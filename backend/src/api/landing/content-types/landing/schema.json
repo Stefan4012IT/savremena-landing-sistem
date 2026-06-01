@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "landings",
+  "info": {
+    "singularName": "landing",
+    "pluralName": "landings",
+    "displayName": "Landing"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": { "type": "string", "required": true },
+    "slug": { "type": "uid", "targetField": "name", "required": true },
+    "brandScope": {
+      "type": "enumeration",
+      "enum": ["SOS", "SG", "IS", "SOS+SG", "SOS+SG+IS"],
+      "required": true,
+      "default": "SG"
+    },
+    "gtmId": { "type": "string" },
+    "seo": { "type": "component", "component": "shared.seo" },
+    "hero": { "type": "component", "component": "sections.hero", "required": true },
+    "emotionalTurn": { "type": "component", "component": "sections.emotional-turn", "required": true },
+    "modernEducation": { "type": "component", "component": "sections.modern-education", "required": true },
+    "directions": { "type": "component", "component": "sections.section-header", "required": true },
+    "directionCards": { "type": "component", "repeatable": true, "component": "cards.info-card" },
+    "programChoice": { "type": "component", "component": "sections.program-choice", "required": true },
+    "benefits": { "type": "component", "component": "sections.section-header", "required": true },
+    "benefitCards": { "type": "component", "repeatable": true, "component": "cards.benefit-card" },
+    "specialOffer": { "type": "component", "component": "sections.simple-cta", "required": true },
+    "enrollmentHelp": { "type": "component", "component": "sections.enrollment-help", "required": true },
+    "leadForm": { "type": "component", "component": "sections.lead-form", "required": true },
+    "testimonials": { "type": "component", "component": "sections.section-header", "required": true },
+    "testimonialCards": { "type": "component", "repeatable": true, "component": "cards.testimonial-card" },
+    "footer": { "type": "component", "component": "sections.footer", "required": true }
+  }
+}

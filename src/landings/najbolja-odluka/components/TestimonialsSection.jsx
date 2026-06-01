@@ -1,20 +1,22 @@
 import { useEffect, useRef, useState } from 'react'
 import { testimonials } from '../landingContent'
+import { useLandingData } from '../useLandingData'
 import { SectionHeader } from './SectionHeader'
 import { TestimonialCard } from './TestimonialCard'
 
 export function TestimonialsSection() {
+  const { testimonials: section, testimonialCards = testimonials } = useLandingData()
   const [activeIndex, setActiveIndex] = useState(0)
   const trackRef = useRef(null)
   const slideRefs = useRef([])
 
   useEffect(() => {
     const timer = window.setInterval(() => {
-      setActiveIndex((current) => (current + 1) % testimonials.length)
+      setActiveIndex((current) => (current + 1) % testimonialCards.length)
     }, 4200)
 
     return () => window.clearInterval(timer)
-  }, [])
+  }, [testimonialCards.length])
 
   useEffect(() => {
     const track = trackRef.current
@@ -34,13 +36,13 @@ export function TestimonialsSection() {
     <section className="landing-section testimonials-section">
       <div className="landing-container">
         <SectionHeader
-          eyebrow="Iskustva"
-          title="Iskustva ucenika i roditelja"
-          text="Najbolju sliku o skoli daju oni koji su je vec izabrali."
+          eyebrow={section.eyebrow}
+          title={section.title}
+          text={section.text}
         />
         <div className="testimonials-carousel" aria-label="Testimonijali">
           <div className="testimonials-carousel__track" ref={trackRef}>
-            {testimonials.map((testimonial, index) => (
+            {testimonialCards.map((testimonial, index) => (
               <div
                 className="testimonials-carousel__slide"
                 key={testimonial.title}
@@ -53,7 +55,7 @@ export function TestimonialsSection() {
             ))}
           </div>
           <div className="testimonials-carousel__dots" aria-label="Navigacija testimonijala">
-            {testimonials.map((testimonial, index) => (
+            {testimonialCards.map((testimonial, index) => (
               <button
                 className={index === activeIndex ? 'is-active' : ''}
                 type="button"

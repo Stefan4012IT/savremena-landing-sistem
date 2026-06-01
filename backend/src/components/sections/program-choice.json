@@ -1,0 +1,9 @@
+{
+  "collectionName": "components_sections_program_choices",
+  "info": { "displayName": "Program choice" },
+  "attributes": {
+    "eyebrow": { "type": "string", "required": true },
+    "title": { "type": "string", "required": true },
+    "paragraphs": { "type": "json", "required": true }
+  }
+}

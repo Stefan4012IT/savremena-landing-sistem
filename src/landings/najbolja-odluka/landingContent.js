@@ -1,3 +1,105 @@
+export const landingData = {
+  slug: 'najbolja-odluka',
+  name: 'Najbolja odluka',
+  brandScope: 'SG',
+  gtmId: '',
+  seo: {
+    title: 'Niste upisali željenu školu? Savremena gimnazija - upis 2026/27',
+    description:
+      'Ako vaše dete nije upisalo željenu školu, još uvek možete izabrati obrazovanje koje mu otvara više mogućnosti. Savremena gimnazija nudi Nacionalni i Kombinovani Cambridge program, savremenu nastavu, podršku nastavnika i smerove za budućnost.',
+  },
+  hero: {
+    eyebrow: 'Upis u generaciju 2026/27',
+    title: 'Niste upisali zeljenu skolu? Mozda je to pocetak najbolje odluke.',
+    lead:
+      'Broj bodova ne govori celu pricu o potencijalu deteta. Jos uvek imate priliku da izaberete skolu koja prepoznaje talente, podrzava razvoj i otvara vise mogucnosti.',
+    note: 'Broj mesta u generaciji 2026/27 je ogranicen.',
+  },
+  emotionalTurn: {
+    eyebrow: 'Novi pocetak',
+    title: 'Razocaranje ne mora da bude kraj',
+    text: 'Jedna rang-lista ne moze da izmeri radoznalost, trud, karakter, talenat i mogucnosti deteta.',
+    worryLabel: 'Ako sada osecate pritisak',
+    worries: ['Razocarani ste?', 'Ne znate sta dalje?', 'Brinete da dete nece dobiti svoju priliku?'],
+    reframeLabel: 'Vazno je da znate',
+    reframes: ['To ne mora biti losa vest.', 'Mozda je najbolji izbor jos uvek pred vama.', 'Savremena gimnazija moze biti nova sansa.'],
+  },
+  modernEducation: {
+    eyebrow: 'Stvarno drugacija skola',
+    title: 'Savremeno obrazovanje u svakom pogledu',
+    text:
+      'Ucenici ne uce samo da bi polozili test ili dobili ocenu. Uce da razumeju, povezu znanje, resavaju probleme i koriste ono sto znaju u svakodnevnim situacijama.',
+    paragraphs: [
+      'Savremena gimnazija pruza kreativan i drugaciji pristup nastavi, uz rad u manjim grupama, mentorsku podrsku i savremene metode rada. Takvo okruzenje pomaze ucenicima da napreduju sigurnije, motivisanije i sa vise poverenja u svoje sposobnosti.',
+      'Nastava je usmerena na razumevanje, prakticnu primenu znanja i razvoj vestina koje su vazne za fakultet, karijeru i zivot: kriticko misljenje, komunikaciju, odgovornost, digitalnu pismenost i samostalnost.',
+    ],
+    imagePlaceholder: 'Image placeholder',
+  },
+  directions: {
+    eyebrow: 'Smerovi',
+    title: 'Izaberite smer koji prati interesovanja vaseg deteta',
+    text:
+      'Bilo da ga privlace tehnologija, jezici, drustvene nauke ili siroko opste obrazovanje, svaki smer pruza kvalitetnu osnovu za dalji razvoj.',
+  },
+  programChoice: {
+    eyebrow: 'Izaberite svoj put ka uspehu',
+    title: 'Nacionalni ili Kombinovani Cambridge program',
+    paragraphs: [
+      'Svaki smer u Savremenoj gimnaziji mozete pohadjati po Nacionalnom ili Kombinovanom programu - dvojezicnom modelu koji objedinjuje domaci plan i program sa elementima zvanicnog Cambridge kurikuluma.',
+      'Ovaj pazljivo osmisljen spoj obrazovnih standarda olaksava ucenje i usvajanje znanja, dok casovi na engleskom jeziku pruzaju mogucnost sticanja nacionalne diplome i prestiznih Cambridge kvalifikacija.',
+      'Bilingvalni pristup omogucava ucenicima da razvijaju svoje potencijale u skladu sa savremenim, globalno relevantnim principima obrazovanja - pripremajuci ih za uspeh, bilo gde u svetu.',
+    ],
+  },
+  benefits: {
+    eyebrow: 'Benefiti',
+    title: 'Benefiti skolovanja u Savremenoj gimnaziji',
+    text: 'Savremena ucenicima pruza znanje, podrsku, tehnologiju, zdravo okruzenje i prostor da razviju svoje mogucnosti.',
+  },
+  specialOffer: {
+    eyebrow: 'Posebna prilika za upis',
+    title: 'Iskoristite priliku da obezbedite mesto u Savremenoj gimnaziji',
+    text:
+      'Ako vase dete nije upisalo skolu koju je zelelo, jos uvek imate mogucnost da izaberete obrazovanje koje mu pruza sigurnost, podrsku i bolju pripremu za buducnost.',
+  },
+  enrollmentHelp: {
+    title: 'Imate pitanja ili vam je potrebna pomoć oko upisa u srednju školu?',
+    introBeforeName: 'Naša ljubazna i stručna savetnica za upis,',
+    advisorName: 'Katarina Petrović',
+    introAfterName:
+      'tu je da vam pruži sve potrebne informacije, razjasni nedoumice i pomogne da donesete najbolju odluku za budućnost vašeg deteta.',
+    emphasis: 'Ne čekajte - obezbedite svom detetu školovanje koje zaista pravi razliku.',
+    prompt: 'Pozovite nas još danas i započnite svoje Savremeno iskustvo:',
+    phonePrimary: '011/40-11-223',
+    phoneSecondary: '062/191-80-56',
+    viberLabel: 'Viber',
+    whatsappLabel: 'WhatsApp',
+    contactSuffix: 'ili popunite prijavu, a mi ćemo vas pozvati.',
+    closing: 'Uspešna akademska budućnost vašeg deteta počinje jednim pozivom!',
+    advisorInitials: 'KP',
+  },
+  leadForm: {
+    namePlaceholder: 'Ime i prezime',
+    emailPlaceholder: 'E-mail',
+    countryCodeLabel: 'Pozivni broj drzave',
+    areaCodePlaceholder: '64',
+    areaCodeLabel: 'Pozivni broj',
+    phonePlaceholder: '1234567',
+    phoneLabel: 'Telefon',
+  },
+  testimonials: {
+    eyebrow: 'Iskustva',
+    title: 'Iskustva ucenika i roditelja',
+    text: 'Najbolju sliku o skoli daju oni koji su je vec izabrali.',
+  },
+  footer: {
+    addressLine1: 'Masarikova 5 (ulaz iz Kralja Milana),',
+    addressLine2: 'Palata Beograd',
+    phone: '+381 (0)11 4011 223',
+    officeEmail: 'office@savremena-gimnazija.edu.rs',
+    enrollmentEmail: 'upis@savremena-gimnazija.edu.rs',
+  },
+}
+
 export const educationHighlights = [
   {
     title: 'Jedinstven i kreativan nacin rada',
@@ -101,3 +203,11 @@ export const testimonials = [
     variant: 'video',
   },
 ]
+
+export const defaultLandingData = {
+  ...landingData,
+  educationHighlights,
+  directionCards: directions,
+  benefitCards: benefits,
+  testimonialCards: testimonials,
+}

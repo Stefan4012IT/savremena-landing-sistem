@@ -1,19 +1,16 @@
+import { useLandingData } from '../useLandingData'
 import { HeroImageReveal } from './HeroImageReveal'
 
 export function HeroSection() {
+  const { hero } = useLandingData()
+
   return (
     <section className="najbolja-odluka-hero">
       <div className="najbolja-odluka-hero__inner">
         <div className="najbolja-odluka-hero__content">
-          <p className="najbolja-odluka-hero__eyebrow">Upis u generaciju 2026/27</p>
-          <h1 className="najbolja-odluka-hero__title">
-            Niste upisali zeljenu skolu? Mozda je to pocetak najbolje odluke.
-          </h1>
-          <p className="najbolja-odluka-hero__lead">
-            Broj bodova ne govori celu pricu o potencijalu deteta. Jos uvek imate
-            priliku da izaberete skolu koja prepoznaje talente, podrzava razvoj i
-            otvara vise mogucnosti.
-          </p>
+          <p className="najbolja-odluka-hero__eyebrow">{hero.eyebrow}</p>
+          <h1 className="najbolja-odluka-hero__title">{hero.title}</h1>
+          <p className="najbolja-odluka-hero__lead">{hero.lead}</p>
           <div className="najbolja-odluka-hero__actions" aria-label="Opcije za upis">
             <a className="najbolja-odluka-hero__button" href="#prijava">
               Prijavite se za upis
@@ -25,9 +22,7 @@ export function HeroSection() {
               Zakazite razgovor
             </a>
           </div>
-          <p className="najbolja-odluka-hero__note">
-            Broj mesta u generaciji 2026/27 je ogranicen.
-          </p>
+          <p className="najbolja-odluka-hero__note">{hero.note}</p>
         </div>
         <HeroImageReveal />
       </div>

@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_sections_heroes",
+  "info": { "displayName": "Hero" },
+  "attributes": {
+    "eyebrow": { "type": "string", "required": true },
+    "title": { "type": "text", "required": true },
+    "lead": { "type": "text", "required": true },
+    "note": { "type": "string" }
+  }
+}

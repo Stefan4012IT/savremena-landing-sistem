@@ -1,0 +1,8 @@
+{
+  "collectionName": "components_cards_benefit_cards",
+  "info": { "displayName": "Benefit card" },
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "text": { "type": "text", "required": true }
+  }
+}

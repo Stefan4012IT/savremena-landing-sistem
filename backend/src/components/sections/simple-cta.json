@@ -1,0 +1,9 @@
+{
+  "collectionName": "components_sections_simple_ctas",
+  "info": { "displayName": "Simple CTA" },
+  "attributes": {
+    "eyebrow": { "type": "string" },
+    "title": { "type": "string", "required": true },
+    "text": { "type": "text", "required": true }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "collectionName": "components_sections_section_headers",
+  "info": { "displayName": "Section header" },
+  "attributes": {
+    "eyebrow": { "type": "string" },
+    "title": { "type": "string", "required": true },
+    "text": { "type": "text" }
+  }
+}

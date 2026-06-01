@@ -1,0 +1,11 @@
+{
+  "collectionName": "components_sections_modern_educations",
+  "info": { "displayName": "Modern education" },
+  "attributes": {
+    "eyebrow": { "type": "string", "required": true },
+    "title": { "type": "string", "required": true },
+    "text": { "type": "text", "required": true },
+    "paragraphs": { "type": "json", "required": true },
+    "imagePlaceholder": { "type": "string" }
+  }
+}

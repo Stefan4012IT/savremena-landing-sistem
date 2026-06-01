@@ -1,4 +1,5 @@
 import { LeadForm } from './LeadForm'
+import { useLandingData } from '../useLandingData'
 
 function ViberIcon() {
   return (
@@ -20,40 +21,41 @@ function WhatsAppIcon() {
 }
 
 export function EnrollmentHelpSection() {
+  const { enrollmentHelp } = useLandingData()
+
   return (
     <section className="landing-section enrollment-help" id="prijava">
       <div className="landing-container enrollment-help__inner">
         <div className="enrollment-help__intro">
           <div className="enrollment-help__content">
-            <h2>Imate pitanja ili vam je potrebna pomoć oko upisa u srednju školu?</h2>
+            <h2>{enrollmentHelp.title}</h2>
             <p>
-              Naša ljubazna i stručna savetnica za upis, <strong>Katarina Petrović</strong>,
-              tu je da vam pruži sve potrebne informacije, razjasni nedoumice i pomogne da
-              donesete najbolju odluku za budućnost vašeg deteta.
+              {enrollmentHelp.introBeforeName} <strong>{enrollmentHelp.advisorName}</strong>,{' '}
+              {enrollmentHelp.introAfterName}
             </p>
             <p>
-              <strong>Ne čekajte - obezbedite svom detetu školovanje koje zaista pravi razliku.</strong>
+              <strong>{enrollmentHelp.emphasis}</strong>
             </p>
-            <p>Pozovite nas još danas i započnite svoje Savremeno iskustvo:</p>
+            <p>{enrollmentHelp.prompt}</p>
             <p className="enrollment-help__contacts">
-              <a href="tel:+381114011223">011/40-11-223</a>;{' '}
-              <a href="tel:+381621918056">062/191-80-56</a>, pišite na{' '}
+              <a href="tel:+381114011223">{enrollmentHelp.phonePrimary}</a>;{' '}
+              <a href="tel:+381621918056">{enrollmentHelp.phoneSecondary}</a>, pišite na{' '}
               <a className="enrollment-help__messenger-link" href="viber://chat?number=%2B381621918056">
                 <ViberIcon />
-                <span>Viber</span>
+                <span>{enrollmentHelp.viberLabel}</span>
               </a>{' '}
               i{' '}
               <a className="enrollment-help__messenger-link" href="https://wa.me/381621918056">
                 <WhatsAppIcon />
-                <span>WhatsApp</span>
+                <span>{enrollmentHelp.whatsappLabel}</span>
               </a>{' '}
-              ili popunite prijavu, a mi ćemo vas pozvati.
+              {enrollmentHelp.contactSuffix}
             </p>
-            <p>Uspešna akademska budućnost vašeg deteta počinje jednim pozivom!</p>
+            <p>{enrollmentHelp.closing}</p>
           </div>
           <div className="enrollment-help__advisor" aria-label="Savetnica za upis Katarina Petrovic">
             <div className="enrollment-help__advisor-photo">
-              <span>KP</span>
+              <span>{enrollmentHelp.advisorInitials}</span>
             </div>
             <div className="enrollment-help__advisor-badge" aria-hidden="true" />
           </div>

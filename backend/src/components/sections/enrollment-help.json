@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_enrollment_helps",
+  "info": { "displayName": "Enrollment help" },
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "introBeforeName": { "type": "string", "required": true },
+    "advisorName": { "type": "string", "required": true },
+    "introAfterName": { "type": "text", "required": true },
+    "emphasis": { "type": "text", "required": true },
+    "prompt": { "type": "string", "required": true },
+    "phonePrimary": { "type": "string", "required": true },
+    "phoneSecondary": { "type": "string", "required": true },
+    "viberLabel": { "type": "string", "required": true },
+    "whatsappLabel": { "type": "string", "required": true },
+    "contactSuffix": { "type": "text", "required": true },
+    "closing": { "type": "text", "required": true },
+    "advisorInitials": { "type": "string", "required": true }
+  }
+}

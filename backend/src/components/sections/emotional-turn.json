@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_sections_emotional_turns",
+  "info": { "displayName": "Emotional turn" },
+  "attributes": {
+    "eyebrow": { "type": "string", "required": true },
+    "title": { "type": "string", "required": true },
+    "text": { "type": "text", "required": true },
+    "worryLabel": { "type": "string", "required": true },
+    "worries": { "type": "json", "required": true },
+    "reframeLabel": { "type": "string", "required": true },
+    "reframes": { "type": "json", "required": true }
+  }
+}

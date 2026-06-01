@@ -1,28 +1,19 @@
 import cambridgeLogo from '../assets/cambridge-international-logo.webp'
 import ministryLogo from '../assets/ministarstvo-prosvete-logo.webp'
+import { useLandingData } from '../useLandingData'
 
 export function ProgramChoiceSection() {
+  const { programChoice } = useLandingData()
+
   return (
     <section className="landing-section program-choice" id="savetovanje">
       <div className="landing-container program-choice__grid">
         <div className="program-choice__content">
-          <p className="section-header__eyebrow">Izaberite svoj put ka uspehu</p>
-          <h2>Nacionalni ili Kombinovani Cambridge program</h2>
-          <p>
-            Svaki smer u Savremenoj gimnaziji mozete pohadjati po Nacionalnom ili
-            Kombinovanom programu - dvojezicnom modelu koji objedinjuje domaci plan i
-            program sa elementima zvanicnog Cambridge kurikuluma.
-          </p>
-          <p>
-            Ovaj pazljivo osmisljen spoj obrazovnih standarda olaksava ucenje i usvajanje
-            znanja, dok casovi na engleskom jeziku pruzaju mogucnost sticanja nacionalne
-            diplome i prestiznih Cambridge kvalifikacija.
-          </p>
-          <p>
-            Bilingvalni pristup omogucava ucenicima da razvijaju svoje potencijale u
-            skladu sa savremenim, globalno relevantnim principima obrazovanja -
-            pripremajuci ih za uspeh, bilo gde u svetu.
-          </p>
+          <p className="section-header__eyebrow">{programChoice.eyebrow}</p>
+          <h2>{programChoice.title}</h2>
+          {programChoice.paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
           <a className="landing-link" href="#prijava">
             Zakazite savetovanje o izboru programa
           </a>

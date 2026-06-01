@@ -8,20 +8,23 @@ import { SpecialOfferSection } from './components/SpecialOfferSection'
 import { EnrollmentHelpSection } from './components/EnrollmentHelpSection'
 import { TestimonialsSection } from './components/TestimonialsSection'
 import { FinalCTASection } from './components/FinalCTASection'
+import { LandingDataProvider } from './LandingDataProvider'
 
-export function NajboljaOdlukaLanding() {
+export function NajboljaOdlukaLanding({ data }) {
   return (
-    <main className="landing landing--najbolja-odluka">
-      <HeroSection />
-      <EmotionalTurnSection />
-      <ModernEducationSection />
-      <DirectionsSection />
-      <ProgramChoiceSection />
-      <BenefitsSection />
-      <SpecialOfferSection />
-      <EnrollmentHelpSection />
-      <TestimonialsSection />
-      <FinalCTASection />
-    </main>
+    <LandingDataProvider value={data}>
+      <main className="landing landing--najbolja-odluka">
+        <HeroSection />
+        <EmotionalTurnSection />
+        <ModernEducationSection />
+        <DirectionsSection />
+        <ProgramChoiceSection />
+        <BenefitsSection />
+        <SpecialOfferSection />
+        <EnrollmentHelpSection />
+        <TestimonialsSection />
+        <FinalCTASection />
+      </main>
+    </LandingDataProvider>
   )
 }

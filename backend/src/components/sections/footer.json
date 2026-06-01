@@ -1,0 +1,11 @@
+{
+  "collectionName": "components_sections_footers",
+  "info": { "displayName": "Footer" },
+  "attributes": {
+    "addressLine1": { "type": "string", "required": true },
+    "addressLine2": { "type": "string", "required": true },
+    "phone": { "type": "string", "required": true },
+    "officeEmail": { "type": "email", "required": true },
+    "enrollmentEmail": { "type": "email", "required": true }
+  }
+}

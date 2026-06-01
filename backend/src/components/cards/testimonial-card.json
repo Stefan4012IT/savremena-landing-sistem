@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_cards_testimonial_cards",
+  "info": { "displayName": "Testimonial card" },
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "text": { "type": "text" },
+    "author": { "type": "string", "required": true },
+    "role": { "type": "string", "required": true },
+    "initials": { "type": "string", "required": true },
+    "variant": {
+      "type": "enumeration",
+      "enum": ["text", "video"],
+      "required": true,
+      "default": "text"
+    }
+  }
+}

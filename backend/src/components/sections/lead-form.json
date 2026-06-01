@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_sections_lead_forms",
+  "info": { "displayName": "Lead form" },
+  "attributes": {
+    "namePlaceholder": { "type": "string", "required": true },
+    "emailPlaceholder": { "type": "string", "required": true },
+    "countryCodeLabel": { "type": "string", "required": true },
+    "areaCodePlaceholder": { "type": "string", "required": true },
+    "areaCodeLabel": { "type": "string", "required": true },
+    "phonePlaceholder": { "type": "string", "required": true },
+    "phoneLabel": { "type": "string", "required": true }
+  }
+}
