@@ -1,0 +1,68 @@
+.landing--najbolja-odluka {
+  overflow: hidden;
+  background: var(--color-background);
+}
+
+.landing-container {
+  width: min(100% - (var(--landing-container-padding) * 2), var(--landing-container-max));
+  margin-inline: auto;
+}
+
+.landing-section {
+  padding: clamp(72px, 8vw, 140px) 0;
+}
+
+.section-header {
+  max-width: 840px;
+  margin-bottom: clamp(32px, 4vw, 56px);
+
+  &__eyebrow {
+    margin: 0 0 12px;
+    color: var(--color-primary);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin: 0;
+    color: var(--color-primary-dark);
+    font-size: clamp(2rem, 4vw, 4rem);
+    line-height: 1.05;
+  }
+
+  &__text {
+    max-width: 760px;
+    margin: 20px 0 0;
+    color: var(--color-muted);
+    font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  }
+}
+
+.landing-link {
+  display: inline-flex;
+  min-height: 50px;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-primary);
+  border-radius: 6px;
+  padding: 13px 20px;
+  background: var(--color-primary);
+  color: #ffffff;
+  font-weight: 800;
+  text-decoration: none;
+
+  &--light {
+    border-color: rgba(255, 255, 255, 0.62);
+    background: #ffffff;
+    color: var(--color-primary-dark);
+  }
+}
+
+@media (max-width: 760px) {
+  .landing-container {
+    width: min(100% - 40px, var(--landing-container-max));
+  }
+}
