@@ -1,5 +1,5 @@
 .emotional-turn {
-  background: var(--color-surface);
+  background: #ffffff;
 
   &__grid {
     display: grid;
@@ -50,13 +50,7 @@
 }
 
 .testimonials-section {
-  background-image: var(--gradient-brand);
-
-  .section-header__eyebrow,
-  .section-header__title,
-  .section-header__text {
-    color: #ffffff;
-  }
+  background: #ffffff;
 }
 
 .modern-education {
@@ -103,7 +97,7 @@
 
 .directions-section,
 .enrollment-help {
-  background: #f7fafb;
+  background: #ffffff;
 }
 
 .program-choice {
