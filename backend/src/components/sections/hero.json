@@ -5,6 +5,8 @@
     "eyebrow": { "type": "string", "required": true },
     "title": { "type": "text", "required": true },
     "lead": { "type": "text", "required": true },
-    "note": { "type": "string" }
+    "note": { "type": "string" },
+    "beforeImageUrl": { "type": "string" },
+    "afterImageUrl": { "type": "string" }
   }
 }

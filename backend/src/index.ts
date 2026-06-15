@@ -27,6 +27,25 @@ export default {
         data: najboljaOdlukaLanding,
         status: 'published',
       })
+    } else if (
+      !existingLanding.hero?.beforeImageUrl ||
+      !existingLanding.hero?.afterImageUrl
+    ) {
+      await strapi.documents('api::landing.landing').update({
+        documentId: existingLanding.documentId,
+        data: {
+          hero: {
+            ...existingLanding.hero,
+            beforeImageUrl:
+              existingLanding.hero?.beforeImageUrl ??
+              najboljaOdlukaLanding.hero.beforeImageUrl,
+            afterImageUrl:
+              existingLanding.hero?.afterImageUrl ??
+              najboljaOdlukaLanding.hero.afterImageUrl,
+          },
+        },
+        status: 'published',
+      })
     }
 
     try {

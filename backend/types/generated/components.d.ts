@@ -98,6 +98,8 @@ export interface SectionsHero extends Struct.ComponentSchema {
     displayName: 'Hero';
   };
   attributes: {
+    afterImageUrl: Schema.Attribute.String;
+    beforeImageUrl: Schema.Attribute.String;
     eyebrow: Schema.Attribute.String & Schema.Attribute.Required;
     lead: Schema.Attribute.Text & Schema.Attribute.Required;
     note: Schema.Attribute.String;

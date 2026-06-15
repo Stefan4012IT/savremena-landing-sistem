@@ -2,8 +2,10 @@ import { useState } from 'react'
 import calmImage from '../assets/hero-calm.svg'
 import brightImage from '../assets/hero-bright.svg'
 
-export function HeroImageReveal() {
+export function HeroImageReveal({ beforeImageUrl, afterImageUrl }) {
   const [position, setPosition] = useState(50)
+  const beforeImage = beforeImageUrl || calmImage
+  const afterImage = afterImageUrl || brightImage
 
   function handlePointerMove(event) {
     const bounds = event.currentTarget.getBoundingClientRect()
@@ -19,13 +21,13 @@ export function HeroImageReveal() {
     >
       <img
         className="hero-image-reveal__image"
-        src={calmImage}
-        alt="Smirena plava vizuelna varijanta"
+        src={beforeImage}
+        alt="Osecaj razocaranja pre nove odluke"
       />
       <div className="hero-image-reveal__overlay" aria-hidden="true">
         <img
           className="hero-image-reveal__image"
-          src={brightImage}
+          src={afterImage}
           alt=""
         />
       </div>
