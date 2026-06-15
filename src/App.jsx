@@ -35,9 +35,13 @@ function setFaviconPackage(brandScope) {
   const basePath = import.meta.env.BASE_URL.replace(/\/$/, '')
   const packagePath = `${basePath}/${getFaviconPackage(brandScope)}`
 
-  document.querySelectorAll('link[data-brand-favicon="true"]').forEach((element) => {
-    element.remove()
-  })
+  document
+    .querySelectorAll(
+      'link[rel="icon"], link[rel="shortcut icon"], link[rel="apple-touch-icon"], link[rel="manifest"], link[data-brand-favicon="true"]',
+    )
+    .forEach((element) => {
+      element.remove()
+    })
 
   faviconFiles.forEach((file) => {
     const link = document.createElement('link')
