@@ -20,6 +20,7 @@ export default {
   async bootstrap({ strapi }) {
     const existingLanding = await strapi.documents('api::landing.landing').findFirst({
       filters: { slug: najboljaOdlukaLanding.slug },
+      populate: ['hero'],
     })
 
     if (!existingLanding) {
@@ -28,8 +29,8 @@ export default {
         status: 'published',
       })
     } else if (
-      !existingLanding.hero?.beforeImageUrl ||
-      !existingLanding.hero?.afterImageUrl
+      existingLanding.hero &&
+      (!existingLanding.hero.beforeImageUrl || !existingLanding.hero.afterImageUrl)
     ) {
       await strapi.documents('api::landing.landing').update({
         documentId: existingLanding.documentId,
