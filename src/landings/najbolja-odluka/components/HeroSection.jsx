@@ -7,7 +7,7 @@ export function HeroSection() {
   return (
     <section className="najbolja-odluka-hero">
       <div className="najbolja-odluka-hero__inner">
-        <div className="najbolja-odluka-hero__content">
+        <div className="najbolja-odluka-hero__content" aria-label="Uvod u landing">
           <p className="najbolja-odluka-hero__eyebrow">{hero.eyebrow}</p>
           <h1 className="najbolja-odluka-hero__title">{hero.title}</h1>
           <p className="najbolja-odluka-hero__lead">{hero.lead}</p>

@@ -1,27 +1,20 @@
 .najbolja-odluka-hero {
-  display: grid;
   min-height: 100vh;
-  padding: 80px var(--landing-container-padding);
-  place-items: center;
   background:
-    linear-gradient(135deg, rgba(43, 68, 107, 0.08), rgba(247, 184, 21, 0.14)),
-    var(--color-background);
+    linear-gradient(90deg, #7a0f1a 0%, #7a0f1a 45%, rgba(80, 33, 67, 0.92) 50%, #284379 55%, #284379 100%);
+  color: #ffffff;
 
   &__inner {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.72fr);
-    gap: clamp(40px, 6vw, 96px);
-    align-items: center;
-    width: min(100%, var(--landing-container-max));
+    min-height: 100vh;
   }
 
   &__content {
-    min-width: 0;
+    display: none;
   }
 
   &__eyebrow {
     margin: 0 0 16px;
-    color: var(--color-primary);
+    color: rgba(255, 255, 255, 0.78);
     font-size: 0.875rem;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -31,7 +24,7 @@
   &__title {
     max-width: 980px;
     margin: 0;
-    color: var(--color-primary-dark);
+    color: #ffffff;
     font-size: clamp(2.875rem, 6vw, 6.5rem);
     line-height: 1;
   }
@@ -39,7 +32,7 @@
   &__lead {
     max-width: 760px;
     margin: 24px 0 0;
-    color: var(--color-muted);
+    color: rgba(255, 255, 255, 0.82);
     font-size: clamp(1.125rem, 2vw, 1.375rem);
   }
 
@@ -55,23 +48,23 @@
     min-height: 52px;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--color-primary);
+    border: 1px solid #ffffff;
     border-radius: 6px;
     padding: 14px 22px;
-    background: var(--color-primary);
-    color: #ffffff;
+    background: #ffffff;
+    color: #284379;
     font-weight: 700;
     text-decoration: none;
   }
 
   &__button--secondary {
     background: transparent;
-    color: var(--color-primary-dark);
+    color: #ffffff;
   }
 
   &__note {
     margin: 16px 0 0;
-    color: var(--color-muted);
+    color: rgba(255, 255, 255, 0.72);
     font-size: 0.95rem;
   }
 }
@@ -80,31 +73,109 @@
   --reveal-position: 50%;
 
   position: relative;
-  isolation: isolate;
-  width: min(100%, 560px);
-  margin-left: auto;
+  min-height: 100vh;
   overflow: hidden;
-  border: 1px solid rgba(43, 68, 107, 0.16);
-  border-radius: 8px;
-  aspect-ratio: 0.82;
-  background: #ffffff;
-  box-shadow: 0 30px 90px rgba(39, 48, 67, 0.16);
+  isolation: isolate;
+  background: #7a0f1a;
   cursor: ew-resize;
   touch-action: none;
   user-select: none;
 
-  &__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+      radial-gradient(circle at var(--reveal-position) 50%, rgba(255, 255, 255, 0.2), transparent 0 16%),
+      linear-gradient(90deg, transparent calc(var(--reveal-position) - 8%), rgba(255, 255, 255, 0.2), transparent calc(var(--reveal-position) + 8%));
+    filter: blur(18px);
+    opacity: 0.85;
     pointer-events: none;
   }
 
-  &__overlay {
+  &__side {
     position: absolute;
     inset: 0;
+    display: grid;
+    grid-template-columns: minmax(300px, 0.95fr) minmax(280px, 430px) minmax(300px, 0.95fr);
+    gap: clamp(28px, 4.4vw, 68px);
+    align-items: center;
+    padding: clamp(56px, 8vh, 96px) clamp(32px, 5vw, 84px);
+  }
+
+  &__side--before {
     z-index: 1;
-    clip-path: inset(0 calc(100% - var(--reveal-position)) 0 0);
+    background:
+      linear-gradient(90deg, #7a0f1a 0%, #7a0f1a 46%, rgba(122, 15, 26, 0.68) 50%, #284379 54%, #284379 100%);
+  }
+
+  &__side--after {
+    z-index: 3;
+    background:
+      linear-gradient(90deg, #7a0f1a 0%, #7a0f1a 46%, rgba(40, 67, 121, 0.72) 50%, #284379 54%, #284379 100%);
+    clip-path: inset(0 0 0 var(--reveal-position));
+  }
+
+  &__copy {
+    grid-row: 1;
+    max-width: 420px;
+    color: #ffffff;
+    text-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
+  }
+
+  &__copy--before {
+    grid-column: 1;
+  }
+
+  &__copy--after {
+    grid-column: 3;
+    justify-self: end;
+    text-align: right;
+  }
+
+  &__kicker {
+    margin: 0 0 14px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: clamp(0.88rem, 1vw, 1rem);
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  &__copy h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(3rem, 5.15vw, 5.8rem);
+    line-height: 0.9;
+  }
+
+  &__subhead {
+    margin: 22px 0 0;
+    font-size: clamp(1.35rem, 2.2vw, 2.3rem);
+    font-weight: 800;
+    line-height: 1.08;
+  }
+
+  &__copy p:not(.hero-image-reveal__kicker, .hero-image-reveal__subhead) {
+    margin: 18px 0 0;
+    color: rgba(255, 255, 255, 0.83);
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    line-height: 1.5;
+  }
+
+  &__image {
+    grid-column: 2;
+    grid-row: 1;
+    width: min(100%, 430px);
+    aspect-ratio: 0.78;
+    align-self: center;
+    justify-self: center;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 36px 100px rgba(0, 0, 0, 0.32);
+    pointer-events: none;
   }
 
   &__axis {
@@ -112,10 +183,10 @@
     top: 0;
     bottom: 0;
     left: var(--reveal-position);
-    z-index: 2;
+    z-index: 4;
     width: 2px;
-    background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 0 0 1px rgba(43, 68, 107, 0.18);
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 0 42px rgba(255, 255, 255, 0.7);
     transform: translateX(-50%);
   }
 
@@ -123,12 +194,12 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 42px;
-    height: 42px;
-    border: 2px solid rgba(43, 68, 107, 0.22);
+    width: 46px;
+    height: 46px;
+    border: 2px solid rgba(255, 255, 255, 0.76);
     border-radius: 999px;
     background: #ffffff;
-    box-shadow: 0 12px 34px rgba(39, 48, 67, 0.22);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.24);
     transform: translate(-50%, -50%);
   }
 
@@ -139,34 +210,98 @@
     top: 50%;
     width: 8px;
     height: 8px;
-    border-top: 2px solid var(--color-primary-dark);
-    border-left: 2px solid var(--color-primary-dark);
+    border-top: 2px solid #284379;
+    border-left: 2px solid #284379;
   }
 
   &__axis span::before {
-    left: 11px;
+    left: 12px;
     transform: translateY(-50%) rotate(-45deg);
   }
 
   &__axis span::after {
-    right: 11px;
+    right: 12px;
     transform: translateY(-50%) rotate(135deg);
   }
 }
 
 @media (max-width: 1060px) {
   .najbolja-odluka-hero {
-    padding-top: 56px;
-    padding-bottom: 56px;
+    display: grid;
+    min-height: auto;
+    padding: 56px var(--landing-container-padding);
+    background:
+      linear-gradient(160deg, rgba(122, 15, 26, 0.96), rgba(40, 67, 121, 0.96)),
+      #284379;
 
     &__inner {
+      display: grid;
+      min-height: auto;
+      gap: 32px;
+      width: min(100%, var(--landing-container-max));
+      margin: 0 auto;
+    }
+
+    &__content {
+      display: block;
+      width: 100%;
+      max-width: 340px;
+      min-width: 0;
+    }
+
+    &__title {
+      max-width: 100%;
+      font-size: clamp(2.1rem, 9.4vw, 2.7rem);
+      line-height: 1.05;
+      overflow-wrap: break-word;
+    }
+
+    &__lead {
+      max-width: 100%;
+      font-size: 1.05rem;
+      overflow-wrap: break-word;
+    }
+
+    &__actions {
+      display: grid;
       grid-template-columns: 1fr;
+    }
+
+    &__button {
+      width: 100%;
     }
   }
 
   .hero-image-reveal {
-    width: min(100%, 640px);
-    margin-right: auto;
-    margin-left: 0;
+    width: min(100%, 350px);
+    margin-inline: auto;
+    min-height: auto;
+    aspect-ratio: 0.82;
+    border-radius: 8px;
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.2);
+
+    &::before,
+    &__copy {
+      display: none;
+    }
+
+    &__side {
+      display: block;
+      padding: 0;
+    }
+
+    &__side--before,
+    &__side--after {
+      background: transparent;
+    }
+
+    &__image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 8px;
+      box-shadow: none;
+    }
   }
 }
