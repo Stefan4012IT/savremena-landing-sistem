@@ -1,6 +1,8 @@
 // import type { Core } from '@strapi/strapi';
 import { najboljaOdlukaLanding } from './data/najbolja-odluka'
 
+const previousNajboljaOdlukaSlug = 'najbolja-odluka'
+
 export default {
   /**
    * An asynchronous register function that runs before
@@ -18,10 +20,17 @@ export default {
    * run jobs, or perform some special logic.
    */
   async bootstrap({ strapi }) {
-    const existingLanding = await strapi.documents('api::landing.landing').findFirst({
+    let existingLanding = await strapi.documents('api::landing.landing').findFirst({
       filters: { slug: najboljaOdlukaLanding.slug },
       populate: ['hero'],
     })
+
+    if (!existingLanding) {
+      existingLanding = await strapi.documents('api::landing.landing').findFirst({
+        filters: { slug: previousNajboljaOdlukaSlug },
+        populate: ['hero'],
+      })
+    }
 
     if (!existingLanding) {
       await strapi.documents('api::landing.landing').create({
@@ -29,22 +38,29 @@ export default {
         status: 'published',
       })
     } else if (
-      existingLanding.hero &&
-      (!existingLanding.hero.beforeImageUrl || !existingLanding.hero.afterImageUrl)
+      existingLanding.slug !== najboljaOdlukaLanding.slug ||
+      (existingLanding.hero &&
+        (!existingLanding.hero.beforeImageUrl || !existingLanding.hero.afterImageUrl))
     ) {
+      const landingUpdateData: Record<string, unknown> = {
+        slug: najboljaOdlukaLanding.slug,
+      }
+
+      if (existingLanding.hero) {
+        landingUpdateData.hero = {
+          ...existingLanding.hero,
+          beforeImageUrl:
+            existingLanding.hero.beforeImageUrl ??
+            najboljaOdlukaLanding.hero.beforeImageUrl,
+          afterImageUrl:
+            existingLanding.hero.afterImageUrl ??
+            najboljaOdlukaLanding.hero.afterImageUrl,
+        }
+      }
+
       await strapi.documents('api::landing.landing').update({
         documentId: existingLanding.documentId,
-        data: {
-          hero: {
-            ...existingLanding.hero,
-            beforeImageUrl:
-              existingLanding.hero?.beforeImageUrl ??
-              najboljaOdlukaLanding.hero.beforeImageUrl,
-            afterImageUrl:
-              existingLanding.hero?.afterImageUrl ??
-              najboljaOdlukaLanding.hero.afterImageUrl,
-          },
-        },
+        data: landingUpdateData,
         status: 'published',
       })
     }

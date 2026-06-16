@@ -1,6 +1,6 @@
 export const najboljaOdlukaLanding = {
   name: 'Najbolja odluka',
-  slug: 'najbolja-odluka',
+  slug: 'najbolji-izbor',
   brandScope: 'SG',
   gtmId: '',
   seo: {

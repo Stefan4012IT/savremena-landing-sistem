@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useGtm } from './hooks/useGtm'
-import { defaultLandingSlug, landingRegistry } from './landings/landingRegistry'
+import { landingRegistry } from './landings/landingRegistry'
 import { fetchLandingBySlug } from './services/landingApi'
 
 const faviconPackages = {
@@ -24,7 +24,7 @@ function getCurrentSlug() {
     pathname = pathname.slice(basePath.length)
   }
 
-  return pathname.replace(/^\/+|\/+$/g, '') || defaultLandingSlug
+  return pathname.replace(/^\/+|\/+$/g, '')
 }
 
 function getFaviconPackage(brandScope) {
@@ -63,11 +63,15 @@ function setFaviconPackage(brandScope) {
 
 function App() {
   const slug = useMemo(() => getCurrentSlug(), [])
-  const registryEntry = landingRegistry[slug] ?? landingRegistry[defaultLandingSlug]
-  const [landingData, setLandingData] = useState(registryEntry.fallbackData)
-  const LandingComponent = registryEntry.component
+  const registryEntry = landingRegistry[slug]
+  const [landingData, setLandingData] = useState(registryEntry?.fallbackData ?? null)
+  const LandingComponent = registryEntry?.component
 
   useEffect(() => {
+    if (!registryEntry) {
+      return undefined
+    }
+
     let isMounted = true
 
     fetchLandingBySlug(slug)
@@ -86,9 +90,14 @@ function App() {
     return () => {
       isMounted = false
     }
-  }, [registryEntry.fallbackData, slug])
+  }, [registryEntry, slug])
 
   useEffect(() => {
+    if (!landingData) {
+      document.title = 'Savremena'
+      return
+    }
+
     if (landingData.seo?.title) {
       document.title = landingData.seo.title
     }
@@ -104,13 +113,17 @@ function App() {
 
       metaDescription.setAttribute('content', landingData.seo.description)
     }
-  }, [landingData.seo])
+  }, [landingData?.seo])
 
   useEffect(() => {
-    setFaviconPackage(landingData.brandScope)
-  }, [landingData.brandScope])
+    setFaviconPackage(landingData?.brandScope)
+  }, [landingData?.brandScope])
 
-  useGtm(landingData.gtmId)
+  useGtm(landingData?.gtmId)
+
+  if (!LandingComponent || !landingData) {
+    return null
+  }
 
   return <LandingComponent data={landingData} />
 }

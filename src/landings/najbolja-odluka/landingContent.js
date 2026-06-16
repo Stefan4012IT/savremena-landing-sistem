@@ -1,5 +1,5 @@
 export const landingData = {
-  slug: 'najbolja-odluka',
+  slug: 'najbolji-izbor',
   name: 'Najbolja odluka',
   brandScope: 'SG',
   gtmId: '',
