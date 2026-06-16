@@ -1,11 +1,44 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import calmImage from '../assets/hero-calm.svg'
 import brightImage from '../assets/hero-bright.svg'
 
 export function HeroImageReveal({ beforeImageUrl, afterImageUrl }) {
   const [position, setPosition] = useState(50)
+  const revealRef = useRef(null)
   const beforeImage = beforeImageUrl || calmImage
   const afterImage = afterImageUrl || brightImage
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 1060px)')
+
+    function updateMobileReveal() {
+      if (!mediaQuery.matches || !revealRef.current) {
+        return
+      }
+
+      const stage = revealRef.current.querySelector('.hero-image-reveal__mobile-stage')
+
+      if (!stage) {
+        return
+      }
+
+      const bounds = stage.getBoundingClientRect()
+      const start = window.innerHeight * 0.46
+      const end = window.innerHeight * 0.12
+      const progress = ((start - bounds.top) / (start - end)) * 100
+
+      setPosition(Math.min(100, Math.max(0, progress)))
+    }
+
+    updateMobileReveal()
+    window.addEventListener('scroll', updateMobileReveal, { passive: true })
+    window.addEventListener('resize', updateMobileReveal)
+
+    return () => {
+      window.removeEventListener('scroll', updateMobileReveal)
+      window.removeEventListener('resize', updateMobileReveal)
+    }
+  }, [])
 
   function handlePointerMove(event) {
     const bounds = event.currentTarget.getBoundingClientRect()
@@ -15,6 +48,7 @@ export function HeroImageReveal({ beforeImageUrl, afterImageUrl }) {
 
   return (
     <div
+      ref={revealRef}
       className="hero-image-reveal"
       onPointerMove={handlePointerMove}
       style={{ '--reveal-position': `${position}%` }}
@@ -61,6 +95,53 @@ export function HeroImageReveal({ beforeImageUrl, afterImageUrl }) {
       </div>
       <div className="hero-image-reveal__axis" aria-hidden="true">
         <span />
+      </div>
+
+      <div className="hero-image-reveal__mobile">
+        <div className="hero-image-reveal__mobile-copy hero-image-reveal__mobile-copy--before">
+          <p className="hero-image-reveal__kicker">Izašla je rang-lista.</p>
+          <h2>Razočarani ste.</h2>
+          <p className="hero-image-reveal__subhead">Ali ne vidite rešenje...</p>
+          <p>Valjda će brzo proći te 4 godine...</p>
+          <p>
+            Ne dozvolite da broj bodova i formalnosti utiču na budućnost vašeg deteta. To ne
+            znači da nije vredno, lošije ili ima manje potencijala.
+          </p>
+        </div>
+
+        <div className="hero-image-reveal__mobile-stage" aria-label="Promena raspoloženja učenika tokom skrola">
+          <img
+            className="hero-image-reveal__mobile-image"
+            src={beforeImage}
+            alt="Osecaj razocaranja pre nove odluke"
+          />
+          <div className="hero-image-reveal__mobile-overlay" aria-hidden="true">
+            <img
+              className="hero-image-reveal__mobile-image"
+              src={afterImage}
+              alt=""
+            />
+          </div>
+          <div className="hero-image-reveal__mobile-axis" aria-hidden="true">
+            <span />
+          </div>
+        </div>
+
+        <div className="hero-image-reveal__mobile-copy hero-image-reveal__mobile-copy--after">
+          <p className="hero-image-reveal__kicker">Niste upisali željenu školu?</p>
+          <h2>To je ustvari odlična vest!</h2>
+          <p className="hero-image-reveal__subhead">
+            Jer idealna škola za vaše dete nije ni bila na listi!
+          </p>
+          <p>
+            Sačuvali smo 5 mesta po povlašćenim uslovima samo za vas koji niste upisali školu koju
+            želite.
+          </p>
+          <p>
+            Pomoći ćemo vam da vaše dete dobije najbolje obrazovanje, najzdravije okruženje za
+            odrastanje i uspešnu akademsku budućnost.
+          </p>
+        </div>
       </div>
     </div>
   )
