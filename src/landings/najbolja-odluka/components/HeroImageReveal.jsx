@@ -53,6 +53,13 @@ export function HeroImageReveal({ beforeImageUrl, afterImageUrl }) {
       onPointerMove={handlePointerMove}
       style={{ '--reveal-position': `${position}%` }}
     >
+      <div className="hero-image-reveal__headline">
+        <h1>
+          Izašla je rang-lista.
+          <span>Niste upisali željenu školu?</span>
+        </h1>
+      </div>
+
       <div className="hero-image-reveal__side hero-image-reveal__side--before">
         <div className="hero-image-reveal__copy hero-image-reveal__copy--before">
           <p className="hero-image-reveal__kicker">Izašla je rang-lista.</p>

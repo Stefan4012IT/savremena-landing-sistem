@@ -80,6 +80,14 @@
     border-radius: 8px;
     background-image: var(--gradient-brand);
     box-shadow: 0 24px 80px rgba(39, 48, 67, 0.1);
+    overflow: hidden;
+  }
+
+  &__image-placeholder img {
+    width: 100%;
+    height: 100%;
+    min-height: clamp(320px, 28vw, 430px);
+    object-fit: cover;
   }
 
   &__image-placeholder span {
@@ -283,6 +291,13 @@
     background:
       var(--gradient-brand),
       #e8e8e8;
+  }
+
+  &__advisor-photo img {
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    object-fit: cover;
   }
 
   &__advisor-photo span {

@@ -4,6 +4,7 @@
   "attributes": {
     "title": { "type": "string", "required": true },
     "tag": { "type": "string" },
-    "text": { "type": "text", "required": true }
+    "text": { "type": "text", "required": true },
+    "imageUrl": { "type": "string" }
   }
 }

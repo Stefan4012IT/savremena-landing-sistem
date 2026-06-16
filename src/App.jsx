@@ -61,6 +61,43 @@ function setFaviconPackage(brandScope) {
   })
 }
 
+function mergeArrayItems(fallbackItems, apiItems) {
+  if (!Array.isArray(fallbackItems) || !Array.isArray(apiItems)) {
+    return apiItems ?? fallbackItems
+  }
+
+  return apiItems.map((item, index) => ({
+    ...(fallbackItems[index] ?? {}),
+    ...item,
+  }))
+}
+
+function mergeLandingData(fallbackData, apiData) {
+  return {
+    ...fallbackData,
+    ...apiData,
+    seo: {
+      ...fallbackData.seo,
+      ...apiData.seo,
+    },
+    hero: {
+      ...fallbackData.hero,
+      ...apiData.hero,
+    },
+    modernEducation: {
+      ...fallbackData.modernEducation,
+      ...apiData.modernEducation,
+    },
+    enrollmentHelp: {
+      ...fallbackData.enrollmentHelp,
+      ...apiData.enrollmentHelp,
+    },
+    directionCards: mergeArrayItems(fallbackData.directionCards, apiData.directionCards),
+    benefitCards: mergeArrayItems(fallbackData.benefitCards, apiData.benefitCards),
+    testimonialCards: mergeArrayItems(fallbackData.testimonialCards, apiData.testimonialCards),
+  }
+}
+
 function App() {
   const slug = useMemo(() => getCurrentSlug(), [])
   const registryEntry = landingRegistry[slug]
@@ -77,10 +114,7 @@ function App() {
     fetchLandingBySlug(slug)
       .then((data) => {
         if (isMounted && data) {
-          setLandingData({
-            ...registryEntry.fallbackData,
-            ...data,
-          })
+          setLandingData(mergeLandingData(registryEntry.fallbackData, data))
         }
       })
       .catch((error) => {

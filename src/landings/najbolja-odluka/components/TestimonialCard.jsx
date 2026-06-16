@@ -1,4 +1,13 @@
-export function TestimonialCard({ title, text, author, role, initials, variant = 'text' }) {
+export function TestimonialCard({
+  title,
+  text,
+  author,
+  role,
+  initials,
+  avatarImageUrl,
+  videoImageUrl,
+  variant = 'text',
+}) {
   const isVideo = variant === 'video'
 
   return (
@@ -7,7 +16,11 @@ export function TestimonialCard({ title, text, author, role, initials, variant =
         <h3>{title}</h3>
         {isVideo ? (
           <div className="testimonial-card__video" aria-label={`Video testimonijal: ${title}`}>
-            <span className="testimonial-card__video-person">{initials}</span>
+            {videoImageUrl ? (
+              <img className="testimonial-card__video-image" src={videoImageUrl} alt="" />
+            ) : (
+              <span className="testimonial-card__video-person">{initials}</span>
+            )}
             <span className="testimonial-card__play" aria-hidden="true" />
           </div>
         ) : (
@@ -16,7 +29,7 @@ export function TestimonialCard({ title, text, author, role, initials, variant =
       </div>
       <footer className="testimonial-card__footer">
         <div className="testimonial-card__avatar" aria-hidden="true">
-          <span>{initials}</span>
+          {avatarImageUrl ? <img src={avatarImageUrl} alt="" /> : <span>{initials}</span>}
         </div>
         <div>
           <strong>{author}</strong>

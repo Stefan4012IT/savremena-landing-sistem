@@ -7,6 +7,8 @@
     "author": { "type": "string", "required": true },
     "role": { "type": "string", "required": true },
     "initials": { "type": "string", "required": true },
+    "avatarImageUrl": { "type": "string" },
+    "videoImageUrl": { "type": "string" },
     "variant": {
       "type": "enumeration",
       "enum": ["text", "video"],

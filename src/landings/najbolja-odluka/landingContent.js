@@ -1,3 +1,36 @@
+const placeholderImages = {
+  modernEducation: 'https://placehold.co/720x520/284379/ffffff?text=Savremena+gimnazija',
+  advisor: 'https://placehold.co/420x520/284379/ffffff?text=Katarina+Petrovic',
+  directions: [
+    'https://placehold.co/480x320/284379/ffffff?text=IT+STEAM+smer',
+    'https://placehold.co/480x320/7a0f1a/ffffff?text=Drustveno-jezicki+smer',
+    'https://placehold.co/480x320/427042/ffffff?text=Opsti+smer',
+  ],
+  benefits: [
+    'https://placehold.co/520x520/284379/ffffff?text=Okruzenje',
+    'https://placehold.co/520x520/7a0f1a/ffffff?text=Online+ucenje',
+    'https://placehold.co/520x520/427042/ffffff?text=Podrska',
+    'https://placehold.co/520x520/f7b815/284379?text=Nastavnici',
+    'https://placehold.co/520x520/284379/ffffff?text=Fakulteti',
+    'https://placehold.co/520x520/7a0f1a/ffffff?text=Tehnologija',
+    'https://placehold.co/520x520/427042/ffffff?text=Projekti',
+    'https://placehold.co/520x520/f7b815/284379?text=Jezici',
+    'https://placehold.co/520x520/284379/ffffff?text=Life+skills',
+    'https://placehold.co/520x520/7a0f1a/ffffff?text=Roditelji',
+  ],
+  testimonialAvatars: [
+    'https://placehold.co/160x160/284379/ffffff?text=NM',
+    'https://placehold.co/160x160/7a0f1a/ffffff?text=NP',
+    'https://placehold.co/160x160/427042/ffffff?text=TK',
+    'https://placehold.co/160x160/f7b815/284379?text=NK',
+    'https://placehold.co/160x160/284379/ffffff?text=TP',
+  ],
+  testimonialVideos: [
+    'https://placehold.co/640x360/7a0f1a/ffffff?text=Video+testimonijal',
+    'https://placehold.co/640x360/284379/ffffff?text=Video+testimonijal',
+  ],
+}
+
 export const landingData = {
   slug: 'najbolji-izbor',
   name: 'Najbolja odluka',
@@ -36,6 +69,7 @@ export const landingData = {
       'Nastava je usmerena na razumevanje, prakticnu primenu znanja i razvoj vestina koje su vazne za fakultet, karijeru i zivot: kriticko misljenje, komunikaciju, odgovornost, digitalnu pismenost i samostalnost.',
     ],
     imagePlaceholder: 'Image placeholder',
+    imageUrl: placeholderImages.modernEducation,
   },
   directions: {
     eyebrow: 'Smerovi',
@@ -78,6 +112,7 @@ export const landingData = {
     contactSuffix: 'ili popunite prijavu, a mi ćemo vas pozvati.',
     closing: 'Uspešna akademska budućnost vašeg deteta počinje jednim pozivom!',
     advisorInitials: 'KP',
+    advisorImageUrl: placeholderImages.advisor,
   },
   leadForm: {
     namePlaceholder: 'Ime i prezime',
@@ -126,16 +161,19 @@ export const directions = [
     title: 'IT STEAM smer',
     tag: 'Tehnologija, programiranje i inovacije',
     text: 'Pored sveopsteg gimnazijskog obrazovanja, ucenici izucavaju programiranje, racunarske i operativne sisteme, racunarske mreze i baze podataka.',
+    imageUrl: placeholderImages.directions[0],
   },
   {
     title: 'Drustveno-jezicki smer',
     tag: 'Jezici, drustvo, komunikacija i humanisticke nauke',
     text: 'Pravi izbor za ucenike koje zanimaju drustveno-humanisticke nauke, jezici, komunikacije, pravo, psihologija, mediji i medjunarodni odnosi.',
+    imageUrl: placeholderImages.directions[1],
   },
   {
     title: 'Opsti smer',
     tag: 'Fleksibilnost i snazna osnova za vise akademskih puteva',
     text: 'Namenjen ucenicima koji zele siroko i temeljno obrazovanje, uz ravnotezu prirodnih i drustvenih nauka i otvorena vrata ka razlicitim fakultetima.',
+    imageUrl: placeholderImages.directions[2],
   },
 ]
 
@@ -151,16 +189,16 @@ export const programs = [
 ]
 
 export const benefits = [
-  ['Podsticajno okruzenje za ucenje', 'Sigurna i inspirativna sredina koja podstice kreativnost, samopouzdanje i uspeh.'],
-  ['Mogucnost onlajn-ucenja', 'Interaktivni materijali, dodatna podrska, konsultacije i testovi dostupni su i van ucionice.'],
-  ['Posvecenost svakom uceniku', 'Nastavnici pristupaju ucenicima sa paznjom, energijom i razumevanjem.'],
-  ['Nastavnici sa velikim iskustvom', 'Profesori koriste savremene metode rada i kontinuirano unapredjuju pristup nastavi.'],
-  ['Otvorena vrata za nastavak skolovanja', 'Znanja i vestine predstavljaju snaznu osnovu za fakultete u zemlji i inostranstvu.'],
-  ['Savremena tehnologija u nastavi', 'Racunari, tableti, interaktivne table, e-Learning i digitalni alati cine ucenje aktivnijim.'],
-  ['Zanimljivi multidisciplinarni casovi', 'Ucenje kroz projekte, timski rad, izazove i povezivanje razlicitih oblasti znanja.'],
-  ['Nastava na srpskom i/ili engleskom jeziku', 'Nacionalni program na srpskom ili Kombinovani program sa Cambridge predmetima na engleskom.'],
-  ['Razvoj zivotnih vestina', 'Life skills program razvija samostalnost, komunikaciju, odgovornost i prakticne vestine.'],
-  ['Partnerstvo sa roditeljima', 'Skola gradi aktivan odnos sa porodicom i jasno komunicira napredak i potrebe ucenika.'],
+  { title: 'Podsticajno okruzenje za ucenje', text: 'Sigurna i inspirativna sredina koja podstice kreativnost, samopouzdanje i uspeh.', imageUrl: placeholderImages.benefits[0] },
+  { title: 'Mogucnost onlajn-ucenja', text: 'Interaktivni materijali, dodatna podrska, konsultacije i testovi dostupni su i van ucionice.', imageUrl: placeholderImages.benefits[1] },
+  { title: 'Posvecenost svakom uceniku', text: 'Nastavnici pristupaju ucenicima sa paznjom, energijom i razumevanjem.', imageUrl: placeholderImages.benefits[2] },
+  { title: 'Nastavnici sa velikim iskustvom', text: 'Profesori koriste savremene metode rada i kontinuirano unapredjuju pristup nastavi.', imageUrl: placeholderImages.benefits[3] },
+  { title: 'Otvorena vrata za nastavak skolovanja', text: 'Znanja i vestine predstavljaju snaznu osnovu za fakultete u zemlji i inostranstvu.', imageUrl: placeholderImages.benefits[4] },
+  { title: 'Savremena tehnologija u nastavi', text: 'Racunari, tableti, interaktivne table, e-Learning i digitalni alati cine ucenje aktivnijim.', imageUrl: placeholderImages.benefits[5] },
+  { title: 'Zanimljivi multidisciplinarni casovi', text: 'Ucenje kroz projekte, timski rad, izazove i povezivanje razlicitih oblasti znanja.', imageUrl: placeholderImages.benefits[6] },
+  { title: 'Nastava na srpskom i/ili engleskom jeziku', text: 'Nacionalni program na srpskom ili Kombinovani program sa Cambridge predmetima na engleskom.', imageUrl: placeholderImages.benefits[7] },
+  { title: 'Razvoj zivotnih vestina', text: 'Life skills program razvija samostalnost, komunikaciju, odgovornost i prakticne vestine.', imageUrl: placeholderImages.benefits[8] },
+  { title: 'Partnerstvo sa roditeljima', text: 'Skola gradi aktivan odnos sa porodicom i jasno komunicira napredak i potrebe ucenika.', imageUrl: placeholderImages.benefits[9] },
 ]
 
 export const testimonials = [
@@ -170,6 +208,7 @@ export const testimonials = [
     author: 'Nikola Milosavljevic',
     role: 'maturant Savremene',
     initials: 'NM',
+    avatarImageUrl: placeholderImages.testimonialAvatars[0],
     variant: 'text',
   },
   {
@@ -178,6 +217,8 @@ export const testimonials = [
     author: 'Natasa Petkovic',
     role: 'roditelj',
     initials: 'NP',
+    avatarImageUrl: placeholderImages.testimonialAvatars[1],
+    videoImageUrl: placeholderImages.testimonialVideos[0],
     variant: 'video',
   },
   {
@@ -186,6 +227,7 @@ export const testimonials = [
     author: 'Tatjana Kavazovic',
     role: 'Andrijina mama',
     initials: 'TK',
+    avatarImageUrl: placeholderImages.testimonialAvatars[2],
     variant: 'text',
   },
   {
@@ -194,6 +236,7 @@ export const testimonials = [
     author: 'Natasa Katic',
     role: 'maturantkinja Savremene',
     initials: 'NK',
+    avatarImageUrl: placeholderImages.testimonialAvatars[3],
     variant: 'text',
   },
   {
@@ -202,6 +245,8 @@ export const testimonials = [
     author: 'Tamara Polic',
     role: 'ucenica Savremene gimnazije',
     initials: 'TP',
+    avatarImageUrl: placeholderImages.testimonialAvatars[4],
+    videoImageUrl: placeholderImages.testimonialVideos[1],
     variant: 'video',
   },
 ]

@@ -6,6 +6,7 @@
     "title": { "type": "string", "required": true },
     "text": { "type": "text", "required": true },
     "paragraphs": { "type": "json", "required": true },
-    "imagePlaceholder": { "type": "string" }
+    "imagePlaceholder": { "type": "string" },
+    "imageUrl": { "type": "string" }
   }
 }

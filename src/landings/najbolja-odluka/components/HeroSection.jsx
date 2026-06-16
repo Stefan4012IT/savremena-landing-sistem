@@ -6,6 +6,16 @@ export function HeroSection() {
 
   return (
     <section className="najbolja-odluka-hero">
+      <header className="najbolja-odluka-hero__header" aria-label="Glavna navigacija">
+        <a className="najbolja-odluka-hero__logo" href="/najbolji-izbor" aria-label="Početna">
+          Logo
+        </a>
+        <nav className="najbolja-odluka-hero__nav">
+          <a href="#savetovanje">Program</a>
+          <a href="#prijava">Prijava</a>
+          <a href="#prijava">Kontakt</a>
+        </nav>
+      </header>
       <div className="najbolja-odluka-hero__inner">
         <div className="najbolja-odluka-hero__content" aria-label="Uvod u landing">
           <p className="najbolja-odluka-hero__eyebrow">{hero.eyebrow}</p>

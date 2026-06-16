@@ -17,11 +17,12 @@ export function BenefitsSection() {
           {benefitCards.map((benefit) => {
             const title = Array.isArray(benefit) ? benefit[0] : benefit.title
             const text = Array.isArray(benefit) ? benefit[1] : benefit.text
+            const imageUrl = Array.isArray(benefit) ? null : benefit.imageUrl
 
             return (
             <article className="benefit-card" key={title}>
               <div className="benefit-card__image" aria-hidden="true">
-                <span>{title.charAt(0)}</span>
+                {imageUrl ? <img src={imageUrl} alt="" /> : <span>{title.charAt(0)}</span>}
               </div>
               <h3>{title}</h3>
               <p>{text}</p>

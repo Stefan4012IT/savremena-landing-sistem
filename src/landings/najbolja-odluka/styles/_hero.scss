@@ -1,8 +1,59 @@
 .najbolja-odluka-hero {
+  position: relative;
   min-height: 100vh;
   background:
-    linear-gradient(90deg, #7a0f1a 0%, #7a0f1a 45%, rgba(80, 33, 67, 0.92) 50%, #284379 55%, #284379 100%);
+    linear-gradient(90deg, #284379 0%, #284379 45%, rgba(80, 33, 67, 0.92) 50%, #7a0f1a 55%, #7a0f1a 100%);
   color: #ffffff;
+
+  &__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 22px clamp(24px, 5vw, 84px);
+    pointer-events: none;
+  }
+
+  &__logo,
+  &__nav a {
+    pointer-events: auto;
+  }
+
+  &__logo {
+    display: inline-flex;
+    min-width: 128px;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 0.82rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(14px, 2.4vw, 30px);
+  }
+
+  &__nav a {
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 0.94rem;
+    font-weight: 800;
+    text-decoration: none;
+  }
 
   &__inner {
     min-height: 100vh;
@@ -101,25 +152,50 @@
     grid-template-columns: minmax(300px, 0.95fr) minmax(280px, 430px) minmax(300px, 0.95fr);
     gap: clamp(28px, 4.4vw, 68px);
     align-items: center;
-    padding: clamp(56px, 8vh, 96px) clamp(32px, 5vw, 84px);
+    padding: clamp(116px, 16vh, 156px) clamp(32px, 5vw, 84px) clamp(44px, 7vh, 82px);
   }
 
   &__side--before {
     z-index: 1;
     background:
-      linear-gradient(90deg, #7a0f1a 0%, #7a0f1a 46%, rgba(122, 15, 26, 0.68) 50%, #284379 54%, #284379 100%);
+      linear-gradient(90deg, #284379 0%, #284379 46%, rgba(80, 33, 67, 0.72) 50%, #7a0f1a 54%, #7a0f1a 100%);
   }
 
   &__side--after {
     z-index: 3;
     background:
-      linear-gradient(90deg, #7a0f1a 0%, #7a0f1a 46%, rgba(40, 67, 121, 0.72) 50%, #284379 54%, #284379 100%);
+      linear-gradient(90deg, #284379 0%, #284379 46%, rgba(122, 15, 26, 0.68) 50%, #7a0f1a 54%, #7a0f1a 100%);
     clip-path: inset(0 0 0 var(--reveal-position));
+  }
+
+  &__headline {
+    position: absolute;
+    top: clamp(84px, 10vh, 116px);
+    left: 50%;
+    z-index: 6;
+    width: min(620px, calc(100% - 40px));
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0 16px 42px rgba(0, 0, 0, 0.26);
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+
+  &__headline h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(2rem, 3.2vw, 3.6rem);
+    line-height: 0.98;
+  }
+
+  &__headline span {
+    display: block;
+    margin-top: 8px;
   }
 
   &__copy {
     grid-row: 1;
-    max-width: 420px;
+    max-width: 380px;
     color: #ffffff;
     text-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
   }
@@ -146,22 +222,22 @@
   &__copy h2 {
     margin: 0;
     color: #ffffff;
-    font-size: clamp(3rem, 5.15vw, 5.8rem);
-    line-height: 0.9;
+    font-size: clamp(2rem, 3.45vw, 3.9rem);
+    line-height: 0.96;
   }
 
   &__subhead {
-    margin: 22px 0 0;
-    font-size: clamp(1.35rem, 2.2vw, 2.3rem);
+    margin: 18px 0 0;
+    font-size: clamp(1.12rem, 1.55vw, 1.75rem);
     font-weight: 800;
-    line-height: 1.08;
+    line-height: 1.14;
   }
 
   &__copy p:not(.hero-image-reveal__kicker, .hero-image-reveal__subhead) {
-    margin: 18px 0 0;
+    margin: 14px 0 0;
     color: rgba(255, 255, 255, 0.83);
-    font-size: clamp(1rem, 1.2vw, 1.2rem);
-    line-height: 1.5;
+    font-size: clamp(0.95rem, 1vw, 1.08rem);
+    line-height: 1.42;
   }
 
   &__image {
@@ -234,8 +310,26 @@
     min-height: auto;
     padding: 0;
     background:
-      linear-gradient(160deg, rgba(122, 15, 26, 0.96), rgba(40, 67, 121, 0.96)),
+      linear-gradient(160deg, rgba(40, 67, 121, 0.96), rgba(122, 15, 26, 0.96)),
       #284379;
+
+    &__header {
+      padding: 16px 20px;
+    }
+
+    &__logo {
+      min-width: 104px;
+      min-height: 38px;
+      font-size: 0.74rem;
+    }
+
+    &__nav {
+      gap: 14px;
+    }
+
+    &__nav a {
+      font-size: 0.84rem;
+    }
 
     &__inner {
       display: block;
@@ -250,9 +344,10 @@
   .hero-image-reveal {
     width: 100%;
     min-height: auto;
-    overflow: visible;
+    overflow-x: hidden;
+    overflow-y: visible;
     background:
-      linear-gradient(180deg, #7a0f1a 0%, #7a0f1a 42%, #442a4f 58%, #284379 100%);
+      linear-gradient(180deg, #284379 0%, #284379 38%, #442a4f 58%, #7a0f1a 100%);
     cursor: default;
     touch-action: pan-y;
 
@@ -265,27 +360,44 @@
     &__mobile {
       display: grid;
       gap: 34px;
-      padding: 54px var(--landing-container-padding) 64px;
+      padding: 34px var(--landing-container-padding) 64px;
       overflow: hidden;
+      justify-items: center;
+    }
+
+    &__headline {
+      position: relative;
+      top: auto;
+      left: auto;
+      width: min(100%, calc(100vw - 40px), 390px);
+      padding: 100px 0 0;
+      margin: 0 auto;
+      transform: none;
+    }
+
+    &__headline h1 {
+      font-size: clamp(1.8rem, 8.8vw, 2.65rem);
+      line-height: 1.04;
+      overflow-wrap: break-word;
     }
 
     &__mobile-copy {
       width: min(100%, calc(100vw - 40px), 350px);
       color: #ffffff;
+      text-align: center;
       overflow-wrap: break-word;
     }
 
     &__mobile-copy h2 {
       margin: 0;
       color: #ffffff;
-      font-size: clamp(2.85rem, 14vw, 4.2rem);
-      line-height: 0.92;
+      font-size: clamp(2.25rem, 10.4vw, 3.15rem);
+      line-height: 0.98;
       overflow-wrap: break-word;
     }
 
     &__mobile-copy--after {
-      justify-self: end;
-      text-align: right;
+      justify-self: center;
     }
 
     &__mobile-copy p:not(.hero-image-reveal__kicker, .hero-image-reveal__subhead) {
@@ -304,7 +416,7 @@
       top: 16px;
       z-index: 1;
       width: min(100%, calc(100vw - 40px), 350px);
-      justify-self: start;
+      justify-self: center;
       margin: 6px 0 14px;
       overflow: hidden;
       border-radius: 8px;
@@ -327,6 +439,14 @@
     }
 
     &__mobile-axis {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .najbolja-odluka-hero {
+    &__nav a:first-child {
       display: none;
     }
   }

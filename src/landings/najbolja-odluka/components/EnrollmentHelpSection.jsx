@@ -55,7 +55,11 @@ export function EnrollmentHelpSection() {
           </div>
           <div className="enrollment-help__advisor" aria-label="Savetnica za upis Katarina Petrovic">
             <div className="enrollment-help__advisor-photo">
-              <span>{enrollmentHelp.advisorInitials}</span>
+              {enrollmentHelp.advisorImageUrl ? (
+                <img src={enrollmentHelp.advisorImageUrl} alt="" />
+              ) : (
+                <span>{enrollmentHelp.advisorInitials}</span>
+              )}
             </div>
             <div className="enrollment-help__advisor-badge" aria-hidden="true" />
           </div>

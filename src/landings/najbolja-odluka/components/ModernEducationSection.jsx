@@ -17,8 +17,12 @@ export function ModernEducationSection() {
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
-        <div className="modern-education__image-placeholder" aria-label="Placeholder za fotografiju skole">
-          <span>{modernEducation.imagePlaceholder}</span>
+        <div className="modern-education__image-placeholder" aria-label="Fotografija skole">
+          {modernEducation.imageUrl ? (
+            <img src={modernEducation.imageUrl} alt="" />
+          ) : (
+            <span>{modernEducation.imagePlaceholder}</span>
+          )}
         </div>
       </div>
     </section>

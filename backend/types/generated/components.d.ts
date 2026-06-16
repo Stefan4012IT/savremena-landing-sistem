@@ -6,6 +6,7 @@ export interface CardsBenefitCard extends Struct.ComponentSchema {
     displayName: 'Benefit card';
   };
   attributes: {
+    imageUrl: Schema.Attribute.String;
     text: Schema.Attribute.Text & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
@@ -17,6 +18,7 @@ export interface CardsInfoCard extends Struct.ComponentSchema {
     displayName: 'Info card';
   };
   attributes: {
+    imageUrl: Schema.Attribute.String;
     tag: Schema.Attribute.String;
     text: Schema.Attribute.Text & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
@@ -30,6 +32,7 @@ export interface CardsTestimonialCard extends Struct.ComponentSchema {
   };
   attributes: {
     author: Schema.Attribute.String & Schema.Attribute.Required;
+    avatarImageUrl: Schema.Attribute.String;
     initials: Schema.Attribute.String & Schema.Attribute.Required;
     role: Schema.Attribute.String & Schema.Attribute.Required;
     text: Schema.Attribute.Text;
@@ -37,6 +40,7 @@ export interface CardsTestimonialCard extends Struct.ComponentSchema {
     variant: Schema.Attribute.Enumeration<['text', 'video']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'text'>;
+    videoImageUrl: Schema.Attribute.String;
   };
 }
 
@@ -62,6 +66,7 @@ export interface SectionsEnrollmentHelp extends Struct.ComponentSchema {
     displayName: 'Enrollment help';
   };
   attributes: {
+    advisorImageUrl: Schema.Attribute.String;
     advisorInitials: Schema.Attribute.String & Schema.Attribute.Required;
     advisorName: Schema.Attribute.String & Schema.Attribute.Required;
     closing: Schema.Attribute.Text & Schema.Attribute.Required;
@@ -131,6 +136,7 @@ export interface SectionsModernEducation extends Struct.ComponentSchema {
   attributes: {
     eyebrow: Schema.Attribute.String & Schema.Attribute.Required;
     imagePlaceholder: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
     paragraphs: Schema.Attribute.JSON & Schema.Attribute.Required;
     text: Schema.Attribute.Text & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
