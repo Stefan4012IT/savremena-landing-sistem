@@ -6,7 +6,10 @@ const previousHeroImageUrls = {
   beforeImageUrl: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/bad_feelings_01.png',
   afterImageUrl: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/good_feelings_01.png',
 }
-const previousModernEducationImageUrl = 'https://placehold.co/720x520/284379/ffffff?text=Savremena+gimnazija'
+const previousModernEducationImageUrls = [
+  'https://placehold.co/720x520/284379/ffffff',
+  'https://placehold.co/720x520/284379/ffffff?text=Savremena+gimnazija',
+]
 const landingPopulate = [
   'hero',
   'modernEducation',
@@ -63,7 +66,7 @@ function shouldUseSeededHeroImage(existingHero, field: 'beforeImageUrl' | 'after
 function shouldUseSeededModernEducationImage(existingModernEducation) {
   return (
     !existingModernEducation?.imageUrl ||
-    existingModernEducation.imageUrl === previousModernEducationImageUrl
+    previousModernEducationImageUrls.includes(existingModernEducation.imageUrl)
   )
 }
 
