@@ -1,4 +1,5 @@
 import { useLandingData } from '../useLandingData'
+import headerLogo from '../assets/logos/savremenaGimnazijaLogoInverse.svg'
 import { HeroImageReveal } from './HeroImageReveal'
 
 export function HeroSection() {
@@ -8,7 +9,7 @@ export function HeroSection() {
     <section className="najbolja-odluka-hero">
       <header className="najbolja-odluka-hero__header" aria-label="Glavna navigacija">
         <a className="najbolja-odluka-hero__logo" href="/najbolji-izbor" aria-label="Početna">
-          Logo
+          <img src={headerLogo} alt="Savremena gimnazija" />
         </a>
         <nav className="najbolja-odluka-hero__nav">
           <a href="#savetovanje">Program</a>
