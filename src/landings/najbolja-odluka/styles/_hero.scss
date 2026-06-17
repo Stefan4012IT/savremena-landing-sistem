@@ -26,8 +26,8 @@
 
   &__logo {
     display: inline-flex;
-    width: clamp(148px, 14vw, 220px);
-    min-height: 48px;
+    width: clamp(210px, 18vw, 300px);
+    min-height: 56px;
     align-items: center;
     justify-content: flex-start;
     text-decoration: none;
@@ -315,8 +315,8 @@
     }
 
     &__logo {
-      width: 142px;
-      min-height: 38px;
+      width: 176px;
+      min-height: 46px;
     }
 
     &__nav {

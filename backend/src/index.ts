@@ -2,6 +2,10 @@
 import { najboljaOdlukaLanding } from './data/najbolja-odluka'
 
 const previousNajboljaOdlukaSlug = 'najbolja-odluka'
+const previousHeroImageUrls = {
+  beforeImageUrl: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/bad_feelings_01.png',
+  afterImageUrl: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/good_feelings_01.png',
+}
 const landingPopulate = [
   'hero',
   'modernEducation',
@@ -51,6 +55,10 @@ function withMissingCardFields(existingCards, seededCards, fields: string[]) {
   })
 }
 
+function shouldUseSeededHeroImage(existingHero, field: 'beforeImageUrl' | 'afterImageUrl') {
+  return !existingHero?.[field] || existingHero[field] === previousHeroImageUrls[field]
+}
+
 export default {
   /**
    * An asynchronous register function that runs before
@@ -88,7 +96,8 @@ export default {
     } else if (
       existingLanding.slug !== najboljaOdlukaLanding.slug ||
       (existingLanding.hero &&
-        (!existingLanding.hero.beforeImageUrl || !existingLanding.hero.afterImageUrl)) ||
+        (shouldUseSeededHeroImage(existingLanding.hero, 'beforeImageUrl') ||
+          shouldUseSeededHeroImage(existingLanding.hero, 'afterImageUrl'))) ||
       (existingLanding.modernEducation && !existingLanding.modernEducation.imageUrl) ||
       (existingLanding.enrollmentHelp && !existingLanding.enrollmentHelp.advisorImageUrl) ||
       existingLanding.directionCards?.some((card) => !card.imageUrl) ||
@@ -102,12 +111,12 @@ export default {
       if (existingLanding.hero) {
         landingUpdateData.hero = {
           ...existingLanding.hero,
-          beforeImageUrl:
-            existingLanding.hero.beforeImageUrl ??
-            najboljaOdlukaLanding.hero.beforeImageUrl,
-          afterImageUrl:
-            existingLanding.hero.afterImageUrl ??
-            najboljaOdlukaLanding.hero.afterImageUrl,
+          beforeImageUrl: shouldUseSeededHeroImage(existingLanding.hero, 'beforeImageUrl')
+            ? najboljaOdlukaLanding.hero.beforeImageUrl
+            : existingLanding.hero.beforeImageUrl,
+          afterImageUrl: shouldUseSeededHeroImage(existingLanding.hero, 'afterImageUrl')
+            ? najboljaOdlukaLanding.hero.afterImageUrl
+            : existingLanding.hero.afterImageUrl,
         }
       }
 

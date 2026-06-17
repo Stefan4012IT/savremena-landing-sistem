@@ -2,11 +2,11 @@ import { useEffect, useRef, useState } from 'react'
 import badFeelingsImage from '../assets/bad_feelings_02.jpg'
 import goodFeelingsImage from '../assets/good_feelings_02.jpg'
 
-export function HeroImageReveal() {
+export function HeroImageReveal({ beforeImageUrl, afterImageUrl }) {
   const [position, setPosition] = useState(50)
   const revealRef = useRef(null)
-  const beforeImage = badFeelingsImage
-  const afterImage = goodFeelingsImage
+  const beforeImage = beforeImageUrl || badFeelingsImage
+  const afterImage = afterImageUrl || goodFeelingsImage
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 1060px)')

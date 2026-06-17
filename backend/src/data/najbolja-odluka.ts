@@ -47,8 +47,8 @@ export const najboljaOdlukaLanding = {
     lead:
       'Broj bodova ne govori celu pricu o potencijalu deteta. Jos uvek imate priliku da izaberete skolu koja prepoznaje talente, podrzava razvoj i otvara vise mogucnosti.',
     note: 'Broj mesta u generaciji 2026/27 je ogranicen.',
-    beforeImageUrl: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/bad_feelings_01.png',
-    afterImageUrl: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/good_feelings_01.png',
+    beforeImageUrl: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/bad_feelings_02.jpg',
+    afterImageUrl: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/good_feelings_02.jpg',
   },
   emotionalTurn: {
     eyebrow: 'Novi pocetak',
