@@ -18,6 +18,7 @@ export interface CardsInfoCard extends Struct.ComponentSchema {
     displayName: 'Info card';
   };
   attributes: {
+    details: Schema.Attribute.String;
     imageUrl: Schema.Attribute.String;
     tag: Schema.Attribute.String;
     text: Schema.Attribute.Text & Schema.Attribute.Required;

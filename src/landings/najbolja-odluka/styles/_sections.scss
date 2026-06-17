@@ -108,6 +108,13 @@
   background: #ffffff;
 }
 
+.directions-section {
+  &__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(24px, 3vw, 38px);
+  }
+}
+
 .program-choice {
   background: #ffffff;
 
@@ -369,6 +376,7 @@
 @media (max-width: 980px) {
   .emotional-turn__grid,
   .modern-education__grid,
+  .directions-section__grid,
   .program-choice__grid,
   .enrollment-help__intro,
   .special-offer__box {

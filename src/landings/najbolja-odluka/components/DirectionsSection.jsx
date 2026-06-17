@@ -5,7 +5,9 @@ import { SectionHeader } from './SectionHeader'
 
 export function DirectionsSection() {
   const { directions: section, directionCards = directions } = useLandingData()
-  const gridClassName = directionCards.length > 3 ? 'card-grid card-grid--four' : 'card-grid card-grid--three'
+  const gridClassName = directionCards.length > 3
+    ? 'card-grid directions-section__grid'
+    : 'card-grid card-grid--three'
 
   return (
     <section className="landing-section directions-section">
@@ -17,7 +19,7 @@ export function DirectionsSection() {
         />
         <div className={gridClassName}>
           {directionCards.map((direction) => (
-            <InfoCard key={direction.title} withProfileImage {...direction} />
+            <InfoCard key={direction.title} className="info-card--direction" withProfileImage {...direction} />
           ))}
         </div>
       </div>

@@ -161,24 +161,28 @@ export const directions = [
   {
     title: 'Opšti smer',
     tag: 'Academic Excellence Program',
+    details: 'Core Knowledge · Critical Thinking · Future Competencies',
     text: 'Opšti smer je idealan izbor za učenike širokih interesovanja, jer nudi uravnoteženo i kvalitetno obrazovanje koje otvara vrata ka velikom broju različitih fakulteta i budućih zanimanja.',
     imageUrl: placeholderImages.directions[0],
   },
   {
     title: 'IT STEAM smer',
     tag: 'Digital Futures Program',
+    details: 'Technology · Engineering · AI · Innovation',
     text: 'Na IT smeru, uz opšte gimnazijsko obrazovanje, učenici stiču praktična znanja iz programiranja, rada računarskih sistema, mreža i baza podataka, pripremajući se za najtraženija zanimanja 21. veka.',
     imageUrl: placeholderImages.directions[1],
   },
   {
     title: 'Društveno-jezički smer',
     tag: 'Global Communication Program',
+    details: 'Languages · Culture · Social Sciences · Global Awareness',
     text: 'Društveno-jezički smer je pravi izbor za učenike koji žele da studiraju društveno-humanističke nauke, jer pruža znanja ključna za dalje školovanje, razvoj opšte kulture i širinu interesovanja i razmišljanja.',
     imageUrl: placeholderImages.directions[2],
   },
   {
     title: 'Sportski smer',
     tag: 'Champion Development Program',
+    details: 'Sports Performance · Academic Excellence · Personal Growth',
     text: 'Sportski smer Savremene gimnazije namenjen je učenicima koji žele da razvijaju svoje sportske talente uz odlične akademske rezultate, uz školu koja razume njihov ritam, ciljeve i potrebe za napredovanjem na oba plana.',
     imageUrl: placeholderImages.directions[3],
   },

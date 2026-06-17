@@ -71,7 +71,10 @@ function shouldUseSeededModernEducationImage(existingModernEducation) {
 }
 
 function shouldUseSeededDirectionCards(existingCards) {
-  return !existingCards?.some((card) => card.title === 'Sportski smer')
+  return (
+    !existingCards?.some((card) => card.title === 'Sportski smer') ||
+    existingCards.some((card) => !card.details)
+  )
 }
 
 export default {
