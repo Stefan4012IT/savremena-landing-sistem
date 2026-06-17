@@ -6,6 +6,7 @@ const previousHeroImageUrls = {
   beforeImageUrl: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/bad_feelings_01.png',
   afterImageUrl: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/good_feelings_01.png',
 }
+const previousModernEducationImageUrl = 'https://placehold.co/720x520/284379/ffffff?text=Savremena+gimnazija'
 const landingPopulate = [
   'hero',
   'modernEducation',
@@ -59,6 +60,13 @@ function shouldUseSeededHeroImage(existingHero, field: 'beforeImageUrl' | 'after
   return !existingHero?.[field] || existingHero[field] === previousHeroImageUrls[field]
 }
 
+function shouldUseSeededModernEducationImage(existingModernEducation) {
+  return (
+    !existingModernEducation?.imageUrl ||
+    existingModernEducation.imageUrl === previousModernEducationImageUrl
+  )
+}
+
 export default {
   /**
    * An asynchronous register function that runs before
@@ -98,7 +106,8 @@ export default {
       (existingLanding.hero &&
         (shouldUseSeededHeroImage(existingLanding.hero, 'beforeImageUrl') ||
           shouldUseSeededHeroImage(existingLanding.hero, 'afterImageUrl'))) ||
-      (existingLanding.modernEducation && !existingLanding.modernEducation.imageUrl) ||
+      (existingLanding.modernEducation &&
+        shouldUseSeededModernEducationImage(existingLanding.modernEducation)) ||
       (existingLanding.enrollmentHelp && !existingLanding.enrollmentHelp.advisorImageUrl) ||
       existingLanding.directionCards?.some((card) => !card.imageUrl) ||
       existingLanding.benefitCards?.some((card) => !card.imageUrl) ||
@@ -121,11 +130,12 @@ export default {
       }
 
       if (existingLanding.modernEducation) {
-        landingUpdateData.modernEducation = withMissingField(
-          existingLanding.modernEducation,
-          najboljaOdlukaLanding.modernEducation,
-          'imageUrl',
-        )
+        landingUpdateData.modernEducation = {
+          ...existingLanding.modernEducation,
+          imageUrl: shouldUseSeededModernEducationImage(existingLanding.modernEducation)
+            ? najboljaOdlukaLanding.modernEducation.imageUrl
+            : existingLanding.modernEducation.imageUrl,
+        }
       }
 
       if (existingLanding.enrollmentHelp) {

@@ -1,5 +1,5 @@
 const placeholderImages = {
-  modernEducation: 'https://placehold.co/720x520/284379/ffffff?text=Savremena+gimnazija',
+  modernEducation: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/najbolji_izbor_720x520.jpg',
   advisor: 'https://placehold.co/420x520/284379/ffffff?text=Katarina+Petrovic',
   directions: [
     'https://placehold.co/480x320/284379/ffffff?text=IT+STEAM+smer',
