@@ -70,6 +70,10 @@ function shouldUseSeededModernEducationImage(existingModernEducation) {
   )
 }
 
+function shouldUseSeededDirectionCards(existingCards) {
+  return !existingCards?.some((card) => card.title === 'Sportski smer')
+}
+
 export default {
   /**
    * An asynchronous register function that runs before
@@ -112,6 +116,7 @@ export default {
       (existingLanding.modernEducation &&
         shouldUseSeededModernEducationImage(existingLanding.modernEducation)) ||
       (existingLanding.enrollmentHelp && !existingLanding.enrollmentHelp.advisorImageUrl) ||
+      shouldUseSeededDirectionCards(existingLanding.directionCards) ||
       existingLanding.directionCards?.some((card) => !card.imageUrl) ||
       existingLanding.benefitCards?.some((card) => !card.imageUrl) ||
       existingLanding.testimonialCards?.some((card) => !card.avatarImageUrl || (card.variant === 'video' && !card.videoImageUrl))
@@ -150,11 +155,13 @@ export default {
       }
 
       if (existingLanding.directionCards?.length) {
-        landingUpdateData.directionCards = withMissingCardFields(
-          existingLanding.directionCards,
-          najboljaOdlukaLanding.directionCards,
-          ['imageUrl'],
-        )
+        landingUpdateData.directionCards = shouldUseSeededDirectionCards(existingLanding.directionCards)
+          ? najboljaOdlukaLanding.directionCards
+          : withMissingCardFields(
+              existingLanding.directionCards,
+              najboljaOdlukaLanding.directionCards,
+              ['imageUrl'],
+            )
       }
 
       if (existingLanding.benefitCards?.length) {

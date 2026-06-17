@@ -2,9 +2,10 @@ const placeholderImages = {
   modernEducation: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/najbolji_izbor_720x520.jpg',
   advisor: 'https://placehold.co/420x520/284379/ffffff?text=Katarina+Petrovic',
   directions: [
-    'https://placehold.co/480x320/284379/ffffff?text=IT+STEAM+smer',
-    'https://placehold.co/480x320/7a0f1a/ffffff?text=Drustveno-jezicki+smer',
-    'https://placehold.co/480x320/427042/ffffff?text=Opsti+smer',
+    'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/SG_opsti-smer.jpg',
+    'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/SG_it-smer.jpg',
+    'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/SG_drustveno-jezicki-smer.jpg',
+    'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/SG_sportski-smer.jpg',
   ],
   benefits: [
     'https://placehold.co/520x520/284379/ffffff?text=Okruzenje',
@@ -158,22 +159,28 @@ export const educationHighlights = [
 
 export const directions = [
   {
-    title: 'IT STEAM smer',
-    tag: 'Tehnologija, programiranje i inovacije',
-    text: 'Pored sveopsteg gimnazijskog obrazovanja, ucenici izucavaju programiranje, racunarske i operativne sisteme, racunarske mreze i baze podataka.',
+    title: 'Opšti smer',
+    tag: 'Academic Excellence Program',
+    text: 'Opšti smer je idealan izbor za učenike širokih interesovanja, jer nudi uravnoteženo i kvalitetno obrazovanje koje otvara vrata ka velikom broju različitih fakulteta i budućih zanimanja.',
     imageUrl: placeholderImages.directions[0],
   },
   {
-    title: 'Drustveno-jezicki smer',
-    tag: 'Jezici, drustvo, komunikacija i humanisticke nauke',
-    text: 'Pravi izbor za ucenike koje zanimaju drustveno-humanisticke nauke, jezici, komunikacije, pravo, psihologija, mediji i medjunarodni odnosi.',
+    title: 'IT STEAM smer',
+    tag: 'Digital Futures Program',
+    text: 'Na IT smeru, uz opšte gimnazijsko obrazovanje, učenici stiču praktična znanja iz programiranja, rada računarskih sistema, mreža i baza podataka, pripremajući se za najtraženija zanimanja 21. veka.',
     imageUrl: placeholderImages.directions[1],
   },
   {
-    title: 'Opsti smer',
-    tag: 'Fleksibilnost i snazna osnova za vise akademskih puteva',
-    text: 'Namenjen ucenicima koji zele siroko i temeljno obrazovanje, uz ravnotezu prirodnih i drustvenih nauka i otvorena vrata ka razlicitim fakultetima.',
+    title: 'Društveno-jezički smer',
+    tag: 'Global Communication Program',
+    text: 'Društveno-jezički smer je pravi izbor za učenike koji žele da studiraju društveno-humanističke nauke, jer pruža znanja ključna za dalje školovanje, razvoj opšte kulture i širinu interesovanja i razmišljanja.',
     imageUrl: placeholderImages.directions[2],
+  },
+  {
+    title: 'Sportski smer',
+    tag: 'Champion Development Program',
+    text: 'Sportski smer Savremene gimnazije namenjen je učenicima koji žele da razvijaju svoje sportske talente uz odlične akademske rezultate, uz školu koja razume njihov ritam, ciljeve i potrebe za napredovanjem na oba plana.',
+    imageUrl: placeholderImages.directions[3],
   },
 ]
 
