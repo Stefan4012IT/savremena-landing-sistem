@@ -121,11 +121,19 @@ export interface SectionsLeadForm extends Struct.ComponentSchema {
   attributes: {
     areaCodeLabel: Schema.Attribute.String & Schema.Attribute.Required;
     areaCodePlaceholder: Schema.Attribute.String & Schema.Attribute.Required;
+    childAgeLabel: Schema.Attribute.String;
+    childAgePlaceholder: Schema.Attribute.String;
     countryCodeLabel: Schema.Attribute.String & Schema.Attribute.Required;
     emailPlaceholder: Schema.Attribute.String & Schema.Attribute.Required;
+    errorMessage: Schema.Attribute.Text;
+    formName: Schema.Attribute.String;
+    institution: Schema.Attribute.String;
     namePlaceholder: Schema.Attribute.String & Schema.Attribute.Required;
     phoneLabel: Schema.Attribute.String & Schema.Attribute.Required;
     phonePlaceholder: Schema.Attribute.String & Schema.Attribute.Required;
+    submitLabel: Schema.Attribute.String;
+    successMessage: Schema.Attribute.Text;
+    successTitle: Schema.Attribute.String;
   };
 }
 

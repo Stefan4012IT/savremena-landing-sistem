@@ -8,6 +8,14 @@
     "areaCodePlaceholder": { "type": "string", "required": true },
     "areaCodeLabel": { "type": "string", "required": true },
     "phonePlaceholder": { "type": "string", "required": true },
-    "phoneLabel": { "type": "string", "required": true }
+    "phoneLabel": { "type": "string", "required": true },
+    "childAgePlaceholder": { "type": "string" },
+    "childAgeLabel": { "type": "string" },
+    "institution": { "type": "string" },
+    "formName": { "type": "string" },
+    "submitLabel": { "type": "string" },
+    "successTitle": { "type": "string" },
+    "successMessage": { "type": "text" },
+    "errorMessage": { "type": "text" }
   }
 }

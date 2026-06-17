@@ -16,6 +16,7 @@ const landingPopulate = [
   'directionCards',
   'benefitCards',
   'enrollmentHelp',
+  'leadForm',
   'testimonialCards',
 ]
 
@@ -119,6 +120,7 @@ export default {
       (existingLanding.modernEducation &&
         shouldUseSeededModernEducationImage(existingLanding.modernEducation)) ||
       (existingLanding.enrollmentHelp && !existingLanding.enrollmentHelp.advisorImageUrl) ||
+      (existingLanding.leadForm && !existingLanding.leadForm.institution) ||
       shouldUseSeededDirectionCards(existingLanding.directionCards) ||
       existingLanding.directionCards?.some((card) => !card.imageUrl) ||
       existingLanding.benefitCards?.some((card) => !card.imageUrl) ||
@@ -155,6 +157,23 @@ export default {
           najboljaOdlukaLanding.enrollmentHelp,
           'advisorImageUrl',
         )
+      }
+
+      if (existingLanding.leadForm) {
+        landingUpdateData.leadForm = withMissingCardFields(
+          [existingLanding.leadForm],
+          [najboljaOdlukaLanding.leadForm],
+          [
+            'childAgePlaceholder',
+            'childAgeLabel',
+            'institution',
+            'formName',
+            'submitLabel',
+            'successTitle',
+            'successMessage',
+            'errorMessage',
+          ],
+        )[0]
       }
 
       if (existingLanding.directionCards?.length) {
