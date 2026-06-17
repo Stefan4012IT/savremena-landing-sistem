@@ -34,10 +34,7 @@ export function HeroSection() {
           </div>
           <p className="najbolja-odluka-hero__note">{hero.note}</p>
         </div>
-        <HeroImageReveal
-          beforeImageUrl={hero.beforeImageUrl}
-          afterImageUrl={hero.afterImageUrl}
-        />
+        <HeroImageReveal />
       </div>
     </section>
   )

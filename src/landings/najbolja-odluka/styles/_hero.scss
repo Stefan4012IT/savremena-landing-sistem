@@ -149,7 +149,7 @@
     position: absolute;
     inset: 0;
     display: grid;
-    grid-template-columns: minmax(300px, 0.95fr) minmax(280px, 430px) minmax(300px, 0.95fr);
+    grid-template-columns: minmax(300px, 0.95fr) minmax(300px, 520px) minmax(300px, 0.95fr);
     gap: clamp(28px, 4.4vw, 68px);
     align-items: center;
     padding: clamp(116px, 16vh, 156px) clamp(32px, 5vw, 84px) clamp(44px, 7vh, 82px);
@@ -243,13 +243,14 @@
   &__image {
     grid-column: 2;
     grid-row: 1;
-    width: min(100%, 430px);
-    aspect-ratio: 0.78;
-    align-self: center;
+    width: min(100%, 520px, 56vh);
+    aspect-ratio: 831 / 900;
+    align-self: end;
     justify-self: center;
     border: 1px solid rgba(255, 255, 255, 0.22);
     border-radius: 8px;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center bottom;
     box-shadow: 0 36px 100px rgba(0, 0, 0, 0.32);
     pointer-events: none;
   }
@@ -368,30 +369,34 @@
     &__headline {
       position: relative;
       top: auto;
-      left: auto;
-      width: min(100%, calc(100vw - 40px), 390px);
+      left: 50vw;
+      width: 300px;
+      max-width: calc(100vw - 80px);
       padding: 100px 0 0;
-      margin: 0 auto;
-      transform: none;
+      margin: 0;
+      transform: translateX(-50%);
     }
 
     &__headline h1 {
-      font-size: clamp(1.8rem, 8.8vw, 2.65rem);
-      line-height: 1.04;
+      font-size: clamp(1.55rem, 6.8vw, 2rem);
+      line-height: 1.08;
       overflow-wrap: break-word;
     }
 
     &__mobile-copy {
-      width: min(100%, calc(100vw - 40px), 350px);
+      width: 300px;
+      max-width: calc(100vw - 80px);
       color: #ffffff;
       text-align: center;
       overflow-wrap: break-word;
+      justify-self: start;
+      margin-left: calc(50vw - 150px - var(--landing-container-padding));
     }
 
     &__mobile-copy h2 {
       margin: 0;
       color: #ffffff;
-      font-size: clamp(2.25rem, 10.4vw, 3.15rem);
+      font-size: clamp(2rem, 9.2vw, 2.8rem);
       line-height: 0.98;
       overflow-wrap: break-word;
     }
@@ -408,19 +413,21 @@
     }
 
     &__subhead {
-      font-size: clamp(1.35rem, 6.4vw, 2rem);
+      font-size: clamp(1.2rem, 5.4vw, 1.55rem);
     }
 
     &__mobile-stage {
       position: sticky;
       top: 16px;
       z-index: 1;
-      width: min(100%, calc(100vw - 40px), 350px);
-      justify-self: center;
+      width: 300px;
+      max-width: calc(100vw - 80px);
+      justify-self: start;
       margin: 6px 0 14px;
+      margin-left: calc(50vw - 150px - var(--landing-container-padding));
       overflow: hidden;
       border-radius: 8px;
-      aspect-ratio: 0.78;
+      aspect-ratio: 831 / 900;
       background: #ffffff;
       box-shadow: 0 30px 90px rgba(0, 0, 0, 0.24);
     }
@@ -428,7 +435,8 @@
     &__mobile-image {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      object-position: center bottom;
       pointer-events: none;
     }
 
@@ -446,7 +454,7 @@
 
 @media (max-width: 520px) {
   .najbolja-odluka-hero {
-    &__nav a:first-child {
+    &__nav {
       display: none;
     }
   }

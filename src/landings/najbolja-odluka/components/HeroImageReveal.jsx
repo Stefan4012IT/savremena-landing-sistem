@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
-import calmImage from '../assets/hero-calm.svg'
-import brightImage from '../assets/hero-bright.svg'
+import badFeelingsImage from '../assets/bad_feelings_02.jpg'
+import goodFeelingsImage from '../assets/good_feelings_02.jpg'
 
-export function HeroImageReveal({ beforeImageUrl, afterImageUrl }) {
+export function HeroImageReveal() {
   const [position, setPosition] = useState(50)
   const revealRef = useRef(null)
-  const beforeImage = beforeImageUrl || calmImage
-  const afterImage = afterImageUrl || brightImage
+  const beforeImage = badFeelingsImage
+  const afterImage = goodFeelingsImage
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 1060px)')
