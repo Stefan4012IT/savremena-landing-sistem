@@ -4,19 +4,16 @@ import { useLandingData } from '../useLandingData'
 import { SectionHeader } from './SectionHeader'
 import { TestimonialCard } from './TestimonialCard'
 
+const testimonialVideoEmbeds = [
+  'https://www.youtube.com/embed/x3MGqdXHT14?si=v6Lyhhj2d_DaNdTY',
+  'https://www.youtube.com/embed/iuPihLFWDT0?si=FssBVFDneKiWqi_6',
+]
+
 export function TestimonialsSection() {
   const { testimonials: section, testimonialCards = testimonials } = useLandingData()
   const [activeIndex, setActiveIndex] = useState(0)
   const trackRef = useRef(null)
   const slideRefs = useRef([])
-
-  useEffect(() => {
-    const timer = window.setInterval(() => {
-      setActiveIndex((current) => (current + 1) % testimonialCards.length)
-    }, 4200)
-
-    return () => window.clearInterval(timer)
-  }, [testimonialCards.length])
 
   useEffect(() => {
     const track = trackRef.current
@@ -42,17 +39,26 @@ export function TestimonialsSection() {
         />
         <div className="testimonials-carousel" aria-label="Testimonijali">
           <div className="testimonials-carousel__track" ref={trackRef}>
-            {testimonialCards.map((testimonial, index) => (
-              <div
-                className="testimonials-carousel__slide"
-                key={testimonial.title}
-                ref={(element) => {
-                  slideRefs.current[index] = element
-                }}
-              >
-                <TestimonialCard {...testimonial} />
-              </div>
-            ))}
+            {testimonialCards.map((testimonial, index) => {
+              const videoIndex = testimonialCards
+                .slice(0, index + 1)
+                .filter((item) => item.variant === 'video').length - 1
+              const videoEmbedUrl = testimonial.variant === 'video'
+                ? testimonialVideoEmbeds[videoIndex]
+                : undefined
+
+              return (
+                <div
+                  className="testimonials-carousel__slide"
+                  key={testimonial.title}
+                  ref={(element) => {
+                    slideRefs.current[index] = element
+                  }}
+                >
+                  <TestimonialCard {...testimonial} videoEmbedUrl={videoEmbedUrl} />
+                </div>
+              )
+            })}
           </div>
           <div className="testimonials-carousel__dots" aria-label="Navigacija testimonijala">
             {testimonialCards.map((testimonial, index) => (

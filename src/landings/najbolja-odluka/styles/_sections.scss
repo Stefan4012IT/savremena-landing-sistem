@@ -16,7 +16,7 @@
 
   &__panel > div {
     border: 1px solid var(--color-border);
-    border-radius: 8px;
+    border-radius: 22px;
     padding: clamp(22px, 3vw, 32px);
     background: #ffffff;
   }
@@ -76,8 +76,8 @@
     display: grid;
     min-height: clamp(320px, 28vw, 430px);
     place-items: center;
-    border: 1px solid rgba(43, 68, 107, 0.16);
-    border-radius: 8px;
+    border: 0;
+    border-radius: 22px;
     background-image: var(--gradient-brand);
     box-shadow: 0 24px 80px rgba(39, 48, 67, 0.1);
     overflow: hidden;
@@ -156,7 +156,7 @@
     min-height: 190px;
     place-items: center;
     border: 1px solid var(--color-border);
-    border-radius: 8px;
+    border-radius: 22px;
     padding: clamp(24px, 4vw, 42px);
     background: #ffffff;
     box-shadow: 0 20px 70px rgba(39, 48, 67, 0.08);
@@ -196,13 +196,13 @@
   }
 
   h2 {
-    font-size: clamp(1.8rem, 3vw, 3rem);
+    font-size: clamp(2rem, 4vw, 4rem);
     line-height: 1.08;
   }
 
   p {
     color: rgba(255, 255, 255, 0.82);
-    font-size: 1.05rem;
+    font-size: clamp(1.05rem, 1.4vw, 1.22rem);
   }
 }
 
@@ -229,15 +229,15 @@
     max-width: 980px;
     margin: 0;
     color: var(--color-primary-dark);
-    font-size: clamp(2.7rem, 4.5vw, 5.2rem);
-    line-height: 0.95;
+    font-size: clamp(2rem, 4vw, 4rem);
+    line-height: 1.05;
   }
 
   p {
     max-width: 1080px;
     margin: 24px 0 0;
     color: var(--color-muted);
-    font-size: clamp(1.15rem, 1.55vw, 1.55rem);
+    font-size: clamp(1.05rem, 1.4vw, 1.22rem);
     line-height: 1.35;
   }
 
@@ -363,12 +363,13 @@
     margin: 0;
     color: #ffffff;
     font-style: normal;
-    font-size: clamp(1.1rem, 1.6vw, 1.4rem);
     line-height: 1.22;
   }
 
+  &__contact span,
   &__contact a {
     color: #ffffff;
+    font-size: clamp(1.05rem, 1.4vw, 1.22rem);
     text-decoration: none;
   }
 }

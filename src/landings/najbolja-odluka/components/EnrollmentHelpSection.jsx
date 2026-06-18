@@ -61,7 +61,6 @@ export function EnrollmentHelpSection() {
                 <span>{enrollmentHelp.advisorInitials}</span>
               )}
             </div>
-            <div className="enrollment-help__advisor-badge" aria-hidden="true" />
           </div>
         </div>
         <LeadForm />
