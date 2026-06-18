@@ -18,10 +18,10 @@
 
   &__eyebrow {
     margin: 0 0 12px;
-    color: var(--color-primary);
-    font-size: 0.82rem;
+    color: #787878;
+    font-size: clamp(1.05rem, 1.4vw, 1.22rem);
     font-weight: 800;
-    letter-spacing: 0.08em;
+    letter-spacing: 0;
     text-transform: uppercase;
   }
 
