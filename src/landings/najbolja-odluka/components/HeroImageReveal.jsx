@@ -55,7 +55,6 @@ export function HeroImageReveal({ beforeImageUrl, afterImageUrl }) {
     >
       <div className="hero-image-reveal__headline">
         <h1>
-          Izašla je rang-lista.
           <span>Niste upisali željenu školu?</span>
         </h1>
       </div>
@@ -74,7 +73,7 @@ export function HeroImageReveal({ beforeImageUrl, afterImageUrl }) {
         <img
           className="hero-image-reveal__image"
           src={beforeImage}
-          alt="Osecaj razocaranja pre nove odluke"
+          alt="Osećaj razočaranja pre nove odluke"
         />
       </div>
 
@@ -120,7 +119,7 @@ export function HeroImageReveal({ beforeImageUrl, afterImageUrl }) {
           <img
             className="hero-image-reveal__mobile-image"
             src={beforeImage}
-            alt="Osecaj razocaranja pre nove odluke"
+            alt="Osećaj razočaranja pre nove odluke"
           />
           <div className="hero-image-reveal__mobile-overlay" aria-hidden="true">
             <img
