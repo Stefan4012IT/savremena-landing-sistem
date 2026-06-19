@@ -19,8 +19,7 @@
     pointer-events: none;
   }
 
-  &__logo,
-  &__nav a {
+  &__logo {
     pointer-events: auto;
   }
 
@@ -38,17 +37,19 @@
     height: auto;
   }
 
-  &__nav {
+  &__institution-logos {
     display: flex;
     align-items: center;
-    gap: clamp(14px, 2.4vw, 30px);
+    justify-content: flex-end;
+    gap: clamp(18px, 3vw, 38px);
   }
 
-  &__nav a {
-    color: rgba(255, 255, 255, 0.86);
-    font-size: 0.94rem;
-    font-weight: 800;
-    text-decoration: none;
+  &__institution-logos img {
+    display: block;
+    width: auto;
+    max-width: min(28vw, 220px);
+    max-height: clamp(38px, 5vw, 62px);
+    object-fit: contain;
   }
 
   &__inner {
@@ -311,7 +312,7 @@
       #284379;
 
     &__header {
-      justify-content: flex-start;
+      justify-content: space-between;
       padding: 16px 20px;
     }
 
@@ -321,12 +322,13 @@
       justify-content: flex-start;
     }
 
-    &__nav {
-      display: none;
+    &__institution-logos {
+      gap: 14px;
     }
 
-    &__nav a {
-      font-size: 0.84rem;
+    &__institution-logos img {
+      max-width: min(23vw, 150px);
+      max-height: 46px;
     }
 
     &__inner {
@@ -367,8 +369,8 @@
       position: relative;
       top: auto;
       left: auto;
-      width: 300px;
-      max-width: calc(100vw - 80px);
+      width: calc(100% - (var(--landing-container-padding) * 2));
+      max-width: none;
       padding: 100px 0 0;
       margin: 0 var(--landing-container-padding);
       justify-self: start;
@@ -377,14 +379,14 @@
     }
 
     &__headline h1 {
-      font-size: clamp(2rem, 8vw, 2.65rem);
+      font-size: 3.5rem;
       line-height: 1.08;
       overflow-wrap: break-word;
     }
 
     &__mobile-copy {
-      width: 300px;
-      max-width: calc(100vw - 80px);
+      width: 100%;
+      max-width: none;
       color: #ffffff;
       text-align: left;
       overflow-wrap: break-word;
@@ -419,8 +421,8 @@
       position: sticky;
       top: 16px;
       z-index: 1;
-      width: 300px;
-      max-width: calc(100vw - 80px);
+      width: 100%;
+      max-width: none;
       justify-self: start;
       margin: 6px 0 14px;
       margin-inline: 0;
@@ -448,13 +450,43 @@
     &__mobile-axis {
       display: none;
     }
+
+    &__mobile-cta {
+      display: inline-flex;
+      min-height: 52px;
+      width: 100%;
+      max-width: none;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 14px 24px;
+      background: #ffffff;
+      color: var(--color-primary-dark);
+      font-weight: 900;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
   }
 }
 
 @media (max-width: 520px) {
   .najbolja-odluka-hero {
-    &__nav {
-      display: none;
+    &__header {
+      gap: 14px;
+    }
+
+    &__logo {
+      width: min(45vw, 190px);
+    }
+
+    &__institution-logos {
+      gap: 10px;
+    }
+
+    &__institution-logos img {
+      max-width: 20vw;
+      max-height: 34px;
     }
   }
 }

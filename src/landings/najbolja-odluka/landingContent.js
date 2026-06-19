@@ -88,8 +88,8 @@ export const landingData = {
     ],
   },
   benefits: {
-    eyebrow: 'Benefiti',
-    title: 'Benefiti školovanja u Savremenoj gimnaziji',
+    eyebrow: 'Stvarno drugačija',
+    title: 'Zašto Savremena gimnazija',
     text: 'Savremena učenicima pruža znanje, podršku, tehnologiju, zdravo okruženje i prostor da razviju svoje mogućnosti.',
   },
   specialOffer: {

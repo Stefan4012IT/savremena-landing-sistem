@@ -1,4 +1,6 @@
 import { useLandingData } from '../useLandingData'
+import cambridgeLogo from '../assets/logos/cambridge-logo-white.png'
+import ministryLogo from '../assets/logos/ministarstvo-prosvete-logo-white.png'
 import headerLogo from '../assets/logos/savremenaGimnazijaLogoInverse.svg'
 import { HeroImageReveal } from './HeroImageReveal'
 
@@ -11,11 +13,10 @@ export function HeroSection() {
         <a className="najbolja-odluka-hero__logo" href="/najbolji-izbor" aria-label="Početna">
           <img src={headerLogo} alt="Savremena gimnazija" />
         </a>
-        <nav className="najbolja-odluka-hero__nav">
-          <a href="#savetovanje">Program</a>
-          <a href="#prijava">Prijava</a>
-          <a href="#prijava">Kontakt</a>
-        </nav>
+        <div className="najbolja-odluka-hero__institution-logos" aria-label="Institucionalni logotipi">
+          <img src={ministryLogo} alt="Ministarstvo prosvete" />
+          <img src={cambridgeLogo} alt="Cambridge International Education" />
+        </div>
       </header>
       <div className="najbolja-odluka-hero__inner">
         <div className="najbolja-odluka-hero__content" aria-label="Uvod u landing">

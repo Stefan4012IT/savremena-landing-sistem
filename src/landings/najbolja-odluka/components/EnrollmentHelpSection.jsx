@@ -24,7 +24,7 @@ export function EnrollmentHelpSection() {
   const { enrollmentHelp } = useLandingData()
 
   return (
-    <section className="landing-section enrollment-help" id="prijava">
+    <section className="landing-section enrollment-help">
       <div className="landing-container enrollment-help__inner">
         <div className="enrollment-help__intro">
           <div className="enrollment-help__content">

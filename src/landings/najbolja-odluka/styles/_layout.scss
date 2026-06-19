@@ -9,12 +9,16 @@
 }
 
 .landing-section {
-  padding: clamp(72px, 8vw, 140px) 0;
+  padding: clamp(56px, 6vw, 96px) 0;
+}
+
+.landing-section + .landing-section:not(.special-conditions, .modern-education, .stats-section, .benefits-section, .special-offer, .enrollment-help) {
+  padding-top: 0;
 }
 
 .section-header {
   max-width: 840px;
-  margin-bottom: clamp(32px, 4vw, 56px);
+  margin-bottom: clamp(26px, 3vw, 42px);
 
   &__eyebrow {
     margin: 0 0 12px;
@@ -65,5 +69,13 @@
 @media (max-width: 760px) {
   .landing-container {
     width: min(100% - 40px, var(--landing-container-max));
+  }
+
+  .landing-section {
+    padding-block: 48px;
+  }
+
+  .landing-section + .landing-section:not(.special-conditions, .modern-education, .stats-section, .benefits-section, .special-offer, .enrollment-help) {
+    padding-top: 0;
   }
 }

@@ -148,6 +148,9 @@ export function HeroImageReveal({ beforeImageUrl, afterImageUrl }) {
             odrastanje i uspešnu akademsku budućnost.
           </p>
         </div>
+        <a className="hero-image-reveal__mobile-cta" href="#prijava">
+          Prijavi se
+        </a>
       </div>
     </div>
   )
