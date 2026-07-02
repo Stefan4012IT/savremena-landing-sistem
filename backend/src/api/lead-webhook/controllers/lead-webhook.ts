@@ -27,6 +27,7 @@ function validateLeadPayload(body: Record<string, unknown>) {
   const countryCode = sanitizeText(body['country-code'] ?? body.countryCode, 6)
   const areaCode = sanitizeText(body['area-code'] ?? body.areaCode, 4)
   const phoneNumber = sanitizeText(body['phone-number'] ?? body.phoneNumber ?? body.phone, 16)
+  const leadEventId = sanitizeText(body.lead_event_id ?? body.leadEventId, 80)
   const institution = sanitizeText(body.institution, 12).toLowerCase()
   const landingSlug = sanitizeText(body.landingSlug, 80)
   const formName = sanitizeText(body.formName, 120) || `landing - ${landingSlug || institution}`
@@ -66,6 +67,10 @@ function validateLeadPayload(body: Record<string, unknown>) {
     errors['phone-number'] = 'Broj telefona nije ispravan.'
   }
 
+  if (leadEventId && !/^ld_\d{10,13}_[a-z0-9]{4,16}$/.test(leadEventId)) {
+    errors.lead_event_id = 'Lead event ID nije ispravan.'
+  }
+
   if (!allowedInstitutions.has(institution)) {
     errors.institution = 'Institution nije ispravan.'
   }
@@ -81,6 +86,7 @@ function validateLeadPayload(body: Record<string, unknown>) {
       'country-code': countryCode,
       'area-code': areaCode,
       'phone-number': phoneNumber,
+      lead_event_id: leadEventId,
       institution,
       form_name: formName,
     },

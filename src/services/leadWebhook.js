@@ -1,3 +1,5 @@
+import { getLeadEventId } from './leadEventId'
+
 export async function submitLeadWebhook(payload) {
   const apiUrl = import.meta.env.VITE_STRAPI_URL
 
@@ -6,12 +8,17 @@ export async function submitLeadWebhook(payload) {
   }
 
   const url = new URL('/api/lead-webhook', apiUrl)
+  const payloadWithLeadEventId = {
+    ...payload,
+    lead_event_id: payload.lead_event_id || payload.leadEventId || getLeadEventId(),
+  }
+
   const response = await fetch(url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(payload),
+    body: JSON.stringify(payloadWithLeadEventId),
   })
 
   const data = await response.json().catch(() => ({}))

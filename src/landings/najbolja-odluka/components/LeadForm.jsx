@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { LeadEventIdField } from '../../../components/LeadEventIdField'
 import { submitLeadWebhook } from '../../../services/leadWebhook'
 import { useLandingData } from '../useLandingData'
 
@@ -44,6 +45,7 @@ export function LeadForm() {
         countryCode: formData.get('countryCode'),
         areaCode: formData.get('areaCode'),
         phoneNumber: formData.get('phone'),
+        leadEventId: formData.get('lead_event_id'),
         website: formData.get('website'),
         institution: leadForm.institution || 'sg',
         formName: leadForm.formName || `landing - ${slug || 'savremena'}`,
@@ -62,6 +64,7 @@ export function LeadForm() {
   return (
     <>
       <form className="lead-form" onSubmit={handleSubmit}>
+        <LeadEventIdField />
         <input
           className="lead-form__honeypot"
           type="text"
