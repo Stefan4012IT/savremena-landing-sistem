@@ -15,6 +15,12 @@ function normalizeEmail(value: unknown) {
   return sanitizeText(value, 160).toLowerCase()
 }
 
+function normalizeDigits(value: unknown, maxLength = 16) {
+  return sanitizeText(value, maxLength)
+    .replace(/\D/g, '')
+    .slice(0, maxLength)
+}
+
 function getClientIp(ctx) {
   return sanitizeText(ctx.request.ip || ctx.request.headers['x-forwarded-for'] || 'unknown', 120)
 }
@@ -25,13 +31,14 @@ function validateLeadPayload(body: Record<string, unknown>) {
   const email = normalizeEmail(body.email)
   const childsAge = sanitizeText(body.childs_age ?? body.childAge, 4)
   const countryCode = sanitizeText(body['country-code'] ?? body.countryCode, 6)
-  const areaCode = sanitizeText(body['area-code'] ?? body.areaCode, 4)
-  const phoneNumber = sanitizeText(body['phone-number'] ?? body.phoneNumber ?? body.phone, 16)
+  const areaCode = normalizeDigits(body['area-code'] ?? body.areaCode, 5)
+  const phoneNumber = normalizeDigits(body['phone-number'] ?? body.phoneNumber ?? body.phone, 16)
   const leadEventId = sanitizeText(body.lead_event_id ?? body.leadEventId, 80)
   const institution = sanitizeText(body.institution, 12).toLowerCase()
   const landingSlug = sanitizeText(body.landingSlug, 80)
   const formName = sanitizeText(body.formName, 120) || `landing - ${landingSlug || institution}`
   const website = sanitizeText(body.website, 200)
+  const validLeadEventId = /^ld_\d{10,13}_[a-z0-9]{4,16}$/.test(leadEventId) ? leadEventId : ''
 
   if (website) {
     return {
@@ -42,7 +49,7 @@ function validateLeadPayload(body: Record<string, unknown>) {
     }
   }
 
-  if (!/^[A-Za-zÀ-žĆČŠĐŽćčšđž\s'-]{2,60}$/.test(name)) {
+  if (!/^[A-Za-zÀ-žĆČŠĐŽćčšđž\s'.-]{2,60}$/.test(name)) {
     errors.name = 'Ime i prezime nisu u ispravnom formatu.'
   }
 
@@ -59,16 +66,12 @@ function validateLeadPayload(body: Record<string, unknown>) {
     errors['country-code'] = 'Pozivni broj drzave nije ispravan.'
   }
 
-  if (!/^\d{1,4}$/.test(areaCode)) {
+  if (!/^\d{1,5}$/.test(areaCode)) {
     errors['area-code'] = 'Pozivni broj mreze nije ispravan.'
   }
 
   if (!/^\d{5,12}$/.test(phoneNumber)) {
     errors['phone-number'] = 'Broj telefona nije ispravan.'
-  }
-
-  if (leadEventId && !/^ld_\d{10,13}_[a-z0-9]{4,16}$/.test(leadEventId)) {
-    errors.lead_event_id = 'Lead event ID nije ispravan.'
   }
 
   if (!allowedInstitutions.has(institution)) {
@@ -86,7 +89,7 @@ function validateLeadPayload(body: Record<string, unknown>) {
       'country-code': countryCode,
       'area-code': areaCode,
       'phone-number': phoneNumber,
-      lead_event_id: leadEventId,
+      lead_event_id: validLeadEventId,
       institution,
       form_name: formName,
     },
@@ -135,6 +138,7 @@ export default {
     }
 
     if (!validation.isValid || !validation.sanitizedData) {
+      strapi.log.warn(`Lead webhook validation failed: ${JSON.stringify(validation.errors)}`)
       ctx.status = 400
       ctx.body = {
         success: false,
