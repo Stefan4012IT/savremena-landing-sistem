@@ -63,7 +63,7 @@ export function HeroImageReveal({ beforeImageUrl, afterImageUrl }) {
         <div className="hero-image-reveal__copy hero-image-reveal__copy--before">
           <p className="hero-image-reveal__kicker">Izašla je rang-lista.</p>
           <h2>Razočarani ste.</h2>
-          <p className="hero-image-reveal__subhead">Ali ne vidite rešenje...</p>
+          <p className="hero-image-reveal__subhead">I ne vidite rešenje.</p>
           <p>Valjda će brzo proći te 4 godine...</p>
           <p>
             Ne dozvolite da broj bodova i formalnosti utiču na budućnost vašeg deteta. To ne
@@ -107,7 +107,7 @@ export function HeroImageReveal({ beforeImageUrl, afterImageUrl }) {
         <div className="hero-image-reveal__mobile-copy hero-image-reveal__mobile-copy--before">
           <p className="hero-image-reveal__kicker">Izašla je rang-lista.</p>
           <h2>Razočarani ste.</h2>
-          <p className="hero-image-reveal__subhead">Ali ne vidite rešenje...</p>
+          <p className="hero-image-reveal__subhead">I ne vidite rešenje.</p>
           <p>Valjda će brzo proći te 4 godine...</p>
           <p>
             Ne dozvolite da broj bodova i formalnosti utiču na budućnost vašeg deteta. To ne

@@ -30,7 +30,7 @@ const awardLogos = [
 export function PartnerLogosSection() {
   return (
     <section className="partner-logos" aria-label="Svetske nagrade">
-      <div className="landing-container">
+      <div className="landing-container partner-logos__grid">
         <SectionHeader
           eyebrow="Svetske nagrade kao potvrda izvrsnosti"
           title="Savremena obrazovna grupa pomera granice u obrazovanju"

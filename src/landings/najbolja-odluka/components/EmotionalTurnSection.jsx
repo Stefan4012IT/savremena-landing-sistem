@@ -13,11 +13,15 @@ export function EmotionalTurnSection() {
         </header>
         <div className="scholarship-offer__content">
           <div className="scholarship-offer__copy">
-            <p>
-              Da li vam se već danima život vrti samo oko pitanja da li će vaše dete upasti u školu
-              koju ste odabrali? Da li ima dovoljno bodova za školu broj 1? Da li može da se izbori
-              sa tolikom konkurencijom? Hoće li uopšte dobiti svoju priliku?!
-            </p>
+            <div className="scholarship-offer__questions">
+              <p>Da li vam se već danima život vrti samo oko ovih pitanja:</p>
+              <ul>
+                <li>Da li će vaše dete upasti u školu koju ste odabrali?</li>
+                <li>Da li ima dovoljno bodova za školu broj 1?</li>
+                <li>Da li može da se izbori sa tolikom konkurencijom?</li>
+                <li>Hoće li uopšte dobiti svoju priliku?!</li>
+              </ul>
+            </div>
             <p>
               U pravu ste – ovo je veoma bitna odluka za budućnost vašeg deteta. Iz tog razloga
               organizovali smo specijalnu akciju za upis dece koja nisu dobila željenu školu. Ako

@@ -1,7 +1,7 @@
 import { LeadForm } from './LeadForm'
 
 const conditions = [
-  'Poklon-ponuda Savremene gimnazije važi samo za učenike koji nisu upisali prvu školu sa željene liste.',
+  'Poklon-ponuda Savremene gimnazije važi samo za učenike koji nisu upisali školu sa liste želja.',
   'Akciju je moguće koristiti u punoj vrednosti za Nacionalni i Kombinovani Kembridž progam.',
   'Broj mesta za upis po ovoj posebnoj akciji je strogo ograničen na 5.',
   'Da biste ostvarili uslov za upis po povlašćenim uslovima, potrebno je da popunite ovu prijavu.',
