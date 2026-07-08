@@ -1,5 +1,6 @@
 // import type { Core } from '@strapi/strapi';
 import { najboljaOdlukaLanding } from './data/najbolja-odluka'
+import { novoOdeljenjeLanding } from './data/novo-odeljenje'
 
 const previousNajboljaOdlukaSlug = 'najbolja-odluka'
 const previousHeroImageUrls = {
@@ -205,6 +206,18 @@ export default {
       await strapi.documents('api::landing.landing').update({
         documentId: existingLanding.documentId,
         data: landingUpdateData,
+        status: 'published',
+      })
+    }
+
+    const existingNovoOdeljenjeLanding = await strapi.documents('api::landing.landing').findFirst({
+      filters: { slug: novoOdeljenjeLanding.slug },
+      populate: landingPopulate,
+    })
+
+    if (!existingNovoOdeljenjeLanding) {
+      await strapi.documents('api::landing.landing').create({
+        data: novoOdeljenjeLanding,
         status: 'published',
       })
     }

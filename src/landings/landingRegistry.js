@@ -1,11 +1,17 @@
 import { NajboljaOdlukaLanding } from './najbolja-odluka/NajboljaOdlukaLanding'
-import { defaultLandingData } from './najbolja-odluka/landingContent'
+import { defaultLandingData as najboljaOdlukaLandingData } from './najbolja-odluka/landingContent'
+import { NovoOdeljenjeLanding } from './novo-odeljenje/NovoOdeljenjeLanding'
+import { defaultLandingData as novoOdeljenjeLandingData } from './novo-odeljenje/landingContent'
 
 export const landingRegistry = {
-  [defaultLandingData.slug]: {
+  [najboljaOdlukaLandingData.slug]: {
     component: NajboljaOdlukaLanding,
-    fallbackData: defaultLandingData,
+    fallbackData: najboljaOdlukaLandingData,
+  },
+  [novoOdeljenjeLandingData.slug]: {
+    component: NovoOdeljenjeLanding,
+    fallbackData: novoOdeljenjeLandingData,
   },
 }
 
-export const defaultLandingSlug = defaultLandingData.slug
+export const defaultLandingSlug = najboljaOdlukaLandingData.slug
