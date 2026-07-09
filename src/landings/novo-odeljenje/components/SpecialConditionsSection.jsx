@@ -9,7 +9,7 @@ export function SpecialConditionsSection() {
       <div className="landing-container special-conditions__grid">
         <div className="special-conditions__content">
           {specialConditions.eyebrow ? (
-            <p className="special-conditions__eyebrow">{specialConditions.eyebrow}</p>
+            <p className="section-header__eyebrow">{specialConditions.eyebrow}</p>
           ) : null}
           <h2>{specialConditions.title}</h2>
           {paragraphs.map((paragraph, index) => (
