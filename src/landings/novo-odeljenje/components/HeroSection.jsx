@@ -1,52 +1,44 @@
 import cambridgeLogo from '../assets/logos/cambridge-logo-white.png'
 import ministryLogo from '../assets/logos/ministarstvo-prosvete-logo-white.png'
 import headerLogo from '../assets/logos/savremenaGimnazijaLogoInverse.svg'
-import heroCopyImage from '../assets/7_novo-odeljenje-cop.webp'
-import heroBackground from '../assets/9_novo_odeljenje_hero_background_000.webp'
-import heroStudents from '../assets/novo_odeljenje_hero_11.webp'
+import heroLeftPart from '../assets/novo-odeljenje-left-part_002.png'
+import heroRightPart from '../assets/novo-odeljenje-right-part_002.png'
+import heroMobile from '../assets/hero_img_mob.png'
 import { LeadForm } from './LeadForm'
 
 export function HeroSection() {
   return (
     <section
       className="najbolja-odluka-hero"
-      data-hero-version="novo-odeljenje-7"
+      data-hero-version="novo-odeljenje-9"
     >
-      <div
-        className="najbolja-odluka-hero__background"
-        style={{ '--hero-background-image': `url(${heroBackground})` }}
-        aria-hidden="true"
-      />
       <header className="najbolja-odluka-hero__header" aria-label="Glavna navigacija">
         <a className="najbolja-odluka-hero__logo" href="/novo-odeljenje" aria-label="Početna">
           <img src={headerLogo} alt="Savremena gimnazija" />
         </a>
         <div className="najbolja-odluka-hero__institution-logos" aria-label="Institucionalni logotipi">
-          <img src={ministryLogo} alt="Ministarstvo prosvete" />
           <img src={cambridgeLogo} alt="Cambridge International Education" />
+          <img src={ministryLogo} alt="Ministarstvo prosvete" />
         </div>
       </header>
-      <img
-        className="najbolja-odluka-hero__students"
-        src={heroStudents}
-        alt=""
-        aria-hidden="true"
-      />
+      <picture className="najbolja-odluka-hero__right-part" aria-hidden="true">
+        <source media="(max-width: 760px)" srcSet={heroMobile} />
+        <img src={heroRightPart} alt="" />
+      </picture>
       <div className="najbolja-odluka-hero__inner">
         <div className="najbolja-odluka-hero__content" aria-label="Uvod u landing">
           <img
-            className="najbolja-odluka-hero__copy-image"
-            src={heroCopyImage}
-            alt="Otvoreno je još jedno, 7. odeljenje!"
+            className="najbolja-odluka-hero__left-part"
+            src={heroLeftPart}
+            alt="Otvoreno je još jedno, 9. odeljenje!"
           />
-          <p className="najbolja-odluka-hero__eyebrow">SJAJNE VESTI</p>
-          <h1 className="najbolja-odluka-hero__title">
-            Zbog velikog interesovanja, Savremena gimnazija otvara još jedno, 7. odeljenje prvog
-            razreda u generaciji 2025/26!
-          </h1>
-          <p className="najbolja-odluka-hero__lead">
-            Izaberite najsavremenije školovanje za najbolje rezultate.
-          </p>
+          <div className="najbolja-odluka-hero__yellow-copy">
+            <h1>
+              Zbog velikog interesovanja, Savremena gimnazija otvara još jedno, 9. odeljenje prvog
+              razreda u generaciji 2029/267!
+            </h1>
+            <p>Izaberite najsavremenije školovanje za najbolje rezultate.</p>
+          </div>
         </div>
         <div className="najbolja-odluka-hero__form-panel" id="prijava">
           <LeadForm

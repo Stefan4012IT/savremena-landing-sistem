@@ -1,39 +1,19 @@
 .najbolja-odluka-hero {
   position: relative;
-  min-height: 860px;
+  min-height: 880px;
   isolation: isolate;
   overflow: visible;
-  background: #13244a;
+  background: #07080c;
   color: #ffffff;
 
-  &__background {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    overflow: hidden;
-    background:
-      linear-gradient(90deg, rgba(17, 30, 62, 0.72) 0%, rgba(17, 30, 62, 0.52) 44%, rgba(17, 30, 62, 0.18) 100%),
-      var(--hero-background-image);
-    background-position: center;
-    background-size: cover;
-    pointer-events: none;
-  }
-
-  &__background::after {
-    content: '';
-    position: absolute;
-    inset: auto 0 0;
-    height: 32%;
-    background: linear-gradient(180deg, transparent, rgba(15, 23, 42, 0.62));
-  }
-
   &__header {
-    position: relative;
+    position: absolute;
     z-index: 80;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 24px;
+    width: 100%;
     padding: 22px clamp(24px, 5vw, 84px);
   }
 
@@ -66,112 +46,94 @@
     object-fit: contain;
   }
 
-  &__students {
+  &__right-part {
     position: absolute;
+    top: 0;
     right: 0;
     bottom: 0;
     z-index: 20;
-    width: min(64vw, 1136px);
-    height: auto;
-    max-height: 787px;
-    object-fit: contain;
-    object-position: center bottom;
+    width: 1130px;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
     pointer-events: none;
+  }
+
+  &__right-part img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
   }
 
   &__inner {
     position: relative;
     z-index: 30;
     display: flex;
-    min-height: calc(860px - 104px);
-    align-items: center;
+    min-height: 880px;
+    align-items: flex-end;
     justify-content: space-between;
-    gap: clamp(36px, 6vw, 88px);
-    padding: clamp(64px, 10vh, 116px) clamp(24px, 5vw, 84px) clamp(60px, 9vh, 104px);
+    gap: clamp(28px, 5vw, 72px);
+    padding: clamp(132px, 15vh, 168px) clamp(24px, 5vw, 84px) 0 0;
   }
 
   &__content {
-    position: relative;
+    position: absolute;
+    left: 0;
+    bottom: 0;
     z-index: 35;
     display: grid;
-    width: min(720px, 54%);
+    width: min(66vw, 900px);
   }
 
-  &__eyebrow {
-    margin: 24px 0 14px;
-    color: #f7b817;
-    font-size: clamp(1.5rem, 2.4vw, 2.75rem);
-    font-weight: 900;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  &__title {
-    max-width: 690px;
-    margin: 0;
-    color: #ffffff;
-    font-size: clamp(1.65rem, 2.65vw, 3rem);
-    line-height: 1.08;
-    text-wrap: balance;
-  }
-
-  &__lead {
-    max-width: 610px;
-    margin: 18px 0 0;
-    color: rgba(255, 255, 255, 0.84);
-    font-size: clamp(1.125rem, 2vw, 1.375rem);
-    line-height: 1.5;
-  }
-
-  &__copy-image {
+  &__left-part {
     position: relative;
     z-index: 36;
     display: block;
-    width: min(100%, 600px);
+    width: 100%;
     height: auto;
     margin: 0;
   }
 
-  &__actions {
-    display: flex;
-    flex-wrap: wrap;
+  &__yellow-copy {
+    position: absolute;
+    right: clamp(110px, 12%, 160px);
+    bottom: clamp(118px, 12%, 154px);
+    left: clamp(72px, 9%, 112px);
+    z-index: 40;
+    display: grid;
     gap: 14px;
-    margin-top: 32px;
+    color: #07080c;
   }
 
-  &__button {
-    display: inline-flex;
-    min-height: 52px;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #ffffff;
-    border-radius: 6px;
-    padding: 14px 22px;
-    background: #ffffff;
-    color: #284379;
-    font-weight: 700;
-    text-decoration: none;
+  &__yellow-copy h1,
+  &__yellow-copy p {
+    margin: 0;
   }
 
-  &__button--secondary {
-    background: transparent;
-    color: #ffffff;
+  &__yellow-copy h1 {
+    max-width: 650px;
+    font-size: clamp(1.05rem, 2vw, 2rem);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: 0;
   }
 
-  &__note {
-    margin: 16px 0 0;
-    color: rgba(255, 255, 255, 0.72);
-    font-size: 0.95rem;
+  &__yellow-copy p {
+    max-width: 720px;
+    font-size: clamp(0.95rem, 1.35vw, 1.3rem);
+    font-weight: 600;
+    line-height: 1.22;
   }
 
   &__form-panel {
     position: absolute;
     right: clamp(24px, 5vw, 84px);
-    bottom: -178px;
+    bottom: -170px;
     z-index: 60;
-    width: min(660px, calc(100vw - 48px));
-    border-radius: 40px;
-    padding: clamp(22px, 2.4vw, 32px);
+    width: min(640px, calc(100vw - 48px));
+    border-radius: 28px;
+    padding: clamp(20px, 2.2vw, 28px);
     background: #9d1516;
     color: #ffffff;
     box-shadow: 0 28px 86px rgba(18, 24, 32, 0.28);
@@ -180,17 +142,11 @@
 
 @media (max-width: 760px) {
   .najbolja-odluka-hero {
-    min-height: 100svh;
-
-    &__background {
-      background:
-        linear-gradient(180deg, rgba(17, 30, 62, 0.72) 0%, rgba(17, 30, 62, 0.7) 52%, rgba(17, 30, 62, 0.38) 100%),
-        var(--hero-background-image);
-      background-position: center;
-      background-size: cover;
-    }
+    min-height: auto;
+    overflow: hidden;
 
     &__header {
+      position: absolute;
       gap: 16px;
       padding: 16px 20px;
     }
@@ -209,47 +165,61 @@
       max-height: 34px;
     }
 
-    &__students {
-      right: -72px;
-      bottom: 0;
-      z-index: 2;
-      width: min(94vw, 500px);
-      max-height: 50vh;
-      opacity: 0.7;
+    &__right-part {
+      position: relative;
+      top: auto;
+      right: 0;
+      bottom: auto;
+      display: block;
+      z-index: 10;
+      width: 100%;
+      height: auto;
+      opacity: 1;
+      transform: none;
+    }
+
+    &__right-part img {
+      width: 100%;
+      height: auto;
     }
 
     &__inner {
       display: grid;
-      min-height: calc(100svh - 76px);
-      align-items: end;
-      gap: 28px;
-      padding: 84px 20px 36px;
+      min-height: auto;
+      align-items: start;
+      gap: 0;
+      padding: 0;
     }
 
     &__content {
+      position: relative;
+      left: auto;
+      bottom: auto;
       width: 100%;
+      margin-left: 0;
     }
 
-    &__title {
-      font-size: clamp(1.7rem, 8vw, 2.8rem);
+    &__yellow-copy {
+      right: auto;
+      bottom: 11%;
+      left: 8%;
+      width: 72%;
+      gap: 8px;
     }
 
-    &__lead {
-      font-size: 1.05rem;
+    &__yellow-copy h1 {
+      font-size: clamp(0.78rem, 3.3vw, 1.05rem);
+      line-height: 1.08;
     }
 
-    &__copy-image {
-      width: min(100%, 430px);
-      margin-top: 22px;
+    &__yellow-copy p {
+      font-size: clamp(0.72rem, 2.75vw, 0.9rem);
     }
 
-    &__actions {
-      display: grid;
-      gap: 12px;
-    }
-
-    &__button {
+    &__left-part {
       width: 100%;
+      max-width: 100%;
+      margin-left: 0;
     }
 
     &__form-panel {
@@ -258,8 +228,33 @@
       bottom: auto;
       z-index: 60;
       width: 100%;
-      border-radius: 28px;
-      padding: 22px;
+      margin-top: 0;
+      border-radius: 0;
+      padding: 20px;
+    }
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1180px) {
+  .najbolja-odluka-hero {
+    min-height: 820px;
+
+    &__inner {
+      min-height: 820px;
+      padding-top: 132px;
+    }
+
+    &__content {
+      width: min(68vw, 820px);
+    }
+
+    &__right-part {
+      height: 100%;
+      width: 1130px;
+    }
+
+    &__form-panel {
+      width: min(520px, calc(100vw - 48px));
     }
   }
 }

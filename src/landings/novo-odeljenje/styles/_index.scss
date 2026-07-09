@@ -3,3 +3,80 @@
 @use './sections';
 @use './cards';
 @use './form';
+
+.landing--novo-odeljenje {
+  --color-blue: #07080c;
+  --color-primary: #07080c;
+  --color-primary-dark: #07080c;
+  --color-yellow: #ffcc0c;
+  --gradient-brand: #ffcc0c;
+}
+
+.landing--novo-odeljenje {
+  .scholarship-offer__ribbon,
+  .special-conditions,
+  .stats-section,
+  .special-offer,
+  .landing-footer,
+  .info-card--direction,
+  .testimonial-card,
+  .testimonial-card__body {
+    background: #ffcc0c;
+    background-image: none;
+    color: #07080c;
+  }
+
+  .info-card__profile,
+  .benefit-card__image,
+  .modern-education__image-placeholder,
+  .enrollment-help__advisor-photo {
+    background: #ffcc0c;
+    background-image: none;
+  }
+
+  .testimonial-card__video,
+  .testimonial-card__avatar {
+    background: #ffcc0c;
+  }
+
+  .scholarship-offer__ribbon,
+  .special-conditions h2,
+  .special-conditions p,
+  .special-conditions a,
+  .special-conditions__visual span,
+  .stats-section__value,
+  .stats-section__label,
+  .special-offer__eyebrow,
+  .special-offer h2,
+  .special-offer p,
+  .landing-footer__contact,
+  .landing-footer__contact span,
+  .landing-footer__contact a,
+  .info-card--direction .info-card__title,
+  .info-card--direction .info-card__tag,
+  .info-card--direction .info-card__details,
+  .info-card--direction .info-card__text,
+  .testimonial-card h3,
+  .testimonial-card p,
+  .testimonial-card__video-person,
+  .testimonial-card__avatar span {
+    color: #07080c;
+  }
+
+  .special-conditions__visual {
+    border-color: rgba(7, 8, 12, 0.28);
+    background: rgba(7, 8, 12, 0.08);
+  }
+
+  .testimonial-card__play {
+    background: #07080c;
+  }
+
+  .testimonial-card__play::after {
+    border-color: rgba(7, 8, 12, 0.34);
+  }
+
+  .testimonial-card__play svg {
+    fill: #ffcc0c;
+  }
+}
