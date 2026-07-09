@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { LeadEventIdField } from '../../../components/LeadEventIdField'
+import { pushLeadSubmitToDataLayer } from '../../../services/leadEventId'
 import { submitLeadWebhook } from '../../../services/leadWebhook'
 import { useLandingData } from '../useLandingData'
 
@@ -28,11 +29,16 @@ export function LeadForm({ className = '', headerTitle, headerText }) {
   const [status, setStatus] = useState('idle')
   const [message, setMessage] = useState('')
   const isSubmitting = status === 'submitting'
+  const institution = leadForm.institution || 'sg'
+  const formName = leadForm.formName || `landing - ${slug || 'savremena'}`
+  const landingSlug = slug || 'novo-odeljenje'
 
   async function handleSubmit(event) {
     event.preventDefault()
     const form = event.currentTarget
     const formData = new FormData(form)
+    const submittedInstitution = formData.get('institution') || institution
+    const leadEventId = formData.get('lead_event_id')
 
     setStatus('submitting')
     setMessage('')
@@ -45,12 +51,18 @@ export function LeadForm({ className = '', headerTitle, headerText }) {
         countryCode: formData.get('countryCode'),
         areaCode: formData.get('areaCode'),
         phoneNumber: formData.get('phone'),
-        leadEventId: formData.get('lead_event_id'),
+        leadEventId,
         website: formData.get('website'),
-        institution: leadForm.institution || 'sg',
-        formName: leadForm.formName || `landing - ${slug || 'savremena'}`,
-        landingSlug: slug || 'novo-odeljenje',
+        institution: submittedInstitution,
+        formName,
+        landingSlug,
         pageUrl: window.location.href,
+      })
+
+      pushLeadSubmitToDataLayer(leadEventId, {
+        institution: submittedInstitution,
+        formName,
+        landingSlug,
       })
 
       form.reset()
@@ -70,7 +82,8 @@ export function LeadForm({ className = '', headerTitle, headerText }) {
             {headerText ? <p>{headerText}</p> : null}
           </div>
         ) : null}
-        <LeadEventIdField />
+        <LeadEventIdField institution={institution} formName={formName} landingSlug={landingSlug} />
+        <input type="hidden" name="institution" value={institution} readOnly />
         <input
           className="lead-form__honeypot"
           type="text"

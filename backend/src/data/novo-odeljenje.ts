@@ -68,7 +68,8 @@ export const novoOdeljenjeLanding = {
     reframes: ['Poverenje roditelja', 'Kontinuirani rast', 'Najbrojnija generacija u istoriji škole'],
   },
   specialConditions: {
-    title: 'DA LI STE ZNALI ZAŠTO JE BROJ 9 POSEBAN?',
+    eyebrow: 'Simbolika broja 9',
+    title: 'Da li ste znali zašto je broj 9 poseban?',
     paragraphs: [
       'Kao najveći jednocifreni broj, devet simbolizuje vrhunac, zaokružen uspeh i početak novog poglavlja. Upravo zato ove godine dobija posebno značenje za Savremenu gimnaziju: otvaranjem 9. odeljenja nastaje najbrojnija generacija u istoriji škole.',
       'Devet odeljenja postaju simbol poverenja, kontinuiranog rasta i uspeha koji zajedno ispisuju novu stranicu istorije Savremene gimnazije.',

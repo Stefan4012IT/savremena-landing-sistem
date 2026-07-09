@@ -188,6 +188,21 @@ export interface SectionsSimpleCta extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsSpecialConditions extends Struct.ComponentSchema {
+  collectionName: 'components_sections_special_conditions';
+  info: {
+    displayName: 'Special conditions';
+  };
+  attributes: {
+    ctaText: Schema.Attribute.Text & Schema.Attribute.Required;
+    eyebrow: Schema.Attribute.String;
+    imagePlaceholder: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    paragraphs: Schema.Attribute.JSON & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedSeo extends Struct.ComponentSchema {
   collectionName: 'components_shared_seos';
   info: {
@@ -214,6 +229,7 @@ declare module '@strapi/strapi' {
       'sections.program-choice': SectionsProgramChoice;
       'sections.section-header': SectionsSectionHeader;
       'sections.simple-cta': SectionsSimpleCta;
+      'sections.special-conditions': SectionsSpecialConditions;
       'shared.seo': SharedSeo;
     }
   }

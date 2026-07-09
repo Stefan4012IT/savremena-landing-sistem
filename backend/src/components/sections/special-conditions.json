@@ -2,6 +2,7 @@
   "collectionName": "components_sections_special_conditions",
   "info": { "displayName": "Special conditions" },
   "attributes": {
+    "eyebrow": { "type": "string" },
     "title": { "type": "string", "required": true },
     "paragraphs": { "type": "json", "required": true },
     "ctaText": { "type": "text", "required": true },

@@ -144,12 +144,29 @@
     line-height: 1.05;
   }
 
+  &__content &__eyebrow {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(0.9rem, 1vw, 1rem);
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
   &__content p {
     margin: 0;
     color: #ffffff;
     font-size: clamp(1.05rem, 1.4vw, 1.22rem);
     font-weight: 800;
     line-height: 1.35;
+  }
+
+  &__content &__paragraph {
+    font-weight: 400;
+  }
+
+  &__content &__cta {
+    font-weight: 800;
   }
 
   &__content a {
