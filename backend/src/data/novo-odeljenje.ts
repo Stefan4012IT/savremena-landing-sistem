@@ -38,27 +38,34 @@ export const novoOdeljenjeLanding = {
   brandScope: 'SG',
   gtmId: '',
   seo: {
-    title: 'Niste upisali željenu školu? Savremena gimnazija - upis 2026/27',
+    title: 'Otvoreno je 9. odeljenje | Savremena gimnazija - upis 2026/27',
     description:
-      'Ako vaše dete nije upisalo željenu školu, još uvek možete izabrati obrazovanje koje mu otvara više mogućnosti. Savremena gimnazija nudi Nacionalni i Kombinovani Cambridge program, savremenu nastavu, podršku nastavnika i smerove za budućnost.',
+      'Zbog velikog interesovanja, Savremena gimnazija otvara 9. odeljenje prvog razreda u generaciji 2026/27. Izaberite najsavremenije školovanje za najbolje rezultate.',
   },
   hero: {
     eyebrow: 'Upis u generaciju 2026/27',
-    title: 'Niste upisali željenu školu? Možda je to početak najbolje odluke.',
+    title:
+      'Zbog velikog interesovanja, Savremena gimnazija otvara još jedno, 9. odeljenje prvog razreda u generaciji 2026/27!',
     lead:
-      'Broj bodova ne govori celu priču o potencijalu deteta. Još uvek imate priliku da izaberete školu koja prepoznaje talente, podržava razvoj i otvara više mogućnosti.',
-    note: 'Broj mesta u generaciji 2026/27 je ograničen.',
+      'Izaberite najsavremenije školovanje za najbolje rezultate.',
+    note: 'Prijavite se po povlašćenim cenama do 31. jula ili do popune mesta.',
     beforeImageUrl: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/bad_feelings_02.jpg',
     afterImageUrl: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/good_feelings_02.jpg',
   },
   emotionalTurn: {
-    eyebrow: 'Novi početak',
-    title: 'Razočaranje ne mora da bude kraj',
-    text: 'Jedna rang-lista ne može da izmeri radoznalost, trud, karakter, talenat i mogućnosti deteta.',
-    worryLabel: 'Ako sada osećate pritisak',
-    worries: ['Razočarani ste?', 'Ne znate šta dalje?', 'Brinete da dete neće dobiti svoju priliku?'],
-    reframeLabel: 'Važno je da znate',
-    reframes: ['To ne mora biti loša vest.', 'Možda je najbolji izbor još uvek pred vama.', 'Savremena gimnazija može biti nova šansa.'],
+    eyebrow: 'Najbrojnija generacija u istoriji Savremene gimnazije',
+    title: 'Više učenika dobija priliku za stvarno drugačije obrazovanje',
+    text:
+      'Proširenjem kapaciteta, još jedna grupa srednjoškolaca dobiće priliku da postane deo obrazovnog okruženja koje povezuje savremenu nastavu, praktična znanja, tehnologiju i individualnu podršku.',
+    worryLabel: 'Da li od srednje škole očekujete više',
+    worries: [
+      'Da li za svoje dete želite stvarno drugačije obrazovanje?',
+      'Da li želite da uči u najsavremenijem školskom prostoru?',
+      'Da li tražite smer koji prati njegova interesovanja i talente?',
+      'Da li želite praktičnu primenu znanja i razvoj veština?',
+    ],
+    reframeLabel: 'Otvaranje 9. odeljenja',
+    reframes: ['Poverenje roditelja', 'Kontinuirani rast', 'Najbrojnija generacija u istoriji škole'],
   },
   modernEducation: {
     eyebrow: 'Stvarno drugačija škola',

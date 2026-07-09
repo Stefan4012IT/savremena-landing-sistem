@@ -12,13 +12,21 @@ const previousModernEducationImageUrls = [
   'https://placehold.co/720x520/284379/ffffff?text=Savremena+gimnazija',
 ]
 const landingPopulate = [
+  'seo',
   'hero',
+  'emotionalTurn',
   'modernEducation',
+  'directions',
   'directionCards',
+  'programChoice',
+  'benefits',
   'benefitCards',
+  'specialOffer',
   'enrollmentHelp',
   'leadForm',
+  'testimonials',
   'testimonialCards',
+  'footer',
 ]
 
 function withMissingField(existing, seeded, field: string) {
@@ -76,6 +84,79 @@ function shouldUseSeededDirectionCards(existingCards) {
   return (
     !existingCards?.some((card) => card.title === 'Sportski smer') ||
     existingCards.some((card) => !card.details)
+  )
+}
+
+function withPreservedMediaFields(existing, seeded, fields: string[]) {
+  if (!existing) {
+    return seeded
+  }
+
+  return fields.reduce(
+    (nextValue, field) => ({
+      ...nextValue,
+      [field]: existing[field] || seeded?.[field],
+    }),
+    seeded,
+  )
+}
+
+function withPreservedCardMediaFields(existingCards, seededCards, fields: string[]) {
+  return seededCards.map((seededCard, index) => {
+    const existingCard = existingCards?.[index]
+
+    if (!existingCard) {
+      return seededCard
+    }
+
+    return withPreservedMediaFields(existingCard, seededCard, fields)
+  })
+}
+
+function getNovoOdeljenjeUpdateData(existingLanding) {
+  return {
+    ...novoOdeljenjeLanding,
+    hero: withPreservedMediaFields(existingLanding.hero, novoOdeljenjeLanding.hero, [
+      'beforeImageUrl',
+      'afterImageUrl',
+    ]),
+    modernEducation: withPreservedMediaFields(
+      existingLanding.modernEducation,
+      novoOdeljenjeLanding.modernEducation,
+      ['imageUrl'],
+    ),
+    directionCards: withPreservedCardMediaFields(
+      existingLanding.directionCards,
+      novoOdeljenjeLanding.directionCards,
+      ['imageUrl'],
+    ),
+    benefitCards: withPreservedCardMediaFields(
+      existingLanding.benefitCards,
+      novoOdeljenjeLanding.benefitCards,
+      ['imageUrl'],
+    ),
+    enrollmentHelp: withPreservedMediaFields(
+      existingLanding.enrollmentHelp,
+      novoOdeljenjeLanding.enrollmentHelp,
+      ['advisorImageUrl'],
+    ),
+    testimonialCards: withPreservedCardMediaFields(
+      existingLanding.testimonialCards,
+      novoOdeljenjeLanding.testimonialCards,
+      ['avatarImageUrl', 'videoImageUrl'],
+    ),
+  }
+}
+
+function shouldRefreshNovoOdeljenjeLanding(existingLanding) {
+  return (
+    existingLanding.seo?.title !== novoOdeljenjeLanding.seo.title ||
+    existingLanding.hero?.title !== novoOdeljenjeLanding.hero.title ||
+    existingLanding.emotionalTurn?.title !== novoOdeljenjeLanding.emotionalTurn.title ||
+    existingLanding.leadForm?.formName !== novoOdeljenjeLanding.leadForm.formName ||
+    existingLanding.directionCards?.length !== novoOdeljenjeLanding.directionCards.length ||
+    existingLanding.benefitCards?.length !== novoOdeljenjeLanding.benefitCards.length ||
+    existingLanding.testimonialCards?.length !== novoOdeljenjeLanding.testimonialCards.length
   )
 }
 
@@ -218,6 +299,12 @@ export default {
     if (!existingNovoOdeljenjeLanding) {
       await strapi.documents('api::landing.landing').create({
         data: novoOdeljenjeLanding,
+        status: 'published',
+      })
+    } else if (shouldRefreshNovoOdeljenjeLanding(existingNovoOdeljenjeLanding)) {
+      await strapi.documents('api::landing.landing').update({
+        documentId: existingNovoOdeljenjeLanding.documentId,
+        data: getNovoOdeljenjeUpdateData(existingNovoOdeljenjeLanding),
         status: 'published',
       })
     }
