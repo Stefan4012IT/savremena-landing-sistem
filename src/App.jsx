@@ -84,6 +84,10 @@ function mergeLandingData(fallbackData, apiData) {
       ...fallbackData.hero,
       ...apiData.hero,
     },
+    specialConditions: {
+      ...fallbackData.specialConditions,
+      ...apiData.specialConditions,
+    },
     modernEducation: {
       ...fallbackData.modernEducation,
       ...apiData.modernEducation,

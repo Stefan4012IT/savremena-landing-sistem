@@ -15,6 +15,7 @@ const landingPopulate = [
   'seo',
   'hero',
   'emotionalTurn',
+  'specialConditions',
   'modernEducation',
   'directions',
   'directionCards',
@@ -153,6 +154,7 @@ function shouldRefreshNovoOdeljenjeLanding(existingLanding) {
     existingLanding.seo?.title !== novoOdeljenjeLanding.seo.title ||
     existingLanding.hero?.title !== novoOdeljenjeLanding.hero.title ||
     existingLanding.emotionalTurn?.title !== novoOdeljenjeLanding.emotionalTurn.title ||
+    existingLanding.specialConditions?.imageUrl !== novoOdeljenjeLanding.specialConditions.imageUrl ||
     existingLanding.leadForm?.formName !== novoOdeljenjeLanding.leadForm.formName ||
     existingLanding.directionCards?.length !== novoOdeljenjeLanding.directionCards.length ||
     existingLanding.benefitCards?.length !== novoOdeljenjeLanding.benefitCards.length ||

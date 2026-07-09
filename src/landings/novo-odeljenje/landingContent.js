@@ -67,6 +67,16 @@ export const landingData = {
     reframeLabel: 'Otvaranje 9. odeljenja',
     reframes: ['Poverenje roditelja', 'Kontinuirani rast', 'Najbrojnija generacija u istoriji škole'],
   },
+  specialConditions: {
+    title: 'DA LI STE ZNALI ZAŠTO JE BROJ 9 POSEBAN?',
+    paragraphs: [
+      'Kao najveći jednocifreni broj, devet simbolizuje vrhunac, zaokružen uspeh i početak novog poglavlja. Upravo zato ove godine dobija posebno značenje za Savremenu gimnaziju: otvaranjem 9. odeljenja nastaje najbrojnija generacija u istoriji škole.',
+      'Devet odeljenja postaju simbol poverenja, kontinuiranog rasta i uspeha koji zajedno ispisuju novu stranicu istorije Savremene gimnazije.',
+    ],
+    ctaText: 'Prijavite se po povlašćenim cenama do 31. jula ili do popune mesta.',
+    imagePlaceholder: 'Prostor za sliku',
+    imageUrl: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/07/novo_odeljenje_img_700x470.png',
+  },
   modernEducation: {
     eyebrow: 'Stvarno drugačija škola',
     title: 'Savremeno obrazovanje u svakom pogledu',
