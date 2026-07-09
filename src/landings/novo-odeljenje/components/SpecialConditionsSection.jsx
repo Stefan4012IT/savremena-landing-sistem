@@ -3,15 +3,18 @@ export function SpecialConditionsSection() {
     <section className="landing-section special-conditions">
       <div className="landing-container special-conditions__grid">
         <div className="special-conditions__content">
-          <h2>Da li ste znali da je 7 broj uspeha?</h2>
+          <h2>DA LI STE ZNALI ZAŠTO JE BROJ 9 POSEBAN?</h2>
           <p>
-            Savremena to zna i zato otvara upis u 7. odeljenje. 7 kontinenata. 7 svetskih čuda. 7
-            vrednosti Savremene gimnazije: radoznalost, zajedništvo, kreativnost, hrabrost,
-            poštovanje, timski duh, empatija.
+            Kao najveći jednocifreni broj, devet simbolizuje vrhunac, zaokružen uspeh i početak
+            novog poglavlja. Upravo zato ove godine dobija posebno značenje za Savremenu gimnaziju:
+            otvaranjem 9. odeljenja nastaje najbrojnija generacija u istoriji škole.
           </p>
-          <p>A sada… još jedna odlična stvar za listu: 7. odeljenje! Jer je vaše mesto baš ovde.</p>
           <p>
-            Prijavite se po povlašćenim cenama do 31. avgusta ili do popune mesta.
+            Devet odeljenja postaju simbol poverenja, kontinuiranog rasta i uspeha koji zajedno
+            ispisuju novu stranicu istorije Savremene gimnazije.
+          </p>
+          <p>
+            Prijavite se po povlašćenim cenama do 31. jula ili do popune mesta.
           </p>
         </div>
         <div className="special-conditions__visual" aria-hidden="true">

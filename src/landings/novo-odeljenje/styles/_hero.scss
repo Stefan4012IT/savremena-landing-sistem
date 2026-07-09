@@ -106,23 +106,22 @@
     color: #07080c;
   }
 
-  &__yellow-copy h1,
   &__yellow-copy p {
     margin: 0;
   }
 
-  &__yellow-copy h1 {
+  &__yellow-copy-main {
     max-width: 650px;
     font-size: clamp(1.05rem, 2vw, 2rem);
-    font-weight: 900;
+    font-weight: 950;
     line-height: 1.1;
     letter-spacing: 0;
   }
 
-  &__yellow-copy p {
+  &__yellow-copy p:not(.najbolja-odluka-hero__yellow-copy-main) {
     max-width: 720px;
     font-size: clamp(0.95rem, 1.35vw, 1.3rem);
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.22;
   }
 
@@ -201,19 +200,21 @@
 
     &__yellow-copy {
       right: auto;
-      bottom: 11%;
+      bottom: 3%;
       left: 8%;
       width: 72%;
       gap: 8px;
     }
 
-    &__yellow-copy h1 {
-      font-size: clamp(0.78rem, 3.3vw, 1.05rem);
+    &__yellow-copy-main {
+      font-size: 1.02rem;
+      font-weight: 950;
       line-height: 1.08;
     }
 
-    &__yellow-copy p {
-      font-size: clamp(0.72rem, 2.75vw, 0.9rem);
+    &__yellow-copy p:not(.najbolja-odluka-hero__yellow-copy-main) {
+      font-size: 1.02rem;
+      font-weight: 800;
     }
 
     &__left-part {

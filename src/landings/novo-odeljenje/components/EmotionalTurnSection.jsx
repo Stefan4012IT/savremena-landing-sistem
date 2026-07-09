@@ -4,30 +4,28 @@ export function EmotionalTurnSection() {
   return (
     <section className="landing-section scholarship-offer">
       <div className="landing-container scholarship-offer__inner">
-        <p className="scholarship-offer__ribbon">Najsavremenija Cambridge gimnazija vam poklanja:</p>
+        <p className="scholarship-offer__ribbon">
+          Najbrojnija generacija u istoriji Savremene gimnazije
+        </p>
         <header className="scholarship-offer__headline">
-          <h2>
-            Prijavite se i obezbedite najsavremenije obrazovanje uz{' '}
-            <strong>do 3546 evra popusta – za samo 474 evra mesečno</strong>
-          </h2>
+          <h2>Više učenika dobija priliku za stvarno drugačije obrazovanje</h2>
         </header>
         <div className="scholarship-offer__content">
           <div className="scholarship-offer__copy">
             <div className="scholarship-offer__questions">
-              <p>Da li vam se već danima život vrti samo oko ovih pitanja:</p>
+              <p>Da li od srednje škole očekujete više:</p>
               <ul>
-                <li>Da li će vaše dete upasti u školu koju ste odabrali?</li>
-                <li>Da li ima dovoljno bodova za školu broj 1?</li>
-                <li>Da li može da se izbori sa tolikom konkurencijom?</li>
-                <li>Hoće li uopšte dobiti svoju priliku?!</li>
+                <li>Da li za svoje dete želite stvarno drugačije obrazovanje?</li>
+                <li>Da li želite da uči u najsavremenijem školskom prostoru?</li>
+                <li>Da li tražite smer koji prati njegova interesovanja i talente?</li>
+                <li>Da li želite praktičnu primenu znanja i razvoj veština?</li>
               </ul>
             </div>
             <p>
-              U pravu ste – ovo je veoma bitna odluka za budućnost vašeg deteta. Iz tog razloga
-              organizovali smo specijalnu akciju za upis dece koja nisu dobila željenu školu. Ako
-              popunite prijavu na ovoj stranici, imate mogućnost da za samo 474 evra mesečno
-              obezbedite jedno od 5 mesta za školovanje u zdravom, perspektivnom i sigurnom
-              okruženju.
+              Proširenjem kapaciteta, još jedna grupa srednjoškolaca dobiće priliku da postane deo
+              obrazovnog okruženja koje povezuje savremenu nastavu, praktična znanja, tehnologiju i
+              individualnu podršku. Otvaranje novog odeljenja predstavlja još jednu snažnu potvrdu
+              poverenja koje učenici i roditelji ukazuju Savremenoj gimnaziji.
             </p>
           </div>
           <figure className="scholarship-offer__image">

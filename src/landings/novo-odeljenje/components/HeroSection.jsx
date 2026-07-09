@@ -33,10 +33,10 @@ export function HeroSection() {
             alt="Otvoreno je još jedno, 9. odeljenje!"
           />
           <div className="najbolja-odluka-hero__yellow-copy">
-            <h1>
+            <p className="najbolja-odluka-hero__yellow-copy-main">
               Zbog velikog interesovanja, Savremena gimnazija otvara još jedno, 9. odeljenje prvog
-              razreda u generaciji 2029/267!
-            </h1>
+              razreda u generaciji 2026/27!
+            </p>
             <p>Izaberite najsavremenije školovanje za najbolje rezultate.</p>
           </div>
         </div>
