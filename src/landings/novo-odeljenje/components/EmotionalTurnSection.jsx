@@ -1,4 +1,40 @@
-const offerImageUrl = 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/mejl2.jpg'
+import { useEffect } from 'react'
+
+const instagramReelUrl = 'https://www.instagram.com/reel/DacWFqfOk-b/'
+
+function InstagramReelEmbed() {
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return
+    }
+
+    const existingScript = document.querySelector('script[src="https://www.instagram.com/embed.js"]')
+
+    if (window.instgrm?.Embeds) {
+      window.instgrm.Embeds.process()
+      return
+    }
+
+    if (!existingScript) {
+      const script = document.createElement('script')
+      script.async = true
+      script.src = 'https://www.instagram.com/embed.js'
+      document.body.appendChild(script)
+    }
+  }, [])
+
+  return (
+    <blockquote
+      className="instagram-media"
+      data-instgrm-permalink={instagramReelUrl}
+      data-instgrm-version="14"
+    >
+      <a href={instagramReelUrl} target="_blank" rel="noreferrer">
+        Pogledajte video na Instagramu
+      </a>
+    </blockquote>
+  )
+}
 
 export function EmotionalTurnSection() {
   return (
@@ -28,8 +64,10 @@ export function EmotionalTurnSection() {
               poverenja koje učenici i roditelji ukazuju Savremenoj gimnaziji.
             </p>
           </div>
-          <figure className="scholarship-offer__image">
-            <img src={offerImageUrl} alt="Savremena gimnazija - specijalna akcija za upis" />
+          <figure className="scholarship-offer__reel" aria-label="Instagram reel Savremene gimnazije">
+            <div className="scholarship-offer__reel-frame">
+              <InstagramReelEmbed />
+            </div>
           </figure>
         </div>
       </div>

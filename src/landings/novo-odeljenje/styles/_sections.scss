@@ -109,6 +109,37 @@
     height: auto;
     object-fit: cover;
   }
+
+  &__reel {
+    justify-self: center;
+    width: min(100%, 420px);
+    margin: 0;
+    border-radius: 22px;
+    padding: 12px;
+    background: #07080c;
+    box-shadow: 0 24px 80px rgba(39, 48, 67, 0.14);
+  }
+
+  &__reel-frame {
+    display: grid;
+    width: 100%;
+    min-height: 620px;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #ffffff;
+  }
+
+  &__reel-frame .instagram-media {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  &__reel-frame > iframe {
+    width: 100% !important;
+  }
 }
 
 .modern-education,
@@ -776,5 +807,14 @@
 
   .scholarship-offer__questions ul {
     grid-template-columns: 1fr;
+  }
+
+  .scholarship-offer__reel {
+    width: min(100%, 360px);
+    padding: 8px;
+  }
+
+  .scholarship-offer__reel-frame {
+    min-height: 540px;
   }
 }
