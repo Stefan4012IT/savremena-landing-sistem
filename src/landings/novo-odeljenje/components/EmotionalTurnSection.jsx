@@ -16,11 +16,11 @@ export function EmotionalTurnSection() {
   return (
     <section className="landing-section scholarship-offer">
       <div className="landing-container scholarship-offer__inner">
-        <p className="scholarship-offer__ribbon">
-          Najbrojnija generacija u istoriji Savremene gimnazije
-        </p>
         <div className="scholarship-offer__content">
           <div className="scholarship-offer__copy">
+            <p className="scholarship-offer__ribbon">
+              Najbrojnija generacija u istoriji Savremene gimnazije
+            </p>
             <header className="scholarship-offer__headline">
               <h2>Više učenika dobija priliku za stvarno drugačije obrazovanje</h2>
             </header>
