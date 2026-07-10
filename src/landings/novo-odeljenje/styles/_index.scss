@@ -17,7 +17,6 @@
   .special-conditions,
   .stats-section,
   .special-offer,
-  .landing-footer,
   .info-card--direction,
   .testimonial-card,
   .testimonial-card__body {
@@ -49,9 +48,6 @@
   .special-offer__eyebrow,
   .special-offer h2,
   .special-offer p,
-  .landing-footer__contact,
-  .landing-footer__contact span,
-  .landing-footer__contact a,
   .info-card--direction .info-card__title,
   .info-card--direction .info-card__tag,
   .info-card--direction .info-card__details,
@@ -61,6 +57,18 @@
   .testimonial-card__video-person,
   .testimonial-card__avatar span {
     color: #07080c;
+  }
+
+  .landing-footer {
+    background: #07080c;
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .landing-footer__contact,
+  .landing-footer__contact span,
+  .landing-footer__contact a {
+    color: #ffffff;
   }
 
   .special-conditions__visual {
