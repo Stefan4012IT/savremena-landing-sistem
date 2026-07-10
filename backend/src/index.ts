@@ -152,6 +152,7 @@ function getNovoOdeljenjeUpdateData(existingLanding) {
 function shouldRefreshNovoOdeljenjeLanding(existingLanding) {
   return (
     existingLanding.seo?.title !== novoOdeljenjeLanding.seo.title ||
+    existingLanding.gtmId !== novoOdeljenjeLanding.gtmId ||
     existingLanding.hero?.title !== novoOdeljenjeLanding.hero.title ||
     existingLanding.emotionalTurn?.title !== novoOdeljenjeLanding.emotionalTurn.title ||
     existingLanding.specialConditions?.eyebrow !== novoOdeljenjeLanding.specialConditions.eyebrow ||

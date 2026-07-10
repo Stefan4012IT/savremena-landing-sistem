@@ -36,7 +36,7 @@ export const novoOdeljenjeLanding = {
   name: 'Novo odeljenje',
   slug: 'novo-odeljenje',
   brandScope: 'SG',
-  gtmId: '',
+  gtmId: 'GTM-WRTKDP',
   seo: {
     title: 'Otvoreno je 9. odeljenje | Savremena gimnazija - upis 2026/27',
     description:
