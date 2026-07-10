@@ -1,4 +1,4 @@
-const instagramReelEmbedUrl = 'https://www.instagram.com/reel/DacWFqfOk-b/embed'
+const instagramReelEmbedUrl = 'https://www.instagram.com/reel/Dam-he7uWjx/embed'
 
 function InstagramReelEmbed() {
   return (
