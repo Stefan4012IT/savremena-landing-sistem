@@ -1,38 +1,14 @@
-import { useEffect } from 'react'
-
-const instagramReelUrl = 'https://www.instagram.com/reel/DacWFqfOk-b/'
+const instagramReelEmbedUrl = 'https://www.instagram.com/reel/DacWFqfOk-b/embed'
 
 function InstagramReelEmbed() {
-  useEffect(() => {
-    if (typeof window === 'undefined') {
-      return
-    }
-
-    const existingScript = document.querySelector('script[src="https://www.instagram.com/embed.js"]')
-
-    if (window.instgrm?.Embeds) {
-      window.instgrm.Embeds.process()
-      return
-    }
-
-    if (!existingScript) {
-      const script = document.createElement('script')
-      script.async = true
-      script.src = 'https://www.instagram.com/embed.js'
-      document.body.appendChild(script)
-    }
-  }, [])
-
   return (
-    <blockquote
-      className="instagram-media"
-      data-instgrm-permalink={instagramReelUrl}
-      data-instgrm-version="14"
-    >
-      <a href={instagramReelUrl} target="_blank" rel="noreferrer">
-        Pogledajte video na Instagramu
-      </a>
-    </blockquote>
+    <iframe
+      src={instagramReelEmbedUrl}
+      title="Instagram reel Savremene gimnazije"
+      loading="lazy"
+      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+      allowFullScreen
+    />
   )
 }
 
@@ -43,11 +19,11 @@ export function EmotionalTurnSection() {
         <p className="scholarship-offer__ribbon">
           Najbrojnija generacija u istoriji Savremene gimnazije
         </p>
-        <header className="scholarship-offer__headline">
-          <h2>Više učenika dobija priliku za stvarno drugačije obrazovanje</h2>
-        </header>
         <div className="scholarship-offer__content">
           <div className="scholarship-offer__copy">
+            <header className="scholarship-offer__headline">
+              <h2>Više učenika dobija priliku za stvarno drugačije obrazovanje</h2>
+            </header>
             <div className="scholarship-offer__questions">
               <p>Da li od srednje škole očekujete više:</p>
               <ul>
