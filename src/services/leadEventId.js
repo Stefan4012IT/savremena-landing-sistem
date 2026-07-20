@@ -50,6 +50,9 @@ export function pushLeadEventIdToDataLayer(id = getLeadEventId(), options = {}) 
   window.dataLayer = window.dataLayer || []
   window.dataLayer.push({
     event: 'lead_id_ready',
+    transaction_id: id,
+    external_id: id,
+    event_id: id,
     lead_id: id,
     client_lead_id: id,
     lead_event_id: id,
@@ -73,7 +76,10 @@ export function pushLeadSubmitToDataLayer(id = getLeadEventId(), options = {}) {
   window.leadEventId = id
   window.dataLayer = window.dataLayer || []
   window.dataLayer.push({
-    event: 'lead',
+    event: 'purchase',
+    transaction_id: id,
+    external_id: id,
+    event_id: id,
     lead_id: id,
     client_lead_id: id,
     lead_event_id: id,
