@@ -1,4 +1,4 @@
-.najbolja-odluka-hero {
+.novo-odeljenje-hero {
   position: relative;
   min-height: 880px;
   isolation: isolate;
@@ -118,7 +118,7 @@
     letter-spacing: 0;
   }
 
-  &__yellow-copy p:not(.najbolja-odluka-hero__yellow-copy-main) {
+  &__yellow-copy p:not(.novo-odeljenje-hero__yellow-copy-main) {
     max-width: 720px;
     font-size: clamp(0.95rem, 1.35vw, 1.3rem);
     font-weight: 400;
@@ -140,7 +140,7 @@
 }
 
 @media (max-width: 760px) {
-  .najbolja-odluka-hero {
+  .novo-odeljenje-hero {
     min-height: auto;
     overflow: hidden;
 
@@ -215,7 +215,7 @@
       line-height: 1.08;
     }
 
-    &__yellow-copy p:not(.najbolja-odluka-hero__yellow-copy-main) {
+    &__yellow-copy p:not(.novo-odeljenje-hero__yellow-copy-main) {
       font-size: 1.02rem;
       font-weight: 400;
     }
@@ -240,7 +240,7 @@
 }
 
 @media (min-width: 1600px) {
-  .najbolja-odluka-hero {
+  .novo-odeljenje-hero {
     &__right-part {
       left: 560px;
       right: -90px;
@@ -249,7 +249,7 @@
 }
 
 @media (min-width: 1200px) and (max-width: 1599px) {
-  .najbolja-odluka-hero {
+  .novo-odeljenje-hero {
     &__right-part {
       right: 0;
       left: 500px;
@@ -258,7 +258,7 @@
 }
 
 @media (min-width: 761px) and (max-width: 1180px) {
-  .najbolja-odluka-hero {
+  .novo-odeljenje-hero {
     min-height: 820px;
 
     &__inner {

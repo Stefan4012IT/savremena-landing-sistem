@@ -17,7 +17,7 @@ import { LandingDataProvider } from './LandingDataProvider'
 export function NovoOdeljenjeLanding({ data }) {
   return (
     <LandingDataProvider value={data}>
-      <main className="landing landing--najbolja-odluka landing--novo-odeljenje">
+      <main className="landing landing--novo-odeljenje">
         <HeroSection />
         <EmotionalTurnSection />
         <SpecialConditionsSection />
