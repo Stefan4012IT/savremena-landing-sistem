@@ -1,0 +1,42 @@
+.malo-mesta-testimonials {
+  background: #ffffff;
+
+  .testimonial-card,
+  .testimonial-card__body {
+    background: #ffcc0c;
+    background-image: none;
+    color: #07080c;
+  }
+
+  .testimonial-card h3,
+  .testimonial-card p,
+  .testimonial-card__video-person,
+  .testimonial-card__avatar span {
+    color: #07080c;
+  }
+
+  .testimonial-card__video,
+  .testimonial-card__avatar {
+    background: #ffcc0c;
+  }
+
+  .testimonial-card__play {
+    background: #07080c;
+  }
+
+  .testimonial-card__play::after {
+    border-color: rgba(7, 8, 12, 0.34);
+  }
+
+  .testimonial-card__play svg {
+    fill: #ffcc0c;
+  }
+
+  .testimonials-carousel__dots button {
+    background: rgba(7, 8, 12, 0.24);
+  }
+
+  .testimonials-carousel__dots button.is-active {
+    background: #07080c;
+  }
+}

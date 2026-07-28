@@ -1,0 +1,69 @@
+.malo-mesta-footer {
+  padding: clamp(34px, 3.1vw, 52px) 0;
+  background: #a40000;
+  color: #ffffff;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: minmax(190px, 1.05fr) minmax(220px, 1fr) minmax(220px, 1fr) minmax(190px, 1.05fr);
+    gap: clamp(26px, 4vw, 78px);
+    width: min(100% - (var(--landing-container-padding) * 2), 1280px);
+    margin: auto;
+    align-items: center;
+  }
+
+  &__logo {
+    display: grid;
+    justify-items: center;
+  }
+
+  &__logo img {
+    display: block;
+    width: min(100%, 260px);
+    height: auto;
+  }
+
+  &__contact {
+    display: grid;
+    gap: 4px;
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(0.92rem, 1.05vw, 1.05rem);
+    font-style: normal;
+    line-height: 1.32;
+    text-align: center;
+  }
+
+  &__contact a,
+  &__contact span {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__contact a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+@media (max-width: 980px) {
+  .malo-mesta-footer__inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 48px;
+  }
+}
+
+@media (max-width: 620px) {
+  .malo-mesta-footer {
+    padding: 38px 0;
+
+    &__inner {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    &__logo img {
+      max-width: 250px;
+    }
+  }
+}

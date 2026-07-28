@@ -1,6 +1,7 @@
 // import type { Core } from '@strapi/strapi';
 import { najboljaOdlukaLanding } from './data/najbolja-odluka'
 import { novoOdeljenjeLanding } from './data/novo-odeljenje'
+import { maloMestaLanding } from './data/malo-mesta'
 
 const previousNajboljaOdlukaSlug = 'najbolja-odluka'
 const previousHeroImageUrls = {
@@ -310,6 +311,41 @@ export default {
       await strapi.documents('api::landing.landing').update({
         documentId: existingNovoOdeljenjeLanding.documentId,
         data: getNovoOdeljenjeUpdateData(existingNovoOdeljenjeLanding),
+        status: 'published',
+      })
+    }
+
+    const existingMaloMestaLanding = await strapi.documents('api::landing.landing').findFirst({
+      filters: { slug: maloMestaLanding.slug },
+      populate: ['programChoice', 'benefits', 'benefitCards', 'specialOffer', 'enrollmentHelp', 'testimonials'],
+    })
+
+    if (!existingMaloMestaLanding) {
+      await strapi.documents('api::landing.landing').create({
+        data: maloMestaLanding,
+        status: 'published',
+      })
+    } else if (
+      existingMaloMestaLanding.programChoice?.title !== maloMestaLanding.programChoice.title ||
+      existingMaloMestaLanding.benefits?.title !== maloMestaLanding.benefits.title ||
+      existingMaloMestaLanding.benefits?.eyebrow !== maloMestaLanding.benefits.eyebrow ||
+      existingMaloMestaLanding.benefitCards?.length !== maloMestaLanding.benefitCards.length ||
+      existingMaloMestaLanding.specialOffer?.title !== maloMestaLanding.specialOffer.title ||
+      existingMaloMestaLanding.specialOffer?.eyebrow !== maloMestaLanding.specialOffer.eyebrow ||
+      existingMaloMestaLanding.enrollmentHelp?.title !== maloMestaLanding.enrollmentHelp.title ||
+      existingMaloMestaLanding.testimonials?.eyebrow !== maloMestaLanding.testimonials.eyebrow ||
+      existingMaloMestaLanding.testimonials?.title !== maloMestaLanding.testimonials.title
+    ) {
+      await strapi.documents('api::landing.landing').update({
+        documentId: existingMaloMestaLanding.documentId,
+        data: {
+          programChoice: maloMestaLanding.programChoice,
+          benefits: maloMestaLanding.benefits,
+          benefitCards: maloMestaLanding.benefitCards,
+          specialOffer: maloMestaLanding.specialOffer,
+          enrollmentHelp: maloMestaLanding.enrollmentHelp,
+          testimonials: maloMestaLanding.testimonials,
+        },
         status: 'published',
       })
     }

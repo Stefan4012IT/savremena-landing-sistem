@@ -1,0 +1,159 @@
+.malo-mesta-form {
+  display: grid;
+  gap: 14px;
+
+  &__header {
+    display: grid;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+
+  &__header h2,
+  &__header p {
+    margin: 0;
+  }
+
+  &__header h2 {
+    color: #ffcc0c;
+    font-size: clamp(1.8rem, 3vw, 2.65rem);
+    line-height: 1;
+  }
+
+  &__header p {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.98rem;
+    line-height: 1.4;
+  }
+
+  &__institution {
+    display: grid;
+    gap: 7px;
+    color: #ffffff;
+    font-size: 0.86rem;
+    font-weight: 800;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  &__row--phone {
+    grid-template-columns: minmax(76px, 0.62fr) minmax(72px, 0.6fr) minmax(140px, 1.2fr) minmax(112px, 0.82fr);
+  }
+
+  &__honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  input,
+  select {
+    width: 100%;
+    min-height: 48px;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    padding: 10px 14px;
+    background: #ffffff;
+    color: #07080c;
+    font-size: 0.98rem;
+    outline: none;
+  }
+
+  input:focus,
+  select:focus {
+    border-color: #ffcc0c;
+    box-shadow: 0 0 0 3px rgba(255, 204, 12, 0.22);
+  }
+
+  &__message {
+    margin: 0;
+    color: #ffcc0c;
+    font-size: 0.92rem;
+    font-weight: 700;
+  }
+
+  button {
+    min-height: 50px;
+    margin-top: 4px;
+    border: 0;
+    border-radius: 14px;
+    padding: 12px 20px;
+    background: #ffcc0c;
+    color: #07080c;
+    font-weight: 950;
+    text-transform: uppercase;
+  }
+}
+
+.malo-mesta-form-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(7, 8, 12, 0.64);
+
+  &__panel {
+    display: grid;
+    width: min(100%, 460px);
+    gap: 16px;
+    border-radius: 22px;
+    padding: 32px;
+    background: #ffffff;
+    color: #07080c;
+    text-align: center;
+  }
+
+  h3,
+  p {
+    margin: 0;
+  }
+
+  button {
+    min-height: 46px;
+    justify-self: center;
+    border: 0;
+    border-radius: 999px;
+    padding: 10px 24px;
+    background: #07080c;
+    color: #ffffff;
+    font-weight: 900;
+  }
+}
+
+.malo-mesta-form--light {
+  .malo-mesta-form__header h2 {
+    color: #07080c;
+  }
+
+  .malo-mesta-form__header p,
+  .malo-mesta-form__institution {
+    color: #787878;
+  }
+
+  input,
+  select {
+    border-color: #07080c;
+  }
+
+  button {
+    background: #07080c;
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 560px) {
+  .malo-mesta-form {
+    &__row,
+    &__row--phone {
+      grid-template-columns: 1fr;
+    }
+  }
+}
