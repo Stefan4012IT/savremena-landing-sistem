@@ -1,5 +1,6 @@
 import { HeroSection } from './components/HeroSection'
 import { WaitingListSection } from './components/WaitingListSection'
+import { AvailableSeatsSection } from './components/AvailableSeatsSection'
 import { PartnerLogosSection } from './components/PartnerLogosSection'
 import { ProgramChoiceSection } from './components/ProgramChoiceSection'
 import { StatsSection } from './components/StatsSection'
@@ -15,6 +16,7 @@ export function MaloMestaLanding({ data }) {
       <main className="landing landing--malo-mesta">
         <HeroSection />
         <WaitingListSection />
+        <AvailableSeatsSection />
         <PartnerLogosSection />
         <StatsSection />
         <ProgramChoiceSection />
