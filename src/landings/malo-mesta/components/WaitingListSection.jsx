@@ -9,8 +9,8 @@ export function WaitingListSection() {
   }
 
   const paragraphs = [
-    'Roditelji koji čekaju do poslednjeg trenutka često se suočavaju sa izazovom - svi kapaciteti su popunjeni. U tim slučajevima, formiraju se liste čekanja, što značajno usporava proces upisa. Ako se kasnije oslobodi mesto, škola će prvo kontaktirati sa prvom porodicom sa liste.',
-    <>Trenutno je broj preostalih slobodnih mesta u mlađim razredima jednocifren, dok su neki stariji razredi već popunjeni. Oni koji propuste priliku da upišu svoje dete dok još ima mesta, moraju sačekati svoj red na listi. Pogledajte broj slobodnih mesta po razredima <a href="#prijava">ovde.</a></>,
+    'Roditelji koji prijavu ostave za poslednji trenutak često se suočavaju sa tim da za željeni program, razred ili smer više nema dostupnih mesta. Nakon popune kapaciteta, nove prijave prelaze na listu čekanja, a porodice mogu biti kontaktirane tek ukoliko se neko mesto naknadno oslobodi.',
+    'Pravovremenom prijavom izbegavate neizvesnost i dobijate priliku da na vreme završite sve korake upisa i pripreme za početak nove školske godine.',
   ]
 
   return (
@@ -19,6 +19,7 @@ export function WaitingListSection() {
         <div className="modern-education__content">
           <SectionHeader eyebrow={specialOffer.eyebrow} title={specialOffer.title} text={specialOffer.text} />
           {paragraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+          <p className="malo-mesta-waiting-list__available-link">Pogledajte broj preostalih slobodnih mesta <a href="#slobodna-mesta">ovde.</a></p>
         </div>
         <div className="modern-education__image-placeholder" aria-label="Prostor za fotografiju škole">
           <span>Fotografija škole</span>

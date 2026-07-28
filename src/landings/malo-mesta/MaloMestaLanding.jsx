@@ -16,10 +16,10 @@ export function MaloMestaLanding({ data }) {
       <main className="landing landing--malo-mesta">
         <HeroSection />
         <WaitingListSection />
+        <ProgramChoiceSection />
         <AvailableSeatsSection />
         <PartnerLogosSection />
         <StatsSection />
-        <ProgramChoiceSection />
         <BenefitsSection />
         <EnrollmentHelpSection />
         <TestimonialsSection />

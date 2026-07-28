@@ -9,11 +9,10 @@ export const maloMestaLanding = {
       'Prijavite dete za Savremenu osnovnu školu ili Savremenu gimnaziju. Broj slobodnih mesta je ograničen.',
   },
   hero: {
-    eyebrow: 'Upis u toku',
-    title: 'Ostalo je još malo slobodnih mesta',
-    lead:
-      'Izaberite školu za koju želite da prijavite dete i pošaljite nam svoje podatke. Naš tim će vas uskoro kontaktirati.',
-    note: 'Broj slobodnih mesta je ograničen.',
+    eyebrow: '',
+    title: 'UPIS ZA 2026/27.\nse uskoro\nZATVARA!',
+    lead: 'Upis za školsku 2026/27. godinu ulazi u završnu fazu, a u pojedinim razredima ostalo je još samo nekoliko slobodnih mesta.\n\nPrijavite dete na vreme kako biste izbegli listu čekanja i obezbedili mu mesto u školi koja odgovara njegovim potrebama.',
+    note: '',
   },
   emotionalTurn: {
     eyebrow: 'Upis',
@@ -39,9 +38,9 @@ export const maloMestaLanding = {
     eyebrow: 'Izaberite svoj put ka uspehu',
     title: 'Nacionalni ili Kombinovani Cambridge program',
     paragraphs: [
-      'Svaki smer u Savremenoj gimnaziji možete pohađati po Nacionalnom ili Kombinovanom programu - dvojezičnom modelu koji objedinjuje domaći plan i program sa elementima zvaničnog Cambridge kurikuluma.',
-      'Ovaj pažljivo osmišljen spoj obrazovnih standarda olakšava učenje i usvajanje znanja, dok časovi na engleskom jeziku pružaju mogućnost sticanja nacionalne diplome i prestižnih Cambridge kvalifikacija.',
-      'Bilingvalni pristup omogućava učenicima da razvijaju svoje potencijale u skladu sa savremenim, globalno relevantnim principima obrazovanja - pripremajući ih za uspeh, bilo gde u svetu.',
+      'U Savremenoj osnovnoj školi i Savremenoj gimnaziji učenici mogu da izaberu Nacionalni ili Kombinovani Cambridge program – dvojezični model koji objedinjuje domaći plan i program sa elementima zvaničnog Cambridge kurikuluma.',
+      'Ovaj pažljivo osmišljen spoj obrazovnih standarda učenicima omogućava da znanja usvajaju na srpskom i engleskom jeziku, razvijaju jezičke i akademske veštine i steknu čvrstu osnovu za nastavak školovanja.',
+      'Učenici Savremene gimnazije, u zavisnosti od izabranog programa, stiču nacionalnu diplomu i mogućnost osvajanja prestižnih Cambridge kvalifikacija. Bilingvalni pristup na oba nivoa obrazovanja priprema ih za uspeh u domaćem i međunarodnom akademskom okruženju.',
     ],
   },
   benefits: {
@@ -64,7 +63,7 @@ export const maloMestaLanding = {
   specialOffer: {
     eyebrow: 'Slobodna mesta',
     title: 'Izbegnite stres i neizvesnost liste čekanja: rezervišite mesto odmah!',
-    text: 'U većini razreda Savremene osnovne škole preostaje tek nekoliko slobodnih mesta. Prijave za prvi razred su otvorene još kratko, ali s obzirom na veliku zainteresovanost, preostala mesta će ubrzo biti popunjena. Osigurajte svom detetu najbolje obrazovanje dok još ima vremena.',
+    text: 'Upis za školsku 2026/27. godinu ulazi u završnu fazu. U predškolskom programu i većini razreda Savremene osnovne škole, kao i u odeljenjima Savremene gimnazije, ostalo je još samo nekoliko slobodnih mesta, dok su pojedini kapaciteti već u potpunosti popunjeni.',
   },
   enrollmentHelp: {
     title: 'Imate pitanja ili vam je potrebna pomoć oko upisa?',

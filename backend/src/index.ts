@@ -317,7 +317,7 @@ export default {
 
     const existingMaloMestaLanding = await strapi.documents('api::landing.landing').findFirst({
       filters: { slug: maloMestaLanding.slug },
-      populate: ['programChoice', 'benefits', 'benefitCards', 'specialOffer', 'enrollmentHelp', 'testimonials'],
+      populate: ['hero', 'programChoice', 'benefits', 'benefitCards', 'specialOffer', 'enrollmentHelp', 'testimonials'],
     })
 
     if (!existingMaloMestaLanding) {
@@ -326,12 +326,17 @@ export default {
         status: 'published',
       })
     } else if (
+      existingMaloMestaLanding.hero?.title !== maloMestaLanding.hero.title ||
+      existingMaloMestaLanding.hero?.eyebrow !== maloMestaLanding.hero.eyebrow ||
+      existingMaloMestaLanding.hero?.lead !== maloMestaLanding.hero.lead ||
       existingMaloMestaLanding.programChoice?.title !== maloMestaLanding.programChoice.title ||
+      existingMaloMestaLanding.programChoice?.paragraphs?.join('\n') !== maloMestaLanding.programChoice.paragraphs.join('\n') ||
       existingMaloMestaLanding.benefits?.title !== maloMestaLanding.benefits.title ||
       existingMaloMestaLanding.benefits?.eyebrow !== maloMestaLanding.benefits.eyebrow ||
       existingMaloMestaLanding.benefitCards?.length !== maloMestaLanding.benefitCards.length ||
       existingMaloMestaLanding.specialOffer?.title !== maloMestaLanding.specialOffer.title ||
       existingMaloMestaLanding.specialOffer?.eyebrow !== maloMestaLanding.specialOffer.eyebrow ||
+      existingMaloMestaLanding.specialOffer?.text !== maloMestaLanding.specialOffer.text ||
       existingMaloMestaLanding.enrollmentHelp?.title !== maloMestaLanding.enrollmentHelp.title ||
       existingMaloMestaLanding.testimonials?.eyebrow !== maloMestaLanding.testimonials.eyebrow ||
       existingMaloMestaLanding.testimonials?.title !== maloMestaLanding.testimonials.title
@@ -339,6 +344,7 @@ export default {
       await strapi.documents('api::landing.landing').update({
         documentId: existingMaloMestaLanding.documentId,
         data: {
+          hero: maloMestaLanding.hero,
           programChoice: maloMestaLanding.programChoice,
           benefits: maloMestaLanding.benefits,
           benefitCards: maloMestaLanding.benefitCards,

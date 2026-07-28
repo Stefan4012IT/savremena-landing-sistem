@@ -6,7 +6,7 @@ import { useLandingData } from '../useLandingData'
 
 const countryCallingCodes = ['+381', '+382', '+385', '+387', '+43', '+49', '+41', '+44', '+1']
 
-export function LeadForm({ variant = 'dark', showHeader = true }) {
+export function LeadForm({ variant = 'dark', showHeader = true, introText = 'Popunite formu, a naš tim za upis će vas uskoro kontaktirati.' }) {
   const { leadForm, slug, institutionOptions = [] } = useLandingData()
   const defaultInstitution = ''
   const [institution, setInstitution] = useState(defaultInstitution)
@@ -61,7 +61,7 @@ export function LeadForm({ variant = 'dark', showHeader = true }) {
         {showHeader ? (
           <div className="malo-mesta-form__header">
             <h2>Prijavite se</h2>
-            <p>Popunite formu, a naš tim za upis će vas uskoro kontaktirati.</p>
+            <p>{introText}</p>
           </div>
         ) : null}
         <LeadEventIdField institution={institution} formName={formName} landingSlug={slug} />

@@ -1,5 +1,6 @@
 .landing--malo-mesta {
   min-height: 100vh;
+  overflow-x: clip;
   --color-primary: #07080c;
   --color-primary-dark: #07080c;
   --color-red: #07080c;
@@ -10,10 +11,12 @@
   position: relative;
   display: grid;
   min-height: 100vh;
-  align-items: center;
-  padding: clamp(32px, 6vw, 96px) clamp(20px, 5vw, 84px);
-  background: #ffcc0c;
-  color: #07080c;
+  overflow: visible;
+  align-items: stretch;
+  padding: clamp(32px, 5vw, 72px) 0;
+  background: #1a283e url('../assets/background_malo_mesta.jpg') center / cover no-repeat;
+  color: #ffffff;
+  --hero-content-left: max(var(--landing-container-padding), calc((100% - var(--landing-container-max)) / 2));
 
   &__header {
     position: absolute;
@@ -25,12 +28,12 @@
     align-items: center;
     justify-content: space-between;
     gap: 24px;
-    padding: 22px clamp(24px, 5vw, 84px);
+    padding: 22px var(--hero-content-left);
   }
 
   &__logo {
     display: inline-flex;
-    width: clamp(210px, 18vw, 300px);
+    width: clamp(260px, 22vw, 360px);
     min-height: 56px;
     align-items: center;
     text-decoration: none;
@@ -57,33 +60,77 @@
   }
 
   &__inner {
-    display: grid;
-    grid-template-columns: minmax(0, 0.92fr) minmax(420px, 0.78fr);
-    gap: clamp(36px, 7vw, 120px);
-    width: min(100%, 1440px);
+    display: block;
+    width: min(100% - (var(--landing-container-padding) * 2), var(--landing-container-max));
     margin: auto;
-    align-items: center;
+    padding: clamp(74px, 8vw, 108px) 0 clamp(298px, 38vh, 382px);
+    z-index: 1;
   }
 
   &__content {
-    max-width: 720px;
+    width: min(52vw, 820px);
   }
 
   &__eyebrow {
-    margin: 0 0 16px;
-    font-size: clamp(0.88rem, 1.1vw, 1rem);
+    display: inline-flex;
+    margin: 0 0 18px;
+    border-radius: 999px;
+    padding: 8px 13px;
+    background: #ffcc0c;
+    color: #07080c;
+    font-size: clamp(0.78rem, 1vw, 0.94rem);
     font-weight: 900;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.07em;
     text-transform: uppercase;
   }
 
   h1 {
-    max-width: 760px;
+    max-width: 720px;
     margin: 0;
-    font-size: clamp(3.2rem, 6.4vw, 7.25rem);
+    max-width: none;
+    font-size: clamp(2.75rem, 5.15vw, 5.85rem);
     font-weight: 950;
     line-height: 0.9;
     letter-spacing: -0.055em;
+    white-space: pre-line;
+    text-wrap: balance;
+  }
+
+  &__highlight {
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    font-size: 1.2em;
+    line-height: 0.82;
+    margin-left: 0.04em;
+    transform: rotate(-6deg);
+  }
+
+  &__title-line {
+    display: block;
+    white-space: nowrap;
+  }
+
+  &__title-line--accent {
+    margin-top: 0.1em;
+  }
+
+  &__title-line--light {
+    font-weight: 400;
+  }
+
+  &__highlight::after {
+    position: absolute;
+    right: -0.24em;
+    top: -0.1em;
+    bottom: -0.1em;
+    left: -0.24em;
+    z-index: -1;
+    height: auto;
+    border-radius: 0;
+    background: #981313;
+    content: '';
+    transform: none;
   }
 
   &__lead {
@@ -94,6 +141,23 @@
     line-height: 1.34;
   }
 
+  &__copy {
+    width: min(100%, 640px);
+    margin-top: clamp(42px, 4vw, 64px);
+  }
+
+  &__copy p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: clamp(1rem, 1.25vw, 1.16rem);
+    font-weight: 650;
+    line-height: 1.42;
+  }
+
+  &__copy p + p {
+    margin-top: 14px;
+  }
+
   &__note {
     margin: 20px 0 0;
     font-size: 1rem;
@@ -101,24 +165,94 @@
   }
 
   &__form-panel {
-    width: 100%;
-    border-radius: 28px;
-    padding: clamp(22px, 3vw, 38px);
-    background: #07080c;
+    position: absolute;
+    bottom: clamp(28px, 5vh, 60px);
+    left: var(--hero-content-left);
+    z-index: 3;
+    width: min(100%, 630px);
+    border-radius: 20px;
+    padding: clamp(18px, 1.8vw, 26px);
+    background: #981313;
     color: #ffffff;
-    box-shadow: 0 32px 82px rgba(7, 8, 12, 0.24);
+  }
+
+  &__visual {
+    position: absolute;
+    right: clamp(136px, calc(8vw + 100px), 250px);
+    bottom: 0;
+    z-index: 1;
+    display: block;
+    width: min(68vw, 960px);
+    max-height: min(108vh, 1080px);
+    object-fit: contain;
+    object-position: bottom right;
+    pointer-events: none;
+  }
+
+  &__form-panel .malo-mesta-form {
+    gap: 10px;
+  }
+
+  &__form-panel .malo-mesta-form__header {
+    gap: 4px;
+    margin-bottom: 0;
+  }
+
+  &__form-panel .malo-mesta-form__header h2 {
+    color: #ffffff;
+    font-size: clamp(1.45rem, 2vw, 2rem);
+  }
+
+  &__form-panel .malo-mesta-form__header p {
+    font-size: 0.88rem;
+  }
+
+  &__form-panel .malo-mesta-form input,
+  &__form-panel .malo-mesta-form select {
+    min-height: 42px;
+    padding: 8px 12px;
+  }
+
+  &__form-panel .malo-mesta-form button {
+    min-height: 44px;
+    margin-top: 0;
+    padding: 10px 18px;
+    color: #ffffff;
+  }
+}
+
+@media (min-width: 1041px) {
+  .malo-mesta-hero {
+    min-height: min(100vh, 900px);
+  }
+
+  .malo-mesta-hero h1 {
+    font-size: 125px;
+  }
+
+  .malo-mesta-hero__form-panel {
+    bottom: -54px;
+    width: min(100%, 560px);
   }
 }
 
 @media (max-width: 1040px) {
   .malo-mesta-hero {
+    min-height: 820px;
+
     &__inner {
-      grid-template-columns: 1fr;
-      max-width: 720px;
+      padding-top: 120px;
     }
 
     &__content {
       max-width: 680px;
+      width: min(66vw, 660px);
+    }
+
+    &__visual {
+      right: -11vw;
+      width: min(58vw, 560px);
+      opacity: 0.4;
     }
   }
 }
@@ -126,15 +260,17 @@
 @media (max-width: 700px) {
   .malo-mesta-hero {
     min-height: auto;
-    padding: 56px 20px;
+    padding: 56px 0;
 
     h1 {
-      font-size: clamp(3.15rem, 14vw, 4.7rem);
+      font-size: clamp(2.25rem, 10vw, 4.7rem);
+      position: relative;
+      z-index: 1;
     }
 
     &__header {
       gap: 14px;
-      padding: 16px 20px;
+      padding: 16px var(--hero-content-left);
     }
 
     &__logo {
@@ -152,8 +288,50 @@
     }
 
     &__form-panel {
+      width: 100%;
       border-radius: 20px;
       padding: 20px;
+    }
+
+    &__visual {
+      position: absolute;
+      top: -30px;
+      right: -56px;
+      bottom: auto;
+      z-index: 0;
+      width: min(124%, 480px);
+      max-height: none;
+      margin: 0;
+      opacity: 1;
+    }
+
+    &__inner {
+      padding: 108px 0 0;
+    }
+
+    &__content {
+      position: relative;
+      width: 100%;
+    }
+
+    &__copy {
+      position: relative;
+      z-index: 1;
+      margin-top: clamp(250px, 74vw, 360px);
+    }
+
+    &__title-year {
+      display: block;
+      font-weight: 400;
+    }
+
+    &__form-panel {
+      position: relative;
+      right: auto;
+      bottom: auto;
+      left: auto;
+      width: 100%;
+      margin-top: 28px;
     }
   }
 }
