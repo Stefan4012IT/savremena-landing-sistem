@@ -334,6 +334,7 @@ export default {
       existingMaloMestaLanding.benefits?.title !== maloMestaLanding.benefits.title ||
       existingMaloMestaLanding.benefits?.eyebrow !== maloMestaLanding.benefits.eyebrow ||
       existingMaloMestaLanding.benefitCards?.length !== maloMestaLanding.benefitCards.length ||
+      existingMaloMestaLanding.benefitCards?.some((card, index) => card.imageUrl !== maloMestaLanding.benefitCards[index]?.imageUrl) ||
       existingMaloMestaLanding.specialOffer?.title !== maloMestaLanding.specialOffer.title ||
       existingMaloMestaLanding.specialOffer?.eyebrow !== maloMestaLanding.specialOffer.eyebrow ||
       existingMaloMestaLanding.specialOffer?.text !== maloMestaLanding.specialOffer.text ||

@@ -3,33 +3,33 @@
 
   .testimonial-card,
   .testimonial-card__body {
-    background: #ffcc0c;
+    background: #981313;
     background-image: none;
-    color: #07080c;
+    color: #ffffff;
   }
 
   .testimonial-card h3,
   .testimonial-card p,
   .testimonial-card__video-person,
   .testimonial-card__avatar span {
-    color: #07080c;
+    color: #ffffff;
   }
 
   .testimonial-card__video,
   .testimonial-card__avatar {
-    background: #ffcc0c;
+    background: #981313;
   }
 
   .testimonial-card__play {
-    background: #07080c;
+    background: #ffffff;
   }
 
   .testimonial-card__play::after {
-    border-color: rgba(7, 8, 12, 0.34);
+    border-color: rgba(255, 255, 255, 0.6);
   }
 
   .testimonial-card__play svg {
-    fill: #ffcc0c;
+    fill: #981313;
   }
 
   .testimonials-carousel__dots button {
@@ -37,6 +37,6 @@
   }
 
   .testimonials-carousel__dots button.is-active {
-    background: #07080c;
+    background: #981313;
   }
 }

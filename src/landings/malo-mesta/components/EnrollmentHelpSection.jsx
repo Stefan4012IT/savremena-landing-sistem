@@ -63,7 +63,7 @@ export function EnrollmentHelpSection() {
           </div>
         </div>
         <div className="malo-mesta-enrollment-help__form-panel">
-          <LeadForm variant="light" showHeader={false} />
+          <LeadForm showHeader={false} />
         </div>
       </div>
     </section>

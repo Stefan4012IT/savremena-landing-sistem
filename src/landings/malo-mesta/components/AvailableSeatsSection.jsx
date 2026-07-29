@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import sosVisual from '../assets/sos_call_img.webp'
-import sgVisual from '../../novo-odeljenje/assets/novo_odeljenje_hero_11.webp'
+import sosVisual from '../assets/malo-mesta-available-seats__visual_sos.jpg'
+import sgVisual from '../assets/malo-mesta-available-seats__visual_sg.jpg'
 
 const schoolTables = [
   {
@@ -53,9 +53,9 @@ function SchoolTable({ school, className = '' }) {
           <table className="is-compact">
             <thead>
               <tr>
-                <th scope="col">Generacija</th>
+                <th scope="col">Razred</th>
                 <th scope="col">Mesta</th>
-                <th scope="col">Generacija</th>
+                <th scope="col">Razred</th>
                 <th scope="col">Mesta</th>
               </tr>
             </thead>
@@ -91,7 +91,7 @@ function SchoolTable({ school, className = '' }) {
         <table>
           <thead>
             <tr>
-              <th scope="col">Generacija</th>
+              <th scope="col">Razred</th>
               <th scope="col">Slobodna mesta</th>
             </tr>
           </thead>

@@ -21,8 +21,11 @@ export function WaitingListSection() {
           {paragraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
           <p className="malo-mesta-waiting-list__available-link">Pogledajte broj preostalih slobodnih mesta <a href="#slobodna-mesta">ovde.</a></p>
         </div>
-        <div className="modern-education__image-placeholder" aria-label="Prostor za fotografiju škole">
-          <span>Fotografija škole</span>
+        <div className="modern-education__image-placeholder">
+          <img
+            src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/07/malo-mesta-waiting-list_img_1.jpg"
+            alt="Učenici Savremene osnovne škole"
+          />
         </div>
       </div>
     </section>

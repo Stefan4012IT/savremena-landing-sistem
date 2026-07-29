@@ -8,3 +8,22 @@
 @use './testimonials';
 @use './enrollment-help';
 @use './footer';
+
+@media (min-width: 981px) {
+  .landing--malo-mesta > section:not(.malo-mesta-hero):not(.malo-mesta-footer) {
+    padding-top: 96px;
+    padding-bottom: 0;
+  }
+
+  .landing--malo-mesta > .malo-mesta-partner-logos:not(.malo-mesta-hero):not(.malo-mesta-footer) {
+    padding-bottom: 96px;
+  }
+
+  .landing--malo-mesta > .malo-mesta-stats:not(.malo-mesta-hero):not(.malo-mesta-footer) {
+    padding-block: 48px;
+  }
+
+  .landing--malo-mesta > .malo-mesta-testimonials:not(.malo-mesta-hero):not(.malo-mesta-footer) {
+    padding-bottom: 96px;
+  }
+}

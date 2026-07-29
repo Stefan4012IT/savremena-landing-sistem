@@ -90,7 +90,7 @@ export function LeadForm({ variant = 'dark', showHeader = true, introText = 'Pop
           </select>
           <input type="text" name="areaCode" placeholder={leadForm.areaCodePlaceholder} inputMode="tel" aria-label={leadForm.areaCodeLabel} required />
           <input type="tel" name="phone" placeholder={leadForm.phonePlaceholder} autoComplete="tel" aria-label={leadForm.phoneLabel} required />
-          <input type="number" name="childAge" min="10" max="19" placeholder={leadForm.childAgePlaceholder} aria-label={leadForm.childAgeLabel} required />
+          <input type="number" name="childAge" min="4" max="20" placeholder={leadForm.childAgePlaceholder} aria-label={leadForm.childAgeLabel} required />
         </div>
         {status === 'error' ? <p className="malo-mesta-form__message" role="alert">{message}</p> : null}
         <button type="submit" disabled={isSubmitting}>{isSubmitting ? 'Slanje...' : leadForm.submitLabel}</button>
