@@ -248,6 +248,15 @@
   }
 }
 
+@media (min-width: 1920px) {
+  .novo-odeljenje-hero {
+    &__right-part {
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
 @media (min-width: 1200px) and (max-width: 1599px) {
   .novo-odeljenje-hero {
     &__right-part {

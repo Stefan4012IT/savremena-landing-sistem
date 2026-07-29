@@ -17,7 +17,7 @@ export function HeroSection() {
         </a>
         <div className="malo-mesta-hero__institution-logos" aria-label="Institucionalni logotipi">
           <img src={cambridgeLogo} alt="Cambridge International Education" />
-          <img src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2023/02/ministarstvo-logo.png" alt="Ministarstvo prosvete" />
+          <img src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/07/ministarstvo_prosvete_logo_color_white.png" alt="Ministarstvo prosvete" />
         </div>
       </header>
         <div className="malo-mesta-hero__inner">

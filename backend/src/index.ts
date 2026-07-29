@@ -326,6 +326,7 @@ export default {
         status: 'published',
       })
     } else if (
+      existingMaloMestaLanding.gtmId !== maloMestaLanding.gtmId ||
       existingMaloMestaLanding.hero?.title !== maloMestaLanding.hero.title ||
       existingMaloMestaLanding.hero?.eyebrow !== maloMestaLanding.hero.eyebrow ||
       existingMaloMestaLanding.hero?.lead !== maloMestaLanding.hero.lead ||
@@ -345,6 +346,7 @@ export default {
       await strapi.documents('api::landing.landing').update({
         documentId: existingMaloMestaLanding.documentId,
         data: {
+          gtmId: maloMestaLanding.gtmId,
           hero: maloMestaLanding.hero,
           programChoice: maloMestaLanding.programChoice,
           benefits: maloMestaLanding.benefits,

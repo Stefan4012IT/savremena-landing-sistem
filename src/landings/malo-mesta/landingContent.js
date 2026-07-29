@@ -2,7 +2,7 @@ export const landingData = {
   slug: 'malo-mesta',
   name: 'Ostalo je još malo slobodnih mesta — SOS + SG',
   brandScope: 'SOS+SG',
-  gtmId: '',
+  gtmId: 'GTM-PDD7NJ3',
   seo: {
     title: 'Ostalo je još malo slobodnih mesta | Savremeno obrazovanje',
     description:

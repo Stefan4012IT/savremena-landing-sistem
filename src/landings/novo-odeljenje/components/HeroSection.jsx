@@ -1,5 +1,4 @@
 import cambridgeLogo from '../assets/logos/cambridge-logo-white.png'
-import ministryLogo from '../assets/logos/ministarstvo-prosvete-logo-white.png'
 import headerLogo from '../assets/logos/savremenaGimnazijaLogoInverse.svg'
 import heroLeftPart from '../assets/novo-odeljenje-left-part_002.png'
 import heroRightPart from '../assets/novo-odeljenje-right-part_002.png'
@@ -18,7 +17,7 @@ export function HeroSection() {
         </a>
         <div className="novo-odeljenje-hero__institution-logos" aria-label="Institucionalni logotipi">
           <img src={cambridgeLogo} alt="Cambridge International Education" />
-          <img src={ministryLogo} alt="Ministarstvo prosvete" />
+          <img src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/07/ministarstvo_prosvete_logo_color_white.png" alt="Ministarstvo prosvete" />
         </div>
       </header>
       <picture className="novo-odeljenje-hero__right-part" aria-hidden="true">
