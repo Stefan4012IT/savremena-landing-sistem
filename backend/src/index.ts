@@ -317,7 +317,7 @@ export default {
 
     const existingMaloMestaLanding = await strapi.documents('api::landing.landing').findFirst({
       filters: { slug: maloMestaLanding.slug },
-      populate: ['seo', 'hero', 'programChoice', 'benefits', 'benefitCards', 'specialOffer', 'enrollmentHelp', 'testimonials'],
+      populate: ['seo', 'hero', 'programChoice', 'benefits', 'benefitCards', 'specialOffer', 'enrollmentHelp', 'leadForm', 'testimonials'],
     })
 
     if (!existingMaloMestaLanding) {
@@ -343,6 +343,7 @@ export default {
       existingMaloMestaLanding.specialOffer?.eyebrow !== maloMestaLanding.specialOffer.eyebrow ||
       existingMaloMestaLanding.specialOffer?.text !== maloMestaLanding.specialOffer.text ||
       existingMaloMestaLanding.enrollmentHelp?.title !== maloMestaLanding.enrollmentHelp.title ||
+      existingMaloMestaLanding.leadForm?.institutionLabel !== maloMestaLanding.leadForm.institutionLabel ||
       existingMaloMestaLanding.testimonials?.eyebrow !== maloMestaLanding.testimonials.eyebrow ||
       existingMaloMestaLanding.testimonials?.title !== maloMestaLanding.testimonials.title
     ) {
@@ -357,6 +358,7 @@ export default {
           benefitCards: maloMestaLanding.benefitCards,
           specialOffer: maloMestaLanding.specialOffer,
           enrollmentHelp: maloMestaLanding.enrollmentHelp,
+          leadForm: maloMestaLanding.leadForm,
           testimonials: maloMestaLanding.testimonials,
         },
         status: 'published',

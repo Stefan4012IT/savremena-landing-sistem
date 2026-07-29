@@ -94,6 +94,7 @@ export const maloMestaLanding = {
     childAgePlaceholder: 'Uzrast deteta',
     childAgeLabel: 'Uzrast deteta',
     institution: 'sos',
+    institutionLabel: 'Za koju školu se prijavljujete?',
     formName: 'malo slobodnih mesta',
     submitLabel: 'Pošaljite prijavu',
     successTitle: 'Prijava je poslata',

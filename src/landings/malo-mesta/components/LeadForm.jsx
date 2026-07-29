@@ -75,7 +75,7 @@ export function LeadForm({ variant = 'dark', showHeader = true, introText = 'Pop
           aria-label={leadForm.institutionLabel}
           required
         >
-          <option value="" disabled>{leadForm.institutionLabel}</option>
+          <option value="" disabled hidden>{leadForm.institutionLabel}</option>
           {institutionOptions.map((option) => (
             <option value={option.value} key={`${option.value}-${option.label}`}>
               {option.label}

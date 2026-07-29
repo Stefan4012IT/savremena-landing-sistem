@@ -128,6 +128,7 @@ export interface SectionsLeadForm extends Struct.ComponentSchema {
     errorMessage: Schema.Attribute.Text;
     formName: Schema.Attribute.String;
     institution: Schema.Attribute.String;
+    institutionLabel: Schema.Attribute.String;
     namePlaceholder: Schema.Attribute.String & Schema.Attribute.Required;
     phoneLabel: Schema.Attribute.String & Schema.Attribute.Required;
     phonePlaceholder: Schema.Attribute.String & Schema.Attribute.Required;

@@ -12,6 +12,7 @@
     "childAgePlaceholder": { "type": "string" },
     "childAgeLabel": { "type": "string" },
     "institution": { "type": "string" },
+    "institutionLabel": { "type": "string" },
     "formName": { "type": "string" },
     "submitLabel": { "type": "string" },
     "successTitle": { "type": "string" },

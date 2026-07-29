@@ -126,6 +126,10 @@ function mergeLandingData(fallbackData, apiData) {
       ...fallbackData.enrollmentHelp,
       ...apiData.enrollmentHelp,
     },
+    leadForm: {
+      ...fallbackData.leadForm,
+      ...apiData.leadForm,
+    },
     directionCards: mergeArrayItems(fallbackData.directionCards, apiData.directionCards),
     benefitCards: mergeArrayItems(fallbackData.benefitCards, apiData.benefitCards),
     testimonialCards: mergeArrayItems(fallbackData.testimonialCards, apiData.testimonialCards),
