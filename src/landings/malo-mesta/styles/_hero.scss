@@ -237,6 +237,22 @@
   }
 }
 
+@media (min-width: 1041px) and (max-width: 1919px) {
+  .malo-mesta-hero h1 {
+    font-size: 112px;
+  }
+
+  .malo-mesta-hero__visual {
+    right: clamp(24px, 3vw, 70px);
+  }
+}
+
+@media (min-width: 1920px) {
+  .malo-mesta-hero__visual {
+    right: 200px;
+  }
+}
+
 @media (max-width: 1040px) {
   .malo-mesta-hero {
     min-height: 820px;
