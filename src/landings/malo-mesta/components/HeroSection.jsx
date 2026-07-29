@@ -51,7 +51,12 @@ export function HeroSection() {
                 </>
               ) : hero.title}
             </h1>
-            <img className="malo-mesta-hero__visual" src={heroImage} alt="Učenik i nastavnica Savremene" />
+            <img className="malo-mesta-hero__visual malo-mesta-hero__visual--desktop" src={heroImage} alt="Učenik i nastavnica Savremene" />
+            <img
+              className="malo-mesta-hero__visual malo-mesta-hero__visual--mobile"
+              src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/07/malo_mesta_img_hero_mobile.png"
+              alt="Učenik i nastavnica Savremene"
+            />
             {hero.lead ? (
               <div className="malo-mesta-hero__copy">
                 {hero.lead.split('\n\n').map((paragraph) => <p key={paragraph}>{paragraph}</p>)}

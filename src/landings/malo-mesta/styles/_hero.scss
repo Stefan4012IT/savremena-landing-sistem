@@ -189,6 +189,10 @@
     pointer-events: none;
   }
 
+  &__visual--mobile {
+    display: none;
+  }
+
   &__form-panel .malo-mesta-form {
     gap: 10px;
   }
@@ -320,6 +324,14 @@
       max-height: none;
       margin: 0;
       opacity: 1;
+    }
+
+    &__visual--desktop {
+      display: none;
+    }
+
+    &__visual--mobile {
+      display: block;
     }
 
     &__inner {

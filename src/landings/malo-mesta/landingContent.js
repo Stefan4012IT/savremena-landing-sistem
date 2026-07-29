@@ -4,9 +4,10 @@ export const landingData = {
   brandScope: 'SOS+SG',
   gtmId: 'GTM-PDD7NJ3',
   seo: {
-    title: 'Ostalo je još malo slobodnih mesta | Savremeno obrazovanje',
+    title: 'Upis 2026/27: još malo slobodnih mesta | Savremena',
     description:
-      'Prijavite dete za Savremenu osnovnu školu ili Savremenu gimnaziju. Broj slobodnih mesta je ograničen.',
+      'Upis za školsku 2026/27. godinu je pri kraju. Proverite preostala slobodna mesta u Savremenoj osnovnoj školi i Savremenoj gimnaziji i prijavite dete na vreme.',
+    ogImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/07/malo-mesta_og.jpg',
   },
   hero: {
     eyebrow: '',
@@ -20,9 +21,9 @@ export const landingData = {
     text: 'Upis za školsku 2026/27. godinu ulazi u završnu fazu. U predškolskom programu i većini razreda Savremene osnovne škole, kao i u odeljenjima Savremene gimnazije, ostalo je još samo nekoliko slobodnih mesta, dok su pojedini kapaciteti već u potpunosti popunjeni.',
   },
   institutionOptions: [
-    { value: 'sos', label: 'Savremena osnovna škola – predškolsko' },
-    { value: 'sos', label: 'Savremena osnovna škola' },
-    { value: 'sg', label: 'Savremena gimnazija' },
+    { value: 'sos-preschool', institution: 'sos', label: 'Savremena osnovna škola – predškolsko' },
+    { value: 'sos-primary', institution: 'sos', label: 'Savremena osnovna škola' },
+    { value: 'sg', institution: 'sg', label: 'Savremena gimnazija' },
   ],
   partnerLogos: {
     eyebrow: 'Svetske nagrade kao potvrda izvrsnosti',

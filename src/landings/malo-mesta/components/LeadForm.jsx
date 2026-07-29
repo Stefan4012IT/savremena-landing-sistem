@@ -9,11 +9,13 @@ const countryCallingCodes = ['+381', '+382', '+385', '+387', '+43', '+49', '+41'
 export function LeadForm({ variant = 'dark', showHeader = true, introText = 'Popunite formu, a naš tim za upis će vas uskoro kontaktirati.' }) {
   const { leadForm, slug, institutionOptions = [] } = useLandingData()
   const defaultInstitution = ''
-  const [institution, setInstitution] = useState(defaultInstitution)
+  const [institutionSelection, setInstitutionSelection] = useState(defaultInstitution)
   const [status, setStatus] = useState('idle')
   const [message, setMessage] = useState('')
   const isSubmitting = status === 'submitting'
-  const formName = `${leadForm.formName || 'malo slobodnih mesta'} - ${institution}`
+  const selectedInstitution = institutionOptions.find((option) => option.value === institutionSelection)
+  const institution = selectedInstitution?.institution ?? selectedInstitution?.value ?? ''
+  const formName = `${leadForm.formName || 'malo slobodnih mesta'} - ${selectedInstitution?.label ?? institution}`
 
   async function handleSubmit(event) {
     event.preventDefault()
@@ -47,7 +49,7 @@ export function LeadForm({ variant = 'dark', showHeader = true, introText = 'Pop
       })
 
       form.reset()
-      setInstitution(defaultInstitution)
+      setInstitutionSelection(defaultInstitution)
       setStatus('success')
     } catch (error) {
       setStatus('error')
@@ -68,8 +70,8 @@ export function LeadForm({ variant = 'dark', showHeader = true, introText = 'Pop
         <input className="malo-mesta-form__honeypot" type="text" name="website" tabIndex="-1" autoComplete="off" aria-hidden="true" />
         <select
           name="institution"
-          value={institution}
-          onChange={(event) => setInstitution(event.target.value)}
+          value={institutionSelection}
+          onChange={(event) => setInstitutionSelection(event.target.value)}
           aria-label={leadForm.institutionLabel}
           required
         >

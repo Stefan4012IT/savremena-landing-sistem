@@ -317,7 +317,7 @@ export default {
 
     const existingMaloMestaLanding = await strapi.documents('api::landing.landing').findFirst({
       filters: { slug: maloMestaLanding.slug },
-      populate: ['hero', 'programChoice', 'benefits', 'benefitCards', 'specialOffer', 'enrollmentHelp', 'testimonials'],
+      populate: ['seo', 'hero', 'programChoice', 'benefits', 'benefitCards', 'specialOffer', 'enrollmentHelp', 'testimonials'],
     })
 
     if (!existingMaloMestaLanding) {
@@ -327,6 +327,9 @@ export default {
       })
     } else if (
       existingMaloMestaLanding.gtmId !== maloMestaLanding.gtmId ||
+      existingMaloMestaLanding.seo?.title !== maloMestaLanding.seo.title ||
+      existingMaloMestaLanding.seo?.description !== maloMestaLanding.seo.description ||
+      existingMaloMestaLanding.seo?.ogImageUrl !== maloMestaLanding.seo.ogImageUrl ||
       existingMaloMestaLanding.hero?.title !== maloMestaLanding.hero.title ||
       existingMaloMestaLanding.hero?.eyebrow !== maloMestaLanding.hero.eyebrow ||
       existingMaloMestaLanding.hero?.lead !== maloMestaLanding.hero.lead ||
@@ -347,6 +350,7 @@ export default {
         documentId: existingMaloMestaLanding.documentId,
         data: {
           gtmId: maloMestaLanding.gtmId,
+          seo: maloMestaLanding.seo,
           hero: maloMestaLanding.hero,
           programChoice: maloMestaLanding.programChoice,
           benefits: maloMestaLanding.benefits,

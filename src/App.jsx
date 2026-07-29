@@ -61,6 +61,36 @@ function setFaviconPackage(brandScope) {
   })
 }
 
+function setMetaTag(attribute, name, content) {
+  const selector = `meta[${attribute}="${name}"]`
+  let metaTag = document.head.querySelector(selector)
+
+  if (!content) {
+    metaTag?.remove()
+    return
+  }
+
+  if (!metaTag) {
+    metaTag = document.createElement('meta')
+    metaTag.setAttribute(attribute, name)
+    document.head.appendChild(metaTag)
+  }
+
+  metaTag.setAttribute('content', content)
+}
+
+function setCanonicalUrl(url) {
+  let canonicalLink = document.head.querySelector('link[rel="canonical"]')
+
+  if (!canonicalLink) {
+    canonicalLink = document.createElement('link')
+    canonicalLink.rel = 'canonical'
+    document.head.appendChild(canonicalLink)
+  }
+
+  canonicalLink.href = url
+}
+
 function mergeArrayItems(fallbackItems, apiItems) {
   if (!Array.isArray(fallbackItems) || !Array.isArray(apiItems)) {
     return apiItems ?? fallbackItems
@@ -136,21 +166,26 @@ function App() {
       return
     }
 
-    if (landingData.seo?.title) {
-      document.title = landingData.seo.title
-    }
+    const title = landingData.seo?.title ?? landingData.name ?? 'Savremena'
+    const description = landingData.seo?.description ?? ''
+    const imageUrl = landingData.seo?.ogImageUrl ?? ''
+    const pageUrl = `${window.location.origin}${window.location.pathname}`
 
-    if (landingData.seo?.description) {
-      let metaDescription = document.querySelector('meta[name="description"]')
-
-      if (!metaDescription) {
-        metaDescription = document.createElement('meta')
-        metaDescription.setAttribute('name', 'description')
-        document.head.appendChild(metaDescription)
-      }
-
-      metaDescription.setAttribute('content', landingData.seo.description)
-    }
+    document.title = title
+    setMetaTag('name', 'description', description)
+    setMetaTag('property', 'og:type', 'website')
+    setMetaTag('property', 'og:locale', 'sr_RS')
+    setMetaTag('property', 'og:title', title)
+    setMetaTag('property', 'og:description', description)
+    setMetaTag('property', 'og:url', pageUrl)
+    setMetaTag('property', 'og:image', imageUrl)
+    setMetaTag('property', 'og:image:secure_url', imageUrl)
+    setMetaTag('property', 'og:image:alt', imageUrl ? title : '')
+    setMetaTag('name', 'twitter:card', imageUrl ? 'summary_large_image' : 'summary')
+    setMetaTag('name', 'twitter:title', title)
+    setMetaTag('name', 'twitter:description', description)
+    setMetaTag('name', 'twitter:image', imageUrl)
+    setCanonicalUrl(pageUrl)
   }, [landingData?.seo])
 
   useEffect(() => {

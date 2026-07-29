@@ -3,6 +3,7 @@
   "info": { "displayName": "SEO" },
   "attributes": {
     "title": { "type": "string", "required": true },
-    "description": { "type": "text", "required": true }
+    "description": { "type": "text", "required": true },
+    "ogImageUrl": { "type": "string" }
   }
 }

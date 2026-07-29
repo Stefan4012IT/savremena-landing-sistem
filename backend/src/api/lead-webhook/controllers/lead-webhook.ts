@@ -58,8 +58,8 @@ function validateLeadPayload(body: Record<string, unknown>) {
   }
 
   const ageNum = Number(childsAge)
-  if (!Number.isInteger(ageNum) || ageNum < 10 || ageNum > 19) {
-    errors.childs_age = 'Uzrast mora biti izmedju 10 i 19.'
+  if (!Number.isInteger(ageNum) || ageNum < 4 || ageNum > 20) {
+    errors.childs_age = 'Uzrast mora biti izmedju 4 i 20.'
   }
 
   if (!/^\+\d{1,4}$/.test(countryCode)) {

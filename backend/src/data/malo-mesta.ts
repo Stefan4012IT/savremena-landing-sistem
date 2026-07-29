@@ -4,9 +4,10 @@ export const maloMestaLanding = {
   brandScope: 'SOS+SG',
   gtmId: 'GTM-PDD7NJ3',
   seo: {
-    title: 'Ostalo je još malo slobodnih mesta | Savremeno obrazovanje',
+    title: 'Upis 2026/27: još malo slobodnih mesta | Savremena',
     description:
-      'Prijavite dete za Savremenu osnovnu školu ili Savremenu gimnaziju. Broj slobodnih mesta je ograničen.',
+      'Upis za školsku 2026/27. godinu je pri kraju. Proverite preostala slobodna mesta u Savremenoj osnovnoj školi i Savremenoj gimnaziji i prijavite dete na vreme.',
+    ogImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/07/malo-mesta_og.jpg',
   },
   hero: {
     eyebrow: '',

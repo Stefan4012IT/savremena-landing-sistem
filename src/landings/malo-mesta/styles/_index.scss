@@ -27,3 +27,22 @@
     padding-bottom: 96px;
   }
 }
+
+@media (max-width: 980px) {
+  .malo-mesta-program-choice,
+  .malo-mesta-available-seats,
+  .malo-mesta-partner-logos,
+  .malo-mesta-enrollment-help,
+  .malo-mesta-testimonials {
+    padding-top: 0;
+    padding-bottom: 56px;
+  }
+
+  .malo-mesta-benefits {
+    padding-block: 56px;
+  }
+
+  .malo-mesta-waiting-list {
+    padding-top: 56px;
+  }
+}
