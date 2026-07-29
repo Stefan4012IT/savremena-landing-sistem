@@ -1,7 +1,6 @@
 import { LeadForm } from './LeadForm'
 import { useLandingData } from '../useLandingData'
 import cambridgeLogo from '../../novo-odeljenje/assets/logos/cambridge-logo-white.png'
-import ministryLogo from '../../novo-odeljenje/assets/logos/ministarstvo-prosvete-logo-white.png'
 import savremenaGroupLogo from '../assets/Logo_sos_sg_001.svg'
 import heroImage from '../assets/hero_img.png'
 
@@ -18,7 +17,7 @@ export function HeroSection() {
         </a>
         <div className="malo-mesta-hero__institution-logos" aria-label="Institucionalni logotipi">
           <img src={cambridgeLogo} alt="Cambridge International Education" />
-          <img src={ministryLogo} alt="Ministarstvo prosvete" />
+          <img src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2023/02/ministarstvo-logo.png" alt="Ministarstvo prosvete" />
         </div>
       </header>
         <div className="malo-mesta-hero__inner">
