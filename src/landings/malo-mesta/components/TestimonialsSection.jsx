@@ -11,6 +11,7 @@ const testimonialVideoEmbeds = [
 
 export function TestimonialsSection() {
   const { testimonials: section, testimonialCards = defaultTestimonialCards } = useLandingData()
+  const cards = testimonialCards.length ? testimonialCards : defaultTestimonialCards
   const [activeIndex, setActiveIndex] = useState(0)
   const trackRef = useRef(null)
   const slideRefs = useRef([])
@@ -36,8 +37,8 @@ export function TestimonialsSection() {
         <SectionHeader eyebrow={section.eyebrow} title={section.title} text={section.text} />
         <div className="testimonials-carousel" aria-label="Testimonijali">
           <div className="testimonials-carousel__track" ref={trackRef}>
-            {testimonialCards.map((testimonial, index) => {
-              const videoIndex = testimonialCards
+            {cards.map((testimonial, index) => {
+              const videoIndex = cards
                 .slice(0, index + 1)
                 .filter((item) => item.variant === 'video').length - 1
               const videoEmbedUrl = testimonial.variant === 'video'
@@ -56,7 +57,7 @@ export function TestimonialsSection() {
             })}
           </div>
           <div className="testimonials-carousel__dots" aria-label="Navigacija testimonijala">
-            {testimonialCards.map((testimonial, index) => (
+            {cards.map((testimonial, index) => (
               <button
                 className={index === activeIndex ? 'is-active' : ''}
                 type="button"

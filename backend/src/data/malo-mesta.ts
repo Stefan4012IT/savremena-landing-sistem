@@ -1,3 +1,5 @@
+import { novoOdeljenjeLanding } from './novo-odeljenje'
+
 export const maloMestaLanding = {
   name: 'Ostalo je još malo slobodnih mesta — SOS + SG',
   slug: 'malo-mesta',
@@ -105,6 +107,7 @@ export const maloMestaLanding = {
     eyebrow: 'Iskustva učenika i roditelja',
     title: '„Savremena gimnazija je drugačija od drugih”',
   },
+  testimonialCards: novoOdeljenjeLanding.testimonialCards,
   footer: {
     addressLine1: 'Masarikova 5 (ulaz iz Kralja Milana),',
     addressLine2: 'Palata Beograd',

@@ -1,3 +1,5 @@
+import { testimonials as novoOdeljenjeTestimonialCards } from '../novo-odeljenje/landingContent'
+
 export const landingData = {
   slug: 'malo-mesta',
   name: 'Ostalo je još malo slobodnih mesta — SOS + SG',
@@ -86,6 +88,7 @@ export const landingData = {
     eyebrow: 'Iskustva učenika i roditelja',
     title: '„Savremena gimnazija je drugačija od drugih”',
   },
+  testimonialCards: novoOdeljenjeTestimonialCards,
   enrollmentHelp: {
     title: 'Imate pitanja ili vam je potrebna pomoć oko upisa?',
     introBeforeName: 'Naša ljubazna i stručna savetnica za upis,',
