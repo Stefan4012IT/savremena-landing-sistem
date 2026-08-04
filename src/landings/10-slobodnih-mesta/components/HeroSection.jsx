@@ -32,7 +32,7 @@ export function HeroSection() {
           <p className="deset-slobodnih-mesta-hero__availability-outro">
             <span className="deset-slobodnih-mesta-hero__availability-outro-desktop"><strong>za upis</strong> u generaciju</span>
             <span className="deset-slobodnih-mesta-hero__availability-outro-mobile"><strong>za upis</strong> u</span>
-            <span className="deset-slobodnih-mesta-hero__availability-outro-mobile">generacija</span>
+            <span className="deset-slobodnih-mesta-hero__availability-outro-mobile">generaciju</span>
             <span>2026/27!</span>
           </p>
         </div>

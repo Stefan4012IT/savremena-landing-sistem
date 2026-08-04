@@ -197,6 +197,10 @@
     &__supporting-copy span + span::before {
       content: ' ';
     }
+
+    &__supporting-copy span + span::before {
+      content: ' ';
+    }
   }
 }
 
@@ -386,6 +390,10 @@
       max-width: 350px;
       margin-top: 20px;
       font-size: clamp(1.3rem, 6.4vw, 1.9rem);
+    }
+
+    &__supporting-copy span {
+      display: inline;
     }
 
     &__visual {
