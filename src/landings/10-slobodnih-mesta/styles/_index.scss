@@ -1,0 +1,92 @@
+@use './layout';
+@use './hero';
+@use './sections';
+@use './cards';
+@use './form';
+
+.deset-slobodnih-mesta-landing {
+  --color-blue: #07080c;
+  --color-primary: #07080c;
+  --color-primary-dark: #07080c;
+  --color-yellow: #ffcc0c;
+  --gradient-brand: #ffcc0c;
+  --deset-slobodnih-mesta-landing-container-max: 1600px;
+  --deset-slobodnih-mesta-landing-container-padding: clamp(20px, 4vw, 64px);
+}
+
+.deset-slobodnih-mesta-landing {
+  .deset-slobodnih-mesta-scholarship-offer__ribbon,
+  .deset-slobodnih-mesta-special-conditions,
+  .deset-slobodnih-mesta-stats-section,
+  .deset-slobodnih-mesta-special-offer,
+  .deset-slobodnih-mesta-info-card--direction,
+  .deset-slobodnih-mesta-testimonial-card,
+  .deset-slobodnih-mesta-testimonial-card__body {
+    background: #ffcc0c;
+    background-image: none;
+    color: #07080c;
+  }
+
+  .deset-slobodnih-mesta-info-card__profile,
+  .deset-slobodnih-mesta-benefit-card__image,
+  .deset-slobodnih-mesta-modern-education__image-placeholder,
+  .deset-slobodnih-mesta-enrollment-help__advisor-photo {
+    background: #ffcc0c;
+    background-image: none;
+  }
+
+  .deset-slobodnih-mesta-testimonial-card__video,
+  .deset-slobodnih-mesta-testimonial-card__avatar {
+    background: #ffcc0c;
+  }
+
+  .deset-slobodnih-mesta-scholarship-offer__ribbon,
+  .deset-slobodnih-mesta-special-conditions h2,
+  .deset-slobodnih-mesta-special-conditions p,
+  .deset-slobodnih-mesta-special-conditions a,
+  .deset-slobodnih-mesta-special-conditions__visual span,
+  .deset-slobodnih-mesta-stats-section__value,
+  .deset-slobodnih-mesta-stats-section__label,
+  .deset-slobodnih-mesta-special-offer__eyebrow,
+  .deset-slobodnih-mesta-special-offer h2,
+  .deset-slobodnih-mesta-special-offer p,
+  .deset-slobodnih-mesta-info-card--direction .deset-slobodnih-mesta-info-card__title,
+  .deset-slobodnih-mesta-info-card--direction .deset-slobodnih-mesta-info-card__tag,
+  .deset-slobodnih-mesta-info-card--direction .deset-slobodnih-mesta-info-card__details,
+  .deset-slobodnih-mesta-info-card--direction .deset-slobodnih-mesta-info-card__text,
+  .deset-slobodnih-mesta-testimonial-card h3,
+  .deset-slobodnih-mesta-testimonial-card p,
+  .deset-slobodnih-mesta-testimonial-card__video-person,
+  .deset-slobodnih-mesta-testimonial-card__avatar span {
+    color: #07080c;
+  }
+
+  .deset-slobodnih-mesta-landing-footer {
+    background: #07080c;
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .deset-slobodnih-mesta-landing-footer__contact,
+  .deset-slobodnih-mesta-landing-footer__contact span,
+  .deset-slobodnih-mesta-landing-footer__contact a {
+    color: #ffffff;
+  }
+
+  .deset-slobodnih-mesta-special-conditions__visual {
+    border-color: rgba(7, 8, 12, 0.28);
+    background: rgba(7, 8, 12, 0.08);
+  }
+
+  .deset-slobodnih-mesta-testimonial-card__play {
+    background: #07080c;
+  }
+
+  .deset-slobodnih-mesta-testimonial-card__play::after {
+    border-color: rgba(7, 8, 12, 0.34);
+  }
+
+  .deset-slobodnih-mesta-testimonial-card__play svg {
+    fill: #ffcc0c;
+  }
+}

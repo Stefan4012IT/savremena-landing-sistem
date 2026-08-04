@@ -1,0 +1,81 @@
+.deset-slobodnih-mesta-landing {
+  overflow: hidden;
+  background: var(--color-background);
+}
+
+.deset-slobodnih-mesta-landing-container {
+  width: min(100% - (var(--deset-slobodnih-mesta-landing-container-padding) * 2), var(--deset-slobodnih-mesta-landing-container-max));
+  margin-inline: auto;
+}
+
+.deset-slobodnih-mesta-landing-section {
+  padding: clamp(56px, 6vw, 96px) 0;
+}
+
+.deset-slobodnih-mesta-landing-section + .deset-slobodnih-mesta-landing-section:not(.deset-slobodnih-mesta-special-conditions, .deset-slobodnih-mesta-modern-education, .deset-slobodnih-mesta-stats-section, .deset-slobodnih-mesta-benefits-section, .deset-slobodnih-mesta-special-offer, .deset-slobodnih-mesta-enrollment-help) {
+  padding-top: 0;
+}
+
+.deset-slobodnih-mesta-section-header {
+  max-width: 840px;
+  margin-bottom: clamp(26px, 3vw, 42px);
+
+  &__eyebrow {
+    margin: 0 0 12px;
+    color: #787878;
+    font-size: clamp(1.05rem, 1.4vw, 1.22rem);
+    font-weight: 800;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin: 0;
+    color: var(--color-primary-dark);
+    font-size: clamp(2rem, 4vw, 4rem);
+    line-height: 1.05;
+  }
+
+  &__text {
+    max-width: 760px;
+    margin: 20px 0 0;
+    color: var(--color-muted);
+    font-size: clamp(1.05rem, 1.4vw, 1.22rem);
+  }
+}
+
+.deset-slobodnih-mesta-landing-link {
+  display: inline-flex;
+  min-height: 50px;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-primary);
+  border-radius: 50px;
+  padding: 13px 20px;
+  background: var(--color-primary);
+  color: #ffffff;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+
+  &--light {
+    border-color: rgba(255, 255, 255, 0.62);
+    background: #ffffff;
+    color: var(--color-primary-dark);
+  }
+}
+
+@media (max-width: 760px) {
+  .deset-slobodnih-mesta-landing-container {
+    width: min(100% - 40px, var(--deset-slobodnih-mesta-landing-container-max));
+  }
+
+  .deset-slobodnih-mesta-landing-section {
+    padding-block: 48px;
+  }
+
+  .deset-slobodnih-mesta-landing-section + .deset-slobodnih-mesta-landing-section:not(.deset-slobodnih-mesta-special-conditions, .deset-slobodnih-mesta-modern-education, .deset-slobodnih-mesta-stats-section, .deset-slobodnih-mesta-benefits-section, .deset-slobodnih-mesta-special-offer, .deset-slobodnih-mesta-enrollment-help) {
+    padding-top: 0;
+  }
+}

@@ -22,13 +22,25 @@ export async function sendLeadToUis(payload: UisLeadPayload) {
     throw new Error('UIS_WEBHOOK_TOKEN nije postavljen.')
   }
 
+  const uisPayload: UisLeadPayload = {
+    name: payload.name,
+    email: payload.email,
+    childs_age: payload.childs_age,
+    'country-code': payload['country-code'],
+    'area-code': payload['area-code'],
+    'phone-number': payload['phone-number'],
+    lead_event_id: payload.lead_event_id,
+    institution: payload.institution,
+    form_name: payload.form_name,
+  }
+
   const response = await fetch(webhookUrl, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       AccessKey: accessKey,
     },
-    body: JSON.stringify(payload),
+    body: JSON.stringify(uisPayload),
     signal: AbortSignal.timeout(15000),
   })
 

@@ -1,4 +1,5 @@
 import { sendLeadToUis } from '../services/uis'
+import { sendLeadToGoogleSheets } from '../services/googleSheets'
 
 const recentSubmissions = new Map<string, number>()
 const allowedInstitutions = new Set(['sos', 'sg', 'is'])
@@ -36,6 +37,7 @@ function validateLeadPayload(body: Record<string, unknown>) {
   const leadEventId = sanitizeText(body.lead_event_id ?? body.leadEventId, 80)
   const institution = sanitizeText(body.institution, 12).toLowerCase()
   const landingSlug = sanitizeText(body.landingSlug, 80)
+  const pageUrl = sanitizeText(body.pageUrl, 500)
   const formName = sanitizeText(body.formName, 120) || `landing - ${landingSlug || institution}`
   const website = sanitizeText(body.website, 200)
   const validLeadEventId = /^ld_\d{10,13}_[a-z0-9]{4,16}$/.test(leadEventId) ? leadEventId : ''
@@ -92,6 +94,8 @@ function validateLeadPayload(body: Record<string, unknown>) {
       lead_event_id: validLeadEventId,
       institution,
       form_name: formName,
+      landing_slug: landingSlug,
+      page_url: pageUrl,
     },
   }
 }
@@ -166,6 +170,12 @@ export default {
 
     try {
       await sendLeadToUis(validation.sanitizedData)
+
+      try {
+        await sendLeadToGoogleSheets(validation.sanitizedData)
+      } catch (error) {
+        strapi.log.warn(`Google Sheets backup failed after UIS success: ${error}`)
+      }
 
       ctx.body = {
         success: true,
