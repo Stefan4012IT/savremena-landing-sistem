@@ -225,6 +225,12 @@
   }
 }
 
+@media (min-width: 761px) and (max-width: 1599px) {
+  .deset-slobodnih-mesta-hero__visual img {
+    transform: translateY(-25px);
+  }
+}
+
 @media (max-width: 760px) {
   .deset-slobodnih-mesta-hero {
     min-height: auto;
