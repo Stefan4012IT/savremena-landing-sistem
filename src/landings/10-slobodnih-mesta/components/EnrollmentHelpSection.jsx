@@ -63,7 +63,7 @@ export function EnrollmentHelpSection() {
             </div>
           </div>
         </div>
-        <LeadForm />
+        <LeadForm className="deset-slobodnih-mesta-lead-form--enrollment" />
       </div>
     </section>
   )

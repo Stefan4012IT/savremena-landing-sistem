@@ -60,7 +60,8 @@
     border-radius: 16px;
     padding: 10px 22px;
     background: #ffffff;
-    color: var(--color-text);
+    color: #141414;
+    caret-color: #141414;
     font-size: 1.08rem;
     font-weight: 500;
     outline: none;
@@ -68,6 +69,18 @@
 
   input::placeholder {
     color: rgba(120, 120, 120, 0.72);
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-text-fill-color: #141414;
+    caret-color: #141414;
+    -webkit-box-shadow: 0 0 0 1000px #ffffff inset;
+    box-shadow: 0 0 0 1000px #ffffff inset;
   }
 
   input:focus,
@@ -104,7 +117,8 @@
   }
 }
 
-.deset-slobodnih-mesta-lead-form--hero {
+.deset-slobodnih-mesta-lead-form--hero,
+.deset-slobodnih-mesta-lead-form--enrollment {
   gap: 16px;
 
   .deset-slobodnih-mesta-lead-form__header h2,
@@ -141,12 +155,24 @@
     width: auto;
     border-radius: 20px;
     background: #ffcc0c;
-    color: #07080c;
+    color: #9d1516;
+  }
+}
+
+.deset-slobodnih-mesta-lead-form--enrollment {
+  width: min(100%, 900px);
+  padding: clamp(20px, 3.4vw, 30px);
+  border-radius: 28px;
+  background: #9d1516;
+
+  button {
+    justify-self: center;
   }
 }
 
 @media (max-width: 760px) {
-  .deset-slobodnih-mesta-lead-form--hero {
+  .deset-slobodnih-mesta-lead-form--hero,
+  .deset-slobodnih-mesta-lead-form--enrollment {
     .deset-slobodnih-mesta-lead-form__row,
     .deset-slobodnih-mesta-lead-form__row--phone {
       grid-template-columns: 1fr;

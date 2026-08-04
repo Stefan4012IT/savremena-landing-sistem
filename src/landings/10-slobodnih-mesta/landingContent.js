@@ -141,9 +141,9 @@ export const landingData = {
     errorMessage: 'Prijava trenutno ne može da se pošalje. Pokušajte ponovo ili nas pozovite.',
   },
   testimonials: {
-    eyebrow: 'Iskustva',
-    title: 'Iskustva učenika i roditelja',
-    text: 'Najbolju sliku o školi daju oni koji su je već izabrali.',
+    eyebrow: 'Iskustva učenika i roditelja',
+    title: 'Savremena gimnazija je drugačija od drugih',
+    text: '',
   },
   footer: {
     addressLine1: 'Masarikova 5 (ulaz iz Kralja Milana),',
