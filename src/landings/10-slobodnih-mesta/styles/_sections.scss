@@ -763,4 +763,13 @@
     padding-top: 48px;
   }
 
+  .deset-slobodnih-mesta-enrollment-help__advisor {
+    width: min(100%, 280px);
+  }
+
+  .deset-slobodnih-mesta-enrollment-help__advisor-photo,
+  .deset-slobodnih-mesta-enrollment-help__advisor-photo img {
+    min-height: 280px;
+  }
+
 }
