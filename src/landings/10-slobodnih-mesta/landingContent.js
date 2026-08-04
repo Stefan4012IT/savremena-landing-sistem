@@ -38,9 +38,10 @@ export const landingData = {
   brandScope: 'SG',
   gtmId: 'GTM-WRTKDP',
   seo: {
-    title: 'Otvoreno je 9. odeljenje | Savremena gimnazija - upis 2026/27',
+    title: 'Još samo 10 slobodnih mesta | Savremena gimnazija – upis 2026/27',
     description:
-      'Zbog velikog interesovanja, Savremena gimnazija otvara 9. odeljenje prvog razreda u generaciji 2026/27. Izaberite najsavremenije školovanje za najbolje rezultate.',
+      'Ostalo je manje od 10 slobodnih mesta za upis u Savremenu gimnaziju, generacija 2026/27. Prijavite dete na vreme i obezbedite mesto.',
+    ogImageUrl: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/08/10_slobodnih_mesta_img_1.jpg',
   },
   hero: {
     eyebrow: 'Upis u generaciju 2026/27',
