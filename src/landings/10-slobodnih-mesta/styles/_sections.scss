@@ -79,7 +79,7 @@
   &__image {
     align-self: center;
     justify-self: end;
-    width: min(100%, 620px);
+    width: 100%;
     margin: 0;
   }
 
@@ -87,6 +87,7 @@
     display: block;
     width: 100%;
     height: auto;
+    border-radius: 22px;
     object-fit: cover;
     filter: drop-shadow(0 24px 36px rgba(39, 48, 67, 0.16));
   }

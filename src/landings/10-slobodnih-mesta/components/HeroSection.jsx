@@ -1,8 +1,8 @@
 import cambridgeLogo from '../assets/logos/cambridge-logo-white.png'
 import headerLogo from '../assets/logos/savremenaGimnazijaLogoInverse.svg'
-import heroLeftPart from '../assets/novo-odeljenje-left-part_002.png'
-import heroRightPart from '../assets/novo-odeljenje-right-part_002.png'
-import heroMobile from '../assets/hero_img_mob.png'
+import heroImage from '../assets/10_slobodnih_mesta_copy_mob.png'
+import availableSeatsCopy from '../assets/10_slobodnih_mesta_copy_desk.svg'
+import availableSeatsCopyMobile from '../assets/10_slobodnih_mesta_copy_mob.svg'
 import { LeadForm } from './LeadForm'
 
 export function HeroSection() {
@@ -20,25 +20,28 @@ export function HeroSection() {
           <img src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/07/ministarstvo_prosvete_logo_color_white.png" alt="Ministarstvo prosvete" />
         </div>
       </header>
-      <picture className="deset-slobodnih-mesta-hero__right-part" aria-hidden="true">
-        <source media="(max-width: 760px)" srcSet={heroMobile} />
-        <img src={heroRightPart} alt="" />
-      </picture>
       <div className="deset-slobodnih-mesta-hero__inner">
         <div className="deset-slobodnih-mesta-hero__content" aria-label="Uvod u landing">
-          <img
-            className="deset-slobodnih-mesta-hero__left-part"
-            src={heroLeftPart}
-            alt="Otvoreno je još jedno, 9. odeljenje!"
-          />
-          <div className="deset-slobodnih-mesta-hero__yellow-copy">
-            <p className="deset-slobodnih-mesta-hero__yellow-copy-main">
-              Zbog velikog interesovanja, Savremena gimnazija otvara još jedno, 9. odeljenje prvog
-              razreda u generaciji 2026/27!
-            </p>
-            <p>Izaberite najsavremenije školovanje za najbolje rezultate.</p>
-          </div>
+          <p className="deset-slobodnih-mesta-hero__availability-intro">
+            <span>Ostalo je</span> <strong>manje od</strong>
+          </p>
+          <picture className="deset-slobodnih-mesta-hero__availability-count">
+            <source media="(max-width: 760px)" srcSet={availableSeatsCopyMobile} />
+            <img src={availableSeatsCopy} alt="10 slobodnih mesta" />
+          </picture>
+          <p className="deset-slobodnih-mesta-hero__availability-outro">
+            <span className="deset-slobodnih-mesta-hero__availability-outro-desktop"><strong>za upis</strong> u generaciju</span>
+            <span className="deset-slobodnih-mesta-hero__availability-outro-mobile"><strong>za upis</strong> u</span>
+            <span className="deset-slobodnih-mesta-hero__availability-outro-mobile">generacija</span>
+            <span>2026/27!</span>
+          </p>
         </div>
+        <div className="deset-slobodnih-mesta-hero__visual" aria-hidden="true">
+          <img src={heroImage} alt="" />
+        </div>
+        <p className="deset-slobodnih-mesta-hero__supporting-copy">
+          Izaberite <strong>najsavremenije školovanje</strong> za najbolje rezultate.
+        </p>
         <div className="deset-slobodnih-mesta-hero__form-panel" id="prijava">
           <LeadForm
             className="deset-slobodnih-mesta-lead-form--hero"

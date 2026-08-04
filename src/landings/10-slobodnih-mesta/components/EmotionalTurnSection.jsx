@@ -1,4 +1,3 @@
-import studentsImage from '../assets/novo_odeljenje_hero_11.webp'
 import { useLandingData } from '../useLandingData'
 
 export function EmotionalTurnSection() {
@@ -22,7 +21,7 @@ export function EmotionalTurnSection() {
           </div>
           <figure className="deset-slobodnih-mesta-scholarship-offer__image">
             <img
-              src={studentsImage}
+              src="https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/08/10_slobodnih_mesta_img_1.jpg"
               alt="Učenici Savremene gimnazije sa digitalnim uređajima"
             />
           </figure>
