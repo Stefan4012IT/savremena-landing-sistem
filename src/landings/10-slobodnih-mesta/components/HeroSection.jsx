@@ -40,7 +40,8 @@ export function HeroSection() {
           <img src={heroImage} alt="" />
         </div>
         <p className="deset-slobodnih-mesta-hero__supporting-copy">
-          Izaberite <strong>najsavremenije školovanje</strong> za najbolje rezultate.
+          <span>Izaberite <strong>najsavremenije školovanje</strong></span>
+          <span>za najbolje rezultate.</span>
         </p>
         <div className="deset-slobodnih-mesta-hero__form-panel" id="prijava">
           <LeadForm

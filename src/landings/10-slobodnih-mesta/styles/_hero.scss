@@ -101,7 +101,7 @@
     position: relative;
     z-index: 4;
     max-width: 600px;
-    margin-top: 0;
+    margin-top: 20px;
     font-size: clamp(1.35rem, 2.3vw, 2.45rem);
     font-weight: 400;
     letter-spacing: -0.04em;
@@ -130,6 +130,10 @@
     font-weight: 900;
   }
 
+  &__supporting-copy span {
+    display: block;
+  }
+
   &__visual {
     position: absolute;
     right: calc(clamp(90px, 14vw, 260px) - 20px);
@@ -150,7 +154,7 @@
     height: auto;
     object-fit: contain;
     object-position: right bottom;
-    transform: translateY(125px);
+    transform: translateY(160px);
   }
 
   &__form-panel {
@@ -174,6 +178,25 @@
   &__form-panel .deset-slobodnih-mesta-lead-form button {
     background: #9d1516;
     color: #ffffff;
+  }
+}
+
+@media (min-width: 1920px) {
+  .deset-slobodnih-mesta-hero {
+    &__supporting-copy {
+      max-width: none;
+      margin-top: 0;
+      transform: translateY(clamp(44px, 4vw, 72px));
+      white-space: nowrap;
+    }
+
+    &__supporting-copy span {
+      display: inline;
+    }
+
+    &__supporting-copy span + span::before {
+      content: ' ';
+    }
   }
 }
 
@@ -220,14 +243,61 @@
 }
 
 @media (min-width: 761px) and (max-width: 1919px) {
+  .deset-slobodnih-mesta-hero__visual {
+    right: clamp(50px, 8vw, 140px);
+    width: min(42vw, 720px);
+    height: auto;
+    overflow: visible;
+  }
+
   .deset-slobodnih-mesta-hero__visual img {
     transform: translateY(25px);
+  }
+}
+
+@media (min-width: 1640px) and (max-width: 1919px) {
+  .deset-slobodnih-mesta-hero__visual {
+    right: calc(66vw - 800px);
+    width: 34vw;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1639px) {
+  .deset-slobodnih-mesta-hero__visual {
+    right: clamp(170px, 16vw, 260px);
+    width: 35vw;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1399px) {
+  .deset-slobodnih-mesta-hero__visual {
+    width: min(42vw, 560px);
   }
 }
 
 @media (min-width: 761px) and (max-width: 1599px) {
   .deset-slobodnih-mesta-hero__visual img {
     transform: translateY(25px);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1399px) {
+  .deset-slobodnih-mesta-hero__visual img {
+    transform: translateY(-15px);
+  }
+}
+
+@media (min-width: 761px) and (max-width: 991px) {
+  .deset-slobodnih-mesta-hero__visual {
+    right: -40px;
+  }
+
+  .deset-slobodnih-mesta-hero__visual img {
+    transform: translateY(-160px);
+  }
+
+  .deset-slobodnih-mesta-hero__form-panel {
+    bottom: -100px;
   }
 }
 
@@ -314,7 +384,7 @@
     &__supporting-copy {
       order: 5;
       max-width: 350px;
-      margin-top: 0;
+      margin-top: 20px;
       font-size: clamp(1.3rem, 6.4vw, 1.9rem);
     }
 
