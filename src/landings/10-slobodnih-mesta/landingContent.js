@@ -41,7 +41,7 @@ export const landingData = {
     title: 'Još samo 10 slobodnih mesta | Savremena gimnazija – upis 2026/27',
     description:
       'Ostalo je manje od 10 slobodnih mesta za upis u Savremenu gimnaziju, generacija 2026/27. Prijavite dete na vreme i obezbedite mesto.',
-    ogImageUrl: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/08/10_slobodnih_mesta_img_1.jpg',
+    ogImageUrl: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/08/10-slobodnih-mesta-1200x628.jpg',
   },
   hero: {
     eyebrow: 'Upis u generaciju 2026/27',
