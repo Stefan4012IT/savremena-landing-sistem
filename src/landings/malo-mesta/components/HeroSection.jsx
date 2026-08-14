@@ -2,12 +2,16 @@ import { LeadForm } from './LeadForm'
 import { useLandingData } from '../useLandingData'
 import cambridgeLogo from '../../novo-odeljenje/assets/logos/cambridge-logo-white.png'
 import savremenaGroupLogo from '../assets/Logo_sos_sg_001.svg'
-import heroImage from '../assets/hero_img.png'
+
+const heroImage = 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/08/malo_mesta_hero_new_001.png'
 
 export function HeroSection() {
   const { hero } = useLandingData()
-  const hasHighlightedTitle = hero.title.includes('ZATVARA!')
-  const titleLines = hero.title.split('\n')
+  const heroTitle = `${hero.title
+    .split('\n')
+    .filter((line) => line !== 'se uskoro' && !line.includes('ZATVARA!'))
+    .join(' ')
+    .trim()} SE`
 
   return (
     <section className="malo-mesta-hero">
@@ -22,46 +26,13 @@ export function HeroSection() {
       </header>
         <div className="malo-mesta-hero__inner">
           <div className="malo-mesta-hero__content">
-            <h1>
-              {hasHighlightedTitle ? (
-                <>
-                  {titleLines.map((line) => {
-                    const isHighlightedLine = line.includes('ZATVARA!')
-                    const isEnrollmentLine = line.includes('2026/27.')
-                    const [beforeHighlight = '', afterHighlight = ''] = line.split('ZATVARA!')
-                    const [enrollmentPrefix = '', enrollmentYear = ''] = line.split(' 2026/27.')
-
-                    return (
-                      <span className={`malo-mesta-hero__title-line${isHighlightedLine ? ' malo-mesta-hero__title-line--accent' : ''}${isEnrollmentLine ? ' malo-mesta-hero__title-line--enrollment' : ''}${line === 'se uskoro' ? ' malo-mesta-hero__title-line--light' : ''}`} key={line}>
-                        {isEnrollmentLine ? (
-                          <>
-                            {enrollmentPrefix}
-                            <span className="malo-mesta-hero__title-year"> {enrollmentYear ? `2026/27.${enrollmentYear}` : '2026/27.'}</span>
-                          </>
-                        ) : (
-                          <>
-                            {beforeHighlight}
-                            {isHighlightedLine ? <span className="malo-mesta-hero__highlight">ZATVARA!</span> : null}
-                            {afterHighlight}
-                          </>
-                        )}
-                      </span>
-                    )
-                  })}
-                </>
-              ) : hero.title}
-            </h1>
+            <h1>{heroTitle}</h1>
             <img className="malo-mesta-hero__visual malo-mesta-hero__visual--desktop" src={heroImage} alt="Učenik i nastavnica Savremene" />
             <img
               className="malo-mesta-hero__visual malo-mesta-hero__visual--mobile"
-              src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/07/malo_mesta_img_hero_mobile.png"
+              src={heroImage}
               alt="Učenik i nastavnica Savremene"
             />
-            {hero.lead ? (
-              <div className="malo-mesta-hero__copy">
-                {hero.lead.split('\n\n').map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-              </div>
-            ) : null}
           </div>
           <div className="malo-mesta-hero__form-panel" id="prijava">
             <LeadForm introText="Iskoristite poslednju priliku i obezbedite svom detetu najsavremenije školovanje u regionu!" />

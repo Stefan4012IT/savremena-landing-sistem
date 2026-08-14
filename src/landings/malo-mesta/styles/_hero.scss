@@ -10,11 +10,11 @@
 .malo-mesta-hero {
   position: relative;
   display: grid;
-  min-height: 100vh;
+  min-height: clamp(860px, 100vh, 980px);
   overflow: visible;
   align-items: stretch;
-  padding: clamp(32px, 5vw, 72px) 0;
-  background: #1a283e url('../assets/background_malo_mesta.jpg') center / cover no-repeat;
+  padding: clamp(32px, 5vw, 72px) 0 0;
+  background: #981313;
   color: #ffffff;
   --hero-content-left: max(var(--landing-container-padding), calc((100% - var(--landing-container-max)) / 2));
 
@@ -62,13 +62,14 @@
   &__inner {
     display: block;
     width: min(100% - (var(--landing-container-padding) * 2), var(--landing-container-max));
-    margin: auto;
-    padding: clamp(74px, 8vw, 108px) 0 clamp(298px, 38vh, 382px);
+    margin: 0 auto;
+    padding: clamp(118px, 11vh, 132px) 0 clamp(430px, 50vh, 520px);
     z-index: 1;
   }
 
   &__content {
-    width: min(52vw, 820px);
+    width: 100%;
+    text-align: center;
   }
 
   &__eyebrow {
@@ -85,52 +86,20 @@
   }
 
   h1 {
-    max-width: 720px;
-    margin: 0;
-    max-width: none;
-    font-size: clamp(2.75rem, 5.15vw, 5.85rem);
-    font-weight: 950;
-    line-height: 0.9;
-    letter-spacing: -0.055em;
-    white-space: pre-line;
-    text-wrap: balance;
-  }
-
-  &__highlight {
-    position: relative;
-    z-index: 0;
-    display: inline-block;
-    font-size: 1.2em;
-    line-height: 0.82;
-    margin-left: 0.04em;
-    transform: rotate(-6deg);
-  }
-
-  &__title-line {
-    display: block;
-    white-space: nowrap;
-  }
-
-  &__title-line--accent {
-    margin-top: 0.1em;
-  }
-
-  &__title-line--light {
-    font-weight: 400;
-  }
-
-  &__highlight::after {
     position: absolute;
-    right: -0.24em;
-    top: -0.1em;
-    bottom: -0.1em;
-    left: -0.24em;
-    z-index: -1;
-    height: auto;
-    border-radius: 0;
-    background: #981313;
-    content: '';
-    transform: none;
+    top: clamp(124px, 12vh, 140px);
+    left: 50%;
+    z-index: 2;
+    margin: 0 auto;
+    width: max-content;
+    max-width: calc(100vw - 48px);
+    font-size: clamp(4.5rem, 4.6vw, 5.5rem);
+    font-weight: 950;
+    line-height: 0.92;
+    letter-spacing: -0.035em;
+    text-align: center;
+    white-space: nowrap;
+    transform: translateX(-50%);
   }
 
   &__lead {
@@ -141,23 +110,6 @@
     line-height: 1.34;
   }
 
-  &__copy {
-    width: min(100%, 640px);
-    margin-top: clamp(64px, 5vw, 88px);
-  }
-
-  &__copy p {
-    margin: 0;
-    color: rgba(255, 255, 255, 0.88);
-    font-size: clamp(1rem, 1.25vw, 1.16rem);
-    font-weight: 650;
-    line-height: 1.42;
-  }
-
-  &__copy p + p {
-    margin-top: 14px;
-  }
-
   &__note {
     margin: 20px 0 0;
     font-size: 1rem;
@@ -166,27 +118,31 @@
 
   &__form-panel {
     position: absolute;
-    bottom: clamp(28px, 5vh, 60px);
-    left: var(--hero-content-left);
+    bottom: -138px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 3;
     width: min(100%, 630px);
     border-radius: 20px;
     padding: clamp(18px, 1.8vw, 26px);
-    background: #981313;
+    background: #2b446b;
     color: #ffffff;
   }
 
   &__visual {
     position: absolute;
-    right: clamp(136px, calc(8vw + 100px), 250px);
-    bottom: 0;
+    right: auto;
+    bottom: clamp(94px, 11vh, 126px);
+    left: 50%;
     z-index: 1;
     display: block;
-    width: min(68vw, 960px);
+    width: 700px;
+    max-width: 52vw;
     max-height: min(108vh, 1080px);
     object-fit: contain;
-    object-position: bottom right;
+    object-position: bottom center;
     pointer-events: none;
+    transform: translateX(-50%);
   }
 
   &__visual--mobile {
@@ -221,45 +177,48 @@
     min-height: 44px;
     margin-top: 0;
     padding: 10px 18px;
-    background: #ffcc0c;
-    color: #981313;
+    background: #981313;
+    color: #ffffff;
   }
 }
 
 @media (min-width: 1041px) {
   .malo-mesta-hero {
-    min-height: min(100vh, 900px);
+    min-height: clamp(860px, 100vh, 980px);
   }
 
   .malo-mesta-hero h1 {
-    font-size: 125px;
+    top: clamp(124px, 12vh, 140px);
+    font-size: clamp(72px, 4.6vw, 88px);
   }
 
   .malo-mesta-hero__form-panel {
-    bottom: -54px;
+    bottom: -138px;
     width: min(100%, 620px);
   }
 }
 
 @media (min-width: 1041px) and (max-width: 1919px) {
   .malo-mesta-hero h1 {
-    font-size: 112px;
+    top: clamp(120px, 11vh, 132px);
+    font-size: clamp(64px, 4.8vw, 82px);
+  }
+
+  .malo-mesta-hero__inner {
+    padding-top: clamp(118px, 11vh, 132px);
+    padding-bottom: clamp(390px, 48vh, 470px);
   }
 
   .malo-mesta-hero__visual {
-    right: clamp(24px, 3vw, 70px);
-  }
-}
-
-@media (min-width: 1920px) {
-  .malo-mesta-hero__visual {
-    right: 200px;
+    bottom: clamp(86px, 10vh, 112px);
+    width: 660px;
+    max-width: 54vw;
   }
 }
 
 @media (max-width: 1040px) {
   .malo-mesta-hero {
-    min-height: 820px;
+    min-height: 860px;
 
     &__inner {
       padding-top: 120px;
@@ -271,9 +230,41 @@
     }
 
     &__visual {
-      right: -11vw;
+      right: auto;
+      left: 50%;
       width: min(58vw, 560px);
-      opacity: 0.4;
+      bottom: 88px;
+      transform: translateX(-50%);
+    }
+
+    &__form-panel {
+      bottom: -96px;
+    }
+  }
+}
+
+@media (min-width: 701px) and (max-width: 992px) {
+  .malo-mesta-hero {
+    min-height: 820px;
+
+    h1 {
+      top: 118px;
+      font-size: clamp(48px, 7.2vw, 68px);
+    }
+
+    &__inner {
+      padding-top: 112px;
+      padding-bottom: 400px;
+    }
+
+    &__visual {
+      width: min(58vw, 500px);
+      bottom: 104px;
+    }
+
+    &__form-panel {
+      bottom: -88px;
+      width: min(100%, 590px);
     }
   }
 }
@@ -281,12 +272,21 @@
 @media (max-width: 700px) {
   .malo-mesta-hero {
     min-height: auto;
-    padding: 56px 0;
+    padding: 0 0 48px;
 
     h1 {
-      font-size: clamp(2.25rem, 10vw, 4.7rem);
       position: relative;
+      top: auto;
+      left: auto;
       z-index: 1;
+      width: 100%;
+      max-width: 100%;
+      font-size: clamp(2.35rem, 12vw, 4.25rem);
+      line-height: 0.95;
+      text-align: center;
+      white-space: normal;
+      text-wrap: balance;
+      transform: none;
     }
 
     &__header {
@@ -315,15 +315,18 @@
     }
 
     &__visual {
-      position: absolute;
-      top: -30px;
-      right: -56px;
+      position: relative;
+      top: auto;
+      right: auto;
       bottom: auto;
+      left: 50%;
       z-index: 0;
-      width: min(124%, 480px);
+      width: 100vw;
+      max-width: none;
       max-height: none;
-      margin: 0;
+      margin: 20px 0 -8px;
       opacity: 1;
+      transform: translateX(-50%);
     }
 
     &__visual--desktop {
@@ -341,17 +344,7 @@
     &__content {
       position: relative;
       width: 100%;
-    }
-
-    &__copy {
-      position: relative;
-      z-index: 1;
-      margin-top: clamp(250px, 74vw, 360px);
-    }
-
-    &__title-year {
-      display: block;
-      font-weight: 400;
+      text-align: center;
     }
 
     &__form-panel {
@@ -360,7 +353,8 @@
       bottom: auto;
       left: auto;
       width: 100%;
-      margin-top: 28px;
+      margin-top: 0;
+      transform: none;
     }
   }
 }

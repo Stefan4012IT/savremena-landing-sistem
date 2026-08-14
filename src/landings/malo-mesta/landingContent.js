@@ -9,7 +9,7 @@ export const landingData = {
     title: 'Upis 2026/27: još malo slobodnih mesta | Savremena',
     description:
       'Upis za školsku 2026/27. godinu je pri kraju. Proverite preostala slobodna mesta u Savremenoj osnovnoj školi i Savremenoj gimnaziji i prijavite dete na vreme.',
-    ogImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/07/malo-mesta_og.jpg',
+    ogImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/08/malo_mesta_og_1200x628.jpg',
   },
   hero: {
     eyebrow: '',
