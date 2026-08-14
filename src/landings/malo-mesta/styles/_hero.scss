@@ -110,6 +110,28 @@
     line-height: 1.34;
   }
 
+  &__copy {
+    position: absolute;
+    top: clamp(500px, 58vh, 600px);
+    bottom: auto;
+    left: var(--hero-content-left);
+    z-index: 3;
+    width: min(22vw, 340px);
+    text-align: left;
+  }
+
+  &__copy p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: clamp(1.04rem, 1vw, 1.16rem);
+    font-weight: 600;
+    line-height: 1.55;
+  }
+
+  &__copy p + p {
+    margin-top: 16px;
+  }
+
   &__note {
     margin: 20px 0 0;
     font-size: 1rem;
@@ -119,10 +141,11 @@
   &__form-panel {
     position: absolute;
     bottom: -138px;
-    left: 50%;
-    transform: translateX(-50%);
+    right: var(--hero-content-left);
+    left: auto;
+    transform: none;
     z-index: 3;
-    width: min(100%, 630px);
+    width: clamp(540px, 34vw, 660px);
     border-radius: 20px;
     padding: clamp(18px, 1.8vw, 26px);
     background: #2b446b;
@@ -132,12 +155,12 @@
   &__visual {
     position: absolute;
     right: auto;
-    bottom: clamp(94px, 11vh, 126px);
+    bottom: 0;
     left: 50%;
     z-index: 1;
     display: block;
-    width: 700px;
-    max-width: 52vw;
+    width: 820px;
+    max-width: 50vw;
     max-height: min(108vh, 1080px);
     object-fit: contain;
     object-position: bottom center;
@@ -194,7 +217,7 @@
 
   .malo-mesta-hero__form-panel {
     bottom: -138px;
-    width: min(100%, 620px);
+    width: clamp(540px, 34vw, 660px);
   }
 }
 
@@ -210,61 +233,103 @@
   }
 
   .malo-mesta-hero__visual {
-    bottom: clamp(86px, 10vh, 112px);
-    width: 660px;
-    max-width: 54vw;
+    bottom: 0;
+    width: 760px;
+    max-width: 50vw;
+  }
+
+  .malo-mesta-hero__copy {
+    top: clamp(470px, 58vh, 560px);
+    width: min(20vw, 320px);
+  }
+
+  .malo-mesta-hero__form-panel {
+    width: clamp(560px, 36vw, 660px);
   }
 }
 
 @media (max-width: 1040px) {
   .malo-mesta-hero {
-    min-height: 860px;
-
-    &__inner {
-      padding-top: 120px;
-    }
-
-    &__content {
-      max-width: 680px;
-      width: min(66vw, 660px);
-    }
-
-    &__visual {
-      right: auto;
-      left: 50%;
-      width: min(58vw, 560px);
-      bottom: 88px;
-      transform: translateX(-50%);
-    }
-
-    &__form-panel {
-      bottom: -96px;
-    }
+    min-height: auto;
   }
 }
 
-@media (min-width: 701px) and (max-width: 992px) {
+@media (min-width: 701px) and (max-width: 1199px) {
   .malo-mesta-hero {
-    min-height: 820px;
+    min-height: auto;
+    padding: 0 0 56px;
 
     h1 {
-      top: 118px;
+      position: relative;
+      top: auto;
+      left: auto;
+      width: 100%;
+      max-width: 100%;
       font-size: clamp(48px, 7.2vw, 68px);
+      white-space: normal;
+      text-wrap: balance;
+      transform: none;
     }
 
     &__inner {
       padding-top: 112px;
-      padding-bottom: 400px;
+      padding-bottom: 0;
+    }
+
+    &__content {
+      position: relative;
+      max-width: 720px;
+      width: min(100%, 720px);
+      margin: 0 auto;
+      text-align: center;
     }
 
     &__visual {
-      width: min(58vw, 500px);
-      bottom: 104px;
+      position: relative;
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: 50%;
+      width: min(86vw, 560px);
+      max-width: none;
+      margin: 22px 0 10px;
+      transform: translateX(-50%);
+    }
+
+    &__visual--desktop {
+      display: none;
+    }
+
+    &__visual--mobile {
+      display: block;
+    }
+
+    &__copy {
+      position: relative;
+      top: auto;
+      bottom: auto;
+      left: auto;
+      display: block;
+      width: 100%;
+      max-width: 620px;
+      margin: 0 auto 22px;
+      padding: 0 12px;
+      text-align: center;
+    }
+
+    &__copy p {
+      font-size: clamp(1rem, 2.3vw, 1.16rem);
+      line-height: 1.52;
     }
 
     &__form-panel {
-      bottom: -88px;
+      position: relative;
+      right: auto;
+      bottom: auto;
+      left: auto;
       width: min(100%, 590px);
+      margin: 0 auto;
+      transform: none;
     }
   }
 }
@@ -324,7 +389,7 @@
       width: 100vw;
       max-width: none;
       max-height: none;
-      margin: 20px 0 -8px;
+      margin: 20px 0 8px;
       opacity: 1;
       transform: translateX(-50%);
     }
@@ -345,6 +410,24 @@
       position: relative;
       width: 100%;
       text-align: center;
+    }
+
+    &__copy {
+      position: relative;
+      top: auto;
+      bottom: auto;
+      left: auto;
+      display: block;
+      width: 100%;
+      max-width: 560px;
+      margin: 0 auto 20px;
+      padding: 0 8px;
+      text-align: center;
+    }
+
+    &__copy p {
+      font-size: clamp(1rem, 4.2vw, 1.12rem);
+      line-height: 1.5;
     }
 
     &__form-panel {

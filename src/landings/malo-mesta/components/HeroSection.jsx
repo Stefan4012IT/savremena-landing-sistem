@@ -4,6 +4,7 @@ import cambridgeLogo from '../../novo-odeljenje/assets/logos/cambridge-logo-whit
 import savremenaGroupLogo from '../assets/Logo_sos_sg_001.svg'
 
 const heroImage = 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/08/malo_mesta_hero_new_001.png'
+const heroImageMobile = 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/08/malo_mesta_hero_new_001-mobile.png'
 
 export function HeroSection() {
   const { hero } = useLandingData()
@@ -30,9 +31,14 @@ export function HeroSection() {
             <img className="malo-mesta-hero__visual malo-mesta-hero__visual--desktop" src={heroImage} alt="Učenik i nastavnica Savremene" />
             <img
               className="malo-mesta-hero__visual malo-mesta-hero__visual--mobile"
-              src={heroImage}
+              src={heroImageMobile}
               alt="Učenik i nastavnica Savremene"
             />
+            {hero.lead ? (
+              <div className="malo-mesta-hero__copy">
+                {hero.lead.split('\n\n').map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              </div>
+            ) : null}
           </div>
           <div className="malo-mesta-hero__form-panel" id="prijava">
             <LeadForm introText="Iskoristite poslednju priliku i obezbedite svom detetu najsavremenije školovanje u regionu!" />
