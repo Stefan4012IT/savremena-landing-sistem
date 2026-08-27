@@ -6,7 +6,7 @@ const schoolTables = [
   {
     name: 'Savremena osnovna škola',
     shortName: 'SOS',
-    updatedAt: '5. 7. 2026.',
+    updatedAt: '14.8.2026.',
     image: sosVisual,
     rows: [
       ['Predškolsko', '2'],
@@ -23,10 +23,10 @@ const schoolTables = [
   {
     name: 'Savremena gimnazija',
     shortName: 'SG',
-    updatedAt: '5. 7. 2026.',
+    updatedAt: '14.8.2026.',
     image: sgVisual,
     rows: [
-      ['I razred', '19', '8 odeljenja: POPUNJENO · Poslednje odeljenje: 19'],
+      ['I razred', '8', '8 odeljenja: POPUNJENO · Poslednje odeljenje: 8'],
       ['II razred', '1'],
       ['III razred', '1'],
       ['IV razred', '1'],
