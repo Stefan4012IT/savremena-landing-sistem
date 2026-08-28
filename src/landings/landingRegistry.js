@@ -4,6 +4,8 @@ import { NovoOdeljenjeLanding } from './novo-odeljenje/NovoOdeljenjeLanding'
 import { defaultLandingData as novoOdeljenjeLandingData } from './novo-odeljenje/landingContent'
 import { DesetSlobodnihMestaLanding } from './10-slobodnih-mesta/DesetSlobodnihMestaLanding'
 import { defaultLandingData as desetSlobodnihMestaLandingData } from './10-slobodnih-mesta/landingContent'
+import { NijeKasnoZaBoljuSkoluLanding } from './nije-kasno-za-bolju-skolu-sg/NijeKasnoZaBoljuSkoluLanding'
+import { defaultLandingData as nijeKasnoZaBoljuSkoluLandingData } from './nije-kasno-za-bolju-skolu-sg/landingContent'
 import { MaloMestaLanding } from './malo-mesta/MaloMestaLanding'
 import { defaultLandingData as maloMestaLandingData } from './malo-mesta/landingContent'
 
@@ -19,6 +21,10 @@ export const landingRegistry = {
   [desetSlobodnihMestaLandingData.slug]: {
     component: DesetSlobodnihMestaLanding,
     fallbackData: desetSlobodnihMestaLandingData,
+  },
+  [nijeKasnoZaBoljuSkoluLandingData.slug]: {
+    component: NijeKasnoZaBoljuSkoluLanding,
+    fallbackData: nijeKasnoZaBoljuSkoluLandingData,
   },
   [maloMestaLandingData.slug]: {
     component: MaloMestaLanding,
