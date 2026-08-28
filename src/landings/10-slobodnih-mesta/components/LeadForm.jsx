@@ -24,6 +24,115 @@ const countryCallingCodes = [
   '+976', '+977', '+992', '+993', '+994', '+995', '+996', '+998',
 ]
 
+function isObviousTestNumber(value) {
+  if (!value) return false
+  if (/^(\d)\1+$/.test(value)) return true
+
+  const ascending = '01234567890123456789'
+  const descending = '98765432109876543210'
+
+  return ascending.includes(value) || descending.includes(value)
+}
+
+function getSerbianPhoneRule(area) {
+  if (/^[1-3]/.test(area)) {
+    return { min: 5, max: 7, type: 'geographic' }
+  }
+
+  if (/^[5-6]/.test(area)) {
+    if (area.length === 2 && area.startsWith('5')) {
+      return { min: 7, max: 7, type: 'mobile' }
+    }
+
+    return { min: 6, max: 7, type: 'mobile' }
+  }
+
+  if (/^[7-9]/.test(area)) {
+    return area.length === 2
+      ? { min: 7, max: 9, type: 'nonGeographic' }
+      : { min: 6, max: 8, type: 'nonGeographic' }
+  }
+
+  return null
+}
+
+function describeDigitRange(min, max) {
+  return min === max ? `${min} cifara` : `od ${min} do ${max} cifara`
+}
+
+function validatePhoneFields(countryCode, areaCode, phoneNumber) {
+  const area = String(areaCode || '').trim()
+  const phone = String(phoneNumber || '').trim()
+
+  if (!/^\d+$/.test(area)) {
+    return 'Pozivni broj mora sadržati samo cifre.'
+  }
+
+  if (!/^\d+$/.test(phone)) {
+    return 'Telefon mora sadržati samo cifre.'
+  }
+
+  if (countryCode === '+381') {
+    if (area.startsWith('0')) {
+      return 'Pozivni broj unesite bez početne nule, na primer 64 ili 11.'
+    }
+
+    if (!/^\d{2,3}$/.test(area)) {
+      return 'Pozivni broj za Srbiju mora imati 2 ili 3 cifre.'
+    }
+
+    const phoneRule = getSerbianPhoneRule(area)
+    if (!phoneRule) {
+      return 'Pozivni broj nije u važećem opsegu za Srbiju.'
+    }
+
+    if (phone.length < phoneRule.min || phone.length > phoneRule.max) {
+      return `Telefon za ovaj pozivni broj mora imati ${describeDigitRange(phoneRule.min, phoneRule.max)}.`
+    }
+
+    if (phoneRule.type === 'geographic' && /^[019]/.test(phone)) {
+      return 'Fiksni telefonski broj ne može počinjati cifrom 0, 1 ili 9.'
+    }
+  } else {
+    if (!/^\d{1,5}$/.test(area)) {
+      return 'Pozivni broj mora imati od 1 do 5 cifara.'
+    }
+
+    if (!/^\d{5,12}$/.test(phone)) {
+      return 'Telefon mora imati od 5 do 12 cifara.'
+    }
+  }
+
+  const totalDigits = countryCode.replace(/\D/g, '').length + area.length + phone.length
+  if (totalDigits > 15) {
+    return 'Kompletan međunarodni broj ne sme imati više od 15 cifara.'
+  }
+
+  if (isObviousTestNumber(phone)) {
+    return 'Uneti telefon izgleda kao probni broj. Unesite stvarni kontakt broj.'
+  }
+
+  return ''
+}
+
+function validateFormData(formData) {
+  const name = String(formData.get('name') || '').trim()
+  const email = String(formData.get('email') || '').trim()
+  const childAge = Number(formData.get('childAge'))
+
+  if (name.length < 2) return 'Unesite ime i prezime.'
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return 'Unesite ispravnu e-mail adresu.'
+  if (!Number.isInteger(childAge) || childAge < 10 || childAge > 19) {
+    return 'Uzrast deteta mora biti između 10 i 19 godina.'
+  }
+
+  return validatePhoneFields(
+    String(formData.get('countryCode') || ''),
+    formData.get('areaCode'),
+    formData.get('phone'),
+  )
+}
+
 export function LeadForm({ className = '', headerTitle, headerText }) {
   const { leadForm, slug } = useLandingData()
   const [status, setStatus] = useState('idle')
@@ -39,6 +148,13 @@ export function LeadForm({ className = '', headerTitle, headerText }) {
     const formData = new FormData(form)
     const submittedInstitution = formData.get('institution') || institution
     const leadEventId = formData.get('lead_event_id')
+    const validationMessage = validateFormData(formData)
+
+    if (validationMessage) {
+      setStatus('error')
+      setMessage(validationMessage)
+      return
+    }
 
     setStatus('submitting')
     setMessage('')
@@ -69,13 +185,14 @@ export function LeadForm({ className = '', headerTitle, headerText }) {
       setStatus('success')
     } catch (error) {
       setStatus('error')
-      setMessage(leadForm.errorMessage || error.message)
+      const backendMessage = error.details ? Object.values(error.details)[0] : ''
+      setMessage(backendMessage || error.message || leadForm.errorMessage || 'Prijava nije poslata.')
     }
   }
 
   return (
     <>
-      <form className={`deset-slobodnih-mesta-lead-form${className ? ` ${className}` : ''}`} onSubmit={handleSubmit}>
+      <form className={`deset-slobodnih-mesta-lead-form${className ? ` ${className}` : ''}`} onSubmit={handleSubmit} noValidate>
         {headerTitle || headerText ? (
           <div className="deset-slobodnih-mesta-lead-form__header">
             {headerTitle ? <h2>{headerTitle}</h2> : null}
@@ -108,7 +225,9 @@ export function LeadForm({ className = '', headerTitle, headerText }) {
             type="text"
             name="areaCode"
             placeholder={leadForm.areaCodePlaceholder}
-            inputMode="tel"
+            inputMode="numeric"
+            pattern="[0-9]*"
+            maxLength="5"
             aria-label={leadForm.areaCodeLabel}
             required
           />
@@ -117,6 +236,9 @@ export function LeadForm({ className = '', headerTitle, headerText }) {
             name="phone"
             placeholder={leadForm.phonePlaceholder}
             autoComplete="tel"
+            inputMode="numeric"
+            pattern="[0-9]*"
+            maxLength="12"
             aria-label={leadForm.phoneLabel}
             required
           />
