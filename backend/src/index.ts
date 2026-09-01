@@ -3,6 +3,7 @@ import { najboljaOdlukaLanding } from './data/najbolja-odluka'
 import { novoOdeljenjeLanding } from './data/novo-odeljenje'
 import { maloMestaLanding } from './data/malo-mesta'
 import { nijeKasnoZaBoljuSkoluLanding } from './data/nije-kasno-za-bolju-skolu'
+import { josNijeKasnoZaBoljuSkoluLanding } from './data/jos-nije-kasno-za-bolju-skolu'
 
 const previousNajboljaOdlukaSlug = 'najbolja-odluka'
 const previousHeroImageUrls = {
@@ -379,6 +380,18 @@ export default {
     if (!existingNijeKasnoZaBoljuSkoluLanding) {
       await strapi.documents('api::landing.landing').create({
         data: nijeKasnoZaBoljuSkoluLanding,
+        status: 'published',
+      })
+    }
+
+    const existingJosNijeKasnoZaBoljuSkoluLanding = await strapi.documents('api::landing.landing').findFirst({
+      filters: { slug: josNijeKasnoZaBoljuSkoluLanding.slug },
+      populate: landingPopulate,
+    })
+
+    if (!existingJosNijeKasnoZaBoljuSkoluLanding) {
+      await strapi.documents('api::landing.landing').create({
+        data: josNijeKasnoZaBoljuSkoluLanding,
         status: 'published',
       })
     }

@@ -33,10 +33,10 @@ const placeholderImages = {
 }
 
 export const landingData = {
-  slug: 'nije-kasno-za-bolju-skolu',
-  name: 'Nije kasno za bolju školu',
-  brandScope: 'SG',
-  gtmId: 'GTM-WRTKDP',
+  slug: 'jos-nije-kasno-za-bolju-skolu',
+  name: 'Još nije kasno za bolju školu',
+  brandScope: 'SOS',
+  gtmId: 'GTM-TPSKNT5',
   seo: {
     title: 'Još samo 10 slobodnih mesta | Savremena gimnazija – upis 2026/27',
     description:
@@ -57,17 +57,8 @@ export const landingData = {
     eyebrow: 'Za početak koji pravi razliku',
     title: 'Nema više odlaganja – sada je pravi trenutak!',
     text:
-      'Iako je nova školska godina već počela, Savremena osnovna škola i Savremena gimnazija pružaju šansu da vaše dete započne putovanje ka uspehu već sada. Ne morate čekati sledeću godinu – vaše dete može odmah postati deo jedne od škola koje nude najbolje od obrazovanja. Preostalo je samo nekoliko slobodnih mesta, zato iskoristite priliku!',
+      'Iako je nova školska godina već počela, Savremena osnovna škola pruža šansu da vaše dete započne putovanje ka uspehu već sada. Ne morate čekati sledeću godinu – vaše dete može odmah postati deo škole koja nudi najbolje od obrazovanja. Preostalo je samo nekoliko slobodnih mesta, zato iskoristite priliku!',
     ctaText: 'Prijavite se danas i obezbedite jedno od preostalih mesta.',
-    worryLabel: 'Da li od srednje škole očekujete više',
-    worries: [
-      'Da li za svoje dete želite stvarno drugačije obrazovanje?',
-      'Da li želite da uči u najsavremenijem školskom prostoru?',
-      'Da li tražite smer koji prati njegova interesovanja i talente?',
-      'Da li želite praktičnu primenu znanja i razvoj veština?',
-    ],
-    reframeLabel: 'Još uvek nije kasno za bolju školu',
-    reframes: ['Pažnja i podrška', 'Savremena nastava', 'Sigurniji put ka budućnosti'],
   },
   specialConditions: {
     eyebrow: 'Simbolika broja 9',
@@ -86,17 +77,17 @@ export const landingData = {
     text:
       'Učenici ne uče samo da bi položili test ili dobili ocenu. Uče da razumeju, povežu znanje, rešavaju probleme i koriste ono što znaju u svakodnevnim situacijama.',
     paragraphs: [
-      'Savremena gimnazija pruža kreativan i drugačiji pristup nastavi, uz rad u manjim grupama, mentorsku podršku i savremene metode rada. Takvo okruženje pomaže učenicima da napreduju sigurnije, motivisanije i sa više poverenja u svoje sposobnosti.',
-      'Nastava je usmerena na razumevanje, praktičnu primenu znanja i razvoj veština koje su važne za fakultet, karijeru i život: kritičko mišljenje, komunikaciju, odgovornost, digitalnu pismenost i samostalnost.',
+      'Savremena osnovna škola pruža kreativan i drugačiji pristup nastavi, uz rad u manjim grupama, mentorsku podršku i savremene metode rada. Takvo okruženje pomaže učenicima da napreduju sigurnije, motivisanije i sa više poverenja u svoje sposobnosti.',
+      'Nastava je usmerena na razumevanje, praktičnu primenu znanja i razvoj veština važnih za dalje školovanje, odrastanje i život: kritičko mišljenje, komunikaciju, odgovornost, digitalnu pismenost i samostalnost.',
     ],
     imagePlaceholder: 'Image placeholder',
     imageUrl: placeholderImages.modernEducation,
   },
   directions: {
-    eyebrow: 'Smerovi',
-    title: 'Izaberite smer koji prati interesovanja vašeg deteta',
+    eyebrow: 'Talent Pathways™',
+    title: 'Izaberite usmerenje koje prati interesovanja vašeg deteta',
     text:
-      'Bilo da ga privlače tehnologija, jezici, društvene nauke ili široko opšte obrazovanje, svaki smer pruža kvalitetnu osnovu za dalji razvoj.',
+      'U višim razredima učenici biraju razvojni modul koji dodatno prati, obogaćuje i unapređuje njihova interesovanja i talente, uz zvanični plan i program Ministarstva prosvete.',
   },
   programChoice: {
     eyebrow: 'Izaberite svoj put ka uspehu',
@@ -109,14 +100,12 @@ export const landingData = {
   },
   benefits: {
     eyebrow: 'Stvarno drugačija',
-    title: 'Zašto Savremena gimnazija',
+    title: 'Zašto Savremena osnovna škola',
     text: 'Savremena učenicima pruža znanje, podršku, tehnologiju, zdravo okruženje i prostor da razviju svoje mogućnosti.',
   },
   specialOffer: {
     eyebrow: 'Važan korak ka budućnosti',
-    title: 'Iskoristite priliku da obezbedite mesto u Savremenoj gimnaziji',
-    text:
-      'Ako vaše dete nije upisalo školu koju je želelo, još uvek imate mogućnost da izaberete obrazovanje koje mu pruža sigurnost, podršku i bolju pripremu za budućnost.',
+    title: 'Iskoristite priliku da obezbedite mesto u Savremenoj osnovnoj školi',
   },
   enrollmentHelp: {
     title: 'Imate pitanja ili vam je potrebna pomoć oko upisa u srednju školu?',
@@ -145,8 +134,8 @@ export const landingData = {
     phoneLabel: 'Telefon',
     childAgePlaceholder: 'Uzrast deteta',
     childAgeLabel: 'Uzrast deteta',
-    institution: 'sg',
-    formName: 'nije kasno za bolju školu - sg',
+    institution: 'sos',
+    formName: 'još nije kasno za bolju školu - sos',
     submitLabel: 'Prijavite se',
     successTitle: 'Prijava je poslata',
     successMessage: 'Hvala vam. Naš tim će vas uskoro kontaktirati sa informacijama o upisu.',
@@ -154,15 +143,15 @@ export const landingData = {
   },
   testimonials: {
     eyebrow: 'Iskustva učenika i roditelja',
-    title: 'Savremena gimnazija je drugačija od drugih',
+    title: 'Mi smo zaista imali samo predivna iskustva u Savremenoj.',
     text: '',
   },
   footer: {
-    addressLine1: 'Masarikova 5 (ulaz iz Kralja Milana),',
-    addressLine2: 'Palata Beograd',
-    phone: '+381 (0)11 4011 223',
-    officeEmail: 'office@savremena-gimnazija.edu.rs',
-    enrollmentEmail: 'upis@savremena-gimnazija.edu.rs',
+    addressLine1: 'Bulevar heroja sa Košara 17,',
+    addressLine2: 'Novi Beograd',
+    phone: '+381 (0)11 4011 222',
+    officeEmail: 'office@savremena-osnovna.edu.rs',
+    enrollmentEmail: 'upis@savremena-osnovna.edu.rs',
   },
 }
 
@@ -187,32 +176,32 @@ export const educationHighlights = [
 
 export const directions = [
   {
-    title: 'Opšti smer',
-    tag: 'Academic Excellence Program',
-    details: 'Core Knowledge · Critical Thinking · Future Competencies',
-    text: 'Opšti smer je idealan izbor za učenike širokih interesovanja, jer nudi uravnoteženo i kvalitetno obrazovanje koje otvara vrata ka velikom broju različitih fakulteta i budućih zanimanja.',
-    imageUrl: placeholderImages.directions[0],
+    title: 'Sportski smer – Šampionski razvoj',
+    tag: 'Champion Pathway™',
+    details: 'Sports & Performance Development',
+    text: 'Za učenike koji žele dodatno da razvijaju disciplinu, timski duh i sportski potencijal. Dodatni treninzi, sportske radionice, kampovi i takmičenja podstiču koordinaciju, snagu, mentalnu otpornost, zdrave navike i liderstvo kroz sport.',
+    imageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/02/sport.jpg',
   },
   {
-    title: 'IT STEAM smer',
-    tag: 'Digital Futures Program',
-    details: 'Technology · Engineering · AI · Innovation',
-    text: 'Na IT smeru, uz opšte gimnazijsko obrazovanje, učenici stiču praktična znanja iz programiranja, rada računarskih sistema, mreža i baza podataka, pripremajući se za najtraženija zanimanja 21. veka.',
-    imageUrl: placeholderImages.directions[1],
+    title: 'IT & AI smer – Digitalni umovi budućnosti',
+    tag: 'FutureTech Pathway™',
+    details: 'IT, Coding & AI Exploration',
+    text: 'Za decu koja ne žele samo da koriste tehnologiju, već da je razumeju i stvaraju. Programiranje, digitalna logika, AI projekti prilagođeni uzrastu, robotika i STEM izazovi razvijaju veštine budućnosti od najranijih godina.',
+    imageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/02/it.jpg',
   },
   {
-    title: 'Društveno-jezički smer',
-    tag: 'Global Communication Program',
-    details: 'Languages · Culture · Social Sciences · Global Awareness',
-    text: 'Društveno-jezički smer je pravi izbor za učenike koji žele da studiraju društveno-humanističke nauke, jer pruža znanja ključna za dalje školovanje, razvoj opšte kulture i širinu interesovanja i razmišljanja.',
-    imageUrl: placeholderImages.directions[2],
+    title: 'Creative Arts smer – Studio ideja i stvaralaštva',
+    tag: 'Creative Studio Pathway™',
+    details: 'Art, Design & Expression',
+    text: 'Za učenike koji svet vide kroz boje, ideje i kreativno stvaranje. Likovna umetnost, dizajn, multimedija, kreativni projekti i izložbe razvijaju maštu, estetiku, samopouzdanje i umetnost kao alat razmišljanja.',
+    imageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/02/art.jpg',
   },
   {
-    title: 'Sportski smer',
-    tag: 'Champion Development Program',
-    details: 'Sports Performance · Academic Excellence · Personal Growth',
-    text: 'Sportski smer Savremene gimnazije namenjen je učenicima koji žele da razvijaju svoje sportske talente uz odlične akademske rezultate, uz školu koja razume njihov ritam, ciljeve i potrebe za napredovanjem na oba plana.',
-    imageUrl: placeholderImages.directions[3],
+    title: 'Language & Global Skills smer – Jezici bez granica',
+    tag: 'Global Language Pathway™',
+    details: 'Languages, Cambridge & Communication',
+    text: 'Za učenike koji žele da govore svetu – jasno, prirodno i samouvereno. Napredni engleski, dodatni jezici, međunarodni projekti, komunikacione veštine i global mindset pripremaju dete za Cambridge putanju i dalje školovanje.',
+    imageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/02/language.jpg',
   },
 ]
 
@@ -242,12 +231,12 @@ export const benefits = [
 
 export const testimonials = [
   {
-    title: 'Savremena je opravdala naša očekivanja',
-    text: 'Pre 4 godine bilo je stvarno drugačije. To je za nas bio novi početak i Savremena je kasnije zaista opravdala očekivanja koja smo na početku imali.',
-    author: 'Nikola Milosavljević',
-    role: 'maturant Savremene',
-    initials: 'NM',
-    avatarImageUrl: placeholderImages.testimonialAvatars[0],
+    title: 'Naša Ana je potpuno procvetala, Savremena je nešto najbolje što trenutno imamo u Srbiji',
+    text: 'Savremena je prva klasa i nešto najbolje što trenutno imamo u Srbiji. Vrlo smo zadovoljni školom, uslovima, tretmanom, pristupom… Vredi svaki dinar uložen u ovu školu i nikad pametnije nisam uložila novac. Naša Ana je potpuno procvetala u školi i to svi primećuju, a neke stvari u životu nemaju cenu.',
+    author: 'Lidija Milanović',
+    role: 'roditelj',
+    initials: 'LM',
+    avatarImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2018/11/Lidija-Milanović-SG-mama...-1.png',
     variant: 'text',
   },
   {
@@ -261,13 +250,12 @@ export const testimonials = [
     variant: 'video',
   },
   {
-    title: 'Najiskrenije, ja sam oduševljena Savremenom gimnazijom',
-    text: 'Savremena gimnazija je drugačija od drugih, ona je zadovoljila sve moje kriterijume i nade kao roditelja da će dete dobiti pravo obrazovanje.',
-    author: 'Tatjana Kavazović',
-    role: 'Andrijina mama',
-    initials: 'TK',
-    avatarImageUrl: placeholderImages.testimonialAvatars[2],
-    videoImageUrl: placeholderImages.testimonialVideos[1],
+    title: 'Preporuka bez razmišljanja – Savremena je jedini izbor!',
+    text: 'Mi smo zaista imali samo predivna iskustva u Savremenoj. Nije uopšte postojala kao opcija nešto drugo. Moje dete je prezadovoljno, mi smo kao roditelji prezadovoljni. Svim prijateljima sam je preporučila i uvek imam samo reči hvale za Savremenu.',
+    author: 'Ivana Stamenković',
+    role: 'roditelj',
+    initials: 'IS',
+    avatarImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/ivana_stamenkovic.png',
     variant: 'text',
   },
   {
@@ -281,19 +269,20 @@ export const testimonials = [
     variant: 'video',
   },
   {
-    title: 'Škola me je maksimalno podržavala',
-    text: 'Svideli su mi se ceo koncept škole i način rada. Savremena je maksimalno podržala moja interesovanja tokom sve četiri godine.',
-    author: 'Nataša Katić',
-    role: 'maturantkinja Savremene',
-    initials: 'NK',
-    avatarImageUrl: placeholderImages.testimonialAvatars[4],
+    title: 'Škola koja opravdava svoje ime',
+    text: 'Sam naziv škole govori mnogo toga. Ova škola zaista jeste za savremenu decu i savremene roditelje. Apsolutno sam za sve moderne pristupe učenju, tako da je ova škola po mojim i nekim opštim kriterijumima zaista savršena za našu decu.',
+    author: 'Bojana Lazić',
+    role: 'roditelj',
+    initials: 'BL',
+    avatarImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/bojana_lazic.png',
     variant: 'text',
   },
 ]
 
-export const nijeKasnoZaBoljuSkoluLanding = {
+export const defaultLandingData = {
   ...landingData,
+  educationHighlights,
   directionCards: directions,
   benefitCards: benefits,
   testimonialCards: testimonials,
-} as const
+}

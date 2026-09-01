@@ -55,9 +55,9 @@ export const landingData = {
   },
   emotionalTurn: {
     eyebrow: 'Za početak koji pravi razliku',
-    title: 'Za generaciju 2026/27 ostalo je još samo 10 slobodnih mesta',
+    title: 'Nema više odlaganja – sada je pravi trenutak!',
     text:
-      'Broj mesta je ograničen. Ako želite da svom detetu obezbedite školu u kojoj će imati pažnju, podršku i prostor da razvija svoje potencijale, sada je pravi trenutak za prijavu. Pravovremenom prijavom izbegavate neizvesnost i dobijate priliku da na vreme završite sve korake upisa i pripreme za početak nove školske godine.',
+      'Iako je nova školska godina već počela, Savremena osnovna škola i Savremena gimnazija pružaju šansu da vaše dete započne putovanje ka uspehu već sada. Ne morate čekati sledeću godinu – vaše dete može odmah postati deo jedne od škola koje nude najbolje od obrazovanja. Preostalo je samo nekoliko slobodnih mesta, zato iskoristite priliku!',
     ctaText: 'Prijavite se danas i obezbedite jedno od preostalih mesta.',
   },
   specialConditions: {

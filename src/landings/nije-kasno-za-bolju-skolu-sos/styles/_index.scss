@@ -1,0 +1,175 @@
+@use './layout';
+@use './hero';
+@use './sections';
+@use './cards';
+@use './form';
+
+.nije-kasno-za-bolju-skolu-sos-landing {
+  --sos-yellow: #f7b815;
+  --sos-red: #9d1516;
+  --sos-blue: #2b446b;
+  --sos-green: #427042;
+  --sos-ink: #07080c;
+  --sos-font-heading: 'Nunito', ui-sans-serif, system-ui, sans-serif;
+  --color-blue: var(--sos-blue);
+  --color-primary: #07080c;
+  --color-primary-dark: #07080c;
+  --color-red: var(--sos-red);
+  --color-yellow: var(--sos-yellow);
+  --color-green: var(--sos-green);
+  --gradient-brand: var(--sos-yellow);
+  --nije-kasno-za-bolju-skolu-sos-landing-container-max: 1600px;
+  --nije-kasno-za-bolju-skolu-sos-landing-container-padding: clamp(20px, 4vw, 64px);
+}
+
+.nije-kasno-za-bolju-skolu-sos-landing {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--sos-font-heading);
+    font-weight: 900;
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-special-conditions,
+  .nije-kasno-za-bolju-skolu-sos-testimonial-card {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-info-card__profile,
+  .nije-kasno-za-bolju-skolu-sos-benefit-card__image,
+  .nije-kasno-za-bolju-skolu-sos-modern-education__image-placeholder,
+  .nije-kasno-za-bolju-skolu-sos-enrollment-help__advisor-photo {
+    background: var(--sos-yellow);
+    background-image: none;
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-testimonial-card__video,
+  .nije-kasno-za-bolju-skolu-sos-testimonial-card__avatar {
+    background: var(--sos-yellow);
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-special-conditions h2,
+  .nije-kasno-za-bolju-skolu-sos-special-conditions p,
+  .nije-kasno-za-bolju-skolu-sos-special-conditions li,
+  .nije-kasno-za-bolju-skolu-sos-special-conditions a,
+  .nije-kasno-za-bolju-skolu-sos-special-conditions__visual span,
+  .nije-kasno-za-bolju-skolu-sos-testimonial-card h3,
+  .nije-kasno-za-bolju-skolu-sos-testimonial-card p,
+  .nije-kasno-za-bolju-skolu-sos-testimonial-card__video-person,
+  .nije-kasno-za-bolju-skolu-sos-testimonial-card__avatar span {
+    color: #ffffff;
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-testimonial-card__body {
+    background: var(--sos-yellow);
+    color: #ffffff;
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-testimonial-card__body h3,
+  .nije-kasno-za-bolju-skolu-sos-testimonial-card__body p {
+    color: #ffffff;
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-scholarship-offer__ribbon {
+    background: var(--sos-yellow);
+    color: #ffffff;
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-special-offer {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-special-offer__eyebrow,
+  .nije-kasno-za-bolju-skolu-sos-special-offer h2 {
+    color: #ffffff;
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-special-offer .nije-kasno-za-bolju-skolu-sos-landing-link--light {
+    border-color: var(--sos-red);
+    background: var(--sos-red);
+    color: #ffffff;
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-info-card--direction {
+    background: var(--sos-yellow);
+    color: #ffffff;
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-info-card--direction .nije-kasno-za-bolju-skolu-sos-info-card__title,
+  .nije-kasno-za-bolju-skolu-sos-info-card--direction .nije-kasno-za-bolju-skolu-sos-info-card__text {
+    color: #ffffff;
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-info-card--direction .nije-kasno-za-bolju-skolu-sos-info-card__tag,
+  .nije-kasno-za-bolju-skolu-sos-info-card--direction .nije-kasno-za-bolju-skolu-sos-info-card__details {
+    color: var(--sos-red);
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-info-card--direction .nije-kasno-za-bolju-skolu-sos-info-card__profile span {
+    color: #ffffff;
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-program-choice .nije-kasno-za-bolju-skolu-sos-landing-link {
+    border-color: var(--sos-red);
+    background: var(--sos-red);
+    color: #ffffff;
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-testimonial-card,
+  .nije-kasno-za-bolju-skolu-sos-info-card--direction,
+  .nije-kasno-za-bolju-skolu-sos-program-choice__logo-card,
+  .nije-kasno-za-bolju-skolu-sos-benefit-card {
+    box-shadow: none;
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-testimonial-card {
+    border: 1px solid var(--sos-yellow);
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-stats-section {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-stats-section__value,
+  .nije-kasno-za-bolju-skolu-sos-stats-section__label {
+    color: #ffffff;
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-landing-footer {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-landing-footer__contact,
+  .nije-kasno-za-bolju-skolu-sos-landing-footer__contact span,
+  .nije-kasno-za-bolju-skolu-sos-landing-footer__contact a {
+    color: #ffffff;
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-special-conditions__visual {
+    border-color: rgba(7, 8, 12, 0.28);
+    background: rgba(7, 8, 12, 0.08);
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-testimonial-card__play {
+    background: var(--sos-red);
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-testimonial-card__play::after {
+    border-color: rgba(157, 21, 22, 0.34);
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-testimonial-card__play svg {
+    fill: #ffffff;
+  }
+}
