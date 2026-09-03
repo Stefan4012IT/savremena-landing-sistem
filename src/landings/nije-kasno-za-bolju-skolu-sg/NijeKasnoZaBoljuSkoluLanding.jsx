@@ -19,12 +19,12 @@ export function NijeKasnoZaBoljuSkoluLanding({ data }) {
       <main className="nije-kasno-za-bolju-skolu-sg-root nije-kasno-za-bolju-skolu-sg-landing">
         <HeroSection />
         <EmotionalTurnSection />
-        <SpecialOfferSection />
+        <StatsSection />
         <ModernEducationSection />
         <PartnerLogosSection />
         <DirectionsSection />
         <ProgramChoiceSection />
-        <StatsSection />
+        <SpecialOfferSection />
         <BenefitsSection />
         <FutureSpaceSection />
         <SpecialOfferSection />

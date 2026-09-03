@@ -1,0 +1,81 @@
+.nije-kasno-za-bolju-skolu-is-landing {
+  overflow: hidden;
+  background: var(--color-background);
+}
+
+.nije-kasno-za-bolju-skolu-is-landing-container {
+  width: min(100% - (var(--nije-kasno-za-bolju-skolu-is-landing-container-padding) * 2), var(--nije-kasno-za-bolju-skolu-is-landing-container-max));
+  margin-inline: auto;
+}
+
+.nije-kasno-za-bolju-skolu-is-landing-section {
+  padding: clamp(56px, 6vw, 96px) 0;
+}
+
+.nije-kasno-za-bolju-skolu-is-landing-section + .nije-kasno-za-bolju-skolu-is-landing-section:not(.nije-kasno-za-bolju-skolu-is-special-conditions, .nije-kasno-za-bolju-skolu-is-modern-education, .nije-kasno-za-bolju-skolu-is-stats-section, .nije-kasno-za-bolju-skolu-is-benefits-section, .nije-kasno-za-bolju-skolu-is-special-offer, .nije-kasno-za-bolju-skolu-is-enrollment-help) {
+  padding-top: 0;
+}
+
+.nije-kasno-za-bolju-skolu-is-section-header {
+  max-width: 840px;
+  margin-bottom: clamp(26px, 3vw, 42px);
+
+  &__eyebrow {
+    margin: 0 0 12px;
+    color: #787878;
+    font-size: clamp(1.05rem, 1.4vw, 1.22rem);
+    font-weight: 800;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin: 0;
+    color: var(--color-primary-dark);
+    font-size: clamp(2rem, 4vw, 4rem);
+    line-height: 1.05;
+  }
+
+  &__text {
+    max-width: 760px;
+    margin: 20px 0 0;
+    color: var(--color-muted);
+    font-size: clamp(1.05rem, 1.4vw, 1.22rem);
+  }
+}
+
+.nije-kasno-za-bolju-skolu-is-landing-link {
+  display: inline-flex;
+  min-height: 50px;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-primary);
+  border-radius: 50px;
+  padding: 13px 20px;
+  background: var(--color-primary);
+  color: #ffffff;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+
+  &--light {
+    border-color: rgba(255, 255, 255, 0.62);
+    background: #ffffff;
+    color: var(--color-primary-dark);
+  }
+}
+
+@media (max-width: 760px) {
+  .nije-kasno-za-bolju-skolu-is-landing-container {
+    width: min(100% - 40px, var(--nije-kasno-za-bolju-skolu-is-landing-container-max));
+  }
+
+  .nije-kasno-za-bolju-skolu-is-landing-section {
+    padding-block: 48px;
+  }
+
+  .nije-kasno-za-bolju-skolu-is-landing-section + .nije-kasno-za-bolju-skolu-is-landing-section:not(.nije-kasno-za-bolju-skolu-is-special-conditions, .nije-kasno-za-bolju-skolu-is-modern-education, .nije-kasno-za-bolju-skolu-is-stats-section, .nije-kasno-za-bolju-skolu-is-benefits-section, .nije-kasno-za-bolju-skolu-is-special-offer, .nije-kasno-za-bolju-skolu-is-enrollment-help) {
+    padding-top: 0;
+  }
+}

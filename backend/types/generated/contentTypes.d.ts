@@ -502,6 +502,10 @@ export interface ApiLandingLanding extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID<'name'> & Schema.Attribute.Required;
+    specialConditions: Schema.Attribute.Component<
+      'sections.special-conditions',
+      false
+    >;
     specialOffer: Schema.Attribute.Component<'sections.simple-cta', false> &
       Schema.Attribute.Required;
     testimonialCards: Schema.Attribute.Component<

@@ -95,6 +95,7 @@ export interface SectionsFooter extends Struct.ComponentSchema {
     enrollmentEmail: Schema.Attribute.Email & Schema.Attribute.Required;
     officeEmail: Schema.Attribute.Email & Schema.Attribute.Required;
     phone: Schema.Attribute.String & Schema.Attribute.Required;
+    secondaryAddress: Schema.Attribute.String;
   };
 }
 

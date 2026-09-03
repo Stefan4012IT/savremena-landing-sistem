@@ -1,5 +1,20 @@
 import { useLandingData } from '../useLandingData'
 
+const instagramReelEmbedUrl = 'https://www.instagram.com/reel/DcvggteO5c_/embed'
+
+function InstagramReelEmbed() {
+  return (
+    <iframe
+      src={instagramReelEmbedUrl}
+      title="Instagram reel Savremene osnovne škole"
+      loading="lazy"
+      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+      referrerPolicy="strict-origin-when-cross-origin"
+      allowFullScreen
+    />
+  )
+}
+
 export function EmotionalTurnSection() {
   const { emotionalTurn } = useLandingData()
 
@@ -19,11 +34,10 @@ export function EmotionalTurnSection() {
               {emotionalTurn.ctaText}
             </a>
           </div>
-          <figure className="nije-kasno-za-bolju-skolu-sos-scholarship-offer__image">
-            <img
-              src="https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/08/10_slobodnih_mesta_img_1.1.jpg"
-              alt="Učenici Savremene gimnazije sa digitalnim uređajima"
-            />
+          <figure className="nije-kasno-za-bolju-skolu-sos-scholarship-offer__reel" aria-label="Instagram reel Savremene osnovne škole">
+            <div className="nije-kasno-za-bolju-skolu-sos-scholarship-offer__reel-frame">
+              <InstagramReelEmbed />
+            </div>
           </figure>
         </div>
       </div>

@@ -4,6 +4,7 @@
   "attributes": {
     "addressLine1": { "type": "string", "required": true },
     "addressLine2": { "type": "string", "required": true },
+    "secondaryAddress": { "type": "string" },
     "phone": { "type": "string", "required": true },
     "officeEmail": { "type": "email", "required": true },
     "enrollmentEmail": { "type": "email", "required": true }

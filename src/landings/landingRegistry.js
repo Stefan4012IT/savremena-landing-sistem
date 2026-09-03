@@ -8,6 +8,8 @@ import { NijeKasnoZaBoljuSkoluLanding } from './nije-kasno-za-bolju-skolu-sg/Nij
 import { defaultLandingData as nijeKasnoZaBoljuSkoluLandingData } from './nije-kasno-za-bolju-skolu-sg/landingContent'
 import { JosNijeKasnoZaBoljuSkoluLanding } from './nije-kasno-za-bolju-skolu-sos/JosNijeKasnoZaBoljuSkoluLanding'
 import { defaultLandingData as josNijeKasnoZaBoljuSkoluLandingData } from './nije-kasno-za-bolju-skolu-sos/landingContent'
+import { NijeKasnoZaBoljuSkoluIsLanding } from './nije-kasno-za-bolju-skolu-is/NijeKasnoZaBoljuSkoluIsLanding'
+import { defaultLandingData as whyWaitLandingData } from './nije-kasno-za-bolju-skolu-is/landingContent'
 import { MaloMestaLanding } from './malo-mesta/MaloMestaLanding'
 import { defaultLandingData as maloMestaLandingData } from './malo-mesta/landingContent'
 
@@ -31,6 +33,10 @@ export const landingRegistry = {
   [josNijeKasnoZaBoljuSkoluLandingData.slug]: {
     component: JosNijeKasnoZaBoljuSkoluLanding,
     fallbackData: josNijeKasnoZaBoljuSkoluLandingData,
+  },
+  [whyWaitLandingData.slug]: {
+    component: NijeKasnoZaBoljuSkoluIsLanding,
+    fallbackData: whyWaitLandingData,
   },
   [maloMestaLandingData.slug]: {
     component: MaloMestaLanding,

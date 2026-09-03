@@ -8,7 +8,7 @@
   --sos-yellow: #f7b815;
   --sos-red: #9d1516;
   --sos-blue: #2b446b;
-  --sos-green: #427042;
+  --sos-green: #369F36;
   --sos-ink: #07080c;
   --sos-font-heading: 'Nunito', ui-sans-serif, system-ui, sans-serif;
   --color-blue: var(--sos-blue);
@@ -20,6 +20,18 @@
   --gradient-brand: var(--sos-yellow);
   --nije-kasno-za-bolju-skolu-sos-landing-container-max: 1600px;
   --nije-kasno-za-bolju-skolu-sos-landing-container-padding: clamp(20px, 4vw, 64px);
+}
+
+.nije-kasno-za-bolju-skolu-sos-modern-education,
+.nije-kasno-za-bolju-skolu-sos-partner-logos,
+.nije-kasno-za-bolju-skolu-sos-directions-section,
+.nije-kasno-za-bolju-skolu-sos-program-choice,
+.nije-kasno-za-bolju-skolu-sos-benefits-section,
+.nije-kasno-za-bolju-skolu-sos-future-space,
+.nije-kasno-za-bolju-skolu-sos-testimonials-section {
+  .nije-kasno-za-bolju-skolu-sos-section-header__eyebrow {
+    color: var(--sos-green);
+  }
 }
 
 .nije-kasno-za-bolju-skolu-sos-landing {

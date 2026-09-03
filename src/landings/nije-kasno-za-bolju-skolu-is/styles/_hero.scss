@@ -1,0 +1,428 @@
+.nije-kasno-za-bolju-skolu-is-hero {
+  position: relative;
+  min-height: 980px;
+  isolation: isolate;
+  overflow: visible;
+  background: var(--sos-yellow, #354180);
+  color: #ffffff;
+
+  &__header {
+    position: absolute;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+    padding: 22px clamp(24px, 5vw, 84px);
+  }
+
+  &__logo {
+    display: inline-flex;
+    width: clamp(280px, 24vw, 410px);
+    min-height: 72px;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+  }
+
+  &__logo img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__institution-logos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(18px, 3vw, 38px);
+  }
+
+  &__institution-logos img {
+    display: block;
+    width: auto;
+    max-width: min(28vw, 220px);
+    max-height: clamp(38px, 5vw, 62px);
+    object-fit: contain;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 2;
+    min-height: 980px;
+    padding: clamp(160px, 18vh, 208px) clamp(24px, 5vw, 84px) 230px;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 4;
+    display: grid;
+    width: min(61vw, 930px);
+    gap: clamp(8px, 1.2vw, 18px);
+    transform: translateY(-20px);
+  }
+
+  &__availability-intro,
+  &__availability-outro,
+  &__supporting-copy {
+    margin: 0;
+  }
+
+  &__availability-intro {
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    font-weight: 400;
+    letter-spacing: -0.045em;
+    line-height: 0.98;
+  }
+
+  &__availability-count {
+    display: block;
+    width: min(84vw, 1280px);
+    max-width: none;
+    margin-left: calc(20px - clamp(24px, 5vw, 84px));
+    height: auto;
+  }
+
+  &__availability-count img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &__availability-outro {
+    max-width: none;
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    font-weight: 400;
+    letter-spacing: -0.045em;
+    line-height: 0.98;
+  }
+
+  &__supporting-copy {
+    position: relative;
+    z-index: 4;
+    max-width: 600px;
+    margin-top: 20px;
+    font-size: clamp(1.35rem, 2.3vw, 2.45rem);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 1.04;
+  }
+
+  &__availability-outro > span {
+    display: block;
+  }
+
+  &__availability-outro > span:first-child {
+    white-space: nowrap;
+  }
+
+  &__availability-outro-mobile {
+    display: none !important;
+  }
+
+  &__availability-intro strong,
+  &__availability-outro strong {
+    font-weight: 700;
+  }
+
+  &__supporting-copy strong {
+    color: var(--is-yellow, #f7b815);
+    font-weight: 900;
+  }
+
+  &__supporting-copy span {
+    display: block;
+  }
+
+  &__visual {
+    position: absolute;
+    right: calc(clamp(90px, 14vw, 260px) - 20px);
+    bottom: 0;
+    z-index: 5;
+    display: flex;
+    width: min(50vw, 860px);
+    height: min(49vw, 840px);
+    max-height: none;
+    justify-content: flex-end;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  &__visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: right bottom;
+    transform: translateY(160px);
+  }
+
+  &__form-panel {
+    position: absolute;
+    bottom: -200px;
+    right: clamp(24px, 5vw, 84px);
+    z-index: 10;
+    width: min(640px, calc(100vw - 48px));
+    border-radius: 28px;
+    padding: clamp(20px, 2.2vw, 28px);
+    background: var(--sos-yellow, #354180);
+    color: #ffffff;
+    box-shadow: 0 28px 86px rgba(18, 24, 32, 0.28);
+  }
+
+  &__form-panel .nije-kasno-za-bolju-skolu-is-lead-form__header h2,
+  &__form-panel .nije-kasno-za-bolju-skolu-is-lead-form__header p {
+    color: #ffffff;
+  }
+
+  &__form-panel .nije-kasno-za-bolju-skolu-is-lead-form button {
+    background: var(--sos-red, #9d1516);
+    color: #ffffff;
+  }
+}
+
+@media (min-width: 1920px) {
+  .nije-kasno-za-bolju-skolu-is-hero {
+    &__supporting-copy {
+      max-width: none;
+      margin-top: 0;
+      transform: translateY(clamp(44px, 4vw, 72px));
+      white-space: nowrap;
+    }
+
+    &__supporting-copy span {
+      display: inline;
+    }
+
+    &__supporting-copy span + span::before {
+      content: ' ';
+    }
+
+    &__supporting-copy span + span::before {
+      content: ' ';
+    }
+  }
+}
+
+@media (min-width: 1181px) and (max-width: 1919px) {
+  .nije-kasno-za-bolju-skolu-is-hero {
+    &__availability-intro,
+    &__availability-outro {
+      font-size: clamp(3rem, 5vw, 5rem);
+    }
+
+    &__availability-count {
+      width: min(70vw, 1000px);
+    }
+  }
+}
+
+@media (max-width: 1180px) {
+  .nije-kasno-za-bolju-skolu-is-hero {
+    min-height: 900px;
+
+    &__inner {
+      min-height: 900px;
+      padding-top: 150px;
+    }
+
+    &__content {
+      width: min(68vw, 820px);
+    }
+
+    &__visual {
+      right: calc(clamp(45px, 10vw, 120px) - 20px);
+      width: min(53vw, 650px);
+      height: min(52vw, 620px);
+    }
+
+    &__availability-intro {
+      font-size: clamp(2.1rem, 4.3vw, 3.8rem);
+    }
+
+    &__availability-outro {
+      font-size: clamp(2rem, 3.7vw, 3.55rem);
+    }
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1919px) {
+  .nije-kasno-za-bolju-skolu-is-hero__visual {
+    right: clamp(50px, 8vw, 140px);
+    width: min(42vw, 720px);
+    height: auto;
+    overflow: visible;
+  }
+
+  .nije-kasno-za-bolju-skolu-is-hero__visual img {
+    transform: translateY(25px);
+  }
+}
+
+@media (min-width: 1640px) and (max-width: 1919px) {
+  .nije-kasno-za-bolju-skolu-is-hero__visual {
+    right: calc(66vw - 800px);
+    width: 34vw;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1639px) {
+  .nije-kasno-za-bolju-skolu-is-hero__visual {
+    right: clamp(170px, 16vw, 260px);
+    width: 35vw;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1399px) {
+  .nije-kasno-za-bolju-skolu-is-hero__visual {
+    width: min(42vw, 560px);
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1599px) {
+  .nije-kasno-za-bolju-skolu-is-hero__visual img {
+    transform: translateY(-25px);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1399px) {
+  .nije-kasno-za-bolju-skolu-is-hero__visual img {
+    transform: translateY(-15px);
+  }
+}
+
+@media (min-width: 761px) and (max-width: 991px) {
+  .nije-kasno-za-bolju-skolu-is-hero__visual {
+    right: -40px;
+  }
+
+  .nije-kasno-za-bolju-skolu-is-hero__visual img {
+    transform: translateY(-160px);
+  }
+
+  .nije-kasno-za-bolju-skolu-is-hero__form-panel {
+    bottom: -100px;
+  }
+}
+
+@media (max-width: 760px) {
+  .nije-kasno-za-bolju-skolu-is-hero {
+    min-height: auto;
+    overflow: hidden;
+
+    &__header {
+      position: relative;
+      gap: 16px;
+      padding: 16px 20px;
+    }
+
+    &__logo {
+      width: min(58vw, 250px);
+      min-height: 52px;
+    }
+
+    &__institution-logos {
+      gap: 10px;
+    }
+
+    &__institution-logos img {
+      max-width: 20vw;
+      max-height: 34px;
+    }
+
+    &__institution-logos img:first-child {
+      max-height: 25px;
+    }
+
+    &__inner {
+      display: grid;
+      min-height: auto;
+      padding: 25px 20px 0;
+    }
+
+    &__content {
+      display: contents;
+      width: 100%;
+      transform: none;
+    }
+
+    &__availability-intro {
+      order: 1;
+      font-size: 32px;
+    }
+
+    &__availability-intro > span,
+    &__availability-intro > strong {
+      display: inline;
+      white-space: nowrap;
+    }
+
+    &__availability-count {
+      order: 2;
+      position: relative;
+      z-index: 4;
+      width: 320px;
+      margin: 6px 0 0 -30px;
+    }
+
+    &__availability-outro {
+      order: 3;
+      max-width: 360px;
+      font-size: 32px;
+      position: relative;
+      z-index: 6;
+    }
+
+    &__availability-outro > span:first-child {
+      white-space: normal;
+    }
+
+    &__availability-outro-desktop {
+      display: none !important;
+    }
+
+    &__availability-outro-mobile {
+      display: block !important;
+    }
+
+    &__supporting-copy {
+      order: 5;
+      max-width: 350px;
+      margin-top: 0;
+      font-size: clamp(1.3rem, 6.4vw, 1.9rem);
+    }
+
+    &__supporting-copy span {
+      display: inline;
+    }
+
+    &__visual {
+      position: relative;
+      right: auto;
+      bottom: auto;
+      order: 4;
+      z-index: 5;
+      width: 280px;
+      height: auto;
+      max-height: none;
+      margin: -150px -8% 0 auto;
+      overflow: visible;
+    }
+
+    &__form-panel {
+      position: relative;
+      bottom: auto;
+      right: auto;
+      left: auto;
+      order: 6;
+      width: 100%;
+      margin: 40px 0 24px;
+      border-radius: 28px;
+      padding: 20px;
+    }
+
+    &__visual img {
+      transform: none;
+    }
+  }
+}

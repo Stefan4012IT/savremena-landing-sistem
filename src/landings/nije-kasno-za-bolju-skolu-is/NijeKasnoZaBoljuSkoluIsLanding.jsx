@@ -13,18 +13,18 @@ import { TestimonialsSection } from './components/TestimonialsSection'
 import { FinalCTASection } from './components/FinalCTASection'
 import { LandingDataProvider } from './LandingDataProvider'
 
-export function JosNijeKasnoZaBoljuSkoluLanding({ data }) {
+export function NijeKasnoZaBoljuSkoluIsLanding({ data }) {
   return (
     <LandingDataProvider value={data}>
-      <main className="nije-kasno-za-bolju-skolu-sos-root nije-kasno-za-bolju-skolu-sos-landing">
+      <main className="nije-kasno-za-bolju-skolu-is-root nije-kasno-za-bolju-skolu-is-landing">
         <HeroSection />
         <EmotionalTurnSection />
-        <StatsSection />
+        <SpecialOfferSection />
         <ModernEducationSection />
         <PartnerLogosSection />
         <DirectionsSection />
         <ProgramChoiceSection />
-        <SpecialOfferSection />
+        <StatsSection />
         <BenefitsSection />
         <FutureSpaceSection />
         <SpecialOfferSection />
