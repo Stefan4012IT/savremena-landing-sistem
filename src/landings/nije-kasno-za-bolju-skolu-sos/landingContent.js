@@ -57,7 +57,15 @@ export const landingData = {
     eyebrow: 'Za početak koji pravi razliku',
     title: 'Nema više odlaganja – sada je pravi trenutak!',
     text:
-      'Iako je nova školska godina već počela, Savremena osnovna škola pruža šansu da vaše dete započne putovanje ka uspehu već sada. Ne morate čekati sledeću godinu – vaše dete može odmah postati deo škole koja nudi najbolje od obrazovanja. Preostalo je samo nekoliko slobodnih mesta, zato iskoristite priliku!',
+      'U pojedinim razredima ostalo je još svega nekoliko slobodnih mesta, dok su za neke već formirane liste čekanja. Ako već razmišljate o promeni škole, početak školske godine je pravi trenutak za odluku – dete se lakše uklapa u novo odeljenje, prati nastavu od početka i prirodnije gradi odnose sa vršnjacima i nastavnicima, bez naknadnog prilagođavanja i nadoknađivanja gradiva.',
+    paragraphs: [
+      'U pojedinim razredima ostalo je još svega nekoliko slobodnih mesta, dok su za neke već formirane liste čekanja. Ako već razmišljate o promeni škole, početak školske godine je pravi trenutak za odluku – dete se lakše uklapa u novo odeljenje, prati nastavu od početka i prirodnije gradi odnose sa vršnjacima i nastavnicima, bez naknadnog prilagođavanja i nadoknađivanja gradiva.',
+      'Ne čekajte polugodište ili narednu godinu da napravite promenu koja može imati važan uticaj na obrazovanje i budućnost vašeg deteta.',
+    ],
+    processTitle: 'Kako izgleda proces prebacivanja:',
+    processText:
+      'Proces prebacivanja je jednostavan, potrebno je samo da se prijavite online ili nas pozovete na 011/40-11-223 i naši konsultanti za upis će vam pomoći oko svih koraka. Kompletnu proceduru je moguće završiti jako brzo i vaše dete već od narednog dana može da krene u svoju novu savremenu avanturu.',
+    processPhone: '011/40-11-223',
     ctaText: 'Prijavite se danas i obezbedite jedno od preostalih mesta.',
   },
   specialConditions: {
@@ -108,7 +116,7 @@ export const landingData = {
     title: 'Iskoristite priliku da obezbedite mesto u Savremenoj osnovnoj školi',
   },
   enrollmentHelp: {
-    title: 'Imate pitanja ili vam je potrebna pomoć oko upisa u srednju školu?',
+    title: 'Imate pitanja ili vam je potrebna pomoć oko upisa u osnovnu školu?',
     introBeforeName: 'Naša ljubazna i stručna savetnica za upis,',
     advisorName: 'Katarina Petrović',
     introAfterName:
@@ -218,7 +226,7 @@ export const programs = [
 
 export const benefits = [
   { title: 'Podsticajno okruženje za učenje', text: 'Sigurna i inspirativna sredina koja podstiče kreativnost, samopouzdanje i uspeh.', imageUrl: placeholderImages.benefits[0] },
-  { title: 'Mogućnost onlajn-učenja', text: 'Interaktivni materijali, dodatna podrška, konsultacije i testovi dostupni su i van učionice.', imageUrl: placeholderImages.benefits[1] },
+  { title: 'Interaktivne metode nastave', text: 'Učenje kroz projekte, simulacije i praktične primere razvija kod dece kritičko razmišljanje, kreativnost i veštine rešavanja problema.', imageUrl: placeholderImages.benefits[1] },
   { title: 'Posvećenost svakom učeniku', text: 'Nastavnici pristupaju učenicima sa pažnjom, energijom i razumevanjem.', imageUrl: placeholderImages.benefits[2] },
   { title: 'Nastavnici sa velikim iskustvom', text: 'Profesori koriste savremene metode rada i kontinuirano unapređuju pristup nastavi.', imageUrl: placeholderImages.benefits[3] },
   { title: 'Otvorena vrata za nastavak školovanja', text: 'Znanja i veštine predstavljaju snažnu osnovu za fakultete u zemlji i inostranstvu.', imageUrl: placeholderImages.benefits[4] },

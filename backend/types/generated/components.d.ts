@@ -52,6 +52,10 @@ export interface SectionsEmotionalTurn extends Struct.ComponentSchema {
   };
   attributes: {
     eyebrow: Schema.Attribute.String & Schema.Attribute.Required;
+    paragraphs: Schema.Attribute.JSON;
+    processPhone: Schema.Attribute.String;
+    processText: Schema.Attribute.Text;
+    processTitle: Schema.Attribute.String;
     reframeLabel: Schema.Attribute.String & Schema.Attribute.Required;
     reframes: Schema.Attribute.JSON & Schema.Attribute.Required;
     text: Schema.Attribute.Text & Schema.Attribute.Required;
