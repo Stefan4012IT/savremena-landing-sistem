@@ -240,7 +240,7 @@ export const benefits = [
   { title: 'Interaktivne metode nastave', text: 'Učenje kroz projekte, simulacije i praktične primere razvija kod dece kritičko razmišljanje, kreativnost i veštine rešavanja problema.', imageUrl: placeholderImages.benefits[1] },
   { title: 'Posvećenost svakom učeniku', text: 'Nastavnici pristupaju učenicima sa pažnjom, energijom i razumevanjem.', imageUrl: placeholderImages.benefits[2] },
   { title: 'Nastavnici sa velikim iskustvom', text: 'Profesori koriste savremene metode rada i kontinuirano unapređuju pristup nastavi.', imageUrl: placeholderImages.benefits[3] },
-  { title: 'Otvorena vrata za nastavak školovanja', text: 'Znanja i veštine predstavljaju snažnu osnovu za fakultete u zemlji i inostranstvu.', imageUrl: placeholderImages.benefits[4] },
+  { title: 'Otvorena vrata za nastavak školovanja', text: 'Znanja i veštine stečeni u Savremenoj predstavljaju dragocenu ulaznicu za najuglednije škole širom sveta.', imageUrl: placeholderImages.benefits[4] },
   { title: 'Savremena tehnologija u nastavi', text: 'Računari, tableti, interaktivne table, e-Learning i digitalni alati čine učenje aktivnijim.', imageUrl: placeholderImages.benefits[5] },
   { title: 'Zanimljivi multidisciplinarni časovi', text: 'Učenje kroz projekte, timski rad, izazove i povezivanje različitih oblasti znanja.', imageUrl: placeholderImages.benefits[6] },
   { title: 'Nastava na srpskom i/ili engleskom jeziku', text: 'Nacionalni program na srpskom ili Kombinovani program sa Cambridge predmetima na engleskom.', imageUrl: placeholderImages.benefits[7] },
