@@ -665,15 +665,15 @@ ili
 
 ## SEO title
 
-**Niste upisali željenu školu? Savremena gimnazija — upis 2026/27**
+**Nije kasno za bolju školu | Savremena osnovna škola**
 
 Alternativni SEO title:
 
-**Savremena gimnazija — najbolji izbor za upis u srednju školu**
+**Savremena osnovna škola — savremeno obrazovanje za budućnost vašeg deteta**
 
 ## Meta description
 
-**Ako vaše dete nije upisalo željenu školu, još uvek možete izabrati obrazovanje koje mu otvara više mogućnosti. Savremena gimnazija nudi Nacionalni i Kombinovani Cambridge program, savremenu nastavu, podršku nastavnika i smerove za budućnost.**
+**Nije kasno za upis u Savremenu osnovnu školu. Iskoristite poslednju šansu i obezbedite detetu savremeno obrazovanje, podršku nastavnika i siguran put ka budućnosti.**
 
 ## Ključne fraze
 
