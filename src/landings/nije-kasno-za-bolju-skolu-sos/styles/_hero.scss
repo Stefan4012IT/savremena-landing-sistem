@@ -3,7 +3,11 @@
   min-height: 980px;
   isolation: isolate;
   overflow: visible;
-  background: var(--sos-yellow, #f7b815);
+  background-color: var(--sos-yellow, #f7b815);
+  background-image: url('https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/background_hero_jos-nije-kasno-sos_002.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #ffffff;
 
   &__header {
@@ -54,12 +58,59 @@
   }
 
   &__content {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: clamp(24px, 5vw, 84px);
     z-index: 4;
     display: grid;
-    width: min(61vw, 930px);
-    gap: clamp(8px, 1.2vw, 18px);
-    transform: translateY(-20px);
+    width: min(72vw, 1180px);
+    max-width: 50vw;
+    gap: clamp(14px, 1.8vw, 26px);
+    transform: translateY(-50%);
+  }
+
+  &__copy {
+    display: contents;
+  }
+
+  &__title {
+    max-width: 100%;
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(3.5rem, 8.55vw, 10.25rem);
+    font-weight: 900;
+    letter-spacing: -0.045em;
+    line-height: 0.95;
+  }
+
+  &__lead,
+  &__message {
+    max-width: 100%;
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(1.5rem, 2.5vw, 2.8rem);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1.08;
+  }
+
+  &__lead {
+    display: inline-flex;
+    width: fit-content;
+    max-width: 100%;
+    align-items: center;
+    border: 0;
+    border-radius: 10px;
+    padding: 8px 10px;
+    background: var(--sos-yellow, #f7b815);
+    color: #ffffff;
+    font-size: clamp(1.25rem, 2.1vw, 2.35rem);
+    white-space: normal;
+  }
+
+  &__message strong {
+    color: var(--sos-yellow, #f7b815);
+    font-weight: 900;
   }
 
   &__availability-intro,
@@ -157,6 +208,11 @@
     transform: translateY(160px);
   }
 
+  &__visual picture {
+    display: block;
+    width: 100%;
+  }
+
   &__form-panel {
     position: absolute;
     bottom: -200px;
@@ -165,7 +221,7 @@
     width: min(640px, calc(100vw - 48px));
     border-radius: 28px;
     padding: clamp(20px, 2.2vw, 28px);
-    background: var(--sos-yellow, #f7b815);
+    background: var(--sos-red, #9d1516);
     color: #ffffff;
     box-shadow: 0 28px 86px rgba(18, 24, 32, 0.28);
   }
@@ -176,7 +232,7 @@
   }
 
   &__form-panel .nije-kasno-za-bolju-skolu-sos-lead-form button {
-    background: var(--sos-red, #9d1516);
+    background: var(--sos-yellow, #f7b815);
     color: #ffffff;
   }
 }
@@ -273,6 +329,15 @@
   }
 }
 
+@media (min-width: 1600px) {
+  .nije-kasno-za-bolju-skolu-sos-hero__visual {
+    right: 0;
+    width: min(52vw, 1000px);
+    height: auto;
+    overflow: visible;
+  }
+}
+
 @media (min-width: 992px) and (max-width: 1399px) {
   .nije-kasno-za-bolju-skolu-sos-hero__visual {
     width: min(42vw, 560px);
@@ -335,15 +400,48 @@
     }
 
     &__inner {
-      display: grid;
+      display: flex;
+      flex-direction: column;
       min-height: auto;
       padding: 25px 20px 0;
     }
 
     &__content {
       display: contents;
+    }
+
+    &__copy {
+      position: static;
+      order: 3;
+      display: flex;
       width: 100%;
-      transform: none;
+      max-width: none;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    &__title {
+      order: 1;
+      font-size: clamp(3.5rem, 15vw, 5.5rem);
+    }
+
+    &__lead,
+    &__message {
+      max-width: 100%;
+    }
+
+    &__lead {
+      position: static;
+      width: fit-content;
+      max-width: 100%;
+      padding: 6px 10px;
+      font-size: clamp(1rem, 4.5vw, 1.35rem);
+      white-space: normal;
+    }
+
+    &__message {
+      position: static;
+      font-size: clamp(0.9rem, 3.8vw, 1.15rem);
     }
 
     &__availability-intro {
@@ -400,13 +498,22 @@
       position: relative;
       right: auto;
       bottom: auto;
-      order: 4;
-      z-index: 5;
-      width: 280px;
+      left: auto;
+      order: 2;
+      width: 100%;
+      max-width: 100%;
       height: auto;
       max-height: none;
-      margin: -150px -8% 0 auto;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
       overflow: visible;
+    }
+
+    &__visual picture {
+      display: flex;
+      width: 100%;
+      justify-content: center;
     }
 
     &__form-panel {
@@ -414,14 +521,18 @@
       bottom: auto;
       right: auto;
       left: auto;
-      order: 6;
+      order: 4;
       width: 100%;
-      margin: 40px 0 24px;
+      margin: 24px 0 24px;
       border-radius: 28px;
       padding: 20px;
     }
 
     &__visual img {
+      width: auto;
+      max-width: 100%;
+      margin-inline: auto;
+      object-position: center bottom;
       transform: none;
     }
   }
