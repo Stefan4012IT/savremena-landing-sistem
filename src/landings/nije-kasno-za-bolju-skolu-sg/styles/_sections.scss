@@ -66,13 +66,16 @@
     margin: 0;
   }
 
-  &__cta {
-    width: fit-content;
-    border-bottom: 2px solid #ffcc0c;
-    padding-bottom: 4px;
+  &__process-title {
+    margin: 2px 0 -10px;
     color: var(--color-primary-dark);
-    font-weight: 900;
-    line-height: 1.25;
+    font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+    line-height: 1.15;
+  }
+
+  &__process-phone {
+    color: #9d1516;
+    font-weight: 700;
     text-decoration: none;
   }
 

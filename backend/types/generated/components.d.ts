@@ -34,6 +34,7 @@ export interface CardsTestimonialCard extends Struct.ComponentSchema {
   attributes: {
     author: Schema.Attribute.String & Schema.Attribute.Required;
     avatarImageUrl: Schema.Attribute.String;
+    hideAttribution: Schema.Attribute.Boolean;
     initials: Schema.Attribute.String & Schema.Attribute.Required;
     role: Schema.Attribute.String & Schema.Attribute.Required;
     text: Schema.Attribute.Text;
@@ -41,6 +42,7 @@ export interface CardsTestimonialCard extends Struct.ComponentSchema {
     variant: Schema.Attribute.Enumeration<['text', 'video']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'text'>;
+    videoEmbedUrl: Schema.Attribute.String;
     videoImageUrl: Schema.Attribute.String;
   };
 }

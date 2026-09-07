@@ -57,7 +57,15 @@ export const landingData = {
     eyebrow: 'Za početak koji pravi razliku',
     title: 'Nema više odlaganja – sada je pravi trenutak!',
     text:
-      'Iako je nova školska godina već počela, Savremena osnovna škola i Savremena gimnazija pružaju šansu da vaše dete započne putovanje ka uspehu već sada. Ne morate čekati sledeću godinu – vaše dete može odmah postati deo jedne od škola koje nude najbolje od obrazovanja. Preostalo je samo nekoliko slobodnih mesta, zato iskoristite priliku!',
+      'U pojedinim razredima ostalo je još svega nekoliko slobodnih mesta, dok su za neke već formirane liste čekanja. Ako već razmišljate o promeni škole, početak školske godine je pravi trenutak za odluku – dete se lakše uklapa u novo odeljenje, prati nastavu od početka i prirodnije gradi odnose sa vršnjacima i nastavnicima, bez naknadnog prilagođavanja i nadoknađivanja gradiva.',
+    paragraphs: [
+      'U pojedinim razredima ostalo je još svega nekoliko slobodnih mesta, dok su za neke već formirane liste čekanja. Ako već razmišljate o promeni škole, početak školske godine je pravi trenutak za odluku – dete se lakše uklapa u novo odeljenje, prati nastavu od početka i prirodnije gradi odnose sa vršnjacima i nastavnicima, bez naknadnog prilagođavanja i nadoknađivanja gradiva.',
+      'Ne čekajte polugodište ili narednu godinu da napravite promenu koja može imati važan uticaj na obrazovanje i budućnost vašeg deteta.',
+    ],
+    processTitle: 'Kako izgleda proces prebacivanja:',
+    processText:
+      'Proces prebacivanja je jednostavan, potrebno je samo da se prijavite online ili nas pozovete na 011/40-11-223 i naši konsultanti za upis će vam pomoći oko svih koraka. Kompletnu proceduru je moguće završiti jako brzo i vaše dete već od narednog dana može da krene u svoju novu savremenu avanturu.',
+    processPhone: '011/40-11-223',
     ctaText: 'Prijavite se danas i obezbedite jedno od preostalih mesta.',
   },
   specialConditions: {
@@ -100,7 +108,7 @@ export const landingData = {
   },
   benefits: {
     eyebrow: 'Stvarno drugačija',
-    title: 'Zašto Savremena gimnazija',
+    title: 'Zašto Savremena gimnazija?',
     text: 'Savremena učenicima pruža znanje, podršku, tehnologiju, zdravo okruženje i prostor da razviju svoje mogućnosti.',
   },
   specialOffer: {

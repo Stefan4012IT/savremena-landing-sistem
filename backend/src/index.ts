@@ -383,6 +383,36 @@ export default {
         data: nijeKasnoZaBoljuSkoluLanding,
         status: 'published',
       })
+    } else if (
+      existingNijeKasnoZaBoljuSkoluLanding.emotionalTurn?.text !== nijeKasnoZaBoljuSkoluLanding.emotionalTurn.text ||
+      existingNijeKasnoZaBoljuSkoluLanding.emotionalTurn?.paragraphs?.join('\n') !==
+        nijeKasnoZaBoljuSkoluLanding.emotionalTurn.paragraphs.join('\n') ||
+      existingNijeKasnoZaBoljuSkoluLanding.emotionalTurn?.processTitle !==
+        nijeKasnoZaBoljuSkoluLanding.emotionalTurn.processTitle ||
+      existingNijeKasnoZaBoljuSkoluLanding.emotionalTurn?.processText !==
+        nijeKasnoZaBoljuSkoluLanding.emotionalTurn.processText ||
+      existingNijeKasnoZaBoljuSkoluLanding.emotionalTurn?.processPhone !==
+        nijeKasnoZaBoljuSkoluLanding.emotionalTurn.processPhone ||
+      existingNijeKasnoZaBoljuSkoluLanding.benefits?.title !== nijeKasnoZaBoljuSkoluLanding.benefits.title
+    ) {
+      await strapi.documents('api::landing.landing').update({
+        documentId: existingNijeKasnoZaBoljuSkoluLanding.documentId,
+        data: {
+          emotionalTurn: {
+            ...existingNijeKasnoZaBoljuSkoluLanding.emotionalTurn,
+            text: nijeKasnoZaBoljuSkoluLanding.emotionalTurn.text,
+            paragraphs: nijeKasnoZaBoljuSkoluLanding.emotionalTurn.paragraphs,
+            processTitle: nijeKasnoZaBoljuSkoluLanding.emotionalTurn.processTitle,
+            processText: nijeKasnoZaBoljuSkoluLanding.emotionalTurn.processText,
+            processPhone: nijeKasnoZaBoljuSkoluLanding.emotionalTurn.processPhone,
+          },
+          benefits: {
+            ...existingNijeKasnoZaBoljuSkoluLanding.benefits,
+            title: nijeKasnoZaBoljuSkoluLanding.benefits.title,
+          },
+        },
+        status: 'published',
+      })
     }
 
     const existingJosNijeKasnoZaBoljuSkoluLanding = await strapi.documents('api::landing.landing').findFirst({
@@ -409,6 +439,15 @@ export default {
         josNijeKasnoZaBoljuSkoluLanding.emotionalTurn.processText ||
       existingJosNijeKasnoZaBoljuSkoluLanding.enrollmentHelp?.phonePrimary !==
         josNijeKasnoZaBoljuSkoluLanding.enrollmentHelp.phonePrimary ||
+      existingJosNijeKasnoZaBoljuSkoluLanding.benefits?.title !==
+        josNijeKasnoZaBoljuSkoluLanding.benefits.title ||
+      existingJosNijeKasnoZaBoljuSkoluLanding.testimonialCards?.[1]?.author !==
+        josNijeKasnoZaBoljuSkoluLanding.testimonialCards?.[1]?.author ||
+      existingJosNijeKasnoZaBoljuSkoluLanding.testimonialCards?.[1]?.videoEmbedUrl !==
+        josNijeKasnoZaBoljuSkoluLanding.testimonialCards?.[1]?.videoEmbedUrl ||
+      existingJosNijeKasnoZaBoljuSkoluLanding.testimonialCards?.[3]?.videoEmbedUrl !==
+        josNijeKasnoZaBoljuSkoluLanding.testimonialCards?.[3]?.videoEmbedUrl ||
+      existingJosNijeKasnoZaBoljuSkoluLanding.testimonialCards?.[3]?.hideAttribution !== true ||
       existingJosNijeKasnoZaBoljuSkoluLanding.benefitCards?.[3]?.text !==
         josNijeKasnoZaBoljuSkoluLanding.benefitCards?.[3]?.text
     ) {
@@ -433,6 +472,11 @@ export default {
             ...existingJosNijeKasnoZaBoljuSkoluLanding.enrollmentHelp,
             phonePrimary: josNijeKasnoZaBoljuSkoluLanding.enrollmentHelp.phonePrimary,
           },
+          benefits: {
+            ...existingJosNijeKasnoZaBoljuSkoluLanding.benefits,
+            title: josNijeKasnoZaBoljuSkoluLanding.benefits.title,
+          },
+          testimonialCards: josNijeKasnoZaBoljuSkoluLanding.testimonialCards,
           benefitCards: (existingJosNijeKasnoZaBoljuSkoluLanding.benefitCards ?? josNijeKasnoZaBoljuSkoluLanding.benefitCards).map(
             (card, index) => ({
               title: card.title,

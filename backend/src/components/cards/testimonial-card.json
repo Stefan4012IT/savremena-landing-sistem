@@ -9,6 +9,8 @@
     "initials": { "type": "string", "required": true },
     "avatarImageUrl": { "type": "string" },
     "videoImageUrl": { "type": "string" },
+    "videoEmbedUrl": { "type": "string" },
+    "hideAttribution": { "type": "boolean" },
     "variant": {
       "type": "enumeration",
       "enum": ["text", "video"],

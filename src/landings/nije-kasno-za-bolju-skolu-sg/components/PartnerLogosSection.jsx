@@ -34,7 +34,7 @@ export function PartnerLogosSection() {
         <SectionHeader
           eyebrow="Svetske nagrade kao potvrda izvrsnosti"
           title="Savremena obrazovna grupa pomera granice u obrazovanju"
-          text="Međunarodna priznanja, svetska prepoznatost i merljivi rezultati International School-a i kompletne Savremene obrazovne grupe samo su još jedna potvrda kvaliteta programa i uspeha naših učenika."
+          text="Međunarodna priznanja, svetska prepoznatost i merljivi rezultati kompletne Savremene obrazovne grupe samo su još jedna potvrda kvaliteta programa i uspeha naših učenika."
         />
         <div className="nije-kasno-za-bolju-skolu-sg-partner-logos__row">
           {awardLogos.map((logo) => (

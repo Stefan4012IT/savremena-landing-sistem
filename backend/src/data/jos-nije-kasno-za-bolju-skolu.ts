@@ -117,7 +117,7 @@ export const landingData = {
   },
   benefits: {
     eyebrow: 'Stvarno drugačija',
-    title: 'Zašto Savremena osnovna škola',
+    title: 'Zašto Savremena osnovna škola?',
     text: 'Savremena učenicima pruža znanje, podršku, tehnologiju, zdravo okruženje i prostor da razviju svoje mogućnosti.',
   },
   specialOffer: {
@@ -261,11 +261,10 @@ export const testimonials = [
   {
     title: 'Kao roditelj sam stvarno presrećna i zahvalna',
     text: '',
-    author: 'Nataša Petković',
+    author: 'Dragana Ponjević',
     role: 'roditelj',
-    initials: 'NP',
-    avatarImageUrl: placeholderImages.testimonialAvatars[1],
-    videoImageUrl: placeholderImages.testimonialVideos[0],
+    initials: 'DP',
+    videoEmbedUrl: 'https://www.youtube.com/embed/Vepxckbfqx0?start=34',
     variant: 'video',
   },
   {
@@ -283,8 +282,8 @@ export const testimonials = [
     author: 'Tamara Polić',
     role: 'učenica Savremene gimnazije',
     initials: 'TP',
-    avatarImageUrl: placeholderImages.testimonialAvatars[3],
-    videoImageUrl: placeholderImages.testimonialVideos[1],
+    hideAttribution: true,
+    videoEmbedUrl: 'https://www.youtube.com/embed/KK2d5x3oZDk',
     variant: 'video',
   },
   {

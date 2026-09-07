@@ -9,6 +9,7 @@ export function TestimonialCard({
   avatarImageUrl,
   videoImageUrl,
   videoEmbedUrl,
+  hideAttribution = false,
   variant = 'text',
 }) {
   const isVideo = variant === 'video'
@@ -56,17 +57,19 @@ export function TestimonialCard({
           <p>{text}</p>
         )}
       </div>
-      <footer className="nije-kasno-za-bolju-skolu-sos-testimonial-card__footer">
-        {!isVideo ? (
-          <div className="nije-kasno-za-bolju-skolu-sos-testimonial-card__avatar" aria-hidden="true">
-            {avatarImageUrl ? <img src={avatarImageUrl} alt="" /> : <span>{initials}</span>}
+      {!hideAttribution ? (
+        <footer className="nije-kasno-za-bolju-skolu-sos-testimonial-card__footer">
+          {!isVideo ? (
+            <div className="nije-kasno-za-bolju-skolu-sos-testimonial-card__avatar" aria-hidden="true">
+              {avatarImageUrl ? <img src={avatarImageUrl} alt="" /> : <span>{initials}</span>}
+            </div>
+          ) : null}
+          <div>
+            <strong>{author}</strong>
+            <span>{role}</span>
           </div>
-        ) : null}
-        <div>
-          <strong>{author}</strong>
-          <span>{role}</span>
-        </div>
-      </footer>
+        </footer>
+      ) : null}
     </article>
   )
 }
