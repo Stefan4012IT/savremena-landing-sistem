@@ -384,6 +384,9 @@ export default {
         status: 'published',
       })
     } else if (
+      existingNijeKasnoZaBoljuSkoluLanding.seo?.title !== nijeKasnoZaBoljuSkoluLanding.seo.title ||
+      existingNijeKasnoZaBoljuSkoluLanding.seo?.description !== nijeKasnoZaBoljuSkoluLanding.seo.description ||
+      existingNijeKasnoZaBoljuSkoluLanding.seo?.ogImageUrl !== nijeKasnoZaBoljuSkoluLanding.seo.ogImageUrl ||
       existingNijeKasnoZaBoljuSkoluLanding.emotionalTurn?.text !== nijeKasnoZaBoljuSkoluLanding.emotionalTurn.text ||
       existingNijeKasnoZaBoljuSkoluLanding.emotionalTurn?.paragraphs?.join('\n') !==
         nijeKasnoZaBoljuSkoluLanding.emotionalTurn.paragraphs.join('\n') ||
@@ -398,6 +401,12 @@ export default {
       await strapi.documents('api::landing.landing').update({
         documentId: existingNijeKasnoZaBoljuSkoluLanding.documentId,
         data: {
+          seo: {
+            ...existingNijeKasnoZaBoljuSkoluLanding.seo,
+            title: nijeKasnoZaBoljuSkoluLanding.seo.title,
+            description: nijeKasnoZaBoljuSkoluLanding.seo.description,
+            ogImageUrl: nijeKasnoZaBoljuSkoluLanding.seo.ogImageUrl,
+          },
           emotionalTurn: {
             ...existingNijeKasnoZaBoljuSkoluLanding.emotionalTurn,
             text: nijeKasnoZaBoljuSkoluLanding.emotionalTurn.text,

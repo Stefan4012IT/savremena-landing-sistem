@@ -3,7 +3,7 @@
   min-height: 980px;
   isolation: isolate;
   overflow: visible;
-  background-color: var(--sg-yellow, #ffcc0c);
+  background-color: var(--sg-red, #9d1516);
   background-image: url('https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/sg_nije_kasno_za_background_hero.jpg');
   background-position: center top;
   background-repeat: no-repeat;
@@ -243,6 +243,12 @@
   &__form-panel .nije-kasno-za-bolju-skolu-sg-lead-form button {
     background: var(--sg-yellow, #ffcc0c);
     color: #ffffff;
+  }
+}
+
+@media (max-width: 1599px) {
+  .nije-kasno-za-bolju-skolu-sg-hero__content {
+    max-width: 60vw;
   }
 }
 

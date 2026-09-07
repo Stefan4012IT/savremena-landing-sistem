@@ -246,6 +246,12 @@
   }
 }
 
+@media (max-width: 1599px) {
+  .nije-kasno-za-bolju-skolu-sos-hero__content {
+    max-width: 60vw;
+  }
+}
+
 @media (min-width: 1920px) {
   .nije-kasno-za-bolju-skolu-sos-hero {
     &__supporting-copy {

@@ -38,10 +38,10 @@ export const landingData = {
   brandScope: 'SG',
   gtmId: 'GTM-WRTKDP',
   seo: {
-    title: 'Još samo 10 slobodnih mesta | Savremena gimnazija – upis 2026/27',
+    title: 'Još nije kasno za bolju školu | Upis u Savremenu gimnaziju 2026/27',
     description:
-      'Ostalo je manje od 10 slobodnih mesta za upis u Savremenu gimnaziju, generacija 2026/27. Prijavite dete na vreme i obezbedite mesto.',
-    ogImageUrl: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/08/10-slobodnih-mesta-1200x628.jpg',
+      'Još nije kasno za bolju školu. Upis u Savremenu gimnaziju donosi savremenu nastavu, podršku profesora i obrazovanje koje priprema učenike za budućnost.',
+    ogImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/nije_kasno_za-bolju_skolu_sg_120x628.jpg',
   },
   hero: {
     eyebrow: 'Upis u generaciju 2026/27',
