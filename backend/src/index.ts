@@ -445,9 +445,18 @@ export default {
         josNijeKasnoZaBoljuSkoluLanding.testimonialCards?.[1]?.author ||
       existingJosNijeKasnoZaBoljuSkoluLanding.testimonialCards?.[1]?.videoEmbedUrl !==
         josNijeKasnoZaBoljuSkoluLanding.testimonialCards?.[1]?.videoEmbedUrl ||
+      existingJosNijeKasnoZaBoljuSkoluLanding.testimonialCards?.[1]?.videoImageUrl !==
+        josNijeKasnoZaBoljuSkoluLanding.testimonialCards?.[1]?.videoImageUrl ||
       existingJosNijeKasnoZaBoljuSkoluLanding.testimonialCards?.[3]?.videoEmbedUrl !==
         josNijeKasnoZaBoljuSkoluLanding.testimonialCards?.[3]?.videoEmbedUrl ||
-      existingJosNijeKasnoZaBoljuSkoluLanding.testimonialCards?.[3]?.hideAttribution !== true ||
+      existingJosNijeKasnoZaBoljuSkoluLanding.testimonialCards?.[3]?.videoImageUrl !==
+        josNijeKasnoZaBoljuSkoluLanding.testimonialCards?.[3]?.videoImageUrl ||
+      existingJosNijeKasnoZaBoljuSkoluLanding.testimonialCards?.[3]?.author !==
+        josNijeKasnoZaBoljuSkoluLanding.testimonialCards?.[3]?.author ||
+      existingJosNijeKasnoZaBoljuSkoluLanding.testimonialCards?.[3]?.role !==
+        josNijeKasnoZaBoljuSkoluLanding.testimonialCards?.[3]?.role ||
+      existingJosNijeKasnoZaBoljuSkoluLanding.testimonialCards?.[3]?.hideAttribution !==
+        josNijeKasnoZaBoljuSkoluLanding.testimonialCards?.[3]?.hideAttribution ||
       existingJosNijeKasnoZaBoljuSkoluLanding.benefitCards?.[3]?.text !==
         josNijeKasnoZaBoljuSkoluLanding.benefitCards?.[3]?.text
     ) {

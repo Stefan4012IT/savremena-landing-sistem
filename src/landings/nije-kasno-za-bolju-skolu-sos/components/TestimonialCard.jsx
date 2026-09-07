@@ -66,7 +66,7 @@ export function TestimonialCard({
           ) : null}
           <div>
             <strong>{author}</strong>
-            <span>{role}</span>
+            {role?.trim() ? <span>{role}</span> : null}
           </div>
         </footer>
       ) : null}
