@@ -495,7 +495,7 @@ Ne čekajte da razočaranje preraste u prihvatanje lošije alternative. Ako prvi
 ## Kontakt informacije
 
 Telefon:
-**011/40-11-223**  
+**011/40-11-222**<br>
 **062/191-80-56**
 
 E-mail:

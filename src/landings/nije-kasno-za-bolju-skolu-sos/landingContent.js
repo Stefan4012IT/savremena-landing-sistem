@@ -64,8 +64,8 @@ export const landingData = {
     ],
     processTitle: 'Kako izgleda proces prebacivanja:',
     processText:
-      'Proces prebacivanja je jednostavan, potrebno je samo da se prijavite online ili nas pozovete na 011/40-11-223 i naši konsultanti za upis će vam pomoći oko svih koraka. Kompletnu proceduru je moguće završiti jako brzo i vaše dete već od narednog dana može da krene u svoju novu savremenu avanturu.',
-    processPhone: '011/40-11-223',
+      'Proces prebacivanja je jednostavan, potrebno je samo da se prijavite online ili nas pozovete na 011/40-11-222 i naši konsultanti za upis će vam pomoći oko svih koraka. Kompletnu proceduru je moguće završiti jako brzo i vaše dete već od narednog dana može da krene u svoju novu savremenu avanturu.',
+    processPhone: '011/40-11-222',
     ctaText: 'Prijavite se danas i obezbedite jedno od preostalih mesta.',
   },
   specialConditions: {
@@ -93,7 +93,7 @@ export const landingData = {
   },
   directions: {
     eyebrow: 'Talent Pathways™',
-    title: 'Izaberite usmerenje koje prati interesovanja vašeg deteta',
+    title: 'Izaberite usmerenje koje prati interesovanja',
     text:
       'U višim razredima učenici biraju razvojni modul koji dodatno prati, obogaćuje i unapređuje njihova interesovanja i talente, uz zvanični plan i program Ministarstva prosvete.',
   },
@@ -123,7 +123,7 @@ export const landingData = {
       'tu je da vam pruži sve potrebne informacije, razjasni nedoumice i pomogne da donesete najbolju odluku za budućnost vašeg deteta.',
     emphasis: 'Ne čekajte - obezbedite svom detetu školovanje koje zaista pravi razliku.',
     prompt: 'Pozovite nas još danas i započnite svoje Savremeno iskustvo:',
-    phonePrimary: '011/40-11-223',
+    phonePrimary: '011/40-11-222',
     phoneSecondary: '062/191-80-56',
     viberLabel: 'Viber',
     whatsappLabel: 'WhatsApp',
@@ -228,7 +228,7 @@ export const benefits = [
   { title: 'Podsticajno okruženje za učenje', text: 'Sigurna i inspirativna sredina koja podstiče kreativnost, samopouzdanje i uspeh.', imageUrl: placeholderImages.benefits[0] },
   { title: 'Interaktivne metode nastave', text: 'Učenje kroz projekte, simulacije i praktične primere razvija kod dece kritičko razmišljanje, kreativnost i veštine rešavanja problema.', imageUrl: placeholderImages.benefits[1] },
   { title: 'Posvećenost svakom učeniku', text: 'Nastavnici pristupaju učenicima sa pažnjom, energijom i razumevanjem.', imageUrl: placeholderImages.benefits[2] },
-  { title: 'Nastavnici sa velikim iskustvom', text: 'Profesori koriste savremene metode rada i kontinuirano unapređuju pristup nastavi.', imageUrl: placeholderImages.benefits[3] },
+  { title: 'Nastavnici sa velikim iskustvom', text: 'Nastavnici koriste savremene metode rada i kontinuirano unapređuju pristup nastavi.', imageUrl: placeholderImages.benefits[3] },
   { title: 'Otvorena vrata za nastavak školovanja', text: 'Znanja i veštine stečeni u Savremenoj predstavljaju dragocenu ulaznicu za najuglednije škole širom sveta.', imageUrl: placeholderImages.benefits[4] },
   { title: 'Savremena tehnologija u nastavi', text: 'Računari, tableti, interaktivne table, e-Learning i digitalni alati čine učenje aktivnijim.', imageUrl: placeholderImages.benefits[5] },
   { title: 'Zanimljivi multidisciplinarni časovi', text: 'Učenje kroz projekte, timski rad, izazove i povezivanje različitih oblasti znanja.', imageUrl: placeholderImages.benefits[6] },

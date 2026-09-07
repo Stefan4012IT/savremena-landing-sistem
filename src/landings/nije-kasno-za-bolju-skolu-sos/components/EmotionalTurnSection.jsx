@@ -59,9 +59,6 @@ export function EmotionalTurnSection() {
                 ) : processText}
               </p>
             ) : null}
-            <a className="nije-kasno-za-bolju-skolu-sos-scholarship-offer__cta" href="#prijava">
-              {emotionalTurn.ctaText}
-            </a>
           </div>
           <figure className="nije-kasno-za-bolju-skolu-sos-scholarship-offer__reel" aria-label="Instagram reel Savremene osnovne škole">
             <div className="nije-kasno-za-bolju-skolu-sos-scholarship-offer__reel-frame">

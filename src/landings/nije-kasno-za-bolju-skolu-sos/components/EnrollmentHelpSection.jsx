@@ -38,7 +38,7 @@ export function EnrollmentHelpSection() {
             </p>
             <p>{enrollmentHelp.prompt}</p>
             <p className="nije-kasno-za-bolju-skolu-sos-enrollment-help__contacts">
-              <a href="tel:+381114011223">{enrollmentHelp.phonePrimary}</a>;{' '}
+              <a href="tel:+381114011222">{enrollmentHelp.phonePrimary}</a>;{' '}
               <a href="tel:+381621918056">{enrollmentHelp.phoneSecondary}</a>, pišite na{' '}
               <a className="nije-kasno-za-bolju-skolu-sos-enrollment-help__messenger-link" href="viber://chat?number=%2B381621918056">
                 <ViberIcon />

@@ -2,9 +2,14 @@ import { SectionHeader } from './SectionHeader'
 
 const spaceImages = [
   'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/new_prostor_1.jpg',
+  'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/gallery_part_two_3.jpg',
   'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/new_prostor_2.jpg',
+  'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/gallery_part_two_1.jpg',
   'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/new_prostor_3.jpg',
+  'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/gallery_part_two_4.jpg',
   'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/new_prostor_4.jpg',
+  'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/gallery_part_two_2.jpg',
+  'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/gallery_part_two_5.jpg',
 ]
 
 const carouselImages = [...spaceImages, ...spaceImages]

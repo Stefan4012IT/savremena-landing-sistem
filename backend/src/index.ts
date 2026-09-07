@@ -397,7 +397,17 @@ export default {
       })
     } else if (
       existingJosNijeKasnoZaBoljuSkoluLanding.modernEducation?.imageUrl !==
-      josNijeKasnoZaBoljuSkoluLanding.modernEducation.imageUrl
+        josNijeKasnoZaBoljuSkoluLanding.modernEducation.imageUrl ||
+      existingJosNijeKasnoZaBoljuSkoluLanding.directions?.title !==
+        josNijeKasnoZaBoljuSkoluLanding.directions.title ||
+      existingJosNijeKasnoZaBoljuSkoluLanding.emotionalTurn?.processPhone !==
+        josNijeKasnoZaBoljuSkoluLanding.emotionalTurn.processPhone ||
+      existingJosNijeKasnoZaBoljuSkoluLanding.emotionalTurn?.processText !==
+        josNijeKasnoZaBoljuSkoluLanding.emotionalTurn.processText ||
+      existingJosNijeKasnoZaBoljuSkoluLanding.enrollmentHelp?.phonePrimary !==
+        josNijeKasnoZaBoljuSkoluLanding.enrollmentHelp.phonePrimary ||
+      existingJosNijeKasnoZaBoljuSkoluLanding.benefitCards?.[3]?.text !==
+        josNijeKasnoZaBoljuSkoluLanding.benefitCards?.[3]?.text
     ) {
       await strapi.documents('api::landing.landing').update({
         documentId: existingJosNijeKasnoZaBoljuSkoluLanding.documentId,
@@ -406,6 +416,28 @@ export default {
             ...existingJosNijeKasnoZaBoljuSkoluLanding.modernEducation,
             imageUrl: josNijeKasnoZaBoljuSkoluLanding.modernEducation.imageUrl,
           },
+          directions: {
+            ...existingJosNijeKasnoZaBoljuSkoluLanding.directions,
+            title: josNijeKasnoZaBoljuSkoluLanding.directions.title,
+          },
+          emotionalTurn: {
+            ...existingJosNijeKasnoZaBoljuSkoluLanding.emotionalTurn,
+            processText: josNijeKasnoZaBoljuSkoluLanding.emotionalTurn.processText,
+            processPhone: josNijeKasnoZaBoljuSkoluLanding.emotionalTurn.processPhone,
+          },
+          enrollmentHelp: {
+            ...existingJosNijeKasnoZaBoljuSkoluLanding.enrollmentHelp,
+            phonePrimary: josNijeKasnoZaBoljuSkoluLanding.enrollmentHelp.phonePrimary,
+          },
+          benefitCards: (existingJosNijeKasnoZaBoljuSkoluLanding.benefitCards ?? josNijeKasnoZaBoljuSkoluLanding.benefitCards).map(
+            (card, index) => ({
+              title: card.title,
+              text: index === 3
+                ? josNijeKasnoZaBoljuSkoluLanding.benefitCards[index].text
+                : card.text,
+              imageUrl: card.imageUrl,
+            }),
+          ),
         },
         status: 'published',
       })
