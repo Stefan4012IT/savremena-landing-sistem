@@ -24,7 +24,7 @@ export function HeroSection() {
           <h1 className="nije-kasno-za-bolju-skolu-sos-hero__title">Nije kasno za bolju školu!</h1>
           <div className="nije-kasno-za-bolju-skolu-sos-hero__copy">
             <p className="nije-kasno-za-bolju-skolu-sos-hero__lead">
-              Iskoristite poslednju šansu za upis u Savremenu:
+              Iskoristite <span className="nije-kasno-za-bolju-skolu-sos-hero__lead-highlight">poslednju šansu</span> za upis u Savremenu
             </p>
             <p className="nije-kasno-za-bolju-skolu-sos-hero__message">
               Donesite pravu odluku i obezbedite svom detetu <strong>STVARNO DRUGAČIJE</strong> školovanje.

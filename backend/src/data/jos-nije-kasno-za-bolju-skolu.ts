@@ -102,7 +102,7 @@ export const landingData = {
   },
   directions: {
     eyebrow: 'Talent Pathways™',
-    title: 'Izaberite usmerenje koje prati interesovanja',
+    title: 'Jedinstvena usmerenja koja prate interesovanja vašeg deteta',
     text:
       'U višim razredima učenici biraju razvojni modul koji dodatno prati, obogaćuje i unapređuje njihova interesovanja i talente, uz zvanični plan i program Ministarstva prosvete.',
   },

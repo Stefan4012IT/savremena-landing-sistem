@@ -108,6 +108,15 @@
     white-space: normal;
   }
 
+  &__lead-highlight {
+    display: inline-block;
+    margin-inline: 0.18em;
+    color: inherit;
+    font-weight: 900;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
   &__message strong {
     color: var(--sos-yellow, #f7b815);
     font-weight: 900;
