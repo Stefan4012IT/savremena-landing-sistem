@@ -287,10 +287,79 @@
 }
 
 .nije-kasno-za-bolju-skolu-sos-stats-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   background: var(--gradient-brand);
   color: #ffffff;
 
+  &__bird {
+    position: absolute;
+    z-index: 0;
+    width: clamp(86px, 10vw, 190px);
+    height: auto;
+    opacity: 0.16;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  &__bird--one {
+    top: 10%;
+    left: 3%;
+    transform: rotate(-12deg);
+    opacity: 0.2;
+  }
+
+  &__bird--two {
+    top: 22%;
+    left: 23%;
+    width: clamp(68px, 7.4vw, 140px);
+    transform: rotate(8deg);
+    opacity: 0.12;
+  }
+
+  &__bird--three {
+    top: 8%;
+    right: 28%;
+    width: clamp(74px, 8.6vw, 158px);
+    transform: rotate(-5deg);
+    opacity: 0.14;
+  }
+
+  &__bird--four {
+    top: 52%;
+    right: 4%;
+    transform: rotate(15deg);
+    opacity: 0.18;
+  }
+
+  &__bird--five {
+    bottom: 8%;
+    left: 12%;
+    width: clamp(68px, 7.9vw, 146px);
+    transform: rotate(4deg);
+    opacity: 0.1;
+  }
+
+  &__bird--six {
+    right: 42%;
+    bottom: 10%;
+    width: clamp(58px, 6.6vw, 122px);
+    transform: rotate(-18deg);
+    opacity: 0.13;
+  }
+
+  &__bird--seven {
+    top: 42%;
+    left: 45%;
+    width: clamp(52px, 6vw, 110px);
+    transform: rotate(22deg);
+    opacity: 0.09;
+  }
+
   &__grid {
+    position: relative;
+    z-index: 1;
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: clamp(18px, 2.2vw, 34px);
@@ -319,6 +388,18 @@
     font-size: clamp(0.9rem, 1vw, 1.05rem);
     font-weight: 800;
     line-height: 1.14;
+  }
+}
+
+@media (max-width: 760px) {
+  .nije-kasno-za-bolju-skolu-sos-stats-section__bird {
+    width: 90px;
+  }
+
+  .nije-kasno-za-bolju-skolu-sos-stats-section__bird--two,
+  .nije-kasno-za-bolju-skolu-sos-stats-section__bird--six,
+  .nije-kasno-za-bolju-skolu-sos-stats-section__bird--seven {
+    display: none;
   }
 }
 
@@ -803,12 +884,12 @@
   }
 
   .nije-kasno-za-bolju-skolu-sos-enrollment-help__advisor {
-    width: min(100%, 280px);
+    width: min(100%, 200px);
   }
 
   .nije-kasno-za-bolju-skolu-sos-enrollment-help__advisor-photo,
   .nije-kasno-za-bolju-skolu-sos-enrollment-help__advisor-photo img {
-    min-height: 280px;
+    min-height: 200px;
   }
 
 }

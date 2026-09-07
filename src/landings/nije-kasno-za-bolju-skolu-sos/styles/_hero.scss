@@ -377,21 +377,28 @@
 
     &__header {
       position: relative;
-      gap: 16px;
+      gap: 8px;
       padding: 16px 20px;
     }
 
+    &__header > * {
+      min-width: 0;
+    }
+
     &__logo {
-      width: min(58vw, 250px);
+      width: min(52vw, 220px);
+      min-width: 0;
       min-height: 52px;
     }
 
     &__institution-logos {
-      gap: 10px;
+      min-width: 0;
+      flex: 0 1 auto;
+      gap: 6px;
     }
 
     &__institution-logos img {
-      max-width: 20vw;
+      max-width: 14vw;
       max-height: 34px;
     }
 
@@ -412,16 +419,17 @@
 
     &__copy {
       position: static;
-      order: 3;
+      order: 2;
       display: flex;
       width: 100%;
       max-width: none;
       flex-direction: column;
-      gap: 12px;
+      gap: 16px;
     }
 
     &__title {
       order: 1;
+      margin-bottom: 20px;
       font-size: clamp(3.5rem, 15vw, 5.5rem);
     }
 
@@ -499,12 +507,12 @@
       right: auto;
       bottom: auto;
       left: auto;
-      order: 2;
+      order: 3;
       width: 100%;
       max-width: 100%;
       height: auto;
       max-height: none;
-      margin: 0;
+      margin: 20px 0 0;
       align-items: center;
       justify-content: center;
       overflow: visible;
@@ -523,14 +531,14 @@
       left: auto;
       order: 4;
       width: 100%;
-      margin: 24px 0 24px;
+      margin: 0 0 24px;
       border-radius: 28px;
       padding: 20px;
     }
 
     &__visual img {
-      width: auto;
-      max-width: 100%;
+      width: 80%;
+      max-width: 80%;
       margin-inline: auto;
       object-position: center bottom;
       transform: none;

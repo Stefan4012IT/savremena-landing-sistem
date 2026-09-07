@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import birdDecoration from '../assets/ptica_001.svg'
 
 const stats = [
   { value: 97, suffix: '%', label: 'zadovoljnih učenika i roditelja' },
@@ -8,6 +9,8 @@ const stats = [
   { value: 3000, prefix: '+', label: 'uspešnih učenika' },
   { value: 30, suffix: '+', label: 'najboljih Cambridge studenta na svetu' },
 ]
+
+const birdDecorations = ['one', 'two', 'three', 'four', 'five', 'six', 'seven']
 
 function AnimatedStat({ stat, shouldAnimate }) {
   const [displayValue, setDisplayValue] = useState(shouldAnimate ? 0 : stat.value)
@@ -78,6 +81,15 @@ export function StatsSection() {
 
   return (
     <section className="nije-kasno-za-bolju-skolu-sos-landing-section nije-kasno-za-bolju-skolu-sos-stats-section" ref={sectionRef}>
+      {birdDecorations.map((position) => (
+        <img
+          className={`nije-kasno-za-bolju-skolu-sos-stats-section__bird nije-kasno-za-bolju-skolu-sos-stats-section__bird--${position}`}
+          src={birdDecoration}
+          alt=""
+          aria-hidden="true"
+          key={position}
+        />
+      ))}
       <div className="nije-kasno-za-bolju-skolu-sos-landing-container nije-kasno-za-bolju-skolu-sos-stats-section__grid">
         {stats.map((stat) => (
           <AnimatedStat stat={stat} shouldAnimate={shouldAnimate} key={stat.label} />
