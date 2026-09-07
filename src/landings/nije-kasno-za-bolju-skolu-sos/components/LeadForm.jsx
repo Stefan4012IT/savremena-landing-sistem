@@ -122,8 +122,8 @@ function validateFormData(formData) {
 
   if (name.length < 2) return 'Unesite ime i prezime.'
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return 'Unesite ispravnu e-mail adresu.'
-  if (!Number.isInteger(childAge) || childAge < 10 || childAge > 19) {
-    return 'Uzrast deteta mora biti između 10 i 19 godina.'
+  if (!Number.isInteger(childAge) || childAge < 5 || childAge > 20) {
+    return 'Uzrast deteta mora biti između 5 i 20 godina.'
   }
 
   return validatePhoneFields(
@@ -245,8 +245,8 @@ export function LeadForm({ className = '', headerTitle, headerText }) {
           <input
             type="number"
             name="childAge"
-            min="10"
-            max="19"
+            min="5"
+            max="20"
             placeholder={leadForm.childAgePlaceholder || 'Uzrast deteta'}
             aria-label={leadForm.childAgeLabel || 'Uzrast deteta'}
             required

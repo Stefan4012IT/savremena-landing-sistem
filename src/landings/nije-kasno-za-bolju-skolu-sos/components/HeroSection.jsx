@@ -2,7 +2,7 @@ import cambridgeLogo from '../assets/logos/cambridge-logo-white.png'
 import { LeadForm } from './LeadForm'
 
 const heroImageUrl = 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/hero_img_002.png'
-const heroImageMobileUrl = 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/hero_img_003_mobile.png'
+const heroImageMobileUrl = 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/hero_img_004_mobile.png'
 
 export function HeroSection() {
   return (
@@ -33,7 +33,7 @@ export function HeroSection() {
         </div>
         <div className="nije-kasno-za-bolju-skolu-sos-hero__visual" aria-hidden="true">
           <picture>
-            <source media="(max-width: 760px)" srcSet={heroImageMobileUrl} />
+            <source media="(max-width: 991px)" srcSet={heroImageMobileUrl} />
             <img src={heroImageUrl} alt="" />
           </picture>
         </div>

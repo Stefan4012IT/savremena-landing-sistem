@@ -1,5 +1,5 @@
 const placeholderImages = {
-  modernEducation: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/najbolji_izbor_720x520.jpg',
+  modernEducation: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/savremena_landing_sos_img_1.jpg',
   advisor: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/sg-katarina-petrovic.jpg',
   directions: [
     'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/SG_opsti-smer.jpg',

@@ -324,8 +324,8 @@
 
 @media (min-width: 1400px) and (max-width: 1639px) {
   .nije-kasno-za-bolju-skolu-sos-hero__visual {
-    right: clamp(170px, 16vw, 260px);
-    width: 35vw;
+    right: 0;
+    width: min(52vw, 900px);
   }
 }
 
@@ -340,7 +340,8 @@
 
 @media (min-width: 992px) and (max-width: 1399px) {
   .nije-kasno-za-bolju-skolu-sos-hero__visual {
-    width: min(42vw, 560px);
+    right: 0;
+    width: min(52vw, 760px);
   }
 }
 
@@ -358,11 +359,12 @@
 
 @media (min-width: 761px) and (max-width: 991px) {
   .nije-kasno-za-bolju-skolu-sos-hero__visual {
-    right: -40px;
+    right: 0;
+    width: min(52vw, 650px);
   }
 
   .nije-kasno-za-bolju-skolu-sos-hero__visual img {
-    transform: translateY(-160px);
+    transform: translateY(-25px);
   }
 
   .nije-kasno-za-bolju-skolu-sos-hero__form-panel {
@@ -370,7 +372,7 @@
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 991px) {
   .nije-kasno-za-bolju-skolu-sos-hero {
     min-height: auto;
     overflow: hidden;

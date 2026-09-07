@@ -395,6 +395,20 @@ export default {
         data: josNijeKasnoZaBoljuSkoluLanding,
         status: 'published',
       })
+    } else if (
+      existingJosNijeKasnoZaBoljuSkoluLanding.modernEducation?.imageUrl !==
+      josNijeKasnoZaBoljuSkoluLanding.modernEducation.imageUrl
+    ) {
+      await strapi.documents('api::landing.landing').update({
+        documentId: existingJosNijeKasnoZaBoljuSkoluLanding.documentId,
+        data: {
+          modernEducation: {
+            ...existingJosNijeKasnoZaBoljuSkoluLanding.modernEducation,
+            imageUrl: josNijeKasnoZaBoljuSkoluLanding.modernEducation.imageUrl,
+          },
+        },
+        status: 'published',
+      })
     }
 
     const existingWhyWaitLanding = await strapi.documents('api::landing.landing').findFirst({

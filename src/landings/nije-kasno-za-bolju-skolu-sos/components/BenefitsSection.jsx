@@ -2,6 +2,8 @@ import { benefits } from '../landingContent'
 import { useLandingData } from '../useLandingData'
 import { SectionHeader } from './SectionHeader'
 
+const benefitImageBaseUrl = 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/sos_benefits_'
+
 export function BenefitsSection() {
   const { benefits: section, benefitCards = benefits } = useLandingData()
 
@@ -14,10 +16,10 @@ export function BenefitsSection() {
           text={section.text}
         />
         <div className="nije-kasno-za-bolju-skolu-sos-benefits-grid">
-          {benefitCards.map((benefit) => {
+          {benefitCards.map((benefit, index) => {
             const title = Array.isArray(benefit) ? benefit[0] : benefit.title
             const text = Array.isArray(benefit) ? benefit[1] : benefit.text
-            const imageUrl = Array.isArray(benefit) ? null : benefit.imageUrl
+            const imageUrl = `${benefitImageBaseUrl}${index + 1}.jpg`
 
             return (
             <article className="nije-kasno-za-bolju-skolu-sos-benefit-card" key={title}>
