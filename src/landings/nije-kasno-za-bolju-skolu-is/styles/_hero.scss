@@ -475,6 +475,13 @@
       height: 23px;
     }
 
+    &__language-switch {
+      position: absolute;
+      top: 72px;
+      right: 0;
+      z-index: 4;
+    }
+
     &__inner {
       display: flex;
       flex-direction: column;
