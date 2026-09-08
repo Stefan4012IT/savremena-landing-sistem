@@ -1,7 +1,7 @@
 import { useLandingData } from '../useLandingData'
 
 export function EmotionalTurnSection() {
-  const { emotionalTurn } = useLandingData()
+  const { emotionalTurn, locale = 'sr' } = useLandingData()
   const paragraphs = Array.isArray(emotionalTurn.paragraphs) && emotionalTurn.paragraphs.length
     ? emotionalTurn.paragraphs
     : [emotionalTurn.text]
@@ -48,7 +48,7 @@ export function EmotionalTurnSection() {
           <figure className="nije-kasno-za-bolju-skolu-is-scholarship-offer__image">
             <img
               src="https://www.international-school.edu.rs/wp-content/uploads/2026/09/why_wait_img_1.png"
-              alt="Učenici International Schoola"
+              alt={locale === 'en' ? 'International School students' : 'Učenici International Schoola'}
             />
           </figure>
         </div>

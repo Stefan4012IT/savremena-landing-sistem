@@ -1,7 +1,7 @@
 import { useLandingData } from '../useLandingData'
 
 export function SpecialOfferSection() {
-  const { specialOffer } = useLandingData()
+  const { specialOffer, locale = 'sr' } = useLandingData()
 
   return (
     <section className="nije-kasno-za-bolju-skolu-is-landing-section nije-kasno-za-bolju-skolu-is-special-offer">
@@ -11,7 +11,7 @@ export function SpecialOfferSection() {
           <h2>{specialOffer.title}</h2>
         </div>
         <a className="nije-kasno-za-bolju-skolu-is-landing-link nije-kasno-za-bolju-skolu-is-landing-link--light" href="#prijava">
-          Obezbedite mesto u generaciji 2026/27
+          {locale === 'en' ? 'Secure your place in the 2026/27 generation' : 'Obezbedite mesto u generaciji 2026/27'}
         </a>
       </div>
     </section>

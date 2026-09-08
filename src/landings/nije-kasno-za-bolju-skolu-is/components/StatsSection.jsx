@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { useLandingData } from '../useLandingData'
 
 const stats = [
   { value: 97, suffix: '%', label: 'zadovoljnih učenika i roditelja' },
@@ -7,6 +8,15 @@ const stats = [
   { value: 15, suffix: '+', label: 'godina postojanja' },
   { value: 3000, prefix: '+', label: 'uspešnih učenika' },
   { value: 30, suffix: '+', label: 'najboljih Cambridge studenta na svetu' },
+]
+
+const englishStats = [
+  { value: 97, suffix: '%', label: 'satisfied students and parents' },
+  { value: 230, prefix: '+', label: 'medals, awards and recognitions' },
+  { value: 94, suffix: '%', label: 'students enrol in their first-choice university' },
+  { value: 15, suffix: '+', label: 'years of excellence' },
+  { value: 3000, prefix: '+', label: 'successful students' },
+  { value: 30, suffix: '+', label: 'Cambridge students at the world’s best universities' },
 ]
 
 function AnimatedStat({ stat, shouldAnimate }) {
@@ -48,6 +58,8 @@ function AnimatedStat({ stat, shouldAnimate }) {
 }
 
 export function StatsSection() {
+  const { locale = 'sr' } = useLandingData()
+  const localizedStats = locale === 'en' ? englishStats : stats
   const sectionRef = useRef(null)
   const [shouldAnimate, setShouldAnimate] = useState(false)
 
@@ -79,7 +91,7 @@ export function StatsSection() {
   return (
     <section className="nije-kasno-za-bolju-skolu-is-landing-section nije-kasno-za-bolju-skolu-is-stats-section" ref={sectionRef}>
       <div className="nije-kasno-za-bolju-skolu-is-landing-container nije-kasno-za-bolju-skolu-is-stats-section__grid">
-        {stats.map((stat) => (
+        {localizedStats.map((stat) => (
           <AnimatedStat stat={stat} shouldAnimate={shouldAnimate} key={stat.label} />
         ))}
       </div>

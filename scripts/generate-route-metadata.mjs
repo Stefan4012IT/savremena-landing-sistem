@@ -7,6 +7,7 @@ import { defaultLandingData as desetSlobodnihMesta } from '../src/landings/10-sl
 import { defaultLandingData as nijeKasnoZaBoljuSkolu } from '../src/landings/nije-kasno-za-bolju-skolu-sg/landingContent.js'
 import { defaultLandingData as josNijeKasnoZaBoljuSkolu } from '../src/landings/nije-kasno-za-bolju-skolu-sos/landingContent.js'
 import { defaultLandingData as whyWait } from '../src/landings/nije-kasno-za-bolju-skolu-is/landingContent.js'
+import { defaultLandingData as whyWaitEnglish } from '../src/landings/nije-kasno-za-bolju-skolu-is/landingContent.en.js'
 import { defaultLandingData as novoOdeljenje } from '../src/landings/novo-odeljenje/landingContent.js'
 import { defaultLandingData as maloMesta } from '../src/landings/malo-mesta/landingContent.js'
 
@@ -20,6 +21,7 @@ const landingData = [
   nijeKasnoZaBoljuSkolu,
   josNijeKasnoZaBoljuSkolu,
   whyWait,
+  whyWaitEnglish,
   novoOdeljenje,
   maloMesta,
 ]
@@ -48,7 +50,7 @@ function metadataTags(data) {
   const tags = [
     `<meta name="description" content="${escapeHtml(description)}" />`,
     `<meta property="og:type" content="website" />`,
-    `<meta property="og:locale" content="sr_RS" />`,
+    `<meta property="og:locale" content="${data.locale === 'en' ? 'en_GB' : 'sr_RS'}" />`,
     `<meta property="og:site_name" content="${escapeHtml(siteName)}" />`,
     `<meta property="og:title" content="${escapeHtml(title)}" />`,
     `<meta property="og:description" content="${escapeHtml(description)}" />`,
@@ -76,6 +78,10 @@ const template = fs.readFileSync(templatePath, 'utf8')
 for (const data of landingData) {
   const routeDirectory = path.join(distDirectory, data.slug)
   let html = template.replace(/<title>[\s\S]*?<\/title>/i, `<title>${escapeHtml(data.seo?.title || data.name)}</title>`)
+
+  if (data.locale === 'en') {
+    html = html.replace(/<html\s+lang=["']sr["']/i, '<html lang="en"')
+  }
 
   html = html.replace(/<meta\s+name=["']description["'][^>]*>\n?/gi, '')
   html = html.replace(/<meta\s+property=["']og:[^"']+["'][^>]*>\n?/gi, '')

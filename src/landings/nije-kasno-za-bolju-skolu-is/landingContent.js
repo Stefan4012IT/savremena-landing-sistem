@@ -41,7 +41,7 @@ export const landingData = {
     title: 'Iskoristite poslednju šansu za upis u International School | 2026/27',
     description:
       'Iskoristite poslednju šansu za upis u International School. Cambridge obrazovanje na engleskom jeziku, međunarodno okruženje i siguran put ka budućnosti vašeg deteta.',
-    ogImageUrl: '',
+    ogImageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_nije_kasno_za_bolju_skolu_1200x628.jpg',
   },
   hero: {
     eyebrow: 'Upis u generaciju 2026/27',
@@ -67,6 +67,15 @@ export const landingData = {
       'Proces prebacivanja je jednostavan, potrebno je samo da se prijavite online ili nas pozovete na 011/40-11-220 i naši konsultanti za upis će vam pomoći oko svih koraka. Kompletnu proceduru je moguće završiti jako brzo i vaše dete već od narednog dana može da krene u svoju novu savremenu avanturu.',
     processPhone: '011/40-11-220',
     ctaText: 'Prijavite se danas i obezbedite jedno od preostalih mesta.',
+    worryLabel: 'Da li od srednje škole očekujete više',
+    worries: [
+      'Da li za svoje dete želite stvarno drugačije obrazovanje?',
+      'Da li želite da uči u najsavremenijem školskom prostoru?',
+      'Da li tražite smer koji prati njegova interesovanja i talente?',
+      'Da li želite praktičnu primenu znanja i razvoj veština?',
+    ],
+    reframeLabel: 'Još uvek nije kasno za bolju školu',
+    reframes: ['Pažnja i podrška', 'Savremena nastava', 'Sigurniji put ka budućnosti'],
   },
   specialConditions: {
     eyebrow: 'Simbolika broja 9',
@@ -116,6 +125,8 @@ export const landingData = {
   specialOffer: {
     eyebrow: 'Važan korak ka budućnosti',
     title: 'Iskoristite priliku da obezbedite mesto u International Schoolu',
+    text:
+      'Ako vaše dete nije upisalo školu koju je želelo, još uvek imate mogućnost da izaberete obrazovanje koje mu pruža sigurnost, podršku i bolju pripremu za budućnost.',
   },
   enrollmentHelp: {
     title: 'Imate pitanja ili vam je potrebna pomoć oko upisa u srednju školu?',
@@ -132,7 +143,7 @@ export const landingData = {
     contactSuffix: 'ili popunite prijavu, a mi ćemo vas pozvati.',
     closing: 'Uspešna akademska budućnost vašeg deteta počinje jednim pozivom!',
     advisorInitials: 'KP',
-    advisorImageUrl: placeholderImages.advisor,
+    advisorImageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is-katarina-petrovic.jpg',
   },
   leadForm: {
     namePlaceholder: 'Ime i prezime',
@@ -153,13 +164,13 @@ export const landingData = {
   },
   testimonials: {
     eyebrow: 'Iskustva učenika i roditelja',
-    title: 'Mi smo zaista imali samo predivna iskustva u Savremenoj.',
+    title: 'Cambridge International program omogućava mi da učim u drugačijem okruženju',
     text: '',
   },
   footer: {
     addressLine1: 'Šumatovačka 45,',
     addressLine2: 'Beograd',
-    secondaryAddress: 'Terazije 23',
+    secondaryAddress: 'Terazije 23, Beograd',
     phone: '+381 (0)11 4011 220',
     officeEmail: 'info@iss.edu.rs',
     enrollmentEmail: 'admission@iss.edu.rs',
@@ -301,13 +312,14 @@ export const testimonials = [
     variant: 'text',
   },
   {
-    title: 'Ovu školu od drugih škola izdvaja futuristički pristup nastavi',
+    title: 'Prepare your child for a world where excellence is the standard!',
     text: 'Svideli su mi se ceo koncept škole i način rada. Savremena je maksimalno podržala moja interesovanja tokom sve cetiri godine.',
-    author: 'Tamara Polić',
-    role: 'učenica Savremene gimnazije',
-    initials: 'TP',
+    author: 'Tatjana Vilček',
+    role: 'Direktorka International Schoola',
+    initials: 'TV',
+    videoEmbedUrl: 'https://www.youtube.com/embed/PW85NAwrm9c',
+    videoImageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/testimonial_2.png',
     avatarImageUrl: placeholderImages.testimonialAvatars[3],
-    videoImageUrl: placeholderImages.testimonialVideos[1],
     variant: 'video',
   },
   {

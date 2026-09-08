@@ -10,7 +10,7 @@ const testimonialVideoEmbeds = [
 ]
 
 export function TestimonialsSection() {
-  const { testimonials: section, testimonialCards = testimonials } = useLandingData()
+  const { testimonials: section, testimonialCards = testimonials, locale = 'sr' } = useLandingData()
   const [activeIndex, setActiveIndex] = useState(0)
   const trackRef = useRef(null)
   const slideRefs = useRef([])
@@ -37,7 +37,7 @@ export function TestimonialsSection() {
           title={section.title}
           text={section.text}
         />
-        <div className="nije-kasno-za-bolju-skolu-is-testimonials-carousel" aria-label="Testimonijali">
+        <div className="nije-kasno-za-bolju-skolu-is-testimonials-carousel" aria-label={locale === 'en' ? 'Testimonials' : 'Testimonijali'}>
           <div className="nije-kasno-za-bolju-skolu-is-testimonials-carousel__track" ref={trackRef}>
             {testimonialCards.map((testimonial, index) => {
               const videoIndex = testimonialCards
@@ -55,19 +55,19 @@ export function TestimonialsSection() {
                     slideRefs.current[index] = element
                   }}
                 >
-                  <TestimonialCard {...testimonial} videoEmbedUrl={videoEmbedUrl} />
+                  <TestimonialCard {...testimonial} locale={locale} videoEmbedUrl={videoEmbedUrl} />
                 </div>
               )
             })}
           </div>
-          <div className="nije-kasno-za-bolju-skolu-is-testimonials-carousel__dots" aria-label="Navigacija testimonijala">
+          <div className="nije-kasno-za-bolju-skolu-is-testimonials-carousel__dots" aria-label={locale === 'en' ? 'Testimonial navigation' : 'Navigacija testimonijala'}>
             {testimonialCards.map((testimonial, index) => (
               <button
                 className={index === activeIndex ? 'nije-kasno-za-bolju-skolu-is-is-active' : ''}
                 type="button"
                 key={testimonial.title}
                 onClick={() => setActiveIndex(index)}
-                aria-label={`Prikazi testimonijal ${index + 1}`}
+                aria-label={`${locale === 'en' ? 'Show testimonial' : 'Prikazi testimonijal'} ${index + 1}`}
               />
             ))}
           </div>

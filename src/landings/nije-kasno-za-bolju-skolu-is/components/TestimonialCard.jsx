@@ -9,6 +9,7 @@ export function TestimonialCard({
   avatarImageUrl,
   videoImageUrl,
   videoEmbedUrl,
+  locale = 'sr',
   variant = 'text',
 }) {
   const isVideo = variant === 'video'
@@ -22,7 +23,7 @@ export function TestimonialCard({
       <div className="nije-kasno-za-bolju-skolu-is-testimonial-card__body">
         <h3>{title}</h3>
         {isVideo ? (
-          <div className="nije-kasno-za-bolju-skolu-is-testimonial-card__video" aria-label={`Video testimonijal: ${title}`}>
+          <div className="nije-kasno-za-bolju-skolu-is-testimonial-card__video" aria-label={`${locale === 'en' ? 'Video testimonial' : 'Video testimonijal'}: ${title}`}>
             {isPlaying && autoplayUrl ? (
               <iframe
                 className="nije-kasno-za-bolju-skolu-is-testimonial-card__video-embed"
@@ -43,7 +44,7 @@ export function TestimonialCard({
                   className="nije-kasno-za-bolju-skolu-is-testimonial-card__play"
                   type="button"
                   onClick={() => setIsPlaying(true)}
-                  aria-label={`Pusti video testimonijal: ${title}`}
+                  aria-label={`${locale === 'en' ? 'Play video testimonial' : 'Pusti video testimonijal'}: ${title}`}
                 >
                   <svg viewBox="0 0 100 100" focusable="false" aria-hidden="true">
                     <polygon points="38,28 38,72 72,50" />

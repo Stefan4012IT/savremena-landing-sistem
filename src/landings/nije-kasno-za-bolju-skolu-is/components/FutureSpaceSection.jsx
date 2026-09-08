@@ -47,7 +47,7 @@ export function FutureSpaceCarousel({ stage = 'primary' }) {
   const carouselImages = [...images, ...images]
 
   return (
-    <div className="nije-kasno-za-bolju-skolu-is-future-space__carousel" aria-label="Prostor International School-a">
+    <div className="nije-kasno-za-bolju-skolu-is-future-space__carousel" aria-label="International School spaces">
       <div className="nije-kasno-za-bolju-skolu-is-future-space__track">
         {carouselImages.map((imageUrl, index) => (
           <figure className="nije-kasno-za-bolju-skolu-is-future-space__slide" key={`${imageUrl}-${index}`}>

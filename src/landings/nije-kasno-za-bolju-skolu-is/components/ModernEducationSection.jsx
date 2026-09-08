@@ -2,7 +2,10 @@ import { useLandingData } from '../useLandingData'
 import { SectionHeader } from './SectionHeader'
 
 export function ModernEducationSection() {
-  const { modernEducation } = useLandingData()
+  const { modernEducation, locale = 'sr' } = useLandingData()
+  const highlightedTerms = locale === 'en'
+    ? /(International School|5 to 19 years|Cambridge)/g
+    : /(International Schoolu|5 do 19 godina|Cambridge)/g
 
   return (
     <section className="nije-kasno-za-bolju-skolu-is-landing-section nije-kasno-za-bolju-skolu-is-modern-education">
@@ -15,7 +18,7 @@ export function ModernEducationSection() {
           />
           {modernEducation.paragraphs.map((paragraph) => (
             <p key={paragraph}>
-              {paragraph.split(/(International Schoolu|5 do 19 godina|Cambridge)/g).map((part, index) => (
+              {paragraph.split(highlightedTerms).map((part, index) => (
                 index % 2 === 1 ? <strong key={index}>{part}</strong> : part
               ))}
             </p>

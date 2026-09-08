@@ -117,15 +117,22 @@ function mergeTestimonialCards(fallbackItems, apiItems, brandScope) {
   const mergedItems = mergeArrayItems(fallbackItems, apiItems)
 
   if (String(brandScope).trim().toUpperCase() === 'IS') {
-    const fallbackVideoIndex = fallbackItems.findIndex((item) => item.variant === 'video')
-    const mergedVideoIndex = mergedItems.findIndex((item) => item.variant === 'video')
+    const fallbackVideoItems = fallbackItems.filter((item) => item.variant === 'video')
+    const mergedVideoIndexes = mergedItems.reduce((indexes, item, index) => {
+      if (item.variant === 'video') indexes.push(index)
+      return indexes
+    }, [])
 
-    if (fallbackVideoIndex >= 0 && mergedVideoIndex >= 0) {
-      mergedItems[mergedVideoIndex] = {
-        ...mergedItems[mergedVideoIndex],
-        ...fallbackItems[fallbackVideoIndex],
+    fallbackVideoItems.forEach((fallbackVideo, videoIndex) => {
+      const mergedVideoIndex = mergedVideoIndexes[videoIndex]
+
+      if (mergedVideoIndex !== undefined) {
+        mergedItems[mergedVideoIndex] = {
+          ...mergedItems[mergedVideoIndex],
+          ...fallbackVideo,
+        }
       }
-    }
+    })
   }
 
   return mergedItems
@@ -146,7 +153,9 @@ function mergeSeo(fallbackSeo = {}, apiSeo = {}, brandScope) {
       seo.description = fallbackSeo.description
     }
 
-    if (!fallbackSeo.ogImageUrl) {
+    if (fallbackSeo.ogImageUrl) {
+      seo.ogImageUrl = fallbackSeo.ogImageUrl
+    } else {
       delete seo.ogImageUrl
     }
   }
@@ -160,13 +169,20 @@ function mergeLandingData(fallbackData, apiData) {
     ...apiData.modernEducation,
   }
 
+  const enrollmentHelp = {
+    ...fallbackData.enrollmentHelp,
+    ...apiData.enrollmentHelp,
+  }
+
   if (String(apiData.brandScope ?? fallbackData.brandScope).trim().toUpperCase() === 'IS') {
     modernEducation.imageUrl = fallbackData.modernEducation.imageUrl
+    enrollmentHelp.advisorImageUrl = fallbackData.enrollmentHelp.advisorImageUrl
   }
 
   return {
     ...fallbackData,
     ...apiData,
+    slug: fallbackData.slug,
     seo: mergeSeo(fallbackData.seo, apiData.seo, apiData.brandScope ?? fallbackData.brandScope),
     hero: {
       ...fallbackData.hero,
@@ -177,10 +193,7 @@ function mergeLandingData(fallbackData, apiData) {
       ...apiData.specialConditions,
     },
     modernEducation,
-    enrollmentHelp: {
-      ...fallbackData.enrollmentHelp,
-      ...apiData.enrollmentHelp,
-    },
+    enrollmentHelp,
     leadForm: {
       ...fallbackData.leadForm,
       ...apiData.leadForm,
@@ -208,7 +221,7 @@ function App() {
 
     let isMounted = true
 
-    fetchLandingBySlug(slug)
+    fetchLandingBySlug(registryEntry.apiSlug ?? slug)
       .then((data) => {
         if (isMounted && data) {
           setLandingData(mergeLandingData(registryEntry.fallbackData, data))
@@ -235,9 +248,10 @@ function App() {
     const pageUrl = `${window.location.origin}${window.location.pathname}`
 
     document.title = title
+    document.documentElement.lang = landingData.locale === 'en' ? 'en' : 'sr'
     setMetaTag('name', 'description', description)
     setMetaTag('property', 'og:type', 'website')
-    setMetaTag('property', 'og:locale', 'sr_RS')
+    setMetaTag('property', 'og:locale', landingData.locale === 'en' ? 'en_GB' : 'sr_RS')
     setMetaTag('property', 'og:site_name', getInstitutionName(landingData.brandScope))
     setMetaTag('property', 'og:title', title)
     setMetaTag('property', 'og:description', description)

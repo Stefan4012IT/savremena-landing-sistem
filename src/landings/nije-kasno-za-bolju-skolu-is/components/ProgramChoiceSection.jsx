@@ -3,7 +3,7 @@ import ministryLogo from '../assets/ministarstvo-prosvete-logo.webp'
 import { useLandingData } from '../useLandingData'
 
 export function ProgramChoiceSection() {
-  const { programChoice } = useLandingData()
+  const { programChoice, locale = 'sr' } = useLandingData()
 
   return (
     <section className="nije-kasno-za-bolju-skolu-is-landing-section nije-kasno-za-bolju-skolu-is-program-choice" id="savetovanje">
@@ -15,7 +15,7 @@ export function ProgramChoiceSection() {
             <p key={paragraph}>{paragraph}</p>
           ))}
           <a className="nije-kasno-za-bolju-skolu-is-landing-link" href="#prijava">
-            Zakazite savetovanje o izboru programa
+            {locale === 'en' ? 'Book a programme consultation' : 'Zakazite savetovanje o izboru programa'}
           </a>
         </div>
         <div className="nije-kasno-za-bolju-skolu-is-program-choice__logos" aria-label="Akreditacije i programi">

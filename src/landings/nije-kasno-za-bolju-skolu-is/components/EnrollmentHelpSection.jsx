@@ -21,7 +21,8 @@ function WhatsAppIcon() {
 }
 
 export function EnrollmentHelpSection() {
-  const { enrollmentHelp } = useLandingData()
+  const { enrollmentHelp, locale = 'sr' } = useLandingData()
+  const isEnglish = locale === 'en'
 
   return (
     <section className="nije-kasno-za-bolju-skolu-is-landing-section nije-kasno-za-bolju-skolu-is-enrollment-help">
@@ -39,12 +40,12 @@ export function EnrollmentHelpSection() {
             <p>{enrollmentHelp.prompt}</p>
             <p className="nije-kasno-za-bolju-skolu-is-enrollment-help__contacts">
               <a href="tel:+381114011220">{enrollmentHelp.phonePrimary}</a>;{' '}
-              <a href="tel:+38163341329">{enrollmentHelp.phoneSecondary}</a>, pišite na{' '}
+              <a href="tel:+38163341329">{enrollmentHelp.phoneSecondary}</a>, {isEnglish ? 'message us on' : 'pišite na'}{' '}
               <a className="nije-kasno-za-bolju-skolu-is-enrollment-help__messenger-link" href="viber://chat?number=%2B38163341329">
                 <ViberIcon />
                 <span>{enrollmentHelp.viberLabel}</span>
               </a>{' '}
-              i{' '}
+              {isEnglish ? 'and' : 'i'}{' '}
               <a className="nije-kasno-za-bolju-skolu-is-enrollment-help__messenger-link" href="https://wa.me/38163341329">
                 <WhatsAppIcon />
                 <span>{enrollmentHelp.whatsappLabel}</span>
@@ -53,7 +54,7 @@ export function EnrollmentHelpSection() {
             </p>
             <p>{enrollmentHelp.closing}</p>
           </div>
-          <div className="nije-kasno-za-bolju-skolu-is-enrollment-help__advisor" aria-label="Savetnica za upis Katarina Petrovic">
+          <div className="nije-kasno-za-bolju-skolu-is-enrollment-help__advisor" aria-label={isEnglish ? 'Admissions adviser Katarina Petrovic' : 'Savetnica za upis Katarina Petrovic'}>
             <div className="nije-kasno-za-bolju-skolu-is-enrollment-help__advisor-photo">
               {enrollmentHelp.advisorImageUrl ? (
                 <img src={enrollmentHelp.advisorImageUrl} alt="" />

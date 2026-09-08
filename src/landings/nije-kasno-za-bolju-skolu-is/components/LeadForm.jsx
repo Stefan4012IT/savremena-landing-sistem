@@ -56,85 +56,89 @@ function getSerbianPhoneRule(area) {
   return null
 }
 
-function describeDigitRange(min, max) {
-  return min === max ? `${min} cifara` : `od ${min} do ${max} cifara`
+function describeDigitRange(min, max, isEnglish) {
+  return isEnglish
+    ? (min === max ? `${min} digits` : `${min} to ${max} digits`)
+    : (min === max ? `${min} cifara` : `od ${min} do ${max} cifara`)
 }
 
-function validatePhoneFields(countryCode, areaCode, phoneNumber) {
+function validatePhoneFields(countryCode, areaCode, phoneNumber, isEnglish) {
   const area = String(areaCode || '').trim()
   const phone = String(phoneNumber || '').trim()
 
   if (!/^\d+$/.test(area)) {
-    return 'Pozivni broj mora sadržati samo cifre.'
+    return isEnglish ? 'The area code may contain digits only.' : 'Pozivni broj mora sadržati samo cifre.'
   }
 
   if (!/^\d+$/.test(phone)) {
-    return 'Telefon mora sadržati samo cifre.'
+    return isEnglish ? 'The phone number may contain digits only.' : 'Telefon mora sadržati samo cifre.'
   }
 
   if (countryCode === '+381') {
     if (area.startsWith('0')) {
-      return 'Pozivni broj unesite bez početne nule, na primer 64 ili 11.'
+      return isEnglish ? 'Enter the area code without the leading zero, for example 64 or 11.' : 'Pozivni broj unesite bez početne nule, na primer 64 ili 11.'
     }
 
     if (!/^\d{2,3}$/.test(area)) {
-      return 'Pozivni broj za Srbiju mora imati 2 ili 3 cifre.'
+      return isEnglish ? 'A Serbian area code must contain 2 or 3 digits.' : 'Pozivni broj za Srbiju mora imati 2 ili 3 cifre.'
     }
 
     const phoneRule = getSerbianPhoneRule(area)
     if (!phoneRule) {
-      return 'Pozivni broj nije u važećem opsegu za Srbiju.'
+      return isEnglish ? 'This is not a valid Serbian area code.' : 'Pozivni broj nije u važećem opsegu za Srbiju.'
     }
 
     if (phone.length < phoneRule.min || phone.length > phoneRule.max) {
-      return `Telefon za ovaj pozivni broj mora imati ${describeDigitRange(phoneRule.min, phoneRule.max)}.`
+      return isEnglish ? `For this area code, the phone number must contain ${describeDigitRange(phoneRule.min, phoneRule.max, true)}.` : `Telefon za ovaj pozivni broj mora imati ${describeDigitRange(phoneRule.min, phoneRule.max, false)}.`
     }
 
     if (phoneRule.type === 'geographic' && /^[019]/.test(phone)) {
-      return 'Fiksni telefonski broj ne može počinjati cifrom 0, 1 ili 9.'
+      return isEnglish ? 'A landline number cannot begin with 0, 1 or 9.' : 'Fiksni telefonski broj ne može počinjati cifrom 0, 1 ili 9.'
     }
   } else {
     if (!/^\d{1,5}$/.test(area)) {
-      return 'Pozivni broj mora imati od 1 do 5 cifara.'
+      return isEnglish ? 'The area code must contain 1 to 5 digits.' : 'Pozivni broj mora imati od 1 do 5 cifara.'
     }
 
     if (!/^\d{5,12}$/.test(phone)) {
-      return 'Telefon mora imati od 5 do 12 cifara.'
+      return isEnglish ? 'The phone number must contain 5 to 12 digits.' : 'Telefon mora imati od 5 do 12 cifara.'
     }
   }
 
   const totalDigits = countryCode.replace(/\D/g, '').length + area.length + phone.length
   if (totalDigits > 15) {
-    return 'Kompletan međunarodni broj ne sme imati više od 15 cifara.'
+    return isEnglish ? 'The complete international number cannot contain more than 15 digits.' : 'Kompletan međunarodni broj ne sme imati više od 15 cifara.'
   }
 
   if (isObviousTestNumber(phone)) {
-    return 'Uneti telefon izgleda kao probni broj. Unesite stvarni kontakt broj.'
+    return isEnglish ? 'This looks like a test number. Please enter a real contact number.' : 'Uneti telefon izgleda kao probni broj. Unesite stvarni kontakt broj.'
   }
 
   return ''
 }
 
-function validateFormData(formData) {
+function validateFormData(formData, isEnglish) {
   const name = String(formData.get('name') || '').trim()
   const email = String(formData.get('email') || '').trim()
   const childAge = Number(formData.get('childAge'))
 
-  if (name.length < 2) return 'Unesite ime i prezime.'
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return 'Unesite ispravnu e-mail adresu.'
+  if (name.length < 2) return isEnglish ? 'Enter your full name.' : 'Unesite ime i prezime.'
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return isEnglish ? 'Enter a valid email address.' : 'Unesite ispravnu e-mail adresu.'
   if (!Number.isInteger(childAge) || childAge < 4 || childAge > 20) {
-    return 'Uzrast deteta mora biti između 4 i 20 godina.'
+    return isEnglish ? 'Your child’s age must be between 4 and 20.' : 'Uzrast deteta mora biti između 4 i 20 godina.'
   }
 
   return validatePhoneFields(
     String(formData.get('countryCode') || ''),
     formData.get('areaCode'),
     formData.get('phone'),
+    isEnglish,
   )
 }
 
 export function LeadForm({ className = '', headerTitle, headerText }) {
-  const { leadForm, slug } = useLandingData()
+  const { leadForm, slug, locale = 'sr' } = useLandingData()
+  const isEnglish = locale === 'en'
   const [status, setStatus] = useState('idle')
   const [message, setMessage] = useState('')
   const isSubmitting = status === 'submitting'
@@ -148,7 +152,7 @@ export function LeadForm({ className = '', headerTitle, headerText }) {
     const formData = new FormData(form)
     const submittedInstitution = formData.get('institution') || institution
     const leadEventId = formData.get('lead_event_id')
-    const validationMessage = validateFormData(formData)
+    const validationMessage = validateFormData(formData, isEnglish)
 
     if (validationMessage) {
       setStatus('error')
@@ -186,7 +190,7 @@ export function LeadForm({ className = '', headerTitle, headerText }) {
     } catch (error) {
       setStatus('error')
       const backendMessage = error.details ? Object.values(error.details)[0] : ''
-      setMessage(backendMessage || error.message || leadForm.errorMessage || 'Prijava nije poslata.')
+      setMessage(backendMessage || error.message || leadForm.errorMessage || (isEnglish ? 'Your application was not sent.' : 'Prijava nije poslata.'))
     }
   }
 
@@ -247,8 +251,8 @@ export function LeadForm({ className = '', headerTitle, headerText }) {
             name="childAge"
             min="4"
             max="20"
-            placeholder={leadForm.childAgePlaceholder || 'Uzrast deteta'}
-            aria-label={leadForm.childAgeLabel || 'Uzrast deteta'}
+            placeholder={leadForm.childAgePlaceholder || (isEnglish ? 'Child’s age' : 'Uzrast deteta')}
+            aria-label={leadForm.childAgeLabel || (isEnglish ? 'Child’s age' : 'Uzrast deteta')}
             required
           />
         </div>
@@ -258,7 +262,7 @@ export function LeadForm({ className = '', headerTitle, headerText }) {
           </p>
         ) : null}
         <button type="submit" disabled={isSubmitting}>
-          {isSubmitting ? 'Slanje...' : leadForm.submitLabel || 'Prijavite se'}
+          {isSubmitting ? (isEnglish ? 'Sending...' : 'Slanje...') : leadForm.submitLabel || (isEnglish ? 'Apply now' : 'Prijavite se')}
         </button>
       </form>
 
@@ -271,7 +275,7 @@ export function LeadForm({ className = '', headerTitle, headerText }) {
                 'Hvala vam. Naš tim će vas uskoro kontaktirati sa informacijama o upisu.'}
             </p>
             <button type="button" onClick={() => setStatus('idle')}>
-              U redu
+              {isEnglish ? 'OK' : 'U redu'}
             </button>
           </div>
         </div>

@@ -5,6 +5,7 @@ import { maloMestaLanding } from './data/malo-mesta'
 import { nijeKasnoZaBoljuSkoluLanding } from './data/nije-kasno-za-bolju-skolu'
 import { josNijeKasnoZaBoljuSkoluLanding } from './data/jos-nije-kasno-za-bolju-skolu'
 import { NijeKasnoZaBoljuSkoluIsLanding } from './data/why-wait'
+import { NijeKasnoZaBoljuSkoluIsLandingEn } from './data/why-wait-en'
 
 const previousNajboljaOdlukaSlug = 'najbolja-odluka'
 const previousHeroImageUrls = {
@@ -520,16 +521,25 @@ export default {
         status: 'published',
       })
     } else if (
-      existingWhyWaitLanding.benefits?.title === 'Zašto Savremena osnovna škola' ||
-      existingWhyWaitLanding.benefitCards?.some((card, index) => card.imageUrl !== NijeKasnoZaBoljuSkoluIsLanding.benefitCards[index]?.imageUrl)
+      existingWhyWaitLanding.seo?.title !== NijeKasnoZaBoljuSkoluIsLanding.seo.title ||
+      existingWhyWaitLanding.seo?.ogImageUrl !== NijeKasnoZaBoljuSkoluIsLanding.seo.ogImageUrl ||
+      existingWhyWaitLanding.modernEducation?.imageUrl !== NijeKasnoZaBoljuSkoluIsLanding.modernEducation.imageUrl ||
+      existingWhyWaitLanding.enrollmentHelp?.phonePrimary !== NijeKasnoZaBoljuSkoluIsLanding.enrollmentHelp.phonePrimary ||
+      existingWhyWaitLanding.enrollmentHelp?.phoneSecondary !== NijeKasnoZaBoljuSkoluIsLanding.enrollmentHelp.phoneSecondary ||
+      existingWhyWaitLanding.enrollmentHelp?.advisorImageUrl !== NijeKasnoZaBoljuSkoluIsLanding.enrollmentHelp.advisorImageUrl ||
+      existingWhyWaitLanding.footer?.secondaryAddress !== NijeKasnoZaBoljuSkoluIsLanding.footer.secondaryAddress ||
+      existingWhyWaitLanding.testimonials?.title !== NijeKasnoZaBoljuSkoluIsLanding.testimonials.title ||
+      existingWhyWaitLanding.testimonialCards?.[1]?.videoEmbedUrl !== NijeKasnoZaBoljuSkoluIsLanding.testimonialCards?.[1]?.videoEmbedUrl ||
+      existingWhyWaitLanding.testimonialCards?.[1]?.author !== NijeKasnoZaBoljuSkoluIsLanding.testimonialCards?.[1]?.author ||
+      existingWhyWaitLanding.testimonialCards?.[3]?.videoEmbedUrl !== NijeKasnoZaBoljuSkoluIsLanding.testimonialCards?.[3]?.videoEmbedUrl ||
+      existingWhyWaitLanding.testimonialCards?.[3]?.videoImageUrl !== NijeKasnoZaBoljuSkoluIsLanding.testimonialCards?.[3]?.videoImageUrl ||
+      existingWhyWaitLanding.testimonialCards?.[3]?.title !== NijeKasnoZaBoljuSkoluIsLanding.testimonialCards?.[3]?.title ||
+      existingWhyWaitLanding.testimonialCards?.[3]?.author !== NijeKasnoZaBoljuSkoluIsLanding.testimonialCards?.[3]?.author
     ) {
-      // Keep the local CMS record aligned with the current IS benefit content and media.
+      // Keep the local CMS record fully aligned with the current IS landing content.
       await strapi.documents('api::landing.landing').update({
         documentId: existingWhyWaitLanding.documentId,
-        data: {
-          benefits: NijeKasnoZaBoljuSkoluIsLanding.benefits,
-          benefitCards: NijeKasnoZaBoljuSkoluIsLanding.benefitCards,
-        },
+        data: NijeKasnoZaBoljuSkoluIsLanding,
         status: 'published',
       })
     }
@@ -580,6 +590,28 @@ export default {
             paragraphs: NijeKasnoZaBoljuSkoluIsLanding.modernEducation.paragraphs,
           },
         },
+        status: 'published',
+      })
+    }
+
+    const existingWhyWaitEnglishLanding = await strapi.documents('api::landing.landing').findFirst({
+      filters: { slug: NijeKasnoZaBoljuSkoluIsLandingEn.slug },
+      populate: landingPopulate,
+    })
+
+    if (!existingWhyWaitEnglishLanding) {
+      await strapi.documents('api::landing.landing').create({
+        data: NijeKasnoZaBoljuSkoluIsLandingEn,
+        status: 'published',
+      })
+    } else if (
+      existingWhyWaitEnglishLanding.seo?.title !== NijeKasnoZaBoljuSkoluIsLandingEn.seo.title ||
+      existingWhyWaitEnglishLanding.testimonials?.title !== NijeKasnoZaBoljuSkoluIsLandingEn.testimonials.title ||
+      existingWhyWaitEnglishLanding.testimonialCards?.[3]?.videoImageUrl !== NijeKasnoZaBoljuSkoluIsLandingEn.testimonialCards?.[3]?.videoImageUrl
+    ) {
+      await strapi.documents('api::landing.landing').update({
+        documentId: existingWhyWaitEnglishLanding.documentId,
+        data: NijeKasnoZaBoljuSkoluIsLandingEn,
         status: 'published',
       })
     }
