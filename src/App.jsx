@@ -137,6 +137,15 @@ function mergeSeo(fallbackSeo = {}, apiSeo = {}, brandScope) {
 }
 
 function mergeLandingData(fallbackData, apiData) {
+  const modernEducation = {
+    ...fallbackData.modernEducation,
+    ...apiData.modernEducation,
+  }
+
+  if (String(apiData.brandScope ?? fallbackData.brandScope).trim().toUpperCase() === 'IS') {
+    modernEducation.imageUrl = fallbackData.modernEducation.imageUrl
+  }
+
   return {
     ...fallbackData,
     ...apiData,
@@ -149,10 +158,7 @@ function mergeLandingData(fallbackData, apiData) {
       ...fallbackData.specialConditions,
       ...apiData.specialConditions,
     },
-    modernEducation: {
-      ...fallbackData.modernEducation,
-      ...apiData.modernEducation,
-    },
+    modernEducation,
     enrollmentHelp: {
       ...fallbackData.enrollmentHelp,
       ...apiData.enrollmentHelp,

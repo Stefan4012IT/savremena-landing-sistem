@@ -91,7 +91,7 @@ export const landingData = {
       'Jer dete koje odrasta okruženo najvišim standardima to i dostiže.',
     ],
     imagePlaceholder: 'Image placeholder',
-    imageUrl: placeholderImages.modernEducation,
+    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/nije_kasno_za_bolju_skolu_cabridge.jpg',
   },
   directions: {
     eyebrow: 'Talent Pathways™',
