@@ -44,7 +44,7 @@ export function TestimonialsSection() {
                 .slice(0, index + 1)
                 .filter((item) => item.variant === 'video').length - 1
               const videoEmbedUrl = testimonial.variant === 'video'
-                ? testimonialVideoEmbeds[videoIndex]
+                ? testimonial.videoEmbedUrl ?? testimonialVideoEmbeds[videoIndex]
                 : undefined
 
               return (

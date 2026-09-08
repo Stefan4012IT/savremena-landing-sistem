@@ -47,8 +47,8 @@ export function EmotionalTurnSection() {
           </div>
           <figure className="nije-kasno-za-bolju-skolu-is-scholarship-offer__image">
             <img
-              src="https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/08/10_slobodnih_mesta_img_1.1.jpg"
-              alt="Učenici Savremene gimnazije sa digitalnim uređajima"
+              src="https://www.international-school.edu.rs/wp-content/uploads/2026/09/why_wait_img_1.png"
+              alt="Učenici International Schoola"
             />
           </figure>
         </div>

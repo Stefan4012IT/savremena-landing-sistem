@@ -282,13 +282,13 @@ export const testimonials = [
     variant: 'text',
   },
   {
-    title: 'Kao roditelj sam stvarno presrećna i zahvalna',
+    title: 'Kao roditelj mogu da kažem da sam preponosna',
     text: '',
-    author: 'Nataša Petković',
+    author: 'Tanja Anđelković',
     role: 'roditelj',
-    initials: 'NP',
-    avatarImageUrl: placeholderImages.testimonialAvatars[1],
-    videoImageUrl: placeholderImages.testimonialVideos[0],
+    initials: 'TA',
+    videoEmbedUrl: 'https://www.youtube.com/embed/pBLbcv5_2PI?start=21',
+    videoImageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/testimonial_1.png',
     variant: 'video',
   },
   {

@@ -1,3 +1,5 @@
+import { FutureSpaceCarousel } from './FutureSpaceSection'
+
 const schoolStages = {
   primary: {
     title: 'Primary & Lower Secondary',
@@ -36,6 +38,7 @@ export function SchoolStageSection({ stage }) {
         <figure className="nije-kasno-za-bolju-skolu-is-school-stage__image">
           <img src={imageUrl} alt={imageAlt} loading="lazy" />
         </figure>
+        <FutureSpaceCarousel stage={stage} />
       </div>
     </section>
   )

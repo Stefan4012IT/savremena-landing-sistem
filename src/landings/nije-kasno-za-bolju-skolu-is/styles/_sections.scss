@@ -442,6 +442,11 @@
     color: #ffffff;
   }
 
+  &--primary &__box {
+    background: var(--is-yellow);
+    color: #354180;
+  }
+
   &__box::before {
     position: absolute;
     inset: 0 0 auto;
@@ -453,6 +458,11 @@
   &--secondary &__box::before {
     height: 4px;
     background: linear-gradient(to right, #f2d4b0 0% 32%, #e1a863 32% 44%, #f2d4b0 44% 68%, #e1a863 68% 88%, #f2d4b0 88% 100%);
+  }
+
+  &--primary &__content h2,
+  &--primary &__content p {
+    color: #354180;
   }
 
   &__content h2 {
@@ -486,6 +496,17 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  &__box > .nije-kasno-za-bolju-skolu-is-future-space__carousel {
+    grid-column: 1 / -1;
+    width: 100%;
+    background: transparent;
+  }
+
+  &__box > .nije-kasno-za-bolju-skolu-is-future-space__carousel
+    .nije-kasno-za-bolju-skolu-is-future-space__track {
+    background: transparent;
   }
 
   @media (max-width: 980px) {

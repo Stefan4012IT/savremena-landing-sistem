@@ -5,7 +5,6 @@ import { PartnerLogosSection } from './components/PartnerLogosSection'
 import { SchoolStageSection } from './components/SchoolStageSection'
 import { StatsSection } from './components/StatsSection'
 import { BenefitsSection } from './components/BenefitsSection'
-import { FutureSpaceSection } from './components/FutureSpaceSection'
 import { SpecialOfferSection } from './components/SpecialOfferSection'
 import { EnrollmentHelpSection } from './components/EnrollmentHelpSection'
 import { TestimonialsSection } from './components/TestimonialsSection'
@@ -22,9 +21,7 @@ export function NijeKasnoZaBoljuSkoluIsLanding({ data }) {
         <ModernEducationSection />
         <PartnerLogosSection />
         <SchoolStageSection stage="primary" />
-        <FutureSpaceSection />
         <SchoolStageSection stage="secondary" />
-        <FutureSpaceSection />
         <SpecialOfferSection />
         <BenefitsSection />
         <SpecialOfferSection />

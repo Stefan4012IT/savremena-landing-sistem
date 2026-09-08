@@ -1,8 +1,8 @@
 import cambridgeLogo from '../assets/logos/cambridge-logo-white.png'
 import { LeadForm } from './LeadForm'
 
-const heroImageUrl = 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/hero_img_002.png'
-const heroImageMobileUrl = 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/hero_img_004_mobile.png'
+const heroImageUrl = 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_why_wait_hero_img.png'
+const heroImageMobileUrl = heroImageUrl
 
 export function HeroSection() {
   return (

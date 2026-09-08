@@ -113,6 +113,24 @@ function mergeArrayItems(fallbackItems, apiItems) {
   }))
 }
 
+function mergeTestimonialCards(fallbackItems, apiItems, brandScope) {
+  const mergedItems = mergeArrayItems(fallbackItems, apiItems)
+
+  if (String(brandScope).trim().toUpperCase() === 'IS') {
+    const fallbackVideoIndex = fallbackItems.findIndex((item) => item.variant === 'video')
+    const mergedVideoIndex = mergedItems.findIndex((item) => item.variant === 'video')
+
+    if (fallbackVideoIndex >= 0 && mergedVideoIndex >= 0) {
+      mergedItems[mergedVideoIndex] = {
+        ...mergedItems[mergedVideoIndex],
+        ...fallbackItems[fallbackVideoIndex],
+      }
+    }
+  }
+
+  return mergedItems
+}
+
 function mergeSeo(fallbackSeo = {}, apiSeo = {}, brandScope) {
   const seo = {
     ...fallbackSeo,
@@ -169,7 +187,11 @@ function mergeLandingData(fallbackData, apiData) {
     },
     directionCards: mergeArrayItems(fallbackData.directionCards, apiData.directionCards),
     benefitCards: mergeArrayItems(fallbackData.benefitCards, apiData.benefitCards),
-    testimonialCards: mergeArrayItems(fallbackData.testimonialCards, apiData.testimonialCards),
+    testimonialCards: mergeTestimonialCards(
+      fallbackData.testimonialCards,
+      apiData.testimonialCards,
+      apiData.brandScope ?? fallbackData.brandScope,
+    ),
   }
 }
 
