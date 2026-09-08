@@ -7,7 +7,7 @@ const schoolStages = {
       'Prvi koraci ka velikim mogućnostima počinju u okruženju koje neguje radoznalost, kreativnost i ljubav prema učenju. Primary i Lower Secondary programi povezuju sticanje znanja sa istraživanjem, igrom i razvojem samostalnosti.',
       'Uz podršku nastavnika, učenici razvijaju svoje talente, grade samopouzdanje i uče da sarađuju. Svaki novi izazov postaje prilika da otkriju šta ih zanima i pripreme se za narednu fazu školovanja.',
     ],
-    imageUrl: 'https://www.international-school.edu.rs/nl/admin/temp/newsletters/1953/funandstudy.jpg',
+    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_primary_lower_secondary_1.jpg',
     imageAlt: 'Fun and Study program u International Schoolu',
   },
   secondary: {
