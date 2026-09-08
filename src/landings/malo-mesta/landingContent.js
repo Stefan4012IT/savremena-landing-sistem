@@ -1,4 +1,4 @@
-import { testimonials as novoOdeljenjeTestimonialCards } from '../novo-odeljenje/landingContent'
+import { testimonials as novoOdeljenjeTestimonialCards } from '../novo-odeljenje/landingContent.js'
 
 export const landingData = {
   slug: 'malo-mesta',

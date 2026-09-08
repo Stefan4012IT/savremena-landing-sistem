@@ -38,10 +38,10 @@ export const landingData = {
   brandScope: 'IS',
   gtmId: 'GTM-P36T5K6',
   seo: {
-    title: 'Još samo 10 slobodnih mesta | Savremena gimnazija – upis 2026/27',
+    title: 'Iskoristite poslednju šansu za upis u International School | 2026/27',
     description:
-      'Ostalo je manje od 10 slobodnih mesta za upis u Savremenu gimnaziju, generacija 2026/27. Prijavite dete na vreme i obezbedite mesto.',
-    ogImageUrl: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/08/10-slobodnih-mesta-1200x628.jpg',
+      'Iskoristite poslednju šansu za upis u International School. Cambridge obrazovanje na engleskom jeziku, međunarodno okruženje i siguran put ka budućnosti vašeg deteta.',
+    ogImageUrl: '',
   },
   hero: {
     eyebrow: 'Upis u generaciju 2026/27',
@@ -125,8 +125,8 @@ export const landingData = {
       'tu je da vam pruži sve potrebne informacije, razjasni nedoumice i pomogne da donesete najbolju odluku za budućnost vašeg deteta.',
     emphasis: 'Ne čekajte - obezbedite svom detetu školovanje koje zaista pravi razliku.',
     prompt: 'Pozovite nas još danas i započnite svoje Savremeno iskustvo:',
-    phonePrimary: '011/40-11-223',
-    phoneSecondary: '062/191-80-56',
+    phonePrimary: '011/40-11-220',
+    phoneSecondary: '063/341-329',
     viberLabel: 'Viber',
     whatsappLabel: 'WhatsApp',
     contactSuffix: 'ili popunite prijavu, a mi ćemo vas pozvati.',

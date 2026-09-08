@@ -31,6 +31,17 @@ function getFaviconPackage(brandScope) {
   return String(brandScope).trim().toUpperCase() === 'IS' ? faviconPackages.IS : faviconPackages.default
 }
 
+function getInstitutionName(brandScope) {
+  const names = {
+    SOS: 'Savremena osnovna škola',
+    SG: 'Savremena gimnazija',
+    IS: 'International School',
+    'SOS+SG': 'Savremena',
+  }
+
+  return names[String(brandScope).trim().toUpperCase()] ?? 'Savremena obrazovna grupa'
+}
+
 function setFaviconPackage(brandScope) {
   const basePath = import.meta.env.BASE_URL.replace(/\/$/, '')
   const packagePath = `${basePath}/${getFaviconPackage(brandScope)}`
@@ -102,14 +113,34 @@ function mergeArrayItems(fallbackItems, apiItems) {
   }))
 }
 
+function mergeSeo(fallbackSeo = {}, apiSeo = {}, brandScope) {
+  const seo = {
+    ...fallbackSeo,
+    ...apiSeo,
+  }
+
+  if (String(brandScope).trim().toUpperCase() === 'IS') {
+    if (!/international school/i.test(seo.title ?? '')) {
+      seo.title = fallbackSeo.title
+    }
+
+    if (!/international school/i.test(seo.description ?? '')) {
+      seo.description = fallbackSeo.description
+    }
+
+    if (!fallbackSeo.ogImageUrl) {
+      delete seo.ogImageUrl
+    }
+  }
+
+  return seo
+}
+
 function mergeLandingData(fallbackData, apiData) {
   return {
     ...fallbackData,
     ...apiData,
-    seo: {
-      ...fallbackData.seo,
-      ...apiData.seo,
-    },
+    seo: mergeSeo(fallbackData.seo, apiData.seo, apiData.brandScope ?? fallbackData.brandScope),
     hero: {
       ...fallbackData.hero,
       ...apiData.hero,
@@ -179,6 +210,7 @@ function App() {
     setMetaTag('name', 'description', description)
     setMetaTag('property', 'og:type', 'website')
     setMetaTag('property', 'og:locale', 'sr_RS')
+    setMetaTag('property', 'og:site_name', getInstitutionName(landingData.brandScope))
     setMetaTag('property', 'og:title', title)
     setMetaTag('property', 'og:description', description)
     setMetaTag('property', 'og:url', pageUrl)

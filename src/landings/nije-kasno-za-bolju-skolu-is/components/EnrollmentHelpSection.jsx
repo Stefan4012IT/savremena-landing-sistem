@@ -38,14 +38,14 @@ export function EnrollmentHelpSection() {
             </p>
             <p>{enrollmentHelp.prompt}</p>
             <p className="nije-kasno-za-bolju-skolu-is-enrollment-help__contacts">
-              <a href="tel:+381114011223">{enrollmentHelp.phonePrimary}</a>;{' '}
-              <a href="tel:+381621918056">{enrollmentHelp.phoneSecondary}</a>, pišite na{' '}
-              <a className="nije-kasno-za-bolju-skolu-is-enrollment-help__messenger-link" href="viber://chat?number=%2B381621918056">
+              <a href="tel:+381114011220">{enrollmentHelp.phonePrimary}</a>;{' '}
+              <a href="tel:+38163341329">{enrollmentHelp.phoneSecondary}</a>, pišite na{' '}
+              <a className="nije-kasno-za-bolju-skolu-is-enrollment-help__messenger-link" href="viber://chat?number=%2B38163341329">
                 <ViberIcon />
                 <span>{enrollmentHelp.viberLabel}</span>
               </a>{' '}
               i{' '}
-              <a className="nije-kasno-za-bolju-skolu-is-enrollment-help__messenger-link" href="https://wa.me/381621918056">
+              <a className="nije-kasno-za-bolju-skolu-is-enrollment-help__messenger-link" href="https://wa.me/38163341329">
                 <WhatsAppIcon />
                 <span>{enrollmentHelp.whatsappLabel}</span>
               </a>{' '}
