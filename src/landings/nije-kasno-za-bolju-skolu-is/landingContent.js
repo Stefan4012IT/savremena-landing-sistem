@@ -57,7 +57,15 @@ export const landingData = {
     eyebrow: 'Za početak koji pravi razliku',
     title: 'Nema više odlaganja – sada je pravi trenutak!',
     text:
-      'Iako je nova školska godina već počela, Savremena osnovna škola pruža šansu da vaše dete započne putovanje ka uspehu već sada. Ne morate čekati sledeću godinu – vaše dete može odmah postati deo škole koja nudi najbolje od obrazovanja. Preostalo je samo nekoliko slobodnih mesta, zato iskoristite priliku!',
+      'U pojedinim razredima ostalo je još svega nekoliko slobodnih mesta, dok su za neke već formirane liste čekanja. Ako već razmišljate o promeni škole, početak školske godine je pravi trenutak za odluku – dete se lakše uklapa u novo odeljenje, prati nastavu od početka i prirodnije gradi odnose sa vršnjacima i nastavnicima, bez naknadnog prilagođavanja i nadoknađivanja gradiva.',
+    paragraphs: [
+      'U pojedinim razredima ostalo je još svega nekoliko slobodnih mesta, dok su za neke već formirane liste čekanja. Ako već razmišljate o promeni škole, početak školske godine je pravi trenutak za odluku – dete se lakše uklapa u novo odeljenje, prati nastavu od početka i prirodnije gradi odnose sa vršnjacima i nastavnicima, bez naknadnog prilagođavanja i nadoknađivanja gradiva.',
+      'Ne čekajte polugodište ili narednu godinu da napravite promenu koja može imati važan uticaj na obrazovanje i budućnost vašeg deteta.',
+    ],
+    processTitle: 'Kako izgleda proces prebacivanja:',
+    processText:
+      'Proces prebacivanja je jednostavan, potrebno je samo da se prijavite online ili nas pozovete na 011/40-11-220 i naši konsultanti za upis će vam pomoći oko svih koraka. Kompletnu proceduru je moguće završiti jako brzo i vaše dete već od narednog dana može da krene u svoju novu savremenu avanturu.',
+    processPhone: '011/40-11-220',
     ctaText: 'Prijavite se danas i obezbedite jedno od preostalih mesta.',
   },
   specialConditions: {
@@ -72,13 +80,15 @@ export const landingData = {
     imageUrl: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/07/novo_odeljenje_img_700x470.png',
   },
   modernEducation: {
-    eyebrow: 'Stvarno drugačija škola',
-    title: 'Savremeno obrazovanje u svakom pogledu',
+    eyebrow: 'Where innovation meets inspiration — and students thrive.',
+    title: 'Cambridge Future-Ready škola u srcu Beograda',
     text:
-      'Učenici ne uče samo da bi položili test ili dobili ocenu. Uče da razumeju, povežu znanje, rešavaju probleme i koriste ono što znaju u svakodnevnim situacijama.',
+      'Deca upijaju mnogo više od znanja: vrednosti, samopouzdanje, jezik, ambiciju i način na koji posmatraju svet.',
     paragraphs: [
-      'Savremena osnovna škola pruža kreativan i drugačiji pristup nastavi, uz rad u manjim grupama, mentorsku podršku i savremene metode rada. Takvo okruženje pomaže učenicima da napreduju sigurnije, motivisanije i sa više poverenja u svoje sposobnosti.',
-      'Nastava je usmerena na razumevanje, praktičnu primenu znanja i razvoj veština važnih za dalje školovanje, odrastanje i život: kritičko mišljenje, komunikaciju, odgovornost, digitalnu pismenost i samostalnost.',
+      'Zato škola nije samo mesto učenja. Ona je okruženje koje svakog dana oblikuje dete — njegove misli, sigurnost, radoznalost, karakter i veru u sopstvene mogućnosti.',
+      'U International Schoolu, učenici uzrasta od 5 do 19 godina uče kroz međunarodno priznati Cambridge program, u atmosferi u kojoj se izvrsnost ne predstavlja kao cilj daleko ispred njih, već kao standard koji ih okružuje svakog dana.',
+      'Kroz znanje, podršku, visoka očekivanja i globalni pogled na svet, deca ne razvijaju samo akademske veštine. Ona razvijaju stav da mogu više, da razmišljaju šire i da samouvereno koračaju ka budućnosti.',
+      'Jer dete koje odrasta okruženo najvišim standardima to i dostiže.',
     ],
     imagePlaceholder: 'Image placeholder',
     imageUrl: placeholderImages.modernEducation,
@@ -105,7 +115,7 @@ export const landingData = {
   },
   specialOffer: {
     eyebrow: 'Važan korak ka budućnosti',
-    title: 'Iskoristite priliku da obezbedite mesto u Savremenoj osnovnoj školi',
+    title: 'Iskoristite priliku da obezbedite mesto u International Schoolu',
   },
   enrollmentHelp: {
     title: 'Imate pitanja ili vam je potrebna pomoć oko upisa u srednju školu?',
@@ -222,42 +232,42 @@ export const benefits = [
   {
     title: 'Interdisciplinarna nastava na engleskom',
     text: 'Engleski je deo svakog školskog dana. Povezivanje različitih predmeta pomaže učenicima da sagledaju širu sliku, objasne svoje ideje i primene naučeno u novim situacijama.',
-    imageUrl: '',
+    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_1.jpg',
   },
   {
     title: 'Priznate Cambridge diplome',
     text: 'Cambridge kvalifikacije podržavaju međunarodni obrazovni put. Priprema za njih podstiče temeljno razumevanje gradiva, radne navike i sigurnost pri izboru daljeg školovanja.',
-    imageUrl: '',
+    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_2.jpg',
   },
   {
     title: 'Moderna tehnologija u nastavi',
     text: 'Digitalni alati čine apstraktne pojmove pristupačnijim. Učenici kroz istraživanje i praktične zadatke otkrivaju kako tehnologija može da pomogne u učenju i predstavljanju ideja.',
-    imageUrl: '',
+    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_3.jpg',
   },
   {
     title: 'Nastavnici i mentori sa velikim iskustvom',
     text: 'Iskusni predavači usmeravaju učenike kroz izazove u učenju. Povratna informacija pomaže detetu da prepozna šta već razume i na čemu još treba da radi.',
-    imageUrl: '',
+    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_4.jpg',
   },
   {
     title: 'Posvećenost svakom učeniku',
     text: 'Pažnja prema individualnim potrebama daje učeniku prostor za napredak. Razgovor o interesovanjima i ciljevima podstiče aktivno učešće i preuzimanje odgovornosti za sopstveno učenje.',
-    imageUrl: '',
+    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_5.jpg',
   },
   {
     title: 'Podsticajno okruženje za učenje',
     text: 'Dostupna mentorska podrška olakšava prevazilaženje teškoća. Kada dete slobodno postavlja pitanja, lakše razvija istrajnost i spremnost da isproba drugačiji pristup zadatku.',
-    imageUrl: '',
+    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_6.jpg',
   },
   {
     title: 'Bogate vannastavne aktivnosti',
     text: 'Sport i susreti sa kulturom proširuju školsko iskustvo. Zajedničke aktivnosti pružaju priliku za nova prijateljstva, saradnju i otkrivanje interesovanja van učionice.',
-    imageUrl: '',
+    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_7.jpg',
   },
   {
     title: 'Sekcije za razvijanje talenata',
     text: 'Klubovi i radionice otvaraju prostor za lično izražavanje. Istražujući književnost, umetnost i jezike, učenici upoznaju svoje talente i pronalaze nove načine da ih razviju.',
-    imageUrl: '',
+    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_8.jpg',
   },
 ]
 

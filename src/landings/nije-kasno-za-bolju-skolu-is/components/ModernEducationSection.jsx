@@ -14,7 +14,11 @@ export function ModernEducationSection() {
             text={modernEducation.text}
           />
           {modernEducation.paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
+            <p key={paragraph}>
+              {paragraph.split(/(International Schoolu|5 do 19 godina|Cambridge)/g).map((part, index) => (
+                index % 2 === 1 ? <strong key={index}>{part}</strong> : part
+              ))}
+            </p>
           ))}
         </div>
         <div className="nije-kasno-za-bolju-skolu-is-modern-education__image-placeholder" aria-label="Fotografija škole">

@@ -18,14 +18,14 @@ export function NijeKasnoZaBoljuSkoluIsLanding({ data }) {
       <main className="nije-kasno-za-bolju-skolu-is-root nije-kasno-za-bolju-skolu-is-landing">
         <HeroSection />
         <EmotionalTurnSection />
-        <SpecialOfferSection />
+        <StatsSection />
         <ModernEducationSection />
         <PartnerLogosSection />
         <SchoolStageSection stage="primary" />
         <FutureSpaceSection />
         <SchoolStageSection stage="secondary" />
         <FutureSpaceSection />
-        <StatsSection />
+        <SpecialOfferSection />
         <BenefitsSection />
         <SpecialOfferSection />
         <EnrollmentHelpSection />

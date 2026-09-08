@@ -519,13 +519,66 @@ export default {
         data: NijeKasnoZaBoljuSkoluIsLanding,
         status: 'published',
       })
-    } else if (existingWhyWaitLanding.benefits?.title === 'Zašto Savremena osnovna škola') {
-      // Replace the inherited SOS benefits once; keep subsequent CMS edits.
+    } else if (
+      existingWhyWaitLanding.benefits?.title === 'Zašto Savremena osnovna škola' ||
+      existingWhyWaitLanding.benefitCards?.some((card, index) => card.imageUrl !== NijeKasnoZaBoljuSkoluIsLanding.benefitCards[index]?.imageUrl)
+    ) {
+      // Keep the local CMS record aligned with the current IS benefit content and media.
       await strapi.documents('api::landing.landing').update({
         documentId: existingWhyWaitLanding.documentId,
         data: {
           benefits: NijeKasnoZaBoljuSkoluIsLanding.benefits,
           benefitCards: NijeKasnoZaBoljuSkoluIsLanding.benefitCards,
+        },
+        status: 'published',
+      })
+    }
+
+    if (
+      existingWhyWaitLanding &&
+      !existingWhyWaitLanding.emotionalTurn?.processTitle &&
+      existingWhyWaitLanding.emotionalTurn?.text?.startsWith('Iako je nova školska godina već počela, Savremena osnovna škola')
+    ) {
+      await strapi.documents('api::landing.landing').update({
+        documentId: existingWhyWaitLanding.documentId,
+        data: {
+          emotionalTurn: {
+            ...existingWhyWaitLanding.emotionalTurn,
+            text: NijeKasnoZaBoljuSkoluIsLanding.emotionalTurn.text,
+            paragraphs: NijeKasnoZaBoljuSkoluIsLanding.emotionalTurn.paragraphs,
+            processTitle: NijeKasnoZaBoljuSkoluIsLanding.emotionalTurn.processTitle,
+            processText: NijeKasnoZaBoljuSkoluIsLanding.emotionalTurn.processText,
+            processPhone: NijeKasnoZaBoljuSkoluIsLanding.emotionalTurn.processPhone,
+          },
+        },
+        status: 'published',
+      })
+    }
+
+    if (existingWhyWaitLanding?.specialOffer?.title === 'Iskoristite priliku da obezbedite mesto u Savremenoj osnovnoj školi') {
+      await strapi.documents('api::landing.landing').update({
+        documentId: existingWhyWaitLanding.documentId,
+        data: {
+          specialOffer: {
+            ...existingWhyWaitLanding.specialOffer,
+            title: NijeKasnoZaBoljuSkoluIsLanding.specialOffer.title,
+          },
+        },
+        status: 'published',
+      })
+    }
+
+    if (existingWhyWaitLanding?.modernEducation?.title === 'Savremeno obrazovanje u svakom pogledu') {
+      await strapi.documents('api::landing.landing').update({
+        documentId: existingWhyWaitLanding.documentId,
+        data: {
+          modernEducation: {
+            ...existingWhyWaitLanding.modernEducation,
+            eyebrow: NijeKasnoZaBoljuSkoluIsLanding.modernEducation.eyebrow,
+            title: NijeKasnoZaBoljuSkoluIsLanding.modernEducation.title,
+            text: NijeKasnoZaBoljuSkoluIsLanding.modernEducation.text,
+            paragraphs: NijeKasnoZaBoljuSkoluIsLanding.modernEducation.paragraphs,
+          },
         },
         status: 'published',
       })

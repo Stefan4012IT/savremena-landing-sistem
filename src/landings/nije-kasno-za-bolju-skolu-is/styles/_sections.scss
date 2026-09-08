@@ -66,6 +66,20 @@
     margin: 0;
   }
 
+  &__process-title {
+    margin: 2px 0 -10px;
+    color: var(--color-primary-dark);
+    font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+    line-height: 1.15;
+  }
+
+  &__process-phone {
+    color: #354180;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
   &__cta {
     width: fit-content;
     border-bottom: 2px solid var(--sos-yellow, #354180);
@@ -362,7 +376,7 @@
     margin-bottom: 0;
   }
 
-  &__content p {
+  &__content > p {
     max-width: 760px;
     margin: 22px 0 0;
     color: var(--color-muted);
