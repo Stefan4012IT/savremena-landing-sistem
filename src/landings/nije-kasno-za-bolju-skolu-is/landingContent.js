@@ -99,9 +99,9 @@ export const landingData = {
     ],
   },
   benefits: {
-    eyebrow: 'Stvarno drugačija',
-    title: 'Zašto Savremena osnovna škola',
-    text: 'Savremena učenicima pruža znanje, podršku, tehnologiju, zdravo okruženje i prostor da razviju svoje mogućnosti.',
+    eyebrow: 'International School',
+    title: 'Obrazovanje koje otvara vrata sveta',
+    text: 'Od prvih školskih koraka do pripreme za studije, International School povezuje Cambridge obrazovanje na engleskom jeziku sa razvojem samostalnosti, talenata i veština za život. U međunarodnom okruženju učenici istražuju svoja interesovanja i grade sigurnost za nove izazove.',
   },
   specialOffer: {
     eyebrow: 'Važan korak ka budućnosti',
@@ -217,17 +217,48 @@ export const programs = [
   },
 ]
 
+// Adapted from https://upis.savremena.edu.rs/is-svetski-dan-deteta#rec1527528721
 export const benefits = [
-  { title: 'Podsticajno okruženje za učenje', text: 'Sigurna i inspirativna sredina koja podstiče kreativnost, samopouzdanje i uspeh.', imageUrl: placeholderImages.benefits[0] },
-  { title: 'Mogućnost onlajn-učenja', text: 'Interaktivni materijali, dodatna podrška, konsultacije i testovi dostupni su i van učionice.', imageUrl: placeholderImages.benefits[1] },
-  { title: 'Posvećenost svakom učeniku', text: 'Nastavnici pristupaju učenicima sa pažnjom, energijom i razumevanjem.', imageUrl: placeholderImages.benefits[2] },
-  { title: 'Nastavnici sa velikim iskustvom', text: 'Profesori koriste savremene metode rada i kontinuirano unapređuju pristup nastavi.', imageUrl: placeholderImages.benefits[3] },
-  { title: 'Otvorena vrata za nastavak školovanja', text: 'Znanja i veštine predstavljaju snažnu osnovu za fakultete u zemlji i inostranstvu.', imageUrl: placeholderImages.benefits[4] },
-  { title: 'Savremena tehnologija u nastavi', text: 'Računari, tableti, interaktivne table, e-Learning i digitalni alati čine učenje aktivnijim.', imageUrl: placeholderImages.benefits[5] },
-  { title: 'Zanimljivi multidisciplinarni časovi', text: 'Učenje kroz projekte, timski rad, izazove i povezivanje različitih oblasti znanja.', imageUrl: placeholderImages.benefits[6] },
-  { title: 'Nastava na srpskom i/ili engleskom jeziku', text: 'Nacionalni program na srpskom ili Kombinovani program sa Cambridge predmetima na engleskom.', imageUrl: placeholderImages.benefits[7] },
-  { title: 'Razvoj životnih veština', text: 'Life skills program razvija samostalnost, komunikaciju, odgovornost i praktične veštine.', imageUrl: placeholderImages.benefits[8] },
-  { title: 'Partnerstvo sa roditeljima', text: 'Škola gradi aktivan odnos sa porodicom i jasno komunicira napredak i potrebe učenika.', imageUrl: placeholderImages.benefits[9] },
+  {
+    title: 'Interdisciplinarna nastava na engleskom',
+    text: 'Engleski je deo svakog školskog dana. Povezivanje različitih predmeta pomaže učenicima da sagledaju širu sliku, objasne svoje ideje i primene naučeno u novim situacijama.',
+    imageUrl: '',
+  },
+  {
+    title: 'Priznate Cambridge diplome',
+    text: 'Cambridge kvalifikacije podržavaju međunarodni obrazovni put. Priprema za njih podstiče temeljno razumevanje gradiva, radne navike i sigurnost pri izboru daljeg školovanja.',
+    imageUrl: '',
+  },
+  {
+    title: 'Moderna tehnologija u nastavi',
+    text: 'Digitalni alati čine apstraktne pojmove pristupačnijim. Učenici kroz istraživanje i praktične zadatke otkrivaju kako tehnologija može da pomogne u učenju i predstavljanju ideja.',
+    imageUrl: '',
+  },
+  {
+    title: 'Nastavnici i mentori sa velikim iskustvom',
+    text: 'Iskusni predavači usmeravaju učenike kroz izazove u učenju. Povratna informacija pomaže detetu da prepozna šta već razume i na čemu još treba da radi.',
+    imageUrl: '',
+  },
+  {
+    title: 'Posvećenost svakom učeniku',
+    text: 'Pažnja prema individualnim potrebama daje učeniku prostor za napredak. Razgovor o interesovanjima i ciljevima podstiče aktivno učešće i preuzimanje odgovornosti za sopstveno učenje.',
+    imageUrl: '',
+  },
+  {
+    title: 'Podsticajno okruženje za učenje',
+    text: 'Dostupna mentorska podrška olakšava prevazilaženje teškoća. Kada dete slobodno postavlja pitanja, lakše razvija istrajnost i spremnost da isproba drugačiji pristup zadatku.',
+    imageUrl: '',
+  },
+  {
+    title: 'Bogate vannastavne aktivnosti',
+    text: 'Sport i susreti sa kulturom proširuju školsko iskustvo. Zajedničke aktivnosti pružaju priliku za nova prijateljstva, saradnju i otkrivanje interesovanja van učionice.',
+    imageUrl: '',
+  },
+  {
+    title: 'Sekcije za razvijanje talenata',
+    text: 'Klubovi i radionice otvaraju prostor za lično izražavanje. Istražujući književnost, umetnost i jezike, učenici upoznaju svoje talente i pronalaze nove načine da ih razviju.',
+    imageUrl: '',
+  },
 ]
 
 export const testimonials = [

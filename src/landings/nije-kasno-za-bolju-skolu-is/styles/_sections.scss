@@ -412,6 +412,75 @@
   }
 }
 
+.nije-kasno-za-bolju-skolu-is-school-stage {
+  background: #ffffff;
+
+  &__box {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: clamp(28px, 4vw, 64px);
+    align-items: center;
+    overflow: hidden;
+    border-radius: 22px;
+    padding: clamp(28px, 4vw, 64px);
+    background: #354180;
+    color: #ffffff;
+  }
+
+  &__box::before {
+    position: absolute;
+    inset: 0 0 auto;
+    height: 5px;
+    background: linear-gradient(to right, #e64b4f 0% 25%, #f7b529 25% 50%, #4aa657 50% 75%, #354180 75% 100%);
+    content: '';
+  }
+
+  &--secondary &__box::before {
+    height: 4px;
+    background: linear-gradient(to right, #f2d4b0 0% 32%, #e1a863 32% 44%, #f2d4b0 44% 68%, #e1a863 68% 88%, #f2d4b0 88% 100%);
+  }
+
+  &__content h2 {
+    margin: 0 0 24px;
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 4rem);
+    line-height: 1.05;
+  }
+
+  &__content p {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(1.05rem, 1.4vw, 1.22rem);
+    line-height: 1.5;
+  }
+
+  &__content p + p {
+    margin-top: 20px;
+  }
+
+  &__image {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    aspect-ratio: 4 / 3;
+  }
+
+  &__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 980px) {
+    &__box {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
 .nije-kasno-za-bolju-skolu-is-program-choice {
   background: #ffffff;
 

@@ -519,6 +519,16 @@ export default {
         data: NijeKasnoZaBoljuSkoluIsLanding,
         status: 'published',
       })
+    } else if (existingWhyWaitLanding.benefits?.title === 'Zašto Savremena osnovna škola') {
+      // Replace the inherited SOS benefits once; keep subsequent CMS edits.
+      await strapi.documents('api::landing.landing').update({
+        documentId: existingWhyWaitLanding.documentId,
+        data: {
+          benefits: NijeKasnoZaBoljuSkoluIsLanding.benefits,
+          benefitCards: NijeKasnoZaBoljuSkoluIsLanding.benefitCards,
+        },
+        status: 'published',
+      })
     }
 
     try {

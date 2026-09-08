@@ -2,8 +2,7 @@ import { HeroSection } from './components/HeroSection'
 import { EmotionalTurnSection } from './components/EmotionalTurnSection'
 import { ModernEducationSection } from './components/ModernEducationSection'
 import { PartnerLogosSection } from './components/PartnerLogosSection'
-import { DirectionsSection } from './components/DirectionsSection'
-import { ProgramChoiceSection } from './components/ProgramChoiceSection'
+import { SchoolStageSection } from './components/SchoolStageSection'
 import { StatsSection } from './components/StatsSection'
 import { BenefitsSection } from './components/BenefitsSection'
 import { FutureSpaceSection } from './components/FutureSpaceSection'
@@ -22,11 +21,12 @@ export function NijeKasnoZaBoljuSkoluIsLanding({ data }) {
         <SpecialOfferSection />
         <ModernEducationSection />
         <PartnerLogosSection />
-        <DirectionsSection />
-        <ProgramChoiceSection />
+        <SchoolStageSection stage="primary" />
+        <FutureSpaceSection />
+        <SchoolStageSection stage="secondary" />
+        <FutureSpaceSection />
         <StatsSection />
         <BenefitsSection />
-        <FutureSpaceSection />
         <SpecialOfferSection />
         <EnrollmentHelpSection />
         <TestimonialsSection />
