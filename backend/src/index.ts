@@ -533,6 +533,7 @@ export default {
       existingWhyWaitLanding.modernEducation?.imageUrl !== NijeKasnoZaBoljuSkoluIsLanding.modernEducation.imageUrl ||
       existingWhyWaitLanding.enrollmentHelp?.phonePrimary !== NijeKasnoZaBoljuSkoluIsLanding.enrollmentHelp.phonePrimary ||
       existingWhyWaitLanding.enrollmentHelp?.phoneSecondary !== NijeKasnoZaBoljuSkoluIsLanding.enrollmentHelp.phoneSecondary ||
+      existingWhyWaitLanding.enrollmentHelp?.title !== NijeKasnoZaBoljuSkoluIsLanding.enrollmentHelp.title ||
       existingWhyWaitLanding.enrollmentHelp?.advisorImageUrl !== NijeKasnoZaBoljuSkoluIsLanding.enrollmentHelp.advisorImageUrl ||
       existingWhyWaitLanding.footer?.secondaryAddress !== NijeKasnoZaBoljuSkoluIsLanding.footer.secondaryAddress ||
       existingWhyWaitLanding.testimonials?.title !== NijeKasnoZaBoljuSkoluIsLanding.testimonials.title ||
