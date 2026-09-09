@@ -133,7 +133,7 @@ export const landingData = {
       'Ako vaše dete nije upisalo školu koju je želelo, još uvek imate mogućnost da izaberete obrazovanje koje mu pruža sigurnost, podršku i bolju pripremu za budućnost.',
   },
   enrollmentHelp: {
-    title: 'Imate pitanja ili vam je potrebna pomoć oko upisa u srednju školu?',
+    title: 'Imate pitanja ili vam je potrebna pomoć oko upisa?',
     introBeforeName: 'Naša ljubazna i stručna savetnica za upis,',
     advisorName: 'Katarina Petrović',
     introAfterName:
