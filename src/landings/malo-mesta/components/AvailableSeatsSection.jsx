@@ -23,12 +23,12 @@ const schoolTables = [
   {
     name: 'Savremena gimnazija',
     shortName: 'SG',
-    updatedAt: '14.8.2026.',
+    updatedAt: '02.9.2026.',
     image: sgVisual,
     rows: [
       ['I razred', '8', '8 odeljenja: POPUNJENO · Poslednje odeljenje: 8'],
-      ['II razred', '1'],
-      ['III razred', '1'],
+      ['II razred', '11'],
+      ['III razred', '4'],
       ['IV razred', '1'],
     ],
   },
