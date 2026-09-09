@@ -8,6 +8,37 @@ export function EmotionalTurnSection() {
   const processText = emotionalTurn.processText ?? ''
   const processPhone = emotionalTurn.processPhone ?? ''
   const processPhoneIndex = processPhone ? processText.indexOf(processPhone) : -1
+  const onlinePhrase = locale === 'en' ? 'Submit the form online' : 'prijavite online'
+  const onlinePhraseIndex = processText.indexOf(onlinePhrase)
+
+  function renderProcessText() {
+    const matches = [
+      processPhoneIndex >= 0 ? { index: processPhoneIndex, length: processPhone.length, type: 'phone' } : null,
+      onlinePhraseIndex >= 0 ? { index: onlinePhraseIndex, length: onlinePhrase.length, type: 'online' } : null,
+    ].filter(Boolean).sort((a, b) => a.index - b.index)
+
+    if (!matches.length) return processText
+
+    const nodes = []
+    let cursor = 0
+    matches.forEach((match, index) => {
+      if (match.index < cursor) return
+      if (match.index > cursor) nodes.push(processText.slice(cursor, match.index))
+      const value = processText.slice(match.index, match.index + match.length)
+      nodes.push(match.type === 'phone' ? (
+        <a key={`phone-${index}`} className="nije-kasno-za-bolju-skolu-is-scholarship-offer__process-phone" href={`tel:${processPhone.replace(/[^\d+]/g, '')}`}>
+          {value}
+        </a>
+      ) : (
+        <a key={`online-${index}`} className="nije-kasno-za-bolju-skolu-is-scholarship-offer__process-phone" href="#prijava">
+          {value}
+        </a>
+      ))
+      cursor = match.index + match.length
+    })
+    if (cursor < processText.length) nodes.push(processText.slice(cursor))
+    return nodes
+  }
 
   return (
     <section className="nije-kasno-za-bolju-skolu-is-landing-section nije-kasno-za-bolju-skolu-is-scholarship-offer">
@@ -37,20 +68,7 @@ export function EmotionalTurnSection() {
               </h3>
             ) : null}
             {processText ? (
-              <p>
-                {processPhoneIndex >= 0 ? (
-                  <>
-                    {processText.slice(0, processPhoneIndex)}
-                    <a
-                      className="nije-kasno-za-bolju-skolu-is-scholarship-offer__process-phone"
-                      href={`tel:${processPhone.replace(/[^\d+]/g, '')}`}
-                    >
-                      {processPhone}
-                    </a>
-                    {processText.slice(processPhoneIndex + processPhone.length)}
-                  </>
-                ) : processText}
-              </p>
+              <p>{renderProcessText()}</p>
             ) : null}
           </div>
           <figure className="nije-kasno-za-bolju-skolu-is-scholarship-offer__image">
