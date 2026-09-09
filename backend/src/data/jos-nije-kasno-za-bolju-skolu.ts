@@ -59,7 +59,11 @@ export const landingData = {
     text:
       'U pojedinim razredima ostalo je još svega nekoliko slobodnih mesta, dok su za neke već formirane liste čekanja. Ako već razmišljate o promeni škole, početak školske godine je pravi trenutak za odluku – dete se lakše uklapa u novo odeljenje, prati nastavu od početka i prirodnije gradi odnose sa vršnjacima i nastavnicima, bez naknadnog prilagođavanja i nadoknađivanja gradiva.',
     paragraphs: [
-      'U pojedinim razredima ostalo je još svega nekoliko slobodnih mesta, dok su za neke već formirane liste čekanja. Ako već razmišljate o promeni škole, početak školske godine je pravi trenutak za odluku – dete se lakše uklapa u novo odeljenje, prati nastavu od početka i prirodnije gradi odnose sa vršnjacima i nastavnicima, bez naknadnog prilagođavanja i nadoknađivanja gradiva.',
+      {
+        text: 'Iako je nova školska godina već počela, Savremena osnovna škola vam pruža šansu da vaše dete započne putovanje ka uspehu već sada. Ne morate čekati sledeću godinu – vaše dete može odmah postati deo jedne od škola koje nude najbolje od obrazovanja. Preostalo je samo nekoliko slobodnih mesta, zato iskoristite priliku!',
+        bold: 'vaše dete može odmah postati deo jedne od škola koje nude najbolje od obrazovanja.',
+      },
+      'Ako već razmišljate o promeni škole, početak školske godine je pravi trenutak za odluku – dete se lakše uklapa u novo odeljenje, prati nastavu od početka i prirodnije gradi odnose sa vršnjacima i nastavnicima.',
       'Ne čekajte polugodište ili narednu godinu da napravite promenu koja može imati važan uticaj na obrazovanje i budućnost vašeg deteta.',
     ],
     processTitle: 'Kako izgleda proces prebacivanja:',

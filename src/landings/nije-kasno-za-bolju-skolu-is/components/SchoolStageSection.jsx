@@ -4,7 +4,7 @@ import { useLandingData } from '../useLandingData'
 const schoolStages = {
   primary: {
     eyebrow: 'Cambridge International Y1-Y10',
-    title: 'Prestižno Cambridge obrazovanje od samog početka obrazovanja',
+    title: 'Prestižno Cambridge obrazovanje od samog početka',
     paragraphs: [
       <>
         U International Schoolu učenici od <strong>5 do 11 godina</strong> pohađaju <strong>Cambridge International Primary Programme</strong>, a od <strong>11 do 14 godina</strong> <strong>Cambridge Lower Secondary Programme</strong> – u okviru savremenog, međunarodno priznatog obrazovnog sistema koji podstiče radoznalost, kreativnost, samostalnost i siguran akademski razvoj.
@@ -18,7 +18,7 @@ const schoolStages = {
   },
   secondary: {
     eyebrow: 'Cambridge International Y10–Y13',
-    title: 'Internacionalno obrazovanje koje otvara vrata vodećih univerziteta sveta',
+    title: 'Najviši standard za globalni uspeh',
     paragraphs: [
       <>
         <strong>Cambridge International Secondary nivo</strong> predstavlja ključnu fazu u kojoj se akademski potencijal pretvara u jasnu međunarodnu perspektivu. Učenici se pripremaju za prestižne univerzitetske programe kroz zahtevne <strong>Cambridge kvalifikacije</strong>, strateški izbor predmeta i pažljivo vođen akademski razvoj.
@@ -52,7 +52,7 @@ const englishSchoolStages = {
   },
   secondary: {
     eyebrow: 'Cambridge International Y10–Y13',
-    title: 'International education that opens the doors to the world’s leading universities',
+    title: 'The highest standard for global success',
     paragraphs: [
       <>
         <strong>Cambridge International Secondary</strong> is the key stage where academic potential becomes a clear international perspective. Students prepare for prestigious university programmes through demanding <strong>Cambridge qualifications</strong>, strategic subject choices and carefully guided academic development.

@@ -86,7 +86,7 @@ const englishTestimonials = [
     variant: 'video',
   },
   {
-    title: 'The Cambridge International programme allows me to learn in a different environment',
+    title: 'An education that opened the doors to the world',
     text: 'I chose this school because the International programme opens many doors that other schools do not. It allows me to learn in a different environment, prepare for further education abroad and, most importantly, improve my English.',
     author: 'Uroš Jež',
     role: 'International School student',
@@ -120,8 +120,12 @@ export const defaultLandingData = {
     title: 'There is still time to make the right choice',
     text: 'There are only a few places left in some year groups. If you are already considering a change of school, now is the right moment to decide – your child can join a new class from the beginning, follow lessons naturally and build relationships with teachers and peers from day one.',
     paragraphs: [
-      'There are only a few places left in some year groups. If you are already considering a change of school, now is the right moment to decide – your child can join a new class from the beginning, follow lessons naturally and build relationships with teachers and peers from day one.',
-      'Do not wait until the next term or school year to make a change that can have an important impact on your child’s education and future.',
+      {
+        text: 'Although the new school year has already begun, International School gives your child the opportunity to begin their journey to success right now. You do not have to wait until next year – your child can immediately become part of one of the schools offering the very best in education. Only a few places remain, so make the most of this opportunity!',
+        bold: 'your child can immediately become part of one of the schools offering the very best in education.',
+      },
+      'If you are already considering a change of school, the beginning of the school year is the right time to decide – your child can settle into a new class more easily, follow lessons from the start and naturally build relationships with peers and teachers.',
+      'Do not wait until the half-term or next school year to make a change that can have an important impact on your child’s education and future.',
     ],
     processTitle: 'What does the enrolment process look like?',
     processText: 'The process is simple. Submit the form online or call us on 011/40-11-220 and our admissions consultants will guide you through every step. The full procedure can be completed quickly, so your child can begin their new International School journey as soon as possible.',
@@ -215,8 +219,8 @@ export const defaultLandingData = {
     errorMessage: 'Your application could not be sent at this time. Please try again or call us.',
   },
   testimonials: {
-    eyebrow: 'Student and parent experiences',
-    title: 'The Cambridge International programme allows me to learn in a different environment',
+    eyebrow: 'Truly different',
+    title: 'Why is International School the best choice?',
     text: '',
   },
   directionCards: englishDirections,

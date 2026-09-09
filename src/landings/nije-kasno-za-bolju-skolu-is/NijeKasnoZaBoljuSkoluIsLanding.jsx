@@ -26,7 +26,6 @@ export function NijeKasnoZaBoljuSkoluIsLanding({ data }) {
         <CollegePromoSection />
         <SpecialOfferSection />
         <BenefitsSection />
-        <SpecialOfferSection />
         <EnrollmentHelpSection />
         <TestimonialsSection />
         <FinalCTASection />

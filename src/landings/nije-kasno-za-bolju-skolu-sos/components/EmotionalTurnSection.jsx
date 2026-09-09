@@ -36,7 +36,15 @@ export function EmotionalTurnSection() {
               <h2>{emotionalTurn.title}</h2>
             </header>
             {paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+              <p key={typeof paragraph === 'string' ? paragraph : paragraph.text}>
+                {typeof paragraph === 'string' || !paragraph.bold ? paragraph.text ?? paragraph : (
+                  <>
+                    {paragraph.text.split(paragraph.bold)[0]}
+                    <strong>{paragraph.bold}</strong>
+                    {paragraph.text.split(paragraph.bold).slice(1).join(paragraph.bold)}
+                  </>
+                )}
+              </p>
             ))}
             {emotionalTurn.processTitle ? (
               <h3 className="nije-kasno-za-bolju-skolu-sos-scholarship-offer__process-title">

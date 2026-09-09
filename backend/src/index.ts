@@ -447,6 +447,10 @@ export default {
         josNijeKasnoZaBoljuSkoluLanding.emotionalTurn.processPhone ||
       existingJosNijeKasnoZaBoljuSkoluLanding.emotionalTurn?.processText !==
         josNijeKasnoZaBoljuSkoluLanding.emotionalTurn.processText ||
+      existingJosNijeKasnoZaBoljuSkoluLanding.emotionalTurn?.text !==
+        josNijeKasnoZaBoljuSkoluLanding.emotionalTurn.text ||
+      JSON.stringify(existingJosNijeKasnoZaBoljuSkoluLanding.emotionalTurn?.paragraphs ?? []) !==
+        JSON.stringify(josNijeKasnoZaBoljuSkoluLanding.emotionalTurn.paragraphs) ||
       existingJosNijeKasnoZaBoljuSkoluLanding.enrollmentHelp?.phonePrimary !==
         josNijeKasnoZaBoljuSkoluLanding.enrollmentHelp.phonePrimary ||
       existingJosNijeKasnoZaBoljuSkoluLanding.benefits?.title !==
@@ -484,6 +488,9 @@ export default {
           },
           emotionalTurn: {
             ...existingJosNijeKasnoZaBoljuSkoluLanding.emotionalTurn,
+            text: josNijeKasnoZaBoljuSkoluLanding.emotionalTurn.text,
+            paragraphs: josNijeKasnoZaBoljuSkoluLanding.emotionalTurn.paragraphs,
+            processTitle: josNijeKasnoZaBoljuSkoluLanding.emotionalTurn.processTitle,
             processText: josNijeKasnoZaBoljuSkoluLanding.emotionalTurn.processText,
             processPhone: josNijeKasnoZaBoljuSkoluLanding.emotionalTurn.processPhone,
           },
@@ -546,20 +553,17 @@ export default {
 
     if (
       existingWhyWaitLanding &&
-      !existingWhyWaitLanding.emotionalTurn?.processTitle &&
-      existingWhyWaitLanding.emotionalTurn?.text?.startsWith('Iako je nova školska godina već počela, Savremena osnovna škola')
+      (existingWhyWaitLanding.emotionalTurn?.text !== NijeKasnoZaBoljuSkoluIsLanding.emotionalTurn.text ||
+        JSON.stringify(existingWhyWaitLanding.emotionalTurn?.paragraphs ?? []) !==
+          JSON.stringify(NijeKasnoZaBoljuSkoluIsLanding.emotionalTurn.paragraphs) ||
+        existingWhyWaitLanding.emotionalTurn?.processTitle !== NijeKasnoZaBoljuSkoluIsLanding.emotionalTurn.processTitle ||
+        existingWhyWaitLanding.emotionalTurn?.processText !== NijeKasnoZaBoljuSkoluIsLanding.emotionalTurn.processText ||
+        existingWhyWaitLanding.emotionalTurn?.processPhone !== NijeKasnoZaBoljuSkoluIsLanding.emotionalTurn.processPhone)
     ) {
       await strapi.documents('api::landing.landing').update({
         documentId: existingWhyWaitLanding.documentId,
-        data: {
-          emotionalTurn: {
-            ...existingWhyWaitLanding.emotionalTurn,
-            text: NijeKasnoZaBoljuSkoluIsLanding.emotionalTurn.text,
-            paragraphs: NijeKasnoZaBoljuSkoluIsLanding.emotionalTurn.paragraphs,
-            processTitle: NijeKasnoZaBoljuSkoluIsLanding.emotionalTurn.processTitle,
-            processText: NijeKasnoZaBoljuSkoluIsLanding.emotionalTurn.processText,
-            processPhone: NijeKasnoZaBoljuSkoluIsLanding.emotionalTurn.processPhone,
-          },
+          data: {
+          emotionalTurn: NijeKasnoZaBoljuSkoluIsLanding.emotionalTurn,
         },
         status: 'published',
       })
