@@ -178,8 +178,8 @@ export const NijeKasnoZaBoljuSkoluIsLandingEn = {
   },
   benefits: {
     ...serbianLandingData.benefits,
-    eyebrow: 'International School',
-    title: 'An education that opens the door to the world',
+    eyebrow: 'Truly different',
+    title: 'Why is International School the best choice?',
     text: 'From the first school steps to preparation for university, International School connects Cambridge education in English with independence, talent development and life skills. In an international environment, students explore their interests and build confidence for new challenges.',
   },
   specialOffer: {
@@ -217,8 +217,8 @@ export const NijeKasnoZaBoljuSkoluIsLandingEn = {
     errorMessage: 'Your application could not be sent at this time. Please try again or call us.',
   },
   testimonials: {
-    eyebrow: 'Truly different',
-    title: 'Why is International School the best choice?',
+    eyebrow: 'Student and parent experiences',
+    title: 'The Cambridge International programme allows me to learn in a different environment',
     text: '',
   },
   directionCards: englishDirections,

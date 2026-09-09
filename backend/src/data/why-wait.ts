@@ -122,8 +122,8 @@ export const landingData = {
     ],
   },
   benefits: {
-    eyebrow: 'International School',
-    title: 'Obrazovanje koje otvara vrata sveta',
+    eyebrow: 'Truly different',
+    title: 'Zašto je International School najbolji izbor?',
     text: 'Od prvih školskih koraka do pripreme za studije, International School povezuje Cambridge obrazovanje na engleskom jeziku sa razvojem samostalnosti, talenata i veština za život. U međunarodnom okruženju učenici istražuju svoja interesovanja i grade sigurnost za nove izazove.',
   },
   specialOffer: {
@@ -167,8 +167,8 @@ export const landingData = {
     errorMessage: 'Prijava trenutno ne može da se pošalje. Pokušajte ponovo ili nas pozovite.',
   },
   testimonials: {
-    eyebrow: 'Truly different',
-    title: 'Zašto je International School najbolji izbor?',
+    eyebrow: 'Iskustva učenika i roditelja',
+    title: 'Obrazovanje koje mi je otvorilo vrata sveta',
     text: '',
   },
   footer: {
