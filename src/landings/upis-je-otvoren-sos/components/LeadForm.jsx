@@ -115,15 +115,15 @@ function validatePhoneFields(countryCode, areaCode, phoneNumber) {
   return ''
 }
 
-function validateFormData(formData) {
+function validateFormData(formData, childAgeMin, childAgeMax) {
   const name = String(formData.get('name') || '').trim()
   const email = String(formData.get('email') || '').trim()
   const childAge = Number(formData.get('childAge'))
 
   if (name.length < 2) return 'Unesite ime i prezime.'
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return 'Unesite ispravnu e-mail adresu.'
-  if (!Number.isInteger(childAge) || childAge < 5 || childAge > 20) {
-    return 'Uzrast deteta mora biti između 5 i 20 godina.'
+  if (!Number.isInteger(childAge) || childAge < childAgeMin || childAge > childAgeMax) {
+    return `Uzrast deteta mora biti između ${childAgeMin} i ${childAgeMax} godina.`
   }
 
   return validatePhoneFields(
@@ -133,14 +133,16 @@ function validateFormData(formData) {
   )
 }
 
-export function LeadForm({ className = '', headerTitle, headerText }) {
+export function LeadForm({ className = '', formName: formNameOverride, headerTitle, headerText }) {
   const { leadForm, slug } = useLandingData()
   const [status, setStatus] = useState('idle')
   const [message, setMessage] = useState('')
   const isSubmitting = status === 'submitting'
   const institution = leadForm.institution || 'sg'
-  const formName = leadForm.formName || `landing - ${slug || 'savremena'}`
+  const formName = formNameOverride || leadForm.formName || `landing - ${slug || 'savremena'}`
   const landingSlug = slug || 'upis-je-otvoren'
+  const childAgeMin = Number(leadForm.childAgeMin) || 6
+  const childAgeMax = Number(leadForm.childAgeMax) || 15
 
   async function handleSubmit(event) {
     event.preventDefault()
@@ -148,7 +150,7 @@ export function LeadForm({ className = '', headerTitle, headerText }) {
     const formData = new FormData(form)
     const submittedInstitution = formData.get('institution') || institution
     const leadEventId = formData.get('lead_event_id')
-    const validationMessage = validateFormData(formData)
+    const validationMessage = validateFormData(formData, childAgeMin, childAgeMax)
 
     if (validationMessage) {
       setStatus('error')
@@ -210,8 +212,22 @@ export function LeadForm({ className = '', headerTitle, headerText }) {
           aria-hidden="true"
         />
         <div className="upis-je-otvoren-sos-lead-form__row">
-          <input type="text" name="name" placeholder={leadForm.namePlaceholder} autoComplete="name" required />
-          <input type="email" name="email" placeholder={leadForm.emailPlaceholder} autoComplete="email" required />
+          <input
+            type="text"
+            name="name"
+            placeholder={leadForm.namePlaceholder}
+            aria-label={leadForm.nameLabel || leadForm.namePlaceholder || 'Ime i prezime'}
+            autoComplete="name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder={leadForm.emailPlaceholder}
+            aria-label={leadForm.emailLabel || leadForm.emailPlaceholder || 'E-mail adresa'}
+            autoComplete="email"
+            required
+          />
         </div>
         <div className="upis-je-otvoren-sos-lead-form__row upis-je-otvoren-sos-lead-form__row--phone">
           <select name="countryCode" defaultValue="+381" aria-label={leadForm.countryCodeLabel} required>
@@ -245,8 +261,8 @@ export function LeadForm({ className = '', headerTitle, headerText }) {
           <input
             type="number"
             name="childAge"
-            min="5"
-            max="20"
+            min={childAgeMin}
+            max={childAgeMax}
             placeholder={leadForm.childAgePlaceholder || 'Uzrast deteta'}
             aria-label={leadForm.childAgeLabel || 'Uzrast deteta'}
             required
