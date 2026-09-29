@@ -371,6 +371,10 @@
   .upis-je-otvoren-sos-hero__inner {
     min-height: 820px;
   }
+
+  .upis-je-otvoren-sos-hero__student-label {
+    bottom: 22%;
+  }
 }
 
 @media (min-width: 1200px) and (max-width: 1420px) {
@@ -397,6 +401,10 @@
   .upis-je-otvoren-sos-hero__title-year {
     font-size: 80px;
   }
+
+  .upis-je-otvoren-sos-hero__student-label {
+    bottom: 22%;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -422,6 +430,10 @@
 
   .upis-je-otvoren-sos-hero__title-year {
     font-size: 80px;
+  }
+
+  .upis-je-otvoren-sos-hero__student-label {
+    bottom: 22%;
   }
 }
 
@@ -688,9 +700,9 @@
     }
 
     &__student-label {
-      right: 28%;
-      bottom: 24%;
-      font-size: clamp(0.8rem, 3.5vw, 1rem);
+      right: 10%;
+      bottom: 4%;
+      font-size: 1.7rem;
     }
   }
 }
