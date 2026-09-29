@@ -4,11 +4,38 @@
   isolation: isolate;
   overflow: visible;
   background-color: var(--sos-yellow, #f7b815);
-  background-image: url('https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/background_hero_jos-nije-kasno-sos_002.jpg');
+  background-image: url('https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/upis_je_otvoren_background_001.jpg');
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   color: #ffffff;
+
+  &__decor {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &__shape {
+    position: absolute;
+    display: block;
+    opacity: 0.68;
+    object-fit: fill;
+  }
+
+  &__shape--left {
+    bottom: 0;
+    left: -220px;
+    height: 90%;
+  }
+
+  &__shape--right {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+  }
 
   &__header {
     position: absolute;
@@ -74,13 +101,51 @@
   }
 
   &__title {
-    max-width: 100%;
+    display: flex;
+    max-width: min(100%, 850px);
     margin: 0;
     color: #ffffff;
-    font-size: clamp(3.5rem, 8.55vw, 10.25rem);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(8px, 1vw, 18px);
+  }
+
+  &__title-copy {
+    display: block;
+    padding-bottom: 0;
+    font-size: 150px;
+    font-weight: 700;
+    letter-spacing: -0.055em;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  &__title-line {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.08em;
+  }
+
+  &__title-emphasis {
+    display: block;
+    font-size: 270px;
     font-weight: 900;
-    letter-spacing: -0.045em;
-    line-height: 0.95;
+    letter-spacing: -0.07em;
+    line-height: 0.86;
+  }
+
+  &__title-year {
+    display: inline-block;
+    border-radius: 0.18em;
+    padding: 0.04em 0.18em 0.09em;
+    background: var(--sos-red, #9d1516);
+    box-shadow: 0 0.1em 0.2em rgba(49, 14, 18, 0.22);
+    color: #ffffff;
+    font-size: 100px;
+    font-weight: 900;
+    letter-spacing: -0.055em;
+    line-height: 1;
   }
 
   &__lead,
@@ -95,24 +160,50 @@
   }
 
   &__lead {
-    display: inline-flex;
+    display: flex;
     width: fit-content;
-    max-width: 100%;
-    align-items: center;
-    border: 0;
-    border-radius: 10px;
-    padding: 8px 10px;
-    background: var(--sos-yellow, #f7b815);
+    max-width: min(100%, 760px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.06em;
+    padding: 0;
+    background: transparent;
     color: #ffffff;
-    font-size: clamp(1.25rem, 2.1vw, 2.35rem);
-    white-space: normal;
+    font-size: clamp(1.2rem, 2.15vw, 2.2rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.14;
+    text-shadow: 0 2px 12px rgba(32, 21, 12, 0.2);
+  }
+
+  &__lead-line,
+  &__lead-tail {
+    color: inherit;
+  }
+
+  &__lead-line {
+    display: block;
+  }
+
+  &__lead-line--intro {
+    font-weight: 500;
+  }
+
+  &__lead-line--final {
+    display: flex;
+    align-items: baseline;
+    gap: 0.18em;
   }
 
   &__lead-highlight {
     display: inline-block;
-    margin-inline: 0.18em;
-    color: inherit;
+    border: 2px solid var(--sos-red, #9d1516);
+    border-radius: 4px;
+    padding: 0.05em 0.19em 0.08em;
+    background: var(--sos-red, #9d1516);
+    color: #ffffff;
     font-weight: 900;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
     white-space: nowrap;
   }
@@ -196,15 +287,16 @@
 
   &__visual {
     position: absolute;
-    right: calc(clamp(90px, 14vw, 260px) - 20px);
+    right: 100px;
     bottom: 0;
     z-index: 5;
     display: flex;
-    width: min(50vw, 860px);
-    height: min(49vw, 840px);
+    width: min(920px, 64vw);
+    height: auto;
     max-height: none;
+    align-items: flex-end;
     justify-content: flex-end;
-    overflow: hidden;
+    overflow: visible;
     pointer-events: none;
   }
 
@@ -214,7 +306,7 @@
     height: auto;
     object-fit: contain;
     object-position: right bottom;
-    transform: translateY(160px);
+    transform: none;
   }
 
   &__visual picture {
@@ -301,12 +393,6 @@
       width: min(68vw, 820px);
     }
 
-    &__visual {
-      right: calc(clamp(45px, 10vw, 120px) - 20px);
-      width: min(53vw, 650px);
-      height: min(52vw, 620px);
-    }
-
     &__availability-intro {
       font-size: clamp(2.1rem, 4.3vw, 3.8rem);
     }
@@ -314,76 +400,6 @@
     &__availability-outro {
       font-size: clamp(2rem, 3.7vw, 3.55rem);
     }
-  }
-}
-
-@media (min-width: 761px) and (max-width: 1919px) {
-  .upis-je-otvoren-sos-hero__visual {
-    right: clamp(50px, 8vw, 140px);
-    width: min(42vw, 720px);
-    height: auto;
-    overflow: visible;
-  }
-
-  .upis-je-otvoren-sos-hero__visual img {
-    transform: translateY(25px);
-  }
-}
-
-@media (min-width: 1640px) and (max-width: 1919px) {
-  .upis-je-otvoren-sos-hero__visual {
-    right: calc(66vw - 800px);
-    width: 34vw;
-  }
-}
-
-@media (min-width: 1400px) and (max-width: 1639px) {
-  .upis-je-otvoren-sos-hero__visual {
-    right: 0;
-    width: min(52vw, 900px);
-  }
-}
-
-@media (min-width: 1600px) {
-  .upis-je-otvoren-sos-hero__visual {
-    right: 0;
-    width: min(52vw, 1000px);
-    height: auto;
-    overflow: visible;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1399px) {
-  .upis-je-otvoren-sos-hero__visual {
-    right: 0;
-    width: min(52vw, 760px);
-  }
-}
-
-@media (min-width: 761px) and (max-width: 1599px) {
-  .upis-je-otvoren-sos-hero__visual img {
-    transform: translateY(-25px);
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1399px) {
-  .upis-je-otvoren-sos-hero__visual img {
-    transform: translateY(-15px);
-  }
-}
-
-@media (min-width: 761px) and (max-width: 991px) {
-  .upis-je-otvoren-sos-hero__visual {
-    right: 0;
-    width: min(52vw, 650px);
-  }
-
-  .upis-je-otvoren-sos-hero__visual img {
-    transform: translateY(-25px);
-  }
-
-  .upis-je-otvoren-sos-hero__form-panel {
-    bottom: -100px;
   }
 }
 
@@ -447,7 +463,21 @@
     &__title {
       order: 1;
       margin-bottom: 20px;
-      font-size: clamp(3.5rem, 15vw, 5.5rem);
+      gap: 8px;
+    }
+
+    &__title-year {
+      border-radius: 0.2em;
+      padding: 0.08em 0.22em 0.12em;
+      font-size: clamp(3.2rem, 14vw, 5rem);
+    }
+
+    &__title-copy {
+      font-size: clamp(3.8rem, 15vw, 5.5rem);
+    }
+
+    &__title-emphasis {
+      font-size: clamp(6.4rem, 25vw, 9rem);
     }
 
     &__lead,
@@ -457,11 +487,12 @@
 
     &__lead {
       position: static;
-      width: fit-content;
+      width: 100%;
       max-width: 100%;
-      padding: 6px 10px;
-      font-size: clamp(1rem, 4.5vw, 1.35rem);
-      white-space: normal;
+      gap: 0.1em;
+      padding: 0;
+      font-size: clamp(1rem, 4.3vw, 1.3rem);
+      line-height: 1.18;
     }
 
     &__message {
