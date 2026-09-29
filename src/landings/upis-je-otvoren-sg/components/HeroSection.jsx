@@ -60,6 +60,7 @@ export function HeroSection() {
       <div className="upis-je-otvoren-sg-hero__form-panel" id="prijava">
         <LeadForm
           className="upis-je-otvoren-sg-lead-form--hero"
+          formName="Upis je otvoren – SG – hero forma"
           headerTitle="PRIJAVITE SE"
           headerText="Obezbedite svom detetu najsavremenije obrazovanje u regionu."
         />

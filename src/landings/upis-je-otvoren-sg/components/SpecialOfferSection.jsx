@@ -11,7 +11,7 @@ export function SpecialOfferSection() {
           <h2>{specialOffer.title}</h2>
         </div>
         <a className="upis-je-otvoren-sg-landing-link upis-je-otvoren-sg-landing-link--light" href="#prijava">
-          Obezbedite mesto u generaciji 2026/27
+          Obezbedite mesto u generaciji 2027/28
         </a>
       </div>
     </section>

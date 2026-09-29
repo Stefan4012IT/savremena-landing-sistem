@@ -63,7 +63,10 @@ export function EnrollmentHelpSection() {
             </div>
           </div>
         </div>
-        <LeadForm className="upis-je-otvoren-sg-lead-form--enrollment" />
+        <LeadForm
+          className="upis-je-otvoren-sg-lead-form--enrollment"
+          formName="Upis je otvoren – SG – forma za pomoć pri upisu"
+        />
       </div>
     </section>
   )
