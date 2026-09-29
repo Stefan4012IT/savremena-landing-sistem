@@ -215,7 +215,7 @@ function App() {
   const LandingComponent = registryEntry?.component
 
   useEffect(() => {
-    if (!registryEntry) {
+    if (!registryEntry || registryEntry.useStaticData) {
       return undefined
     }
 
