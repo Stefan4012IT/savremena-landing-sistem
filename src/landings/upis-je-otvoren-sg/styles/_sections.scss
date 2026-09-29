@@ -255,10 +255,31 @@
 }
 
 .upis-je-otvoren-sg-stats-section {
+  position: relative;
+  isolation: isolate;
   background: var(--gradient-brand);
   color: #ffffff;
 
+  &__group-label {
+    position: absolute;
+    right: max(
+      var(--upis-je-otvoren-sg-landing-container-padding),
+      calc((100% - var(--upis-je-otvoren-sg-landing-container-max)) / 2)
+    );
+    bottom: 20px;
+    z-index: 2;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: clamp(0.68rem, 0.85vw, 0.82rem);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
   &__grid {
+    position: relative;
+    z-index: 1;
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: clamp(18px, 2.2vw, 34px);
@@ -701,6 +722,14 @@
 
   .upis-je-otvoren-sg-scholarship-offer__content {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .upis-je-otvoren-sg-stats-section__group-label {
+    right: 20px;
+    bottom: 14px;
+    font-size: 0.62rem;
   }
 }
 

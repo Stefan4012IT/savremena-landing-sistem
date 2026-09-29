@@ -78,6 +78,7 @@ export function StatsSection() {
 
   return (
     <section className="upis-je-otvoren-sg-landing-section upis-je-otvoren-sg-stats-section" ref={sectionRef}>
+      <p className="upis-je-otvoren-sg-stats-section__group-label">Savremena Education Group</p>
       <div className="upis-je-otvoren-sg-landing-container upis-je-otvoren-sg-stats-section__grid">
         {stats.map((stat) => (
           <AnimatedStat stat={stat} shouldAnimate={shouldAnimate} key={stat.label} />
