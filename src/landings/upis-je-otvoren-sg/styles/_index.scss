@@ -1,0 +1,164 @@
+@use './layout';
+@use './hero';
+@use './sections';
+@use './cards';
+@use './form';
+
+.upis-je-otvoren-sg-landing {
+  --sg-yellow: #ffcc0c;
+  --sg-red: #9d1516;
+  --sg-font-heading: var(--font-sans);
+  --color-blue: #07080c;
+  --color-primary: #07080c;
+  --color-primary-dark: #07080c;
+  --color-yellow: #ffcc0c;
+  --gradient-brand: #ffcc0c;
+  --upis-je-otvoren-sg-landing-container-max: 1600px;
+  --upis-je-otvoren-sg-landing-container-padding: clamp(20px, 4vw, 64px);
+}
+
+.upis-je-otvoren-sg-landing {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--sg-font-heading);
+    font-weight: 900;
+  }
+}
+
+.upis-je-otvoren-sg-landing {
+  .upis-je-otvoren-sg-special-conditions,
+  .upis-je-otvoren-sg-testimonial-card {
+    background: #ffcc0c;
+    background-image: none;
+    color: #07080c;
+  }
+
+  .upis-je-otvoren-sg-info-card__profile,
+  .upis-je-otvoren-sg-benefit-card__image,
+  .upis-je-otvoren-sg-modern-education__image-placeholder,
+  .upis-je-otvoren-sg-enrollment-help__advisor-photo {
+    background: #ffcc0c;
+    background-image: none;
+  }
+
+  .upis-je-otvoren-sg-testimonial-card__video,
+  .upis-je-otvoren-sg-testimonial-card__avatar {
+    background: #ffcc0c;
+  }
+
+  .upis-je-otvoren-sg-special-conditions h2,
+  .upis-je-otvoren-sg-special-conditions p,
+  .upis-je-otvoren-sg-special-conditions a,
+  .upis-je-otvoren-sg-special-conditions__visual span,
+  .upis-je-otvoren-sg-testimonial-card h3,
+  .upis-je-otvoren-sg-testimonial-card p,
+  .upis-je-otvoren-sg-testimonial-card__video-person,
+  .upis-je-otvoren-sg-testimonial-card__avatar span {
+    color: #07080c;
+  }
+
+  .upis-je-otvoren-sg-testimonial-card__body {
+    background: #9d1516;
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sg-testimonial-card__body h3,
+  .upis-je-otvoren-sg-testimonial-card__body p {
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sg-scholarship-offer__ribbon {
+    background: #9d1516;
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sg-special-offer {
+    background: #9d1516;
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sg-special-offer__eyebrow,
+  .upis-je-otvoren-sg-special-offer h2 {
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sg-special-offer .upis-je-otvoren-sg-landing-link--light {
+    border-color: #ffcc0c;
+    background: #ffcc0c;
+    color: #9d1516;
+  }
+
+  .upis-je-otvoren-sg-info-card--direction {
+    background: #9d1516;
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sg-info-card--direction .upis-je-otvoren-sg-info-card__title,
+  .upis-je-otvoren-sg-info-card--direction .upis-je-otvoren-sg-info-card__tag,
+  .upis-je-otvoren-sg-info-card--direction .upis-je-otvoren-sg-info-card__details,
+  .upis-je-otvoren-sg-info-card--direction .upis-je-otvoren-sg-info-card__text {
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sg-program-choice .upis-je-otvoren-sg-landing-link {
+    border-color: #9d1516;
+    background: #9d1516;
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sg-testimonial-card,
+  .upis-je-otvoren-sg-info-card--direction,
+  .upis-je-otvoren-sg-program-choice__logo-card,
+  .upis-je-otvoren-sg-benefit-card {
+    box-shadow: none;
+  }
+
+  .upis-je-otvoren-sg-testimonial-card {
+    border: 1px solid #9d1516;
+  }
+
+  .upis-je-otvoren-sg-stats-section {
+    background: #9d1516;
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sg-stats-section__value,
+  .upis-je-otvoren-sg-stats-section__label {
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sg-landing-footer {
+    background: #9d1516;
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sg-landing-footer__contact,
+  .upis-je-otvoren-sg-landing-footer__contact span,
+  .upis-je-otvoren-sg-landing-footer__contact a {
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sg-special-conditions__visual {
+    border-color: rgba(7, 8, 12, 0.28);
+    background: rgba(7, 8, 12, 0.08);
+  }
+
+  .upis-je-otvoren-sg-testimonial-card__play {
+    background: #9d1516;
+  }
+
+  .upis-je-otvoren-sg-testimonial-card__play::after {
+    border-color: rgba(157, 21, 22, 0.34);
+  }
+
+  .upis-je-otvoren-sg-testimonial-card__play svg {
+    fill: #ffffff;
+  }
+}
