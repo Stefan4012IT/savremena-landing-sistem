@@ -29,9 +29,11 @@ export function EmotionalTurnSection() {
       <div className="upis-je-otvoren-sos-landing-container upis-je-otvoren-sos-scholarship-offer__inner">
         <div className="upis-je-otvoren-sos-scholarship-offer__content">
           <div className="upis-je-otvoren-sos-scholarship-offer__copy">
-            <p className="upis-je-otvoren-sos-scholarship-offer__ribbon">
-              {emotionalTurn.eyebrow}
-            </p>
+            {emotionalTurn.eyebrow ? (
+              <p className="upis-je-otvoren-sos-scholarship-offer__ribbon">
+                {emotionalTurn.eyebrow}
+              </p>
+            ) : null}
             <header className="upis-je-otvoren-sos-scholarship-offer__headline">
               <h2>{emotionalTurn.title}</h2>
             </header>
@@ -67,6 +69,7 @@ export function EmotionalTurnSection() {
                 ) : processText}
               </p>
             ) : null}
+            {emotionalTurn.ctaText ? <p>{emotionalTurn.ctaText}</p> : null}
           </div>
           <figure className="upis-je-otvoren-sos-scholarship-offer__reel" aria-label="Instagram reel Savremene osnovne škole">
             <div className="upis-je-otvoren-sos-scholarship-offer__reel-frame">

@@ -49,8 +49,9 @@ export const dataContent = {
     ministryLogoUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/07/ministarstvo_prosvete_logo_color_white.png',
     imageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/upis_je_otvoren_img_001.png',
     mobileImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/hero_img_004_mobile.png',
+    studentLabel: 'Luna II-1',
     shapeLeftUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/shape-left.svg',
-    shapeRightUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/shape-right_001.svg',
+    shapeRightUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/shape-right_002.svg',
     titlePrefix: 'Počeo je',
     titleEmphasis: 'UPIS',
     enrollmentYear: '2027/28',
@@ -63,23 +64,19 @@ export const dataContent = {
     messageAfter: '',
   },
   emotionalTurn: {
-    eyebrow: 'Za početak koji pravi razliku',
-    title: 'Nema više odlaganja – sada je pravi trenutak!',
-    text:
-      'U pojedinim razredima ostalo je još svega nekoliko slobodnih mesta, dok su za neke već formirane liste čekanja. Ako već razmišljate o promeni škole, početak školske godine je pravi trenutak za odluku – dete se lakše uklapa u novo odeljenje, prati nastavu od početka i prirodnije gradi odnose sa vršnjacima i nastavnicima, bez naknadnog prilagođavanja i nadoknađivanja gradiva.',
+    eyebrow: '',
+    title: 'Upis je počeo – obezbedite mesto na vreme!',
+    text: '',
     paragraphs: [
-      {
-        text: 'Iako je nova školska godina već počela, Savremena osnovna škola vam pruža šansu da vaše dete započne putovanje ka uspehu već sada. Ne morate čekati sledeću godinu – vaše dete može odmah postati deo jedne od škola koje nude najbolje od obrazovanja. Preostalo je samo nekoliko slobodnih mesta, zato iskoristite priliku!',
-        bold: 'vaše dete može odmah postati deo jedne od škola koje nude najbolje od obrazovanja.',
-      },
-      'Ako već razmišljate o promeni škole, početak školske godine je pravi trenutak za odluku – dete se lakše uklapa u novo odeljenje, prati nastavu od početka i prirodnije gradi odnose sa vršnjacima i nastavnicima.',
-      'Ne čekajte polugodište ili narednu godinu da napravite promenu koja može imati važan uticaj na obrazovanje i budućnost vašeg deteta.',
+      'Upis u Savremenu osnovnu školu je počeo, a sada je pravi trenutak da svom detetu obezbedite mesto za narednu školsku godinu.',
+      'Upravo sada je idealan trenutak da upoznate program i sve prednosti Savremene osnovne škole, kao i da na vreme svom detetu obezbedite mesto u željenom razredu.',
+      'Broj mesta je ograničen, zato preporučujemo da prijavu ne odlažete.',
     ],
-    processTitle: 'Kako izgleda proces prebacivanja:',
+    processTitle: 'Kako izgleda proces upisa?',
     processText:
-      'Proces prebacivanja je jednostavan, potrebno je samo da se prijavite online ili nas pozovete na 011/40-11-222 i naši konsultanti za upis će vam pomoći oko svih koraka. Kompletnu proceduru je moguće završiti jako brzo i vaše dete već od narednog dana može da krene u svoju novu savremenu avanturu.',
+      'Dovoljno je da se prijavite online ili nas pozovete na 011/40-11-222. Konsultanti za upis će vam predstaviti program, odgovoriti na sva pitanja i pomoći vam tokom celog procesa.',
     processPhone: '011/40-11-222',
-    ctaText: 'Prijavite se danas i obezbedite jedno od preostalih mesta.',
+    ctaText: 'Započnite upis već danas i obezbedite svom detetu mesto u Savremenoj osnovnoj školi.',
   },
   specialConditions: {
     eyebrow: 'Simbolika broja 9',

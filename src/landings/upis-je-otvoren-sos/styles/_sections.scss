@@ -347,6 +347,25 @@
     opacity: 0.09;
   }
 
+  &__group-label {
+    position: absolute;
+    top: auto;
+    right: max(
+      var(--upis-je-otvoren-sos-landing-container-padding),
+      calc((100% - var(--upis-je-otvoren-sos-landing-container-max)) / 2)
+    );
+    bottom: 20px;
+    left: auto;
+    z-index: 2;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: clamp(0.68rem, 0.85vw, 0.82rem);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
   &__grid {
     position: relative;
     z-index: 1;
@@ -382,6 +401,14 @@
 }
 
 @media (max-width: 760px) {
+  .upis-je-otvoren-sos-stats-section__group-label {
+    top: auto;
+    right: 20px;
+    bottom: 14px;
+    left: auto;
+    font-size: 0.62rem;
+  }
+
   .upis-je-otvoren-sos-stats-section__bird {
     width: 90px;
   }

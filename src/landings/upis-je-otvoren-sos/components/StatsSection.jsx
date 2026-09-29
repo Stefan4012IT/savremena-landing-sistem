@@ -90,6 +90,7 @@ export function StatsSection() {
           key={position}
         />
       ))}
+      <p className="upis-je-otvoren-sos-stats-section__group-label">Savremena Education Group</p>
       <div className="upis-je-otvoren-sos-landing-container upis-je-otvoren-sos-stats-section__grid">
         {stats.map((stat) => (
           <AnimatedStat stat={stat} shouldAnimate={shouldAnimate} key={stat.label} />

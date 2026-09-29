@@ -50,17 +50,18 @@ export function HeroSection() {
         </div>
         <div className="upis-je-otvoren-sos-hero__visual" aria-hidden="true">
           <picture>
-            <source media="(max-width: 991px)" srcSet={hero.mobileImageUrl} />
+            <source media="(max-width: 991px)" srcSet={hero.imageUrl} />
             <img src={hero.imageUrl} alt="" />
           </picture>
+          <span className="upis-je-otvoren-sos-hero__student-label">{hero.studentLabel}</span>
         </div>
-        <div className="upis-je-otvoren-sos-hero__form-panel" id="prijava">
-          <LeadForm
-            className="upis-je-otvoren-sos-lead-form--hero"
-            headerTitle="PRIJAVITE SE"
-            headerText="Još uvek imate priliku da svom detetu obezbedite najsavremenije obrazovanje u regionu."
-          />
-        </div>
+      </div>
+      <div className="upis-je-otvoren-sos-hero__form-panel" id="prijava">
+        <LeadForm
+          className="upis-je-otvoren-sos-lead-form--hero"
+          headerTitle="PRIJAVITE SE"
+          headerText="Obezbedite svom detetu najsavremenije obrazovanje u regionu."
+        />
       </div>
     </section>
   )
