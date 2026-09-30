@@ -5,14 +5,18 @@
   min-height: 980px;
   isolation: isolate;
   overflow: visible;
-  background: var(--is-hero-blue);
+  background-color: var(--is-hero-blue);
+  background-image: url('https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_enrollment_is_open_background_001.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #ffffff;
 
   &__header {
     position: absolute;
     z-index: 30;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 24px;
     width: 100%;
@@ -38,6 +42,7 @@
     align-items: center;
     justify-content: flex-end;
     gap: clamp(18px, 3vw, 38px);
+    padding-top: 20px;
   }
 
   &__institution-logos img {
@@ -67,7 +72,7 @@
 
   &__inner {
     position: relative;
-    z-index: 2;
+    z-index: 5;
     min-height: 980px;
     padding: clamp(160px, 18vh, 208px) clamp(24px, 5vw, 84px) 230px;
   }
@@ -89,13 +94,25 @@
   }
 
   &__title {
+    display: flex;
     max-width: 100%;
     margin: 0;
     color: #ffffff;
-    font-size: clamp(3.5rem, 8.55vw, 10.25rem);
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 10.5rem;
     font-weight: 900;
     letter-spacing: -0.045em;
-    line-height: 0.95;
+    line-height: 1.05;
+  }
+
+  &__title-line,
+  &__title-emphasis {
+    display: block;
+  }
+
+  &__title-emphasis {
+    color: var(--is-hero-yellow);
   }
 
   &__lead,
@@ -110,24 +127,26 @@
   }
 
   &__lead {
-    display: inline-block;
-    width: fit-content;
+    display: block;
+    width: auto;
     max-width: 100%;
     justify-self: start;
     align-self: start;
     border: 0;
-    border-radius: 10px;
-    padding: 8px 10px;
-    background: var(--is-hero-yellow);
-    color: var(--is-hero-blue);
+    padding: 0;
+    background: transparent;
+    color: #ffffff;
     font-size: clamp(1.25rem, 2.1vw, 2.35rem);
     white-space: normal;
   }
 
   &__lead-highlight {
     display: inline-block;
-    margin-inline: 0.18em;
-    color: inherit;
+    margin-inline: 0.08em;
+    border-radius: 0.12em;
+    padding: 0.06em 0.16em 0.1em;
+    background: var(--is-hero-yellow);
+    color: var(--is-hero-blue);
     font-weight: 900;
     text-transform: uppercase;
     white-space: nowrap;
@@ -618,6 +637,104 @@
       margin-inline: auto;
       object-position: center bottom;
       transform: none;
+    }
+  }
+}
+
+// Enrollment artwork: each figure is independently anchored to the bottom edge
+// of the hero background so it can be adjusted without affecting the copy/form.
+.upis-je-otvoren-is-hero {
+  &__content {
+    left: 50%;
+    width: min(60vw, 920px);
+    max-width: 60%;
+    justify-items: center;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+
+  &__title {
+    align-items: center;
+    text-align: center;
+  }
+
+  &__lead {
+    justify-self: center;
+    text-align: center;
+  }
+
+  &__visual {
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: auto;
+    z-index: 3;
+    display: block;
+    width: clamp(260px, 21vw, 390px);
+    height: auto;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    overflow: visible;
+    pointer-events: none;
+    transform: none;
+  }
+
+  &__visual picture {
+    display: none;
+  }
+
+  &__visual img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    margin: 0;
+    object-fit: contain;
+    object-position: center bottom;
+    transform: none;
+  }
+
+  &__visual--left {
+    left: 100px;
+  }
+
+  &__visual--right {
+    right: 0;
+    width: clamp(320px, 27vw, 520px);
+  }
+
+  @media (max-width: 991px) {
+    &__content {
+      width: 100%;
+      max-width: none;
+      text-align: center;
+      transform: none;
+    }
+
+    &__title,
+    &__lead {
+      align-self: center;
+      text-align: center;
+    }
+
+    &__visual {
+      position: absolute;
+      bottom: 0;
+      z-index: 3;
+      width: 38vw;
+      height: auto;
+      margin: 0;
+    }
+
+    &__visual--left {
+      left: -4vw;
+    }
+
+    &__visual--right {
+      right: -5vw;
+      width: 46vw;
     }
   }
 }

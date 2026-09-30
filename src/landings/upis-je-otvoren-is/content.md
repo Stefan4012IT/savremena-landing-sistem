@@ -2,7 +2,7 @@
 
 ## 1. Osnovni zadatak
 
-Kreira se nova landing stranica za upis u Savremenu gimnaziju za generaciju 2026/27.
+Kreira se nova landing stranica za upis u Savremenu gimnaziju za generaciju 2027/28.
 
 Glavna komunikacija i emotivni pravac treba da dolaze sa landinga:
 
@@ -107,7 +107,7 @@ Ovo je glavni komunikacioni pravac sa `najbolji-izbor` landinga.
 
 ## Predlog eyebrow teksta
 
-**UPIS U GENERACIJU 2026/27**
+**UPIS U GENERACIJU 2027/28**
 
 ili
 
@@ -161,7 +161,7 @@ Sekundarni CTA:
 
 ili
 
-**Obezbedite mesto u generaciji 2026/27.**
+**Obezbedite mesto u generaciji 2027/28.**
 
 ---
 
@@ -468,7 +468,7 @@ Ako se koristi konkretna akcija, proveriti i uneti tačne podatke:
 
 Ako nema aktivne akcije, ovu sekciju pretvoriti u opšti CTA:
 
-**Obezbedite mesto u generaciji 2026/27.**
+**Obezbedite mesto u generaciji 2027/28.**
 
 ---
 
@@ -665,7 +665,7 @@ ili
 
 ## SEO title
 
-**Niste upisali željenu školu? Savremena gimnazija — upis 2026/27**
+**Niste upisali željenu školu? Savremena gimnazija — upis 2027/28**
 
 Alternativni SEO title:
 

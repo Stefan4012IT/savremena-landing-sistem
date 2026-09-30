@@ -38,15 +38,15 @@ export const landingData = {
   brandScope: 'IS',
   gtmId: 'GTM-P36T5K6',
   seo: {
-    title: 'Iskoristite poslednju šansu za upis u International School | 2026/27',
+    title: 'Iskoristite poslednju šansu za upis u International School | 2027/28',
     description:
       'Iskoristite poslednju šansu za upis u International School. Cambridge obrazovanje na engleskom jeziku, međunarodno okruženje i siguran put ka budućnosti vašeg deteta.',
     ogImageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_nije_kasno_za_bolju_skolu_1200x628.jpg',
   },
   hero: {
-    eyebrow: 'Upis u generaciju 2026/27',
+    eyebrow: 'Upis u generaciju 2027/28',
     title:
-      'Zbog velikog interesovanja, Savremena gimnazija otvara još jedno, 9. odeljenje prvog razreda u generaciji 2026/27!',
+      'Zbog velikog interesovanja, Savremena gimnazija otvara još jedno, 9. odeljenje prvog razreda u generaciji 2027/28!',
     lead:
       'Izaberite najsavremenije školovanje za najbolje rezultate.',
     note: 'Prijavite se po povlašćenim cenama do 31. jula ili do popune mesta.',

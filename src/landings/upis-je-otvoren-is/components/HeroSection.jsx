@@ -2,11 +2,11 @@ import cambridgeLogo from '../assets/logos/cambridge-logo-white.png'
 import { LeadForm } from './LeadForm'
 import { useLandingData } from '../useLandingData'
 
-const heroImageUrl = 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_why_wait_hero_img.png'
-const heroImageMobileUrl = heroImageUrl
+const heroImageLeftUrl = 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_enrollment_is_open_img_left_001.png'
+const heroImageRightUrl = 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_enrollment_is_open_img_right_001.png'
 
 export function HeroSection() {
-  const { locale = 'sr' } = useLandingData()
+  const { hero, locale = 'sr' } = useLandingData()
   const isEnglish = locale === 'en'
   const homeHref = isEnglish ? '/en/enrollment-is-open' : '/enrollment-is-open'
   const languageHref = isEnglish ? '/enrollment-is-open' : '/en/enrollment-is-open'
@@ -21,7 +21,7 @@ export function HeroSection() {
     >
       <header className="upis-je-otvoren-is-hero__header" aria-label={isEnglish ? 'Main navigation' : 'Glavna navigacija'}>
         <a className="upis-je-otvoren-is-hero__logo" href={homeHref} aria-label={isEnglish ? 'Home' : 'Početna'}>
-          <img src="https://www.international-school.edu.rs/wp-content/uploads/2020/03/IS_logo_white.svg" alt="International School" />
+          <img src="https://sr.international-school.edu.rs/wp-content/uploads/2026/09/is_logo_27-28.svg" alt="International School" />
         </a>
         <div className="upis-je-otvoren-is-hero__institution-logos" aria-label={isEnglish ? 'Institutional logos and language switcher' : 'Institucionalni logotipi i izbor jezika'}>
           <img src={cambridgeLogo} alt="Cambridge International Education" />
@@ -31,31 +31,28 @@ export function HeroSection() {
           </a>
         </div>
       </header>
+      <div className="upis-je-otvoren-is-hero__visual upis-je-otvoren-is-hero__visual--left" aria-hidden="true">
+        <img src={heroImageLeftUrl} alt="" />
+      </div>
+      <div className="upis-je-otvoren-is-hero__visual upis-je-otvoren-is-hero__visual--right" aria-hidden="true">
+        <img src={heroImageRightUrl} alt="" />
+      </div>
       <div className="upis-je-otvoren-is-hero__inner">
         <div className="upis-je-otvoren-is-hero__content" aria-label="Uvod u landing">
-          <h1 className="upis-je-otvoren-is-hero__title">{isEnglish ? 'It is not too late for a better school!' : 'Nije kasno za bolju školu!'}</h1>
+          <h1 className="upis-je-otvoren-is-hero__title">
+            <span className="upis-je-otvoren-is-hero__title-line">{hero.titleFirstLine}</span>
+            <span className="upis-je-otvoren-is-hero__title-line">{hero.titleSecondLine}</span>
+            <span className="upis-je-otvoren-is-hero__title-emphasis">{hero.titleEmphasis}</span>
+          </h1>
           <div className="upis-je-otvoren-is-hero__copy">
             <p className="upis-je-otvoren-is-hero__lead">
-              {isEnglish ? (
-                <>Make the most of your <span className="upis-je-otvoren-is-hero__lead-highlight">final opportunity</span> to enrol at International School</>
-              ) : (
-                <>Iskoristite <span className="upis-je-otvoren-is-hero__lead-highlight">poslednju šansu</span> za upis u International School</>
-              )}
-            </p>
-            <p className="upis-je-otvoren-is-hero__message">
-              {isEnglish ? (
-                <>Make the right decision and give your child a <strong>TRULY DIFFERENT</strong> education.</>
-              ) : (
-                <>Donesite pravu odluku i obezbedite svom detetu <strong>STVARNO DRUGAČIJE</strong> školovanje.</>
-              )}
+              {hero.copyBefore}
+              <span className="upis-je-otvoren-is-hero__lead-highlight">{hero.copyCambridge}</span>
+              {hero.copyBetween}
+              <span className="upis-je-otvoren-is-hero__lead-highlight">{hero.copyLowest}</span>
+              {hero.copyAfter}
             </p>
           </div>
-        </div>
-        <div className="upis-je-otvoren-is-hero__visual" aria-hidden="true">
-          <picture>
-            <source media="(max-width: 991px)" srcSet={heroImageMobileUrl} />
-            <img src={heroImageUrl} alt="" />
-          </picture>
         </div>
         <div className="upis-je-otvoren-is-hero__form-panel" id="prijava">
           <LeadForm
