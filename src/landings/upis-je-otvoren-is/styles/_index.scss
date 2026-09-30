@@ -1,0 +1,217 @@
+@use './layout';
+@use './hero';
+@use './sections';
+@use './cards';
+@use './form';
+
+.upis-je-otvoren-is-landing {
+  --sos-yellow: #354180;
+  --is-yellow: #f7b815;
+  --sos-red: #9d1516;
+  --sos-blue: #2b446b;
+  --sos-green: #427042;
+  --sos-ink: #07080c;
+  --is-font-heading: 'Khand', ui-sans-serif, system-ui, sans-serif;
+  --is-font-body: 'Saira', ui-sans-serif, system-ui, sans-serif;
+  --color-blue: var(--sos-blue);
+  --color-primary: #07080c;
+  --color-primary-dark: #07080c;
+  --color-red: var(--sos-red);
+  --color-yellow: var(--sos-yellow);
+  --color-green: var(--sos-green);
+  --gradient-brand: var(--sos-yellow);
+  --upis-je-otvoren-is-landing-container-max: 1600px;
+  --upis-je-otvoren-is-landing-container-padding: clamp(20px, 4vw, 64px);
+  font-family: var(--is-font-body);
+}
+
+.upis-je-otvoren-is-landing {
+  p,
+  li,
+  a,
+  input,
+  select,
+  button {
+    font-family: var(--is-font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--is-font-heading);
+    font-weight: 700;
+  }
+
+  .upis-je-otvoren-is-section-header__eyebrow,
+  .upis-je-otvoren-is-special-offer__eyebrow {
+    font-family: var(--is-font-heading);
+    font-weight: 600;
+  }
+
+  .upis-je-otvoren-is-special-conditions,
+  .upis-je-otvoren-is-testimonial-card {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-is-info-card__profile,
+  .upis-je-otvoren-is-benefit-card__image,
+  .upis-je-otvoren-is-modern-education__image-placeholder,
+  .upis-je-otvoren-is-enrollment-help__advisor-photo {
+    background: var(--sos-yellow);
+    background-image: none;
+  }
+
+  .upis-je-otvoren-is-testimonial-card__video,
+  .upis-je-otvoren-is-testimonial-card__avatar {
+    background: var(--sos-yellow);
+  }
+
+  .upis-je-otvoren-is-special-conditions h2,
+  .upis-je-otvoren-is-special-conditions p,
+  .upis-je-otvoren-is-special-conditions li,
+  .upis-je-otvoren-is-special-conditions a,
+  .upis-je-otvoren-is-special-conditions__visual span,
+  .upis-je-otvoren-is-testimonial-card h3,
+  .upis-je-otvoren-is-testimonial-card p,
+  .upis-je-otvoren-is-testimonial-card__video-person,
+  .upis-je-otvoren-is-testimonial-card__avatar span {
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-is-testimonial-card__body {
+    background: var(--sos-yellow);
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-is-testimonial-card__body h3,
+  .upis-je-otvoren-is-testimonial-card__body p {
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-is-scholarship-offer__ribbon {
+    background: var(--sos-yellow);
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-is-special-offer {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-is-special-offer__eyebrow,
+  .upis-je-otvoren-is-special-offer h2 {
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-is-special-offer .upis-je-otvoren-is-landing-link--light {
+    border-color: var(--sos-red);
+    background: var(--sos-red);
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-is-info-card--direction {
+    background: var(--sos-yellow);
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-is-info-card--direction .upis-je-otvoren-is-info-card__title,
+  .upis-je-otvoren-is-info-card--direction .upis-je-otvoren-is-info-card__text {
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-is-info-card--direction .upis-je-otvoren-is-info-card__tag,
+  .upis-je-otvoren-is-info-card--direction .upis-je-otvoren-is-info-card__details {
+    color: var(--is-yellow);
+  }
+
+  .upis-je-otvoren-is-info-card--direction .upis-je-otvoren-is-info-card__profile span {
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-is-program-choice .upis-je-otvoren-is-landing-link {
+    border-color: var(--sos-red);
+    background: var(--sos-red);
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-is-testimonial-card,
+  .upis-je-otvoren-is-info-card--direction,
+  .upis-je-otvoren-is-program-choice__logo-card,
+  .upis-je-otvoren-is-benefit-card {
+    box-shadow: none;
+  }
+
+  .upis-je-otvoren-is-testimonial-card {
+    border: 1px solid var(--sos-yellow);
+  }
+
+  .upis-je-otvoren-is-stats-section {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-is-stats-section__value,
+  .upis-je-otvoren-is-stats-section__label {
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-is-landing-footer {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-is-landing-footer__contact,
+  .upis-je-otvoren-is-landing-footer__contact span,
+  .upis-je-otvoren-is-landing-footer__contact a {
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-is-special-conditions__visual {
+    border-color: rgba(7, 8, 12, 0.28);
+    background: rgba(7, 8, 12, 0.08);
+  }
+
+  .upis-je-otvoren-is-testimonial-card__play {
+    background: var(--sos-red);
+  }
+
+  .upis-je-otvoren-is-testimonial-card__play::after {
+    border-color: rgba(157, 21, 22, 0.34);
+  }
+
+  .upis-je-otvoren-is-testimonial-card__play svg {
+    fill: #ffffff;
+  }
+
+  .upis-je-otvoren-is-section-header__title,
+  .upis-je-otvoren-is-scholarship-offer__headline h2,
+  .upis-je-otvoren-is-program-choice__content h2,
+  .upis-je-otvoren-is-enrollment-help h2,
+  .upis-je-otvoren-is-benefit-card h3,
+  .upis-je-otvoren-is-scholarship-offer__process-title,
+  .upis-je-otvoren-is-testimonial-card__footer strong,
+  .upis-je-otvoren-is-testimonial-card__footer > div:last-child > span {
+    color: #354180;
+  }
+
+  .upis-je-otvoren-is-section-header__eyebrow,
+  .upis-je-otvoren-is-special-offer__eyebrow,
+  .upis-je-otvoren-is-college-promo__eyebrow,
+  .upis-je-otvoren-is-school-stage__eyebrow {
+    margin-bottom: 12px;
+    font-size: 22px;
+  }
+
+  .upis-je-otvoren-is-school-stage__content p.upis-je-otvoren-is-school-stage__eyebrow {
+    margin-bottom: 12px;
+    font-size: 22px;
+  }
+}

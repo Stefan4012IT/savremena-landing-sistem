@@ -1,0 +1,100 @@
+import { useEffect, useRef, useState } from 'react'
+import { useLandingData } from '../useLandingData'
+
+const stats = [
+  { value: 97, suffix: '%', label: 'zadovoljnih učenika i roditelja' },
+  { value: 230, prefix: '+', label: 'medalja, nagrada i priznanja' },
+  { value: 94, suffix: '%', label: 'učenika upisuje prvi željeni fakultet' },
+  { value: 15, suffix: '+', label: 'godina postojanja' },
+  { value: 3000, prefix: '+', label: 'uspešnih učenika' },
+  { value: 30, suffix: '+', label: 'najboljih Cambridge studenta na svetu' },
+]
+
+const englishStats = [
+  { value: 97, suffix: '%', label: 'satisfied students and parents' },
+  { value: 230, prefix: '+', label: 'medals, awards and recognitions' },
+  { value: 94, suffix: '%', label: 'students enrol in their first-choice university' },
+  { value: 15, suffix: '+', label: 'years of excellence' },
+  { value: 3000, prefix: '+', label: 'successful students' },
+  { value: 30, suffix: '+', label: 'Cambridge students at the world’s best universities' },
+]
+
+function AnimatedStat({ stat, shouldAnimate }) {
+  const [displayValue, setDisplayValue] = useState(shouldAnimate ? 0 : stat.value)
+
+  useEffect(() => {
+    if (!shouldAnimate) return
+
+    let frameId
+    const duration = 1200
+    const startedAt = performance.now()
+
+    function tick(now) {
+      const progress = Math.min((now - startedAt) / duration, 1)
+      const easedProgress = 1 - Math.pow(1 - progress, 3)
+
+      setDisplayValue(Math.round(stat.value * easedProgress))
+
+      if (progress < 1) {
+        frameId = requestAnimationFrame(tick)
+      }
+    }
+
+    frameId = requestAnimationFrame(tick)
+
+    return () => cancelAnimationFrame(frameId)
+  }, [shouldAnimate, stat.value])
+
+  return (
+    <article className="upis-je-otvoren-is-stats-section__item">
+      <p className="upis-je-otvoren-is-stats-section__value">
+        {stat.prefix}
+        {displayValue}
+        {stat.suffix}
+      </p>
+      <p className="upis-je-otvoren-is-stats-section__label">{stat.label}</p>
+    </article>
+  )
+}
+
+export function StatsSection() {
+  const { locale = 'sr' } = useLandingData()
+  const localizedStats = locale === 'en' ? englishStats : stats
+  const sectionRef = useRef(null)
+  const [shouldAnimate, setShouldAnimate] = useState(false)
+
+  useEffect(() => {
+    const section = sectionRef.current
+    if (!section) return
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (prefersReducedMotion) {
+      const frameId = requestAnimationFrame(() => setShouldAnimate(true))
+      return () => cancelAnimationFrame(frameId)
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldAnimate(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.28 },
+    )
+
+    observer.observe(section)
+
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <section className="upis-je-otvoren-is-landing-section upis-je-otvoren-is-stats-section" ref={sectionRef}>
+      <div className="upis-je-otvoren-is-landing-container upis-je-otvoren-is-stats-section__grid">
+        {localizedStats.map((stat) => (
+          <AnimatedStat stat={stat} shouldAnimate={shouldAnimate} key={stat.label} />
+        ))}
+      </div>
+    </section>
+  )
+}
