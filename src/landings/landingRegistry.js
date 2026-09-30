@@ -14,6 +14,7 @@ import { UpisJeOtvorenSgLanding } from './upis-je-otvoren-sg/UpisJeOtvorenSgLand
 import { defaultDataContent as upisJeOtvorenSgData } from './upis-je-otvoren-sg/dataContent'
 import { UpisJeOtvorenIsLanding } from './upis-je-otvoren-is/UpisJeOtvorenIsLanding'
 import { defaultDataContent as upisJeOtvorenIsData } from './upis-je-otvoren-is/dataContent'
+import { defaultDataContent as upisJeOtvorenIsSerbianData } from './upis-je-otvoren-is/dataContent.sr'
 import { NijeKasnoZaBoljuSkoluIsLanding } from './nije-kasno-za-bolju-skolu-is/NijeKasnoZaBoljuSkoluIsLanding'
 import { defaultLandingData as whyWaitLandingData } from './nije-kasno-za-bolju-skolu-is/landingContent'
 import { defaultLandingData as whyWaitEnglishLandingData } from './nije-kasno-za-bolju-skolu-is/landingContent.en'
@@ -54,6 +55,11 @@ export const landingRegistry = {
   [upisJeOtvorenIsData.slug]: {
     component: UpisJeOtvorenIsLanding,
     fallbackData: upisJeOtvorenIsData,
+    useStaticData: true,
+  },
+  [upisJeOtvorenIsSerbianData.slug]: {
+    component: UpisJeOtvorenIsLanding,
+    fallbackData: upisJeOtvorenIsSerbianData,
     useStaticData: true,
   },
   [whyWaitLandingData.slug]: {

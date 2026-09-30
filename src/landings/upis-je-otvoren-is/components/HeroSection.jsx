@@ -8,8 +8,8 @@ const heroImageMobileUrl = heroImageUrl
 export function HeroSection() {
   const { locale = 'sr' } = useLandingData()
   const isEnglish = locale === 'en'
-  const homeHref = isEnglish ? '/en/why-wait' : '/why-wait'
-  const languageHref = isEnglish ? '/why-wait' : '/en/why-wait'
+  const homeHref = isEnglish ? '/en/enrollment-is-open' : '/enrollment-is-open'
+  const languageHref = isEnglish ? '/enrollment-is-open' : '/en/enrollment-is-open'
   const languageFlag = isEnglish
     ? 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_srb_flag.png'
     : 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_eng_flag.png'

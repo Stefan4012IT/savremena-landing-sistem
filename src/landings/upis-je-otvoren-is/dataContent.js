@@ -98,7 +98,7 @@ const englishTestimonials = [
 
 export const defaultDataContent = {
   ...serbianLandingData,
-  slug: 'enrollment-is-open',
+  slug: 'en/enrollment-is-open',
   apiSlug: 'enrollment-is-open',
   locale: 'en',
   name: 'It is not too late for a better school',
@@ -116,20 +116,18 @@ export const defaultDataContent = {
   },
   emotionalTurn: {
     ...serbianLandingData.emotionalTurn,
-    eyebrow: 'The right start makes all the difference',
-    title: 'There is still time to make the right choice',
-    text: 'There are only a few places left in some year groups. If you are already considering a change of school, now is the right moment to decide – your child can join a new class from the beginning, follow lessons naturally and build relationships with teachers and peers from day one.',
+    eyebrow: '',
+    title: 'Enrolment is open – secure your child’s place in time!',
+    text: '',
     paragraphs: [
-      {
-        text: 'Although the new school year has already begun, International School gives your child the opportunity to begin their journey to success right now. You do not have to wait until next year – your child can immediately become part of one of the schools offering the very best in education. Only a few places remain, so make the most of this opportunity!',
-        bold: 'your child can immediately become part of one of the schools offering the very best in education.',
-      },
-      'If you are already considering a change of school, the beginning of the school year is the right time to decide – your child can settle into a new class more easily, follow lessons from the start and naturally build relationships with peers and teachers.',
-      'Do not wait until the half-term or next school year to make a change that can have an important impact on your child’s education and future.',
+      'Enrolment at International School is now open, and this is the right time to secure your child’s place for the next school year.',
+      'Now is the ideal time to explore the programme and all the benefits of International School, and secure a place for your child in the preferred year group.',
+      'Places are limited, so we recommend that you do not delay your application.',
     ],
     processTitle: 'What does the enrolment process look like?',
-    processText: 'The process is simple. Submit the form online or call us on 011/40-11-220 and our admissions consultants will guide you through every step. The full procedure can be completed quickly, so your child can begin their new International School journey as soon as possible.',
-    ctaText: 'Apply today and secure one of the remaining places.',
+    processText: 'Simply submit the form online or call us on 011/40-11-220. Our admissions consultants will present the programme, answer all your questions and support you throughout the process.',
+    processPhone: '011/40-11-220',
+    ctaText: 'Start the enrolment process today and secure your child’s place at International School.',
     worryLabel: 'Do you expect more from secondary education?',
     worries: [
       'Do you want a truly different education for your child?',
@@ -204,7 +202,7 @@ export const defaultDataContent = {
   },
   leadForm: {
     ...serbianLandingData.leadForm,
-    formName: 'why-wait - is - en',
+    formName: 'enrollment-is-open - is - en',
     namePlaceholder: 'Full name',
     countryCodeLabel: 'Country calling code',
     areaCodePlaceholder: '64',

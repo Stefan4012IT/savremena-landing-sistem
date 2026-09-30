@@ -144,7 +144,7 @@ export function LeadForm({ className = '', headerTitle, headerText }) {
   const isSubmitting = status === 'submitting'
   const institution = leadForm.institution || 'is'
   const formName = leadForm.formName || `landing - ${slug || 'savremena'}`
-  const landingSlug = slug || 'why-wait'
+  const landingSlug = slug || 'enrollment-is-open'
 
   async function handleSubmit(event) {
     event.preventDefault()
