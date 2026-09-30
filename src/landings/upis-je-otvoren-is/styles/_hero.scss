@@ -810,6 +810,15 @@
       height: auto;
     }
 
+    &__title {
+      font-size: 5.5rem;
+    }
+
+    &__lead {
+      font-size: 1.35rem;
+      line-height: 1.1;
+    }
+
     &__form-panel {
       order: 4;
       width: 100%;
