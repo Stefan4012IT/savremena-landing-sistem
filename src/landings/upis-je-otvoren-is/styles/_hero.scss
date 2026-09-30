@@ -646,7 +646,7 @@
 .upis-je-otvoren-is-hero {
   &__content {
     left: 50%;
-    width: min(60vw, 920px);
+    width: min(60vw, 960px);
     max-width: 60%;
     justify-items: center;
     text-align: center;
@@ -735,6 +735,98 @@
     &__visual--right {
       right: -5vw;
       width: 46vw;
+    }
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1640px) {
+  .upis-je-otvoren-is-hero {
+    min-height: 880px;
+
+    &__inner {
+      min-height: 880px;
+    }
+
+    &__title {
+      font-size: 8.5rem;
+    }
+
+    &__content {
+      width: min(50vw, 960px);
+    }
+
+    &__visual--left {
+      left: 50px;
+      width: clamp(260px, 39vw, 360px);
+    }
+
+    &__visual--right {
+      width: clamp(320px, 40vw, 460px);
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .upis-je-otvoren-is-hero {
+    min-height: 700px;
+
+    &__inner {
+      min-height: 700px;
+    }
+
+    &__title {
+      font-size: 6.5rem;
+    }
+
+    &__visual--left {
+      left: 40px;
+    }
+  }
+}
+
+.upis-je-otvoren-is-hero__mobile-visual {
+  display: none;
+}
+
+@media (max-width: 776px) {
+  .upis-je-otvoren-is-hero {
+    &__visual--left,
+    &__visual--right {
+      display: none;
+    }
+
+    &__mobile-visual {
+      display: block;
+      order: 3;
+      align-self: center;
+      width: 60%;
+      margin: 24px 0 0;
+      line-height: 0;
+    }
+
+    &__mobile-visual img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    &__form-panel {
+      order: 4;
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .upis-je-otvoren-is-hero {
+    &__mobile-visual {
+      width: 90%;
+    }
+
+    &__form-panel {
+      width: 100%;
+      align-self: center;
     }
   }
 }

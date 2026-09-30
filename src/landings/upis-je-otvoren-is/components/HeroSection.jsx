@@ -4,6 +4,7 @@ import { useLandingData } from '../useLandingData'
 
 const heroImageLeftUrl = 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_enrollment_is_open_img_left_001.png'
 const heroImageRightUrl = 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_enrollment_is_open_img_right_001.png'
+const heroImageMobileUrl = 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_enrollment_is_open_img_mob.png'
 
 export function HeroSection() {
   const { hero, locale = 'sr' } = useLandingData()
@@ -53,6 +54,9 @@ export function HeroSection() {
               {hero.copyAfter}
             </p>
           </div>
+        </div>
+        <div className="upis-je-otvoren-is-hero__mobile-visual" aria-hidden="true">
+          <img src={heroImageMobileUrl} alt="" />
         </div>
         <div className="upis-je-otvoren-is-hero__form-panel" id="prijava">
           <LeadForm
