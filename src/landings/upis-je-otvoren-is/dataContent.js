@@ -103,9 +103,9 @@ export const defaultDataContent = {
   locale: 'en',
   name: 'It is not too late for a better school',
   seo: {
-    title: 'Make the most of your final opportunity to enrol at International School | 2027/28',
-    description: 'Make the most of your final opportunity to enrol at International School. Cambridge education in English, an international environment and a confident path towards your child’s future.',
-    ogImageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_nije_kasno_za_bolju_skolu_1200x628.jpg',
+    title: 'Enrolment for 2027/28 is open | International School',
+    description: 'Enrolment for the 2027/28 school year at International School is open. Secure your child’s place and a prestigious Cambridge education in English.',
+    ogImageUrl: 'https://sr.international-school.edu.rs/wp-content/uploads/2026/10/IS-enrollmtnt-1200x628-1.jpg',
   },
   hero: {
     ...serbianLandingData.hero,

@@ -8,6 +8,8 @@ import { defaultLandingData as nijeKasnoZaBoljuSkolu } from '../src/landings/nij
 import { defaultLandingData as josNijeKasnoZaBoljuSkolu } from '../src/landings/nije-kasno-za-bolju-skolu-sos/landingContent.js'
 import { defaultDataContent as upisJeOtvorenSos } from '../src/landings/upis-je-otvoren-sos/dataContent.js'
 import { defaultDataContent as upisJeOtvorenSg } from '../src/landings/upis-je-otvoren-sg/dataContent.js'
+import { defaultDataContent as upisJeOtvorenIs } from '../src/landings/upis-je-otvoren-is/dataContent.js'
+import { defaultDataContent as upisJeOtvorenIsSerbian } from '../src/landings/upis-je-otvoren-is/dataContent.sr.js'
 import { defaultLandingData as whyWait } from '../src/landings/nije-kasno-za-bolju-skolu-is/landingContent.js'
 import { defaultLandingData as whyWaitEnglish } from '../src/landings/nije-kasno-za-bolju-skolu-is/landingContent.en.js'
 import { defaultLandingData as novoOdeljenje } from '../src/landings/novo-odeljenje/landingContent.js'
@@ -24,6 +26,8 @@ const landingData = [
   josNijeKasnoZaBoljuSkolu,
   upisJeOtvorenSos,
   upisJeOtvorenSg,
+  upisJeOtvorenIs,
+  upisJeOtvorenIsSerbian,
   whyWait,
   whyWaitEnglish,
   novoOdeljenje,
