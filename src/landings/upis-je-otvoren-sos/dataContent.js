@@ -38,10 +38,10 @@ export const dataContent = {
   brandScope: 'SOS',
   gtmId: 'GTM-TPSKNT5',
   seo: {
-    title: 'Nije kasno za bolju školu | Savremena osnovna škola',
+    title: 'Upis je otvoren za 2027/28. | Savremena osnovna škola',
     description:
-      'Nije kasno za upis u Savremenu osnovnu školu. Iskoristite poslednju šansu i obezbedite detetu savremeno obrazovanje, podršku nastavnika i siguran put ka budućnosti.',
-    ogImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/nijde_kasno_za_bolju_skolu_sos_1200x628.png',
+      'Upis za školsku 2027/28. godinu u Savremenu osnovnu školu je otvoren. Obezbedite detetu mesto na vreme i najsavremenije Cambridge obrazovanje.',
+    ogImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/10/SOS_og_1200x628.jpg',
   },
   hero: {
     homeUrl: '/upis-je-otvoren',

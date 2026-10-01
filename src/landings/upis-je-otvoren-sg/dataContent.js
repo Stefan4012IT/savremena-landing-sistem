@@ -38,10 +38,10 @@ export const dataContent = {
   brandScope: 'SG',
   gtmId: 'GTM-WRTKDP',
   seo: {
-    title: 'Počeo je upis | Savremena gimnazija',
+    title: 'Upis je otvoren za 2027/28. | Savremena gimnazija',
     description:
-      'Još nije kasno za bolju školu. Upis u Savremenu gimnaziju donosi savremenu nastavu, podršku profesora i obrazovanje koje priprema učenike za budućnost.',
-    ogImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/nije_kasno_za-bolju_skolu_sg_120x628.jpg',
+      'Upis za školsku 2027/28. godinu u Savremenu gimnaziju je otvoren. Obezbedite učeniku mesto na vreme i savremeno Cambridge obrazovanje za uspešnu budućnost.',
+    ogImageUrl: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/10/SG_og_1200x628.jpg',
   },
   hero: {
     homeUrl: '/poceo-je-upis',
