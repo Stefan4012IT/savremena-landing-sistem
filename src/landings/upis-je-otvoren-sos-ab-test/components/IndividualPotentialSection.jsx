@@ -23,7 +23,11 @@ export function IndividualPotentialSection() {
           </div>
         </div>
         <div className="upis-je-otvoren-sos-ab-test-individual-potential__image-placeholder" aria-label="Prostor za fotografiju">
-          <span>{individualPotential.imagePlaceholder}</span>
+          {individualPotential.imageUrl ? (
+            <img src={individualPotential.imageUrl} alt="" />
+          ) : (
+            <span>{individualPotential.imagePlaceholder}</span>
+          )}
         </div>
       </div>
     </section>

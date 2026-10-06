@@ -60,7 +60,7 @@ export const dataContent = {
     conditions: 'Iskoristite najpovoljnije uslove na početku upisnog ciklusa i obezbedite svom detetu mesto na vreme.',
     tuitionLabel: 'Školarina već od',
     tuitionValue: '383 € mesečno',
-    highlights: 'Cambridge program • I–VIII razred • Savremene tehnologije • Individualni pristup',
+    highlights: 'Cambridge program • predškolsko + I–VIII razred • Savremene tehnologije • Individualni pristup',
   },
   emotionalTurn: {
     title: 'Zašto roditelji biraju Savremenu?',
@@ -88,7 +88,7 @@ export const dataContent = {
   results: {
     title: 'Rezultati koji govore više od obećanja',
     featuredLabel: 'Najbolji takmičarski rezultati učenika Savremene do sada',
-    subtitle: 'U školskoj 2025/26. godini učenici su ostvarili najbolje takmičarske rezultate u istoriji škole.',
+    subtitle: 'U prethodnoj školskoj godini učenici su ostvarili najbolje takmičarske rezultate u istoriji škole.',
     stats: [
       { value: 95, label: 'osvojenih nagrada' },
       { value: 32, label: 'plasmana na gradska takmičenja' },
@@ -128,11 +128,11 @@ export const dataContent = {
     ],
     closing: 'To su veštine koje ostaju važne mnogo duže od jedne ocene ili kontrolnog zadatka.',
     imagePlaceholder: 'Image placeholder',
-    imageUrl: placeholderImages.modernEducation,
+    imageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/10/img_upis_je_otvoren_001.jpg',
   },
   pepper: {
     eyebrow: '',
-    title: 'Upoznajte Peppera, drugačijeg člana Savremene',
+    title: 'Upoznajte Peppera, stvarno drugačijeg člana Savremene',
     subtitle: 'Kada tehnologija uđe u učionicu, učenje dobija potpuno novu dimenziju.',
     paragraphs: [
       {
@@ -168,6 +168,7 @@ export const dataContent = {
       { text: 'Zato individualni pristup u Savremenoj podrazumeva praćenje napretka, podršku nastavnika i okruženje u kojem učenik može da postavlja pitanja, pokušava, pogreši, ponovo proba i napreduje.' },
     ],
     imagePlaceholder: 'Prostor za fotografiju učenika',
+    imageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/10/img_upis_je_otvoren_002.jpg',
   },
   investment: {
     title: 'Investicija u obrazovanje koje traje',
@@ -202,7 +203,7 @@ export const dataContent = {
     title: 'Imate pitanja? Verovatno ih imaju i drugi roditelji.',
     items: [
       { question: 'Da li dete mora dobro da zna engleski?', answer: 'Nivo potrebnog znanja engleskog zavisi od izabranog programa i uzrasta učenika. Admissions tim može vam pomoći da procenite koja opcija najbolje odgovara vašem detetu.' },
-      { question: 'Koja je razlika između Nacionalnog, Kombinovanog i Cambridge programa?', answer: 'Programi se razlikuju prema nastavnom programu, jeziku izvođenja nastave i zastupljenosti Cambridge sadržaja. Tokom razgovora sa Admissions savetnikom možete detaljno upoznati svaku opciju.' },
+      { question: 'Koja je razlika između Nacionalnog i Kombinovanog programa?', answer: 'Programi se razlikuju prema nastavnom programu, jeziku izvođenja nastave i zastupljenosti Cambridge sadržaja. Tokom razgovora sa Admissions savetnikom možete detaljno upoznati svaku opciju.' },
       { question: 'Da li dete može da pređe u Savremenu iz druge škole?', answer: 'Da. Mogućnost prelaska zavisi od razreda, programa i dostupnosti mesta.' },
       { question: 'Možemo li da posetimo školu pre nego što donesemo odluku?', answer: 'Da. Upoznavanje škole i razgovor sa Admissions timom važan su deo procesa donošenja odluke.' },
       { question: 'Da li slanje forme znači da smo upisali dete?', answer: 'Ne. Slanjem forme iskazujete interesovanje i omogućavate Admissions timu da vas kontaktira sa detaljnim informacijama. Konačnu odluku o upisu donosite nakon što dobijete sve potrebne informacije.' },
@@ -229,7 +230,7 @@ export const dataContent = {
   },
   programChoice: {
     eyebrow: '',
-    title: 'Tri programa. Jedan cilj: da vaše dete ostvari svoj potencijal.',
+    title: 'Dva programa. Jedan cilj: da vaše dete ostvari svoj potencijal.',
     intro: 'Svako dete ima drugačija interesovanja, sposobnosti i planove. Zato u Savremenoj roditelji mogu da izaberu obrazovni put koji najbolje odgovara njihovom detetu.',
     programs: [
       {
@@ -238,14 +239,9 @@ export const dataContent = {
         fit: 'Za roditelje koji žele kvalitetan nacionalni program u potpuno drugačijem školskom okruženju.',
       },
       {
-        title: 'Kombinovani program',
+        title: 'Kombinovani - Cambridge program',
         text: 'Nacionalni program obogaćen elementima Cambridge obrazovanja i nastavom na srpskom i engleskom jeziku.',
         fit: 'Za učenike koji žele da razvijaju znanje engleskog jezika paralelno sa redovnim školovanjem.',
-      },
-      {
-        title: 'Cambridge program',
-        text: 'Međunarodni obrazovni program sa nastavom na engleskom jeziku, usmeren na razumevanje, istraživanje, rešavanje problema i razvoj akademskih veština.',
-        fit: 'Za porodice koje žele internacionalno obrazovanje i snažnu osnovu za dalje školovanje u međunarodnom okruženju.',
       },
     ],
     helpText: 'Niste sigurni koji program najbolje odgovara vašem detetu? Admissions savetnik može vam pomoći da upoznate razlike između programa i pronađete odgovarajući obrazovni put.',
