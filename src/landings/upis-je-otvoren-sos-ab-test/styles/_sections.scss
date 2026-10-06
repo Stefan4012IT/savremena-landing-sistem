@@ -769,8 +769,10 @@
   &__image {
     grid-column: 1;
     grid-row: 1 / span 2;
-    align-self: stretch;
-    min-height: clamp(320px, 28vw, 430px);
+    align-self: center;
+    justify-self: start;
+    width: fit-content;
+    max-width: 100%;
     border-radius: 22px;
     overflow: hidden;
     box-shadow: 0 24px 80px rgba(39, 48, 67, 0.1);
@@ -778,10 +780,9 @@
 
   &__image img {
     display: block;
-    width: 100%;
-    min-height: clamp(320px, 28vw, 430px);
-    height: 100%;
-    object-fit: cover;
+    width: auto;
+    max-width: 100%;
+    height: auto;
   }
 
   .upis-je-otvoren-sos-ab-test-landing-link {
@@ -1278,14 +1279,14 @@
   }
 
   &__form-bird--one {
-    top: -14px;
-    right: -30px;
+    top: 14px;
+    right: 30px;
     transform: rotate(16deg);
   }
 
   &__form-bird--two {
-    bottom: -22px;
-    left: -42px;
+    bottom: 22px;
+    left: 42px;
     transform: rotate(-14deg);
   }
 
