@@ -1,0 +1,187 @@
+@use './layout';
+@use './hero';
+@use './sections';
+@use './cards';
+@use './form';
+
+.upis-je-otvoren-sos-ab-test-landing {
+  --sos-yellow: #f7b815;
+  --sos-red: #9d1516;
+  --sos-blue: #2b446b;
+  --sos-green: #369F36;
+  --sos-ink: #07080c;
+  --sos-font-heading: 'Raleway', ui-sans-serif, system-ui, sans-serif;
+  --color-blue: var(--sos-blue);
+  --color-primary: #07080c;
+  --color-primary-dark: #07080c;
+  --color-red: var(--sos-red);
+  --color-yellow: var(--sos-yellow);
+  --color-green: var(--sos-green);
+  --gradient-brand: var(--sos-yellow);
+  --upis-je-otvoren-sos-ab-test-landing-container-max: 1600px;
+  --upis-je-otvoren-sos-ab-test-landing-container-padding: clamp(20px, 4vw, 64px);
+}
+
+.upis-je-otvoren-sos-ab-test-modern-education,
+.upis-je-otvoren-sos-ab-test-partner-logos,
+.upis-je-otvoren-sos-ab-test-directions-section,
+.upis-je-otvoren-sos-ab-test-program-choice,
+.upis-je-otvoren-sos-ab-test-benefits-section,
+.upis-je-otvoren-sos-ab-test-future-space,
+.upis-je-otvoren-sos-ab-test-testimonials-section {
+  .upis-je-otvoren-sos-ab-test-section-header__eyebrow {
+    color: var(--sos-green);
+  }
+}
+
+.upis-je-otvoren-sos-ab-test-landing {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--sos-font-heading);
+    font-weight: 900;
+  }
+
+  .upis-je-otvoren-sos-ab-test-special-conditions,
+  .upis-je-otvoren-sos-ab-test-testimonial-card {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sos-ab-test-info-card__profile,
+  .upis-je-otvoren-sos-ab-test-benefit-card__image,
+  .upis-je-otvoren-sos-ab-test-modern-education__image-placeholder,
+  .upis-je-otvoren-sos-ab-test-enrollment-help__advisor-photo {
+    background: var(--sos-yellow);
+    background-image: none;
+  }
+
+  .upis-je-otvoren-sos-ab-test-testimonial-card__video,
+  .upis-je-otvoren-sos-ab-test-testimonial-card__avatar {
+    background: var(--sos-yellow);
+  }
+
+  .upis-je-otvoren-sos-ab-test-special-conditions h2,
+  .upis-je-otvoren-sos-ab-test-special-conditions p,
+  .upis-je-otvoren-sos-ab-test-special-conditions li,
+  .upis-je-otvoren-sos-ab-test-special-conditions a,
+  .upis-je-otvoren-sos-ab-test-special-conditions__visual span,
+  .upis-je-otvoren-sos-ab-test-testimonial-card h3,
+  .upis-je-otvoren-sos-ab-test-testimonial-card p,
+  .upis-je-otvoren-sos-ab-test-testimonial-card__video-person,
+  .upis-je-otvoren-sos-ab-test-testimonial-card__avatar span {
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sos-ab-test-testimonial-card__body {
+    background: var(--sos-yellow);
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sos-ab-test-testimonial-card__body h3,
+  .upis-je-otvoren-sos-ab-test-testimonial-card__body p {
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sos-ab-test-scholarship-offer__ribbon {
+    background: var(--sos-yellow);
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sos-ab-test-special-offer {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sos-ab-test-special-offer__eyebrow,
+  .upis-je-otvoren-sos-ab-test-special-offer h2 {
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sos-ab-test-special-offer .upis-je-otvoren-sos-ab-test-landing-link--light {
+    border-color: var(--sos-red);
+    background: var(--sos-red);
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sos-ab-test-info-card--direction {
+    background: var(--sos-yellow);
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sos-ab-test-info-card--direction .upis-je-otvoren-sos-ab-test-info-card__title,
+  .upis-je-otvoren-sos-ab-test-info-card--direction .upis-je-otvoren-sos-ab-test-info-card__text {
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sos-ab-test-info-card--direction .upis-je-otvoren-sos-ab-test-info-card__tag,
+  .upis-je-otvoren-sos-ab-test-info-card--direction .upis-je-otvoren-sos-ab-test-info-card__details {
+    color: var(--sos-red);
+  }
+
+  .upis-je-otvoren-sos-ab-test-info-card--direction .upis-je-otvoren-sos-ab-test-info-card__profile span {
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sos-ab-test-program-choice .upis-je-otvoren-sos-ab-test-landing-link {
+    border-color: var(--sos-red);
+    background: var(--sos-red);
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sos-ab-test-testimonial-card,
+  .upis-je-otvoren-sos-ab-test-info-card--direction,
+  .upis-je-otvoren-sos-ab-test-program-choice__logo-card,
+  .upis-je-otvoren-sos-ab-test-benefit-card {
+    box-shadow: none;
+  }
+
+  .upis-je-otvoren-sos-ab-test-testimonial-card {
+    border: 1px solid var(--sos-yellow);
+  }
+
+  .upis-je-otvoren-sos-ab-test-stats-section {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sos-ab-test-stats-section__value,
+  .upis-je-otvoren-sos-ab-test-stats-section__label {
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sos-ab-test-landing-footer {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sos-ab-test-landing-footer__contact,
+  .upis-je-otvoren-sos-ab-test-landing-footer__contact span,
+  .upis-je-otvoren-sos-ab-test-landing-footer__contact a {
+    color: #ffffff;
+  }
+
+  .upis-je-otvoren-sos-ab-test-special-conditions__visual {
+    border-color: rgba(7, 8, 12, 0.28);
+    background: rgba(7, 8, 12, 0.08);
+  }
+
+  .upis-je-otvoren-sos-ab-test-testimonial-card__play {
+    background: var(--sos-red);
+  }
+
+  .upis-je-otvoren-sos-ab-test-testimonial-card__play::after {
+    border-color: rgba(157, 21, 22, 0.34);
+  }
+
+  .upis-je-otvoren-sos-ab-test-testimonial-card__play svg {
+    fill: #ffffff;
+  }
+}

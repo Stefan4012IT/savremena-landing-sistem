@@ -1,0 +1,446 @@
+const placeholderImages = {
+  modernEducation: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/savremena_landing_sos_img_1.jpg',
+  advisor: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/sg-katarina-petrovic.jpg',
+  directions: [
+    'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/SG_opsti-smer.jpg',
+    'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/SG_it-smer.jpg',
+    'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/SG_drustveno-jezicki-smer.jpg',
+    'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/SG_sportski-smer.jpg',
+  ],
+  benefits: [
+    'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/benefit-1.jpg',
+    'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/benefit-2.jpg',
+    'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/benefit-3.jpg',
+    'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/benefit-4.jpg',
+    'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/benefit-5.jpg',
+    'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/benefit-6.jpg',
+    'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/benefit-7.jpg',
+    'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/benefit-8.jpg',
+    'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/benefit-9.jpg',
+    'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/benefit-10.jpg',
+  ],
+  testimonialAvatars: [
+    'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/Nikola-Milosavljevic_testimonial-1.jpg',
+    'https://placehold.co/160x160/7a0f1a/ffffff?text=NP',
+    'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/Tatjana-kavazovic_testimonial-3.png',
+    'https://placehold.co/160x160/284379/ffffff?text=TP',
+    'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/Natasa-Katic_testimonial-5.jpg',
+  ],
+  testimonialVideos: [
+    'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2025/06/natasa-petkovic-sg-roditelj.png',
+    'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2025/06/Screenshot-2025-06-09-at-16.09.15.png',
+  ],
+}
+
+export const dataContent = {
+  slug: 'upis-je-otvoren-2',
+  name: 'Upis je otvoren | Savremena osnovna škola',
+  brandScope: 'SOS',
+  gtmId: 'GTM-TPSKNT5',
+  seo: {
+    title: 'Upis je otvoren za 2027/28. | Savremena osnovna škola',
+    description:
+      'Upis za školsku 2027/28. godinu u Savremenu osnovnu školu je otvoren. Obezbedite detetu mesto na vreme i najsavremenije Cambridge obrazovanje.',
+    ogImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/10/SOS_og_1200x628.jpg',
+  },
+  hero: {
+    homeUrl: '/upis-je-otvoren',
+    logoUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/SOS_log_color_white.svg',
+    ministryLogoUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/07/ministarstvo_prosvete_logo_color_white.png',
+    imageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/upis_je_otvoren_img_001.png',
+    mobileImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/hero_img_004_mobile.png',
+    studentLabel: 'Luna II-1',
+    shapeLeftUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/shape-left.svg',
+    shapeRightUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/shape-right_002.svg',
+    titlePrefix: 'UPIS ZA',
+    titleEmphasis: '2027/28.',
+    enrollmentYear: 'JE OTVOREN',
+    headline: 'Obrazovanje koje priprema vaše dete za svet koji se menja',
+    description: 'Savremena osnovna škola je stvarno drugačija Cambridge škola u kojoj učenici stiču znanje, samostalnost, samopouzdanje i veštine koje će im biti potrebne danas, ali i u budućnosti.',
+    conditions: 'Iskoristite najpovoljnije uslove na početku upisnog ciklusa i obezbedite svom detetu mesto na vreme.',
+    tuitionLabel: 'Školarina već od',
+    tuitionValue: '383 € mesečno',
+    highlights: 'Cambridge program • I–VIII razred • Savremene tehnologije • Individualni pristup',
+  },
+  emotionalTurn: {
+    title: 'Zašto roditelji biraju Savremenu?',
+    intro: 'Savremena nije škola u kojoj se znanje samo pamti i reprodukuje. To je okruženje u kojem deca istražuju, postavljaju pitanja, povezuju naučeno sa stvarnim svetom i razvijaju sposobnosti koje će im biti potrebne tokom daljeg školovanja i života.',
+    reasons: [
+      {
+        title: 'Cambridge obrazovanje',
+        text: 'Učenici imaju priliku da uče po međunarodno priznatom Cambridge programu i razvijaju akademsko znanje engleskog jezika od osnovne škole.',
+      },
+      {
+        title: 'Znanje koje se primenjuje',
+        text: 'Kroz projekte, eksperimente, problemske zadatke i praktičan rad učenici ne uče samo šta, već i zašto i kako.',
+      },
+      {
+        title: 'Tehnologija kao deo učenja',
+        text: 'Humanoidni robot Pepper, VR tehnologija, interaktivni sadržaji i STE(A)M aktivnosti pomažu učenicima da apstraktne pojmove razumeju kroz iskustvo.',
+      },
+      {
+        title: 'Dete u centru nastave',
+        text: 'Individualni pristup omogućava nastavnicima da prepoznaju potencijale, interesovanja i oblasti za razvoj svakog učenika.',
+      },
+    ],
+    ctaLabel: 'ŽELIM DA SAZNAM VIŠE O UPISU',
+  },
+  results: {
+    title: 'Rezultati koji govore više od obećanja',
+    featuredLabel: 'Najbolji takmičarski rezultati učenika Savremene do sada',
+    subtitle: 'U školskoj 2025/26. godini učenici su ostvarili najbolje takmičarske rezultate u istoriji škole.',
+    stats: [
+      { value: 95, label: 'osvojenih nagrada' },
+      { value: 32, label: 'plasmana na gradska takmičenja' },
+      { value: 12, label: 'plasmana na republička takmičenja' },
+    ],
+    closing: 'Od prirodnih nauka i jezika do robotike, veštačke inteligencije i sporta, učenici Savremene znanje umeju da primene kada je najvažnije.',
+    closingLead: 'Jer kvalitetno obrazovanje ne treba samo obećavati.',
+    closingStrong: 'Njegovi rezultati treba da se vide.',
+  },
+  specialConditions: {
+    eyebrow: 'Simbolika broja 9',
+    title: 'Da li ste znali zašto je broj 9 poseban?',
+    paragraphs: [
+      'Kao najveći jednocifreni broj, devet simbolizuje vrhunac, zaokružen uspeh i početak novog poglavlja. Upravo zato ove godine dobija posebno značenje za Savremenu gimnaziju: otvaranjem 9. odeljenja nastaje najbrojnija generacija u istoriji škole.',
+      'Devet odeljenja postaju simbol poverenja, kontinuiranog rasta i uspeha koji zajedno ispisuju novu stranicu istorije Savremene gimnazije.',
+    ],
+    ctaText: 'Prijavite se po povlašćenim cenama do 31. jula ili do popune mesta.',
+    imagePlaceholder: 'Prostor za sliku',
+    imageUrl: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/07/novo_odeljenje_img_700x470.png',
+  },
+  modernEducation: {
+    eyebrow: '',
+    title: 'U Savremenoj deca ne uče za svet kakav je bio. Pripremaju se za svet koji dolazi.',
+    text:
+      'Današnji osnovci odrastaće u svetu u kojem će tehnologija, veštačka inteligencija i nova zanimanja biti deo njihove svakodnevice.',
+    paragraphs: [
+      'Zato savremeno obrazovanje ne može da se zasniva samo na učenju činjenica.',
+    ],
+    skills: [
+      'kritičko razmišljanje i rešavanje problema',
+      'kreativnost i radoznalost',
+      'komunikaciju i timski rad',
+      'digitalne i tehnološke veštine',
+      'samostalnost i odgovornost',
+      'sigurnost u korišćenju engleskog jezika',
+      'sposobnost da znanje primene u novim situacijama',
+    ],
+    closing: 'To su veštine koje ostaju važne mnogo duže od jedne ocene ili kontrolnog zadatka.',
+    imagePlaceholder: 'Image placeholder',
+    imageUrl: placeholderImages.modernEducation,
+  },
+  pepper: {
+    eyebrow: '',
+    title: 'Upoznajte Peppera, drugačijeg člana Savremene',
+    subtitle: 'Kada tehnologija uđe u učionicu, učenje dobija potpuno novu dimenziju.',
+    paragraphs: [
+      {
+        text: 'Savremena je jedina škola koja u nastavi koristi pravog humanoidnog robota Peppera, koji prepoznaje ljudske emocije i pomaže učenicima da kroz zabavu usvajaju znanja iz STE(A)M predmeta.',
+        bold: 'Peppera',
+      },
+      'Ali tehnologija u Savremenoj nije cilj sama po sebi.',
+      {
+        text: 'Ona je alat koji učenicima omogućava da istražuju, eksperimentišu, vizualizuju složene pojmove i uče kroz iskustvo.',
+        bold: 'istražuju, eksperimentišu, vizualizuju složene pojmove i uče kroz iskustvo',
+      },
+      'Uz Peppera, VR tehnologiju, interaktivne sadržaje i digitalne alate, učionica postaje prostor u kojem deca žele da istražuju.',
+    ],
+    ctaLabel: 'ŽELIM DA UPOZNAM SAVREMENU',
+    imageUrl: placeholderImages.modernEducation,
+  },
+  individualApproach: {
+    title: 'Bezbedno i podsticajno okruženje za odrastanje',
+    paragraphs: [
+      { text: 'Kada birate osnovnu školu, ne birate samo obrazovni program.' },
+      { text: 'Birate i mesto na kojem će vaše dete provoditi veliki deo svog detinjstva.' },
+      { text: 'Zato su sigurnost, podrška, međusobno poštovanje i dobra komunikacija sa porodicom važan deo školskog iskustva.' },
+      { text: 'Cilj je da se učenici u školi osećaju sigurno, prihvaćeno i slobodno da razvijaju svoje potencijale, dok roditelji imaju pouzdanog partnera tokom važnih godina odrastanja svog deteta.', bold: 'sigurno, prihvaćeno i slobodno da razvijaju svoje potencijale' },
+    ],
+  },
+  individualPotential: {
+    title: 'Škola u kojoj se dete vidi kao pojedinac',
+    paragraphs: [
+      { text: 'Nisu sva deca dobra u istim stvarima. I ne treba da budu.' },
+      { text: 'Jedno dete će se pronaći u matematici, drugo u jezicima, treće u programiranju, sportu, umetnosti ili prirodnim naukama.' },
+      { text: 'Zadatak dobre škole nije da svu decu učini istom.' },
+      { text: 'Zadatak je da im pomogne da otkriju u čemu su dobra i razviju svoje potencijale.', bold: 'otkriju u čemu su dobra i razviju svoje potencijale' },
+      { text: 'Zato individualni pristup u Savremenoj podrazumeva praćenje napretka, podršku nastavnika i okruženje u kojem učenik može da postavlja pitanja, pokušava, pogreši, ponovo proba i napreduje.' },
+    ],
+    imagePlaceholder: 'Prostor za fotografiju učenika',
+  },
+  investment: {
+    title: 'Investicija u obrazovanje koje traje',
+    price: 'Školarina već od 383 € mesečno',
+    intro: 'Na početku upisnog ciklusa dostupni su ',
+    emphasis: 'najpovoljniji uslovi upisa za školsku 2027/28. godinu.',
+    followup: 'Ranija odluka znači mogućnost da na vreme obezbedite mesto svom detetu i iskoristite povoljnije finansijske uslove.',
+    benefitsTitle: 'Šta vaše dete dobija u Savremenoj?',
+    benefits: [
+      'savremeno obrazovanje prilagođeno novim generacijama',
+      'mogućnost izbora između različitih obrazovnih programa',
+      'Cambridge obrazovanje',
+      'individualni pristup učeniku',
+      'STE(A)M aktivnosti i praktično učenje',
+      'savremene obrazovne tehnologije',
+      'razvoj engleskog jezika',
+      'projekte i vannastavne aktivnosti',
+      'podsticajno okruženje za učenje i odrastanje',
+    ],
+    ctaLabel: 'PROVERITE TRENUTNE USLOVE UPISA',
+  },
+  enrollmentProcess: {
+    title: 'Kako izgleda proces upisa?',
+    steps: [
+      { title: 'Pošaljite upit', text: 'Popunite kratku formu i navedite razred koji će vaše dete pohađati.' },
+      { title: 'Razgovarajte sa Admissions savetnikom', text: 'Dobićete sve informacije o programima, školarini, dostupnosti mesta i uslovima upisa.' },
+      { title: 'Upoznajte Savremenu', text: 'Posetite školu, upoznajte prostor i saznajte kako izgleda svakodnevno iskustvo učenika.' },
+      { title: 'Obezbedite mesto svom detetu', text: 'Kada donesete odluku, Admissions tim vodi vas kroz naredne korake upisa.' },
+    ],
+  },
+  faq: {
+    title: 'Imate pitanja? Verovatno ih imaju i drugi roditelji.',
+    items: [
+      { question: 'Da li dete mora dobro da zna engleski?', answer: 'Nivo potrebnog znanja engleskog zavisi od izabranog programa i uzrasta učenika. Admissions tim može vam pomoći da procenite koja opcija najbolje odgovara vašem detetu.' },
+      { question: 'Koja je razlika između Nacionalnog, Kombinovanog i Cambridge programa?', answer: 'Programi se razlikuju prema nastavnom programu, jeziku izvođenja nastave i zastupljenosti Cambridge sadržaja. Tokom razgovora sa Admissions savetnikom možete detaljno upoznati svaku opciju.' },
+      { question: 'Da li dete može da pređe u Savremenu iz druge škole?', answer: 'Da. Mogućnost prelaska zavisi od razreda, programa i dostupnosti mesta.' },
+      { question: 'Možemo li da posetimo školu pre nego što donesemo odluku?', answer: 'Da. Upoznavanje škole i razgovor sa Admissions timom važan su deo procesa donošenja odluke.' },
+      { question: 'Da li slanje forme znači da smo upisali dete?', answer: 'Ne. Slanjem forme iskazujete interesovanje i omogućavate Admissions timu da vas kontaktira sa detaljnim informacijama. Konačnu odluku o upisu donosite nakon što dobijete sve potrebne informacije.' },
+    ],
+  },
+  enrollmentCta: {
+    title: 'Napravite prvi korak ka drugačijem obrazovanju',
+    introBefore: 'Upis za školsku ',
+    introStrong: '2027/28. godinu je otvoren',
+    introAfter: ', a najpovoljniji uslovi dostupni su na početku upisnog ciklusa.',
+    price: 'Školarina već od 383 € mesečno',
+    description: 'Popunite kratku formu i saznajte više o dostupnosti mesta, aktuelnim uslovima i obrazovanju koje vaše dete može da dobije u Savremenoj.',
+    note: 'Slanjem forme ne obavezujete se na upis. Admissions tim će vas kontaktirati kako biste dobili informacije o programima, dostupnosti mesta, školarini i procesu upisa.',
+  },
+  dayAtSchool: {
+    title: 'Kako izgleda jedan dan u Savremenoj?',
+    paragraphs: [
+      { text: 'Škola je mnogo više od časova.' },
+      { text: 'To je mesto na kojem vaše dete provodi veliki deo svog dana, stvara prijateljstva, otkriva nova interesovanja, uči da sarađuje i postaje sve samostalnije.' },
+      { text: 'Zato je svaki školski dan osmišljen tako da učenici imaju priliku da uče, istražuju, stvaraju, kreću se i druže.', bold: 'uče, istražuju, stvaraju, kreću se i druže' },
+      { text: 'Od interaktivnih časova i Cambridge aktivnosti, preko eksperimenata, projekata i sporta, do sekcija i druženja sa vršnjacima, cilj je da dete školu doživljava kao mesto na kojem želi da bude.' },
+      { text: 'Jer najbolji rezultati dolaze kada su deca radoznala, motivisana i uključena u ono što uče.', bold: 'radoznala, motivisana i uključena u ono što uče' },
+    ],
+  },
+  programChoice: {
+    eyebrow: '',
+    title: 'Tri programa. Jedan cilj: da vaše dete ostvari svoj potencijal.',
+    intro: 'Svako dete ima drugačija interesovanja, sposobnosti i planove. Zato u Savremenoj roditelji mogu da izaberu obrazovni put koji najbolje odgovara njihovom detetu.',
+    programs: [
+      {
+        title: 'Nacionalni program',
+        text: 'Nastava na srpskom jeziku po programu Ministarstva prosvete, obogaćena savremenim metodama rada, tehnologijom, projektima i dodatnim aktivnostima.',
+        fit: 'Za roditelje koji žele kvalitetan nacionalni program u potpuno drugačijem školskom okruženju.',
+      },
+      {
+        title: 'Kombinovani program',
+        text: 'Nacionalni program obogaćen elementima Cambridge obrazovanja i nastavom na srpskom i engleskom jeziku.',
+        fit: 'Za učenike koji žele da razvijaju znanje engleskog jezika paralelno sa redovnim školovanjem.',
+      },
+      {
+        title: 'Cambridge program',
+        text: 'Međunarodni obrazovni program sa nastavom na engleskom jeziku, usmeren na razumevanje, istraživanje, rešavanje problema i razvoj akademskih veština.',
+        fit: 'Za porodice koje žele internacionalno obrazovanje i snažnu osnovu za dalje školovanje u međunarodnom okruženju.',
+      },
+    ],
+    helpText: 'Niste sigurni koji program najbolje odgovara vašem detetu? Admissions savetnik može vam pomoći da upoznate razlike između programa i pronađete odgovarajući obrazovni put.',
+    ctaLabel: 'RAZGOVARAJTE SA SAVETNIKOM ZA UPIS',
+  },
+  benefits: {
+    eyebrow: 'Stvarno drugačija',
+    title: 'Zašto Savremena osnovna škola?',
+    text: 'Savremena učenicima pruža znanje, podršku, tehnologiju, zdravo okruženje i prostor da razviju svoje mogućnosti.',
+  },
+  specialOffer: {
+    eyebrow: 'Važan korak ka budućnosti',
+    title: 'Iskoristite priliku da obezbedite mesto u Savremenoj osnovnoj školi',
+  },
+  enrollmentHelp: {
+    title: 'Imate pitanja ili vam je potrebna pomoć oko upisa u osnovnu školu?',
+    introBeforeName: 'Naša ljubazna i stručna savetnica za upis,',
+    advisorName: 'Katarina Petrović',
+    introAfterName:
+      'tu je da vam pruži sve potrebne informacije, razjasni nedoumice i pomogne da donesete najbolju odluku za budućnost vašeg deteta.',
+    emphasis: 'Ne čekajte - obezbedite svom detetu školovanje koje zaista pravi razliku.',
+    prompt: 'Pozovite nas još danas i započnite svoje Savremeno iskustvo:',
+    phonePrimary: '011/40-11-222',
+    phoneSecondary: '062/191-80-56',
+    viberLabel: 'Viber',
+    whatsappLabel: 'WhatsApp',
+    contactSuffix: 'ili popunite prijavu, a mi ćemo vas pozvati.',
+    closing: 'Uspešna akademska budućnost vašeg deteta počinje jednim pozivom!',
+    advisorInitials: 'KP',
+    advisorImageUrl: placeholderImages.advisor,
+  },
+  leadForm: {
+    namePlaceholder: 'Ime i prezime',
+    nameLabel: 'Ime i prezime roditelja ili staratelja',
+    emailPlaceholder: 'E-mail',
+    emailLabel: 'E-mail adresa',
+    countryCodeLabel: 'Pozivni broj države',
+    areaCodePlaceholder: '64',
+    areaCodeLabel: 'Pozivni broj',
+    phonePlaceholder: '1234567',
+    phoneLabel: 'Telefon',
+    childAgePlaceholder: 'Uzrast deteta',
+    childAgeLabel: 'Uzrast deteta',
+    childAgeMin: 6,
+    childAgeMax: 15,
+    institution: 'sos',
+    formName: 'Upis je otvoren – SOS',
+    submitLabel: 'Prijavite se',
+    successTitle: 'Prijava je poslata',
+    successMessage: 'Hvala vam. Naš tim će vas uskoro kontaktirati sa informacijama o upisu.',
+    errorMessage: 'Prijava trenutno ne može da se pošalje. Pokušajte ponovo ili nas pozovite.',
+  },
+  testimonials: {
+    eyebrow: 'Iskustva učenika i roditelja',
+    title: 'Mi smo zaista imali samo predivna iskustva u Savremenoj.',
+    text: '',
+  },
+  footer: {
+    addressLine1: 'Bulevar heroja sa Košara 17,',
+    addressLine2: 'Novi Beograd',
+    phone: '+381 (0)11 4011 222',
+    officeEmail: 'office@savremena-osnovna.edu.rs',
+    enrollmentEmail: 'upis@savremena-osnovna.edu.rs',
+  },
+}
+
+export const educationHighlights = [
+  {
+    title: 'Jedinstven i kreativan način rada',
+    text: 'Nastava je interaktivna, zanimljiva i usmerena na razumevanje. Profesori pronalaze različite načine da učenicima približe gradivo i pomognu im da ga primene.',
+  },
+  {
+    title: 'Mentorski pristup',
+    text: 'Učenici imaju podršku profesora koji prate njihov rad, prepoznaju njihove potrebe i pomažu im da razvijaju sigurnost i odgovornost.',
+  },
+  {
+    title: 'Rad u malim grupama',
+    text: 'Manje grupe omogućavaju bolju komunikaciju, više pažnje i veći prostor da svaki učenik bude uključen u nastavu.',
+  },
+  {
+    title: 'Future-ready school',
+    text: 'Savremena priprema učenike za svet koji se menja kroz digitalne alate, praktično znanje, kreativnost, komunikaciju i kritičko mišljenje.',
+  },
+]
+
+export const directions = [
+  {
+    title: 'Sportski smer – Šampionski razvoj',
+    tag: 'Champion Pathway™',
+    details: 'Sports & Performance Development',
+    text: 'Za učenike koji žele dodatno da razvijaju disciplinu, timski duh i sportski potencijal. Dodatni treninzi, sportske radionice, kampovi i takmičenja podstiču koordinaciju, snagu, mentalnu otpornost, zdrave navike i liderstvo kroz sport.',
+    imageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/02/sport.jpg',
+  },
+  {
+    title: 'IT & AI smer – Digitalni umovi budućnosti',
+    tag: 'FutureTech Pathway™',
+    details: 'IT, Coding & AI Exploration',
+    text: 'Za decu koja ne žele samo da koriste tehnologiju, već da je razumeju i stvaraju. Programiranje, digitalna logika, AI projekti prilagođeni uzrastu, robotika i STEM izazovi razvijaju veštine budućnosti od najranijih godina.',
+    imageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/02/it.jpg',
+  },
+  {
+    title: 'Creative Arts smer – Studio ideja i stvaralaštva',
+    tag: 'Creative Studio Pathway™',
+    details: 'Art, Design & Expression',
+    text: 'Za učenike koji svet vide kroz boje, ideje i kreativno stvaranje. Likovna umetnost, dizajn, multimedija, kreativni projekti i izložbe razvijaju maštu, estetiku, samopouzdanje i umetnost kao alat razmišljanja.',
+    imageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/02/art.jpg',
+  },
+  {
+    title: 'Language & Global Skills smer – Jezici bez granica',
+    tag: 'Global Language Pathway™',
+    details: 'Languages, Cambridge & Communication',
+    text: 'Za učenike koji žele da govore svetu – jasno, prirodno i samouvereno. Napredni engleski, dodatni jezici, međunarodni projekti, komunikacione veštine i global mindset pripremaju dete za Cambridge putanju i dalje školovanje.',
+    imageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/02/language.jpg',
+  },
+]
+
+export const programs = [
+  {
+    title: 'Nacionalni program',
+    text: 'Kvalitetno gimnazijsko obrazovanje po domaćem nastavnom planu i programu, uz savremene metode rada, podršku nastavnika i podsticajno okruženje.',
+  },
+  {
+    title: 'Kombinovani Cambridge program',
+    text: 'Spoj domaćeg plana i dodatnih Cambridge predmeta na engleskom jeziku, za šire akademske mogućnosti i pripremu za studije u zemlji ili inostranstvu.',
+  },
+]
+
+export const benefits = [
+  { title: 'Podsticajno okruženje za učenje', text: 'Sigurna i inspirativna sredina koja podstiče kreativnost, samopouzdanje i uspeh.', imageUrl: placeholderImages.benefits[0] },
+  { title: 'Interaktivne metode nastave', text: 'Učenje kroz projekte, simulacije i praktične primere razvija kod dece kritičko razmišljanje, kreativnost i veštine rešavanja problema.', imageUrl: placeholderImages.benefits[1] },
+  { title: 'Posvećenost svakom učeniku', text: 'Nastavnici pristupaju učenicima sa pažnjom, energijom i razumevanjem.', imageUrl: placeholderImages.benefits[2] },
+  { title: 'Nastavnici sa velikim iskustvom', text: 'Nastavnici koriste savremene metode rada i kontinuirano unapređuju pristup nastavi.', imageUrl: placeholderImages.benefits[3] },
+  { title: 'Otvorena vrata za nastavak školovanja', text: 'Znanja i veštine stečeni u Savremenoj predstavljaju dragocenu ulaznicu za najuglednije škole širom sveta.', imageUrl: placeholderImages.benefits[4] },
+  { title: 'Savremena tehnologija u nastavi', text: 'Računari, tableti, interaktivne table, e-Learning i digitalni alati čine učenje aktivnijim.', imageUrl: placeholderImages.benefits[5] },
+  { title: 'Zanimljivi multidisciplinarni časovi', text: 'Učenje kroz projekte, timski rad, izazove i povezivanje različitih oblasti znanja.', imageUrl: placeholderImages.benefits[6] },
+  { title: 'Nastava na srpskom i/ili engleskom jeziku', text: 'Nacionalni program na srpskom ili Kombinovani program sa Cambridge predmetima na engleskom.', imageUrl: placeholderImages.benefits[7] },
+  { title: 'Razvoj životnih veština', text: 'Life skills program razvija samostalnost, komunikaciju, odgovornost i praktične veštine.', imageUrl: placeholderImages.benefits[8] },
+  { title: 'Partnerstvo sa roditeljima', text: 'Škola gradi aktivan odnos sa porodicom i jasno komunicira napredak i potrebe učenika.', imageUrl: placeholderImages.benefits[9] },
+]
+
+export const testimonials = [
+  {
+    title: 'Naša Ana je potpuno procvetala, Savremena je nešto najbolje što trenutno imamo u Srbiji',
+    text: 'Savremena je prva klasa i nešto najbolje što trenutno imamo u Srbiji. Vrlo smo zadovoljni školom, uslovima, tretmanom, pristupom… Vredi svaki dinar uložen u ovu školu i nikad pametnije nisam uložila novac. Naša Ana je potpuno procvetala u školi i to svi primećuju, a neke stvari u životu nemaju cenu.',
+    author: 'Lidija Milanović',
+    role: 'roditelj',
+    initials: 'LM',
+    avatarImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2018/11/Lidija-Milanović-SG-mama...-1.png',
+    variant: 'text',
+  },
+  {
+    title: 'Kao roditelj sam stvarno presrećna i zahvalna',
+    text: '',
+    author: 'Dragana Ponjević',
+    role: 'roditelj',
+    initials: 'DP',
+    videoImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/testimonial_video_1.jpg',
+    videoEmbedUrl: 'https://www.youtube.com/embed/Vepxckbfqx0?start=34',
+    variant: 'video',
+  },
+  {
+    title: 'Preporuka bez razmišljanja – Savremena je jedini izbor!',
+    text: 'Mi smo zaista imali samo predivna iskustva u Savremenoj. Nije uopšte postojala kao opcija nešto drugo. Moje dete je prezadovoljno, mi smo kao roditelji prezadovoljni. Svim prijateljima sam je preporučila i uvek imam samo reči hvale za Savremenu.',
+    author: 'Ivana Stamenković',
+    role: 'roditelj',
+    initials: 'IS',
+    avatarImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/ivana_stamenkovic.png',
+    variant: 'text',
+  },
+  {
+    title: 'Ovu školu od drugih škola izdvaja futuristički pristup nastavi',
+    text: 'Svideli su mi se ceo koncept škole i način rada. Savremena je maksimalno podržala moja interesovanja tokom sve cetiri godine.',
+    author: 'Savremena osnovna škola',
+    role: ' ',
+    initials: 'TP',
+    videoImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/testimonial_video_2.jpg',
+    hideAttribution: false,
+    videoEmbedUrl: 'https://www.youtube.com/embed/KK2d5x3oZDk',
+    variant: 'video',
+  },
+  {
+    title: 'Škola koja opravdava svoje ime',
+    text: 'Sam naziv škole govori mnogo toga. Ova škola zaista jeste za savremenu decu i savremene roditelje. Apsolutno sam za sve moderne pristupe učenju, tako da je ova škola po mojim i nekim opštim kriterijumima zaista savršena za našu decu.',
+    author: 'Bojana Lazić',
+    role: 'roditelj',
+    initials: 'BL',
+    avatarImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/bojana_lazic.png',
+    variant: 'text',
+  },
+]
+
+export const defaultDataContent = {
+  ...dataContent,
+  educationHighlights,
+  directionCards: directions,
+  benefitCards: benefits,
+  testimonialCards: testimonials,
+}
