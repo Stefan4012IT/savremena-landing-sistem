@@ -23,6 +23,22 @@ export const defaultDataContent = {
     copyLowest: 'najnižim',
     copyAfter: ' cenama.',
   },
+  emotionalTurn: {
+    ...baseDataContent.emotionalTurn,
+    eyebrow: '',
+    title: 'Upis je počeo – obezbedite mesto na vreme!',
+    text: '',
+    paragraphs: [
+      'Upis u International School je počeo, a sada je pravi trenutak da svom detetu obezbedite mesto za narednu školsku godinu.',
+      'Upravo sada je idealan trenutak da upoznate program i sve prednosti International School, kao i da na vreme svom detetu obezbedite mesto u željenom razredu.',
+      'Broj mesta je ograničen, zato preporučujemo da prijavu ne odlažete.',
+    ],
+    processTitle: 'Kako izgleda proces upisa?',
+    processText:
+      'Dovoljno je da se prijavite online ili nas pozovete na 011/40-11-220. Konsultanti za upis će vam predstaviti program, odgovoriti na sva pitanja i pomoći vam tokom celog procesa.',
+    processPhone: '011/40-11-220',
+    ctaText: 'Započnite upis već danas i obezbedite svom detetu mesto u International School.',
+  },
   leadForm: {
     ...baseDataContent.leadForm,
     formName: 'enrollment-is-open - is - sr',
