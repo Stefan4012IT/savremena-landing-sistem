@@ -122,7 +122,7 @@ export const landingData = {
   },
   skillsInPractice: {
     eyebrow: 'Učenje u praksi',
-    title: 'Kako International School razvija veštine budućnosti',
+    title: 'Kako International School razvija veštine budućnosti?',
     intro: 'U International School učenje se ne svodi na pamćenje informacija. Cambridge predmeti, Global Perspectives, STEAM aktivnosti, debate i učeničke inicijative omogućavaju učenicima da preispituju ideje, sarađuju i primenjuju naučeno.',
     items: [
       { title: 'Ne učimo ih šta da misle. Učimo ih kako da razmišljaju.', category: 'Kritičko mišljenje i argumentacija', text: 'Kroz Cambridge Global Perspectives i debate učenici razmatraju različite perspektive, procenjuju dokaze i uče da argumentovano zastupaju stavove, uz uvažavanje tuđih mišljenja.', linkLabel: 'Upoznajte Global Perspectives', href: '#prijava' },

@@ -25,7 +25,7 @@ const awardLogos = [
   {
     src: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/5_awwward_glob_smart_edu.jpg',
     alt: 'Global Smart Education award',
-    label: 'Najbolji na svetu: Innovation and AI price',
+    label: 'Najbolji na svetu: Innovation and AI prize',
   },
   {
     src: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/6_XXI_century.jpg',
