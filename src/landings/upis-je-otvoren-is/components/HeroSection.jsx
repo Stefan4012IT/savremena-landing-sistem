@@ -62,7 +62,7 @@ export function HeroSection() {
           <LeadForm
             className="upis-je-otvoren-is-lead-form--hero"
             headerTitle={isEnglish ? 'APPLY NOW' : 'PRIJAVITE SE'}
-            headerText={isEnglish ? 'There is still time to give your child an exceptional international education.' : 'Još uvek imate priliku da svom detetu obezbedite najsavremenije obrazovanje u regionu.'}
+            headerText={isEnglish ? 'Give your child the most modern education in the region.' : 'Obezbedite svom detetu najsavremenije obrazovanje u regionu.'}
           />
         </div>
       </div>

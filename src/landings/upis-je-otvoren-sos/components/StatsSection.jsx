@@ -3,10 +3,10 @@ import birdDecoration from '../assets/ptica_001.svg'
 
 const stats = [
   { value: 97, suffix: '%', label: 'zadovoljnih učenika i roditelja' },
-  { value: 230, prefix: '+', label: 'medalja, nagrada i priznanja' },
+  { value: 230, suffix: '+', label: 'medalja, nagrada i priznanja' },
   { value: 94, suffix: '%', label: 'učenika upisuje prvi željeni fakultet' },
   { value: 15, suffix: '+', label: 'godina iskustva' },
-  { value: 3000, prefix: '+', label: 'uspešnih učenika' },
+  { value: 3000, suffix: '+', label: 'uspešnih učenika' },
   { value: 30, suffix: '+', label: 'najboljih Cambridge studenta na svetu' },
 ]
 
