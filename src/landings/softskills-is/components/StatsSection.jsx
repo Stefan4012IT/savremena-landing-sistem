@@ -3,19 +3,19 @@ import { useLandingData } from '../useLandingData'
 
 const stats = [
   { value: 97, suffix: '%', label: 'zadovoljnih učenika i roditelja' },
-  { value: 230, prefix: '+', label: 'medalja, nagrada i priznanja' },
+  { value: 230, suffix: '+', label: 'medalja, nagrada i priznanja' },
   { value: 94, suffix: '%', label: 'učenika upisuje prvi željeni fakultet' },
   { value: 15, suffix: '+', label: 'godina postojanja' },
-  { value: 3000, prefix: '+', label: 'uspešnih učenika' },
+  { value: 3000, suffix: '+', label: 'uspešnih učenika' },
   { value: 30, suffix: '+', label: 'najboljih Cambridge studenta na svetu' },
 ]
 
 const englishStats = [
   { value: 97, suffix: '%', label: 'satisfied students and parents' },
-  { value: 230, prefix: '+', label: 'medals, awards and recognitions' },
+  { value: 230, suffix: '+', label: 'medals, awards and recognitions' },
   { value: 94, suffix: '%', label: 'students enrol in their first-choice university' },
   { value: 15, suffix: '+', label: 'years of excellence' },
-  { value: 3000, prefix: '+', label: 'successful students' },
+  { value: 3000, suffix: '+', label: 'successful students' },
   { value: 30, suffix: '+', label: 'Cambridge students at the world’s best universities' },
 ]
 
@@ -48,7 +48,6 @@ function AnimatedStat({ stat, shouldAnimate }) {
   return (
     <article className="softskills-is-stats-section__item">
       <p className="softskills-is-stats-section__value">
-        {stat.prefix}
         {displayValue}
         {stat.suffix}
       </p>

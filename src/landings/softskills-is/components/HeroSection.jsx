@@ -1,10 +1,11 @@
 import cambridgeLogo from '../../upis-je-otvoren-is/assets/logos/cambridge-logo-white.png'
+import './hero-softskills.scss'
 import { LeadForm } from './LeadForm'
 import { useLandingData } from '../useLandingData'
 
 const heroImageLeftUrl = 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_enrollment_is_open_img_left_001.png'
 const heroImageRightUrl = 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_enrollment_is_open_img_right_001.png'
-const heroImageMobileUrl = 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_enrollment_is_open_img_mob.png'
+const heroImageMobileUrl = heroImageRightUrl
 
 export function HeroSection() {
   const { hero, locale = 'sr' } = useLandingData()
@@ -18,7 +19,7 @@ export function HeroSection() {
   return (
     <section
       className="softskills-is-hero"
-      data-hero-version="jos-nije-kasno-za-bolju-skolu"
+      data-hero-version="soft-skills"
     >
       <header className="softskills-is-hero__header" aria-label={isEnglish ? 'Main navigation' : 'Glavna navigacija'}>
         <a className="softskills-is-hero__logo" href={homeHref} aria-label={isEnglish ? 'Home' : 'Početna'}>
@@ -40,20 +41,15 @@ export function HeroSection() {
       </div>
       <div className="softskills-is-hero__inner">
         <div className="softskills-is-hero__content" aria-label="Uvod u landing">
-          <h1 className="softskills-is-hero__title">
-            <span className="softskills-is-hero__title-line">{hero.titleFirstLine}</span>
-            <span className="softskills-is-hero__title-line">{hero.titleSecondLine}</span>
-            <span className="softskills-is-hero__title-emphasis">{hero.titleEmphasis}</span>
-          </h1>
+          <h1 className="softskills-is-hero__title">{hero.title}</h1>
+          <h2 className="softskills-is-hero__subtitle">{hero.subtitle}</h2>
           <div className="softskills-is-hero__copy">
-            <p className="softskills-is-hero__lead">
-              {hero.copyBefore}
-              <span className="softskills-is-hero__lead-highlight">{hero.copyCambridge}</span>
-              {hero.copyBetween}
-              <span className="softskills-is-hero__lead-highlight">{hero.copyLowest}</span>
-              {hero.copyAfter}
-            </p>
+            {hero.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           </div>
+          <ul className="softskills-is-hero__skills">
+            {hero.skills.map((skill) => <li key={skill}>{skill}</li>)}
+          </ul>
+          <p className="softskills-is-hero__closing">{hero.closing}</p>
         </div>
         <div className="softskills-is-hero__mobile-visual" aria-hidden="true">
           <img src={heroImageMobileUrl} alt="" />

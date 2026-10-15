@@ -215,3 +215,14 @@
     font-size: 22px;
   }
 }
+
+.softskills-is-landing p[class*="__eyebrow"],
+.softskills-is-landing p[class*="__ribbon"] {
+  margin-bottom: 12px;
+  font-family: var(--is-font-heading);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.1;
+  text-transform: uppercase;
+}

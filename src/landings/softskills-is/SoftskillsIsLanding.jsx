@@ -1,6 +1,8 @@
+import './styles/_future-skills.scss'
 import { HeroSection } from './components/HeroSection'
-import { EmotionalTurnSection } from './components/EmotionalTurnSection'
-import { ModernEducationSection } from './components/ModernEducationSection'
+import { FutureSkillsSection } from './components/FutureSkillsSection'
+import { SkillsInPracticeSection } from './components/SkillsInPracticeSection'
+import { EnrollmentCtaSection } from './components/EnrollmentCtaSection'
 import { PartnerLogosSection } from './components/PartnerLogosSection'
 import { SchoolStageSection } from './components/SchoolStageSection'
 import { CollegePromoSection } from './components/CollegePromoSection'
@@ -17,17 +19,18 @@ export function SoftskillsIsLanding({ data }) {
     <LandingDataProvider value={data}>
       <main className="softskills-is-root softskills-is-landing">
         <HeroSection />
-        <EmotionalTurnSection />
+        <FutureSkillsSection />
+        <SkillsInPracticeSection />
         <StatsSection />
-        <ModernEducationSection />
         <PartnerLogosSection />
         <SchoolStageSection stage="primary" />
         <SchoolStageSection stage="secondary" />
         <CollegePromoSection />
         <SpecialOfferSection />
         <BenefitsSection />
-        <EnrollmentHelpSection />
+        <EnrollmentCtaSection />
         <TestimonialsSection />
+        <EnrollmentHelpSection />
         <FinalCTASection />
       </main>
     </LandingDataProvider>

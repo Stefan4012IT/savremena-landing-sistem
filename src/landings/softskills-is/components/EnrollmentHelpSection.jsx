@@ -1,4 +1,3 @@
-import { LeadForm } from './LeadForm'
 import { useLandingData } from '../useLandingData'
 
 function ViberIcon() {
@@ -64,7 +63,6 @@ export function EnrollmentHelpSection() {
             </div>
           </div>
         </div>
-        <LeadForm className="softskills-is-lead-form--enrollment" />
       </div>
     </section>
   )

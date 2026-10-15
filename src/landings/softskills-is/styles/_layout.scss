@@ -12,7 +12,7 @@
   padding: clamp(56px, 6vw, 96px) 0;
 }
 
-.softskills-is-landing-section + .softskills-is-landing-section:not(.softskills-is-special-conditions, .softskills-is-modern-education, .softskills-is-stats-section, .softskills-is-benefits-section, .softskills-is-special-offer, .softskills-is-enrollment-help) {
+.softskills-is-landing-section + .softskills-is-landing-section:not(.softskills-is-special-conditions, .softskills-is-modern-education, .softskills-is-stats-section, .softskills-is-benefits-section, .softskills-is-special-offer, .softskills-is-enrollment-help, .softskills-is-future-skills) {
   padding-top: 0;
 }
 
@@ -75,7 +75,7 @@
     padding-block: 48px;
   }
 
-  .softskills-is-landing-section + .softskills-is-landing-section:not(.softskills-is-special-conditions, .softskills-is-modern-education, .softskills-is-stats-section, .softskills-is-benefits-section, .softskills-is-special-offer, .softskills-is-enrollment-help) {
+  .softskills-is-landing-section + .softskills-is-landing-section:not(.softskills-is-special-conditions, .softskills-is-modern-education, .softskills-is-stats-section, .softskills-is-benefits-section, .softskills-is-special-offer, .softskills-is-enrollment-help, .softskills-is-future-skills) {
     padding-top: 0;
   }
 }

@@ -6,9 +6,9 @@ export const landingData = {
   brandScope: 'SOS+SG',
   gtmId: 'GTM-PDD7NJ3',
   seo: {
-    title: 'Upis 2026/27: još malo slobodnih mesta | Savremena',
+    title: 'Soft skills za budućnost | Savremena osnovna škola i gimnazija',
     description:
-      'Upis za školsku 2026/27. godinu je pri kraju. Proverite preostala slobodna mesta u Savremenoj osnovnoj školi i Savremenoj gimnaziji i prijavite dete na vreme.',
+      'Savremena osnovna škola i gimnazija razvijaju kritičko mišljenje, kreativnost, emocionalnu inteligenciju i druge veštine važne za budućnost.',
     ogImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/08/malo_mesta_og_1200x628.jpg',
   },
   hero: {
