@@ -38,7 +38,7 @@ export const landingData = {
   brandScope: 'IS',
   gtmId: 'GTM-P36T5K6',
   seo: {
-    title: 'Iskoristite poslednju šansu za upis u International School | 2027/28',
+    title: 'Iskoristite poslednju šansu za upis u International School | 2027/28.',
     description:
       'Iskoristite poslednju šansu za upis u International School. Cambridge obrazovanje na engleskom jeziku, međunarodno okruženje i siguran put ka budućnosti vašeg deteta.',
     ogImageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_nije_kasno_za_bolju_skolu_1200x628.jpg',
@@ -134,10 +134,10 @@ export const landingData = {
     ],
   },
   enrollmentCta: {
-    eyebrow: 'Upis za 2027/28',
+    eyebrow: 'Upis za 2027/28.',
     title: 'Uspešna budućnost vašeg deteta počinje pravim izborom danas.',
     text: 'International School povezuje Cambridge obrazovanje sa razvojem samostalnosti, kritičkog mišljenja, kreativnosti i samopouzdanja potrebnog da se znanje primeni u praksi.',
-    formTitle: 'Upis za 2027/28',
+    formTitle: 'Upis za 2027/28.',
     formText: 'Upoznajte školu, nastavni program i korake za upis. Za informacije o raspoloživim mestima, školarini i uslovima ranog upisa kontaktirajte upisni tim.',
     ctaLabel: 'Upoznajte International School',
     signature: 'International School. Više od znanja.',
