@@ -1,0 +1,217 @@
+@use './layout';
+@use './hero';
+@use './sections';
+@use './cards';
+@use './form';
+
+.softskills-is-landing {
+  --sos-yellow: #354180;
+  --is-yellow: #f7b815;
+  --sos-red: #9d1516;
+  --sos-blue: #2b446b;
+  --sos-green: #427042;
+  --sos-ink: #07080c;
+  --is-font-heading: 'Khand', ui-sans-serif, system-ui, sans-serif;
+  --is-font-body: 'Saira', ui-sans-serif, system-ui, sans-serif;
+  --color-blue: var(--sos-blue);
+  --color-primary: #07080c;
+  --color-primary-dark: #07080c;
+  --color-red: var(--sos-red);
+  --color-yellow: var(--sos-yellow);
+  --color-green: var(--sos-green);
+  --gradient-brand: var(--sos-yellow);
+  --softskills-is-landing-container-max: 1600px;
+  --softskills-is-landing-container-padding: clamp(20px, 4vw, 64px);
+  font-family: var(--is-font-body);
+}
+
+.softskills-is-landing {
+  p,
+  li,
+  a,
+  input,
+  select,
+  button {
+    font-family: var(--is-font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--is-font-heading);
+    font-weight: 700;
+  }
+
+  .softskills-is-section-header__eyebrow,
+  .softskills-is-special-offer__eyebrow {
+    font-family: var(--is-font-heading);
+    font-weight: 600;
+  }
+
+  .softskills-is-special-conditions,
+  .softskills-is-testimonial-card {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .softskills-is-info-card__profile,
+  .softskills-is-benefit-card__image,
+  .softskills-is-modern-education__image-placeholder,
+  .softskills-is-enrollment-help__advisor-photo {
+    background: var(--sos-yellow);
+    background-image: none;
+  }
+
+  .softskills-is-testimonial-card__video,
+  .softskills-is-testimonial-card__avatar {
+    background: var(--sos-yellow);
+  }
+
+  .softskills-is-special-conditions h2,
+  .softskills-is-special-conditions p,
+  .softskills-is-special-conditions li,
+  .softskills-is-special-conditions a,
+  .softskills-is-special-conditions__visual span,
+  .softskills-is-testimonial-card h3,
+  .softskills-is-testimonial-card p,
+  .softskills-is-testimonial-card__video-person,
+  .softskills-is-testimonial-card__avatar span {
+    color: #ffffff;
+  }
+
+  .softskills-is-testimonial-card__body {
+    background: var(--sos-yellow);
+    color: #ffffff;
+  }
+
+  .softskills-is-testimonial-card__body h3,
+  .softskills-is-testimonial-card__body p {
+    color: #ffffff;
+  }
+
+  .softskills-is-scholarship-offer__ribbon {
+    background: var(--sos-yellow);
+    color: #ffffff;
+  }
+
+  .softskills-is-special-offer {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .softskills-is-special-offer__eyebrow,
+  .softskills-is-special-offer h2 {
+    color: #ffffff;
+  }
+
+  .softskills-is-special-offer .softskills-is-landing-link--light {
+    border-color: var(--sos-red);
+    background: var(--sos-red);
+    color: #ffffff;
+  }
+
+  .softskills-is-info-card--direction {
+    background: var(--sos-yellow);
+    color: #ffffff;
+  }
+
+  .softskills-is-info-card--direction .softskills-is-info-card__title,
+  .softskills-is-info-card--direction .softskills-is-info-card__text {
+    color: #ffffff;
+  }
+
+  .softskills-is-info-card--direction .softskills-is-info-card__tag,
+  .softskills-is-info-card--direction .softskills-is-info-card__details {
+    color: var(--is-yellow);
+  }
+
+  .softskills-is-info-card--direction .softskills-is-info-card__profile span {
+    color: #ffffff;
+  }
+
+  .softskills-is-program-choice .softskills-is-landing-link {
+    border-color: var(--sos-red);
+    background: var(--sos-red);
+    color: #ffffff;
+  }
+
+  .softskills-is-testimonial-card,
+  .softskills-is-info-card--direction,
+  .softskills-is-program-choice__logo-card,
+  .softskills-is-benefit-card {
+    box-shadow: none;
+  }
+
+  .softskills-is-testimonial-card {
+    border: 1px solid var(--sos-yellow);
+  }
+
+  .softskills-is-stats-section {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .softskills-is-stats-section__value,
+  .softskills-is-stats-section__label {
+    color: #ffffff;
+  }
+
+  .softskills-is-landing-footer {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .softskills-is-landing-footer__contact,
+  .softskills-is-landing-footer__contact span,
+  .softskills-is-landing-footer__contact a {
+    color: #ffffff;
+  }
+
+  .softskills-is-special-conditions__visual {
+    border-color: rgba(7, 8, 12, 0.28);
+    background: rgba(7, 8, 12, 0.08);
+  }
+
+  .softskills-is-testimonial-card__play {
+    background: var(--sos-red);
+  }
+
+  .softskills-is-testimonial-card__play::after {
+    border-color: rgba(157, 21, 22, 0.34);
+  }
+
+  .softskills-is-testimonial-card__play svg {
+    fill: #ffffff;
+  }
+
+  .softskills-is-section-header__title,
+  .softskills-is-scholarship-offer__headline h2,
+  .softskills-is-program-choice__content h2,
+  .softskills-is-enrollment-help h2,
+  .softskills-is-benefit-card h3,
+  .softskills-is-scholarship-offer__process-title,
+  .softskills-is-testimonial-card__footer strong,
+  .softskills-is-testimonial-card__footer > div:last-child > span {
+    color: #354180;
+  }
+
+  .softskills-is-section-header__eyebrow,
+  .softskills-is-special-offer__eyebrow,
+  .softskills-is-college-promo__eyebrow,
+  .softskills-is-school-stage__eyebrow {
+    margin-bottom: 12px;
+    font-size: 22px;
+  }
+
+  .softskills-is-school-stage__content p.softskills-is-school-stage__eyebrow {
+    margin-bottom: 12px;
+    font-size: 22px;
+  }
+}

@@ -10,10 +10,13 @@ import { defaultDataContent as upisJeOtvorenSos } from '../src/landings/upis-je-
 import { defaultDataContent as upisJeOtvorenSg } from '../src/landings/upis-je-otvoren-sg/dataContent.js'
 import { defaultDataContent as upisJeOtvorenIs } from '../src/landings/upis-je-otvoren-is/dataContent.js'
 import { defaultDataContent as upisJeOtvorenIsSerbian } from '../src/landings/upis-je-otvoren-is/dataContent.sr.js'
+import { defaultDataContent as softskillsIs } from '../src/landings/softskills-is/dataContent.js'
+import { defaultDataContent as softskillsIsSerbian } from '../src/landings/softskills-is/dataContent.sr.js'
 import { defaultLandingData as whyWait } from '../src/landings/nije-kasno-za-bolju-skolu-is/landingContent.js'
 import { defaultLandingData as whyWaitEnglish } from '../src/landings/nije-kasno-za-bolju-skolu-is/landingContent.en.js'
 import { defaultLandingData as novoOdeljenje } from '../src/landings/novo-odeljenje/landingContent.js'
 import { defaultLandingData as maloMesta } from '../src/landings/malo-mesta/landingContent.js'
+import { defaultLandingData as softskillsSosSg } from '../src/landings/softskills-sos-sg/landingContent.js'
 
 const distDirectory = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', 'dist')
 const templatePath = path.join(distDirectory, 'index.html')
@@ -28,10 +31,13 @@ const landingData = [
   upisJeOtvorenSg,
   upisJeOtvorenIs,
   upisJeOtvorenIsSerbian,
+  softskillsIs,
+  softskillsIsSerbian,
   whyWait,
   whyWaitEnglish,
   novoOdeljenje,
   maloMesta,
+  softskillsSosSg,
 ]
 
 const institutionNames = {

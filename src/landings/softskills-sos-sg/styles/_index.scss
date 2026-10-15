@@ -1,0 +1,68 @@
+@use './hero';
+@use './future-skills';
+@use './skills-practice';
+@use './available-seats';
+@use './form';
+@use './partners';
+@use './program-choice';
+@use './stats';
+@use './benefits';
+@use './enrollment-cta';
+@use './testimonials';
+@use './enrollment-help';
+@use './footer';
+
+@media (min-width: 981px) {
+  .landing--softskills-sos-sg > .softskills-sos-sg-partner-logos:not(.softskills-sos-sg-hero):not(.softskills-sos-sg-footer) {
+    padding-bottom: 96px;
+  }
+
+  .landing--softskills-sos-sg > .softskills-sos-sg-future-skills {
+    padding-bottom: 96px;
+  }
+
+  .landing--softskills-sos-sg > .softskills-sos-sg-benefits {
+    padding-block: 96px;
+  }
+
+  .landing--softskills-sos-sg > .softskills-sos-sg-enrollment-cta {
+    padding-block: 96px;
+  }
+
+  .landing--softskills-sos-sg > .softskills-sos-sg-enrollment-help {
+    padding-top: 0;
+    padding-bottom: 96px;
+  }
+
+  .landing--softskills-sos-sg > .softskills-sos-sg-stats:not(.softskills-sos-sg-hero):not(.softskills-sos-sg-footer) {
+    padding-block: 48px;
+  }
+
+  .landing--softskills-sos-sg > .softskills-sos-sg-testimonials:not(.softskills-sos-sg-hero):not(.softskills-sos-sg-footer) {
+    padding-bottom: 96px;
+  }
+}
+
+@media (max-width: 980px) {
+  .softskills-sos-sg-program-choice,
+  .softskills-sos-sg-available-seats,
+  .softskills-sos-sg-partner-logos,
+  .softskills-sos-sg-future-skills,
+  .softskills-sos-sg-enrollment-help,
+  .softskills-sos-sg-testimonials {
+    padding-top: 0;
+    padding-bottom: 56px;
+  }
+
+  .softskills-sos-sg-enrollment-help {
+    padding-bottom: 96px;
+  }
+
+  .softskills-sos-sg-benefits {
+    padding-block: 96px;
+  }
+
+  .softskills-sos-sg-waiting-list {
+    padding-top: 56px;
+  }
+}
