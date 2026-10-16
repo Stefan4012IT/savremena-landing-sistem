@@ -13,7 +13,7 @@ const schoolStages = {
         Uz posvećenu podršku nastavnika, učenici razvijaju svoje talente, grade snažno samopouzdanje i usvajaju veštine koje ih pripremaju za naredni veliki korak – <strong>Cambridge Secondary level</strong>.
       </>,
     ],
-    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_primary_lower_secondary_1.jpg',
+    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/10/is_primary-img-001.jpg',
     imageAlt: 'Fun and Study program u International Schoolu',
   },
   secondary: {

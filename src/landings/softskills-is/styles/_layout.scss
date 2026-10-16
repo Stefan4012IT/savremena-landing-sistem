@@ -1,6 +1,13 @@
 .softskills-is-landing {
-  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
   background: var(--color-background);
+}
+
+body:has(.softskills-is-landing) {
+  overflow-x: hidden;
 }
 
 .softskills-is-landing-container {
@@ -68,7 +75,8 @@
 
 @media (max-width: 760px) {
   .softskills-is-landing-container {
-    width: min(100% - 40px, var(--softskills-is-landing-container-max));
+    width: 100%;
+    padding-inline: 20px;
   }
 
   .softskills-is-landing-section {
@@ -81,7 +89,7 @@
 
   .softskills-is-school-stage--secondary,
   .softskills-is-college-promo {
-    padding-top: 0;
+    padding-top: 56px;
   }
 
   .softskills-is-landing .softskills-is-future-skills {

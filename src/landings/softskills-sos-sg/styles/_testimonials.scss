@@ -1,6 +1,13 @@
 .softskills-sos-sg-testimonials {
   background: #ffffff;
 
+  .testimonials-carousel,
+  .testimonials-carousel__track {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
   .testimonial-card,
   .testimonial-card__body {
     background: #981313;

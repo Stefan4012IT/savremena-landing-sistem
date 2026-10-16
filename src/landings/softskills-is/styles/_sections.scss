@@ -449,6 +449,7 @@
   &__box {
     position: relative;
     display: grid;
+    min-width: 0;
     grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
     gap: clamp(28px, 4vw, 64px);
     align-items: center;
@@ -850,7 +851,7 @@
 }
 
 .softskills-is-landing-footer {
-  padding: clamp(70px, 8vw, 110px) 0;
+  padding: 96px 0;
   background-image: var(--gradient-brand);
   color: #ffffff;
 
@@ -978,6 +979,16 @@
 }
 
 @media (max-width: 760px) {
+  .softskills-is-landing-footer {
+    padding-block: 70px;
+  }
+
+  .softskills-is-landing-container.softskills-is-school-stage__box,
+  .softskills-is-landing-container.softskills-is-college-promo__box {
+    width: auto;
+    margin-inline: 20px;
+  }
+
   .softskills-is-partner-logos {
     padding-top: 56px;
     padding-bottom: 0;

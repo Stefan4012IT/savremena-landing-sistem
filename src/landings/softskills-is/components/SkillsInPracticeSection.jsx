@@ -18,6 +18,11 @@ export function SkillsInPracticeSection() {
           {skillsInPractice.items.map((item, index) => (
             <article className="softskills-is-skills-practice__card" key={item.category}>
               <div className="softskills-is-skills-practice__visual" aria-hidden="true">
+                <img
+                  src={`https://www.international-school.edu.rs/wp-content/uploads/2026/10/is-softskills-${index + 1}.jpg`}
+                  alt=""
+                  loading="lazy"
+                />
                 <span>{String(index + 1).padStart(2, '0')}</span>
               </div>
               <div className="softskills-is-skills-practice__copy">

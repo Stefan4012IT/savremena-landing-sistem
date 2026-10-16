@@ -472,6 +472,13 @@
     width: 100%;
   }
 
+  .softskills-is-benefit-card h3 {
+    display: block;
+    width: fit-content;
+    min-height: 0;
+    max-width: 100%;
+  }
+
   .softskills-is-testimonials-carousel__slide {
     flex-basis: 100%;
   }
