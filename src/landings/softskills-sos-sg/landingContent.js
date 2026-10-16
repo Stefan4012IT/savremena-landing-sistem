@@ -9,7 +9,7 @@ export const landingData = {
     title: 'Soft skills za budućnost | Savremena osnovna škola i gimnazija',
     description:
       'Savremena osnovna škola i gimnazija razvijaju kritičko mišljenje, kreativnost, emocionalnu inteligenciju i druge veštine važne za budućnost.',
-    ogImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/08/malo_mesta_og_1200x628.jpg',
+    ogImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/10/sos-sg-og-1200x628.jpg',
   },
   hero: {
     title: 'Budućnost vašeg deteta traži više od znanja.',
