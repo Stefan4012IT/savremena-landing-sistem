@@ -4,8 +4,7 @@ import { LeadForm } from './LeadForm'
 import { useLandingData } from '../useLandingData'
 
 const heroImageLeftUrl = 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_enrollment_is_open_img_left_001.png'
-const heroImageRightUrl = 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_enrollment_is_open_img_right_001.png'
-const heroImageMobileUrl = heroImageRightUrl
+const heroImageMobileUrl = 'https://www.international-school.edu.rs/wp-content/uploads/2026/10/soft-skill-is-hero.png'
 
 export function HeroSection() {
   const { hero, locale = 'sr' } = useLandingData()
@@ -40,6 +39,9 @@ export function HeroSection() {
         <div className="softskills-is-hero__content" aria-label="Uvod u landing">
           <h1 className="softskills-is-hero__title">{hero.title}</h1>
           <h2 className="softskills-is-hero__subtitle">{hero.subtitle}</h2>
+          <div className="softskills-is-hero__mobile-visual" aria-hidden="true">
+            <img src={heroImageMobileUrl} alt="" />
+          </div>
           <div className="softskills-is-hero__copy">
             {hero.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           </div>
@@ -47,9 +49,6 @@ export function HeroSection() {
             {hero.skills.map((skill) => <li key={skill}>{skill}</li>)}
           </ul>
           <p className="softskills-is-hero__closing">{hero.closing}</p>
-        </div>
-        <div className="softskills-is-hero__mobile-visual" aria-hidden="true">
-          <img src={heroImageMobileUrl} alt="" />
         </div>
         <div className="softskills-is-hero__form-panel" id="prijava">
           <LeadForm

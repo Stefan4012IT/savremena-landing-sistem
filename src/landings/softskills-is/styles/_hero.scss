@@ -790,24 +790,11 @@
 
 @media (max-width: 776px) {
   .softskills-is-hero {
+    background-image: none;
+
     &__visual--left,
     &__visual--right {
       display: none;
-    }
-
-    &__mobile-visual {
-      display: block;
-      order: 3;
-      align-self: center;
-      width: 60%;
-      margin: 24px 0 0;
-      line-height: 0;
-    }
-
-    &__mobile-visual img {
-      display: block;
-      width: 100%;
-      height: auto;
     }
 
     &__title {
@@ -829,10 +816,6 @@
 
 @media (max-width: 500px) {
   .softskills-is-hero {
-    &__mobile-visual {
-      width: 90%;
-    }
-
     &__form-panel {
       width: 100%;
       align-self: center;
