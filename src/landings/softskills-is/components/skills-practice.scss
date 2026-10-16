@@ -18,7 +18,7 @@
 
   &__heading h2 {
     margin: 0;
-    color: #354180;
+    color: #282943;
     font-size: clamp(2rem, 4vw, 4rem);
     line-height: 1.05;
   }
@@ -53,7 +53,7 @@
     min-height: 100%;
     align-items: flex-end;
     padding: 20px;
-    background: #354180;
+    background: #282943;
   }
 
   &__visual::after {
@@ -93,7 +93,7 @@
 
   &__copy h3 {
     margin: 12px 0 0;
-    color: #354180;
+    color: #282943;
     font-size: clamp(1.35rem, 1.8vw, 1.8rem);
     line-height: 1.08;
   }
@@ -108,7 +108,7 @@
   &__copy a {
     margin-top: auto;
     padding-top: 20px;
-    color: #354180;
+    color: #282943;
     font-size: .92rem;
     font-weight: 700;
     text-decoration: underline;

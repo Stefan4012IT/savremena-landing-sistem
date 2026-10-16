@@ -54,7 +54,7 @@ export function HeroSection() {
           <LeadForm
             className="softskills-is-lead-form--hero"
             headerTitle={isEnglish ? 'APPLY NOW' : 'PRIJAVITE SE'}
-            headerText={isEnglish ? 'There is still time to give your child an exceptional international education.' : 'Još uvek imate priliku da svom detetu obezbedite najsavremenije obrazovanje u regionu.'}
+            headerText={isEnglish ? 'For information about available places, tuition fees and early enrolment conditions, contact the admissions team.' : 'Za informacije o raspoloživim mestima, školarini i uslovima ranog upisa kontaktirajte upisni tim.'}
           />
         </div>
       </div>

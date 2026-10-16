@@ -137,7 +137,7 @@ export const landingData = {
     eyebrow: 'Upis za 2027/28.',
     title: 'Uspešna budućnost vašeg deteta počinje pravim izborom danas.',
     text: 'International School povezuje Cambridge obrazovanje sa razvojem samostalnosti, kritičkog mišljenja, kreativnosti i samopouzdanja potrebnog da se znanje primeni u praksi.',
-    formTitle: 'Upis za 2027/28.',
+    formTitle: 'PRIJAVI SE',
     formText: 'Upoznajte školu, nastavni program i korake za upis. Za informacije o raspoloživim mestima, školarini i uslovima ranog upisa kontaktirajte upisni tim.',
     ctaLabel: 'Upoznajte International School',
     signature: 'International School. Više od znanja.',
@@ -229,7 +229,7 @@ export const landingData = {
   },
   testimonials: {
     eyebrow: 'Iskustva učenika i roditelja',
-    title: 'Obrazovanje koje mi je otvorilo vrata sveta',
+    title: '„Obrazovanje koje mi je otvorilo vrata sveta“',
     text: '',
   },
   footer: {

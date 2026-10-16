@@ -159,7 +159,7 @@ export const defaultDataContent = {
     eyebrow: 'Enrolment for 2027/28',
     title: 'Your child’s successful future starts with the right choice today.',
     text: 'International School combines a Cambridge education with the independence, critical thinking, creativity and confidence students need to put their knowledge into practice.',
-    formTitle: 'Enrolment for 2027/28',
+    formTitle: 'APPLY NOW',
     formText: 'Discover our school, curriculum and enrolment process. Contact our admissions team for information about available places, fees and early enrolment conditions.',
     ctaLabel: 'Discover International School',
     signature: 'International School. More than knowledge.',
@@ -284,7 +284,7 @@ export const defaultDataContent = {
   },
   testimonials: {
     eyebrow: 'Student and parent experiences',
-    title: 'The Cambridge International programme allows me to learn in a different environment',
+    title: '‘The Cambridge International programme allows me to learn in a different environment’',
     text: '',
   },
   directionCards: englishDirections,

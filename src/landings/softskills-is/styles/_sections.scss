@@ -17,7 +17,7 @@
     margin: 0;
     border-radius: 999px;
     padding: 10px clamp(18px, 3vw, 28px);
-    background: var(--sos-yellow, #354180);
+    background: var(--sos-yellow, #282943);
     color: var(--sos-ink, #07080c);
     font-size: clamp(0.95rem, 1.1vw, 1.08rem);
     font-weight: 900;
@@ -74,7 +74,7 @@
   }
 
   &__process-phone {
-    color: #354180;
+    color: #282943;
     font-weight: 700;
     text-decoration: underline;
     text-underline-offset: 3px;
@@ -82,7 +82,7 @@
 
   &__cta {
     width: fit-content;
-    border-bottom: 2px solid var(--sos-yellow, #354180);
+    border-bottom: 2px solid var(--sos-yellow, #282943);
     padding-bottom: 4px;
     color: var(--color-primary-dark);
     font-weight: 900;
@@ -455,20 +455,20 @@
     overflow: hidden;
     border-radius: 22px;
     padding: clamp(28px, 4vw, 64px);
-    background: #354180;
+    background: #282943;
     color: #ffffff;
   }
 
   &--primary &__box {
     background: var(--is-yellow);
-    color: #354180;
+    color: #282943;
   }
 
   &__box::before {
     position: absolute;
     inset: 0 0 auto;
     height: 5px;
-    background: linear-gradient(to right, #e64b4f 0% 25%, #f7b529 25% 50%, #4aa657 50% 75%, #354180 75% 100%);
+    background: linear-gradient(to right, #e64b4f 0% 25%, #f7b529 25% 50%, #4aa657 50% 75%, #282943 75% 100%);
     content: '';
   }
 
@@ -479,7 +479,7 @@
 
   &--primary &__content h2,
   &--primary &__content p {
-    color: #354180;
+    color: #282943;
   }
 
   &__content h2 {
@@ -502,7 +502,7 @@
   }
 
   &--primary &__eyebrow {
-    color: #354180;
+    color: #282943;
   }
 
   &__content p {
@@ -591,7 +591,7 @@
   h2 {
     max-width: 820px;
     margin: 0 0 24px;
-    color: #354180;
+    color: #282943;
     font-size: clamp(2rem, 4vw, 4rem);
     line-height: 1.05;
   }

@@ -21,7 +21,7 @@
 
   &__heading h2 {
     margin: 0;
-    color: #354180;
+    color: #282943;
     font-size: clamp(2rem, 4vw, 4rem);
     line-height: 1.05;
   }
@@ -69,7 +69,7 @@
 
   &__chart h3 {
     margin: 0 0 26px;
-    color: #354180;
+    color: #282943;
     font-size: clamp(1.2rem, 1.8vw, 1.55rem);
     line-height: 1.15;
   }
@@ -100,7 +100,7 @@
     justify-content: flex-end;
     border-radius: 4px;
     padding-right: 8px;
-    background: #354180;
+    background: #282943;
     color: #fff;
     font-size: .88rem;
   }
@@ -133,7 +133,7 @@
 
   &__stat strong {
     display: block;
-    color: #354180;
+    color: #282943;
     font-family: var(--is-font-heading);
     font-size: clamp(2.8rem, 4.5vw, 4.25rem);
     line-height: .95;
@@ -141,20 +141,20 @@
 
   &__stat p {
     margin: 8px 0 0;
-    color: #354180;
+    color: #282943;
     font-size: 1rem;
     line-height: 1.4;
   }
 
   &__stat span {
     margin-top: 8px;
-    color: #354180;
+    color: #282943;
     font-size: .78rem;
     font-weight: 600;
   }
 
   &__stat--light a {
-    color: #354180;
+    color: #282943;
   }
 
   &__transition {
@@ -173,7 +173,7 @@
     gap: clamp(24px, 3vw, 38px);
     border-radius: 28px;
     padding: clamp(26px, 4vw, 56px);
-    background: #354180;
+    background: #282943;
     color: #fff;
   }
 
@@ -232,12 +232,12 @@
   }
 
   &__life h3 {
-    color: #354180;
+    color: #282943;
   }
 
   &__source {
     width: fit-content;
-    color: #354180;
+    color: #282943;
     font-size: .92rem;
     font-weight: 700;
     line-height: 1.4;

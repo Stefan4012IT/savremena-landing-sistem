@@ -5,10 +5,10 @@
 @use './form';
 
 .softskills-is-landing {
-  --sos-yellow: #354180;
+  --sos-yellow: #282943;
   --is-yellow: #f7b815;
   --sos-red: #9d1516;
-  --sos-blue: #2b446b;
+  --sos-blue: #282943;
   --sos-green: #427042;
   --sos-ink: #07080c;
   --is-font-heading: 'Khand', ui-sans-serif, system-ui, sans-serif;
@@ -110,9 +110,9 @@
   }
 
   .softskills-is-special-offer .softskills-is-landing-link--light {
-    border-color: var(--sos-red);
-    background: var(--sos-red);
-    color: #ffffff;
+    border-color: var(--is-yellow);
+    background: var(--is-yellow);
+    color: #282943;
   }
 
   .softskills-is-info-card--direction {
@@ -135,9 +135,9 @@
   }
 
   .softskills-is-program-choice .softskills-is-landing-link {
-    border-color: var(--sos-red);
-    background: var(--sos-red);
-    color: #ffffff;
+    border-color: var(--is-yellow);
+    background: var(--is-yellow);
+    color: #282943;
   }
 
   .softskills-is-testimonial-card,
@@ -199,7 +199,7 @@
   .softskills-is-scholarship-offer__process-title,
   .softskills-is-testimonial-card__footer strong,
   .softskills-is-testimonial-card__footer > div:last-child > span {
-    color: #354180;
+    color: #282943;
   }
 
   .softskills-is-section-header__eyebrow,

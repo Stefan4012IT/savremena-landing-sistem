@@ -163,7 +163,7 @@
   width: min(100%, 900px);
   padding: clamp(20px, 3.4vw, 30px);
   border-radius: 28px;
-  background: var(--sos-yellow, #354180);
+  background: var(--sos-yellow, #282943);
 
   .softskills-is-lead-form__header h2,
   .softskills-is-lead-form__header p {
@@ -172,6 +172,8 @@
 
   button {
     justify-self: center;
+    background: var(--is-yellow);
+    color: #282943;
   }
 }
 
