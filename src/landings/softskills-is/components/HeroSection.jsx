@@ -36,9 +36,6 @@ export function HeroSection() {
       <div className="softskills-is-hero__visual softskills-is-hero__visual--left" aria-hidden="true">
         <img src={heroImageLeftUrl} alt="" />
       </div>
-      <div className="softskills-is-hero__visual softskills-is-hero__visual--right" aria-hidden="true">
-        <img src={heroImageRightUrl} alt="" />
-      </div>
       <div className="softskills-is-hero__inner">
         <div className="softskills-is-hero__content" aria-label="Uvod u landing">
           <h1 className="softskills-is-hero__title">{hero.title}</h1>
