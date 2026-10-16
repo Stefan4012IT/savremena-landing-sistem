@@ -41,7 +41,7 @@ export const landingData = {
     title: 'Iskoristite poslednju šansu za upis u International School | 2027/28.',
     description:
       'Iskoristite poslednju šansu za upis u International School. Cambridge obrazovanje na engleskom jeziku, međunarodno okruženje i siguran put ka budućnosti vašeg deteta.',
-    ogImageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_nije_kasno_za_bolju_skolu_1200x628.jpg',
+    ogImageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/10/soft-skills-1200x628-srb.jpg',
   },
   hero: {
     title: 'Znanje je temelj. Veštine oblikuju budućnost.',

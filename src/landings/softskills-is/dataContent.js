@@ -167,7 +167,7 @@ export const defaultDataContent = {
   seo: {
     title: 'Future-Ready Skills | International School Belgrade',
     description: 'International School develops critical thinking, creativity, independence and other future-ready skills through an English-language Cambridge education.',
-    ogImageUrl: 'https://sr.international-school.edu.rs/wp-content/uploads/2026/10/IS-enrollmtnt-1200x628-1.jpg',
+    ogImageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/10/soft-skill-1200x628-eng.jpg',
   },
   hero: {
     ...serbianLandingData.hero,

@@ -10,7 +10,7 @@ export const defaultDataContent = {
     title: 'Soft skills za budućnost | International School',
     description:
       'International School razvija kritičko mišljenje, kreativnost, samostalnost i druge veštine budućnosti kroz Cambridge obrazovanje na engleskom jeziku.',
-    ogImageUrl: 'https://sr.international-school.edu.rs/wp-content/uploads/2026/10/IS-enrollmtnt-1200x628-1.jpg',
+    ogImageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/10/soft-skills-1200x628-srb.jpg',
   },
   hero: {
     ...baseDataContent.hero,
