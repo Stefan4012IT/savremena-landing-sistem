@@ -246,7 +246,7 @@
     border-radius: 34px;
   }
 
-  &__ai-copy h3 {
+  &__ai-copy h2 {
     color: #ffffff;
   }
 
@@ -284,7 +284,7 @@
     grid-column: 1 / -1;
     margin-top: clamp(8px, 2vw, 24px);
     padding: clamp(26px, 4vw, 44px);
-    background: #ffffff;
+    background: url('https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/10/softskill_001.jpg') center / cover no-repeat;
     border-radius: 24px;
   }
 
@@ -302,7 +302,7 @@
 
   &__ai-panel &__life h3,
   &__ai-panel &__life-copy > p {
-    color: #07080c;
+    color: #ffffff;
   }
 
   &__ai-panel &__life-copy > p {
@@ -310,7 +310,7 @@
   }
 
   &__ai-panel &__life a {
-    color: var(--color-red);
+    color: #ffffff;
     text-decoration-color: currentcolor;
   }
 
@@ -374,6 +374,10 @@
     &__ai-panel {
       padding: 26px 20px;
       border-radius: 24px;
+    }
+
+    &__life {
+      background-position: 65% 50%;
     }
   }
 }

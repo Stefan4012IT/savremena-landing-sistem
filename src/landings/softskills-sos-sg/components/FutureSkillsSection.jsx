@@ -58,7 +58,7 @@ export function FutureSkillsSection() {
         <div className="softskills-sos-sg-future-skills__ai-panel">
           <div className="softskills-sos-sg-future-skills__ai-copy">
             <p className="softskills-sos-sg-future-skills__eyebrow">{futureSkills.aiEyebrow}</p>
-            <h3>{futureSkills.aiTitle}</h3>
+            <h2>{futureSkills.aiTitle}</h2>
             <p>{futureSkills.aiText}</p>
             <a href="https://www.microsoft.com/en-us/worklab/" target="_blank" rel="noreferrer">
               Izvor: Microsoft Work Trend Index 2026

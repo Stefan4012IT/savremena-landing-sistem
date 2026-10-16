@@ -72,10 +72,20 @@
   }
 
   .softskills-is-landing-section {
-    padding-block: 48px;
+    padding-block: 56px;
   }
 
-  .softskills-is-landing-section + .softskills-is-landing-section:not(.softskills-is-special-conditions, .softskills-is-modern-education, .softskills-is-stats-section, .softskills-is-benefits-section, .softskills-is-special-offer, .softskills-is-enrollment-help, .softskills-is-future-skills) {
+  .softskills-is-landing-section + .softskills-is-landing-section:not(.softskills-is-special-conditions, .softskills-is-modern-education, .softskills-is-stats-section, .softskills-is-benefits-section, .softskills-is-special-offer, .softskills-is-enrollment-help, .softskills-is-future-skills, .softskills-is-school-stage, .softskills-is-college-promo) {
+    padding-top: 56px;
+  }
+
+  .softskills-is-school-stage--secondary,
+  .softskills-is-college-promo {
     padding-top: 0;
+  }
+
+  .softskills-is-landing .softskills-is-future-skills {
+    padding-top: 56px;
+    padding-bottom: 56px;
   }
 }

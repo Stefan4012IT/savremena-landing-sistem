@@ -11,7 +11,7 @@
   position: relative;
   overflow: visible;
   padding: clamp(32px, 5vw, 72px) 0 0;
-  background: #981313;
+  background: #981313 url('https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/10/sos-sg-softskill-background.jpg') center / cover no-repeat;
   color: #ffffff;
   --hero-content-left: max(var(--landing-container-padding), calc((100% - var(--landing-container-max)) / 2));
 
@@ -57,7 +57,7 @@
   }
 
   &__inner {
-    position: relative;
+    position: static;
     width: min(100% - (var(--landing-container-padding) * 2), var(--landing-container-max));
     min-height: 790px;
     margin: 0 auto;
@@ -65,9 +65,13 @@
   }
 
   &__content {
+    position: static;
+    width: max(50%, 820px);
+  }
+
+  &__content > :not(.softskills-sos-sg-hero__visual-wrap) {
     position: relative;
     z-index: 1;
-    width: max(50%, 820px);
   }
 
   h1 {
@@ -146,17 +150,19 @@
     position: absolute;
     right: 0;
     bottom: 0;
+    z-index: 0;
     display: flex;
-    width: min(48vw, 800px);
-    height: min(76vh, 820px);
+    border-bottom: 2px solid #fff;
+    width: min(1020px, 72vw);
+    height: min(84vh, 900px);
     align-items: end;
     justify-content: flex-end;
   }
 
   &__visual {
     display: block;
-    width: min(100%, 800px);
-    max-height: 820px;
+    width: 100%;
+    max-height: none;
     object-fit: contain;
     object-position: bottom center;
     pointer-events: none;
@@ -210,7 +216,11 @@
 
     &__content {
       width: 100%;
-      max-width: 760px;
+      max-width: 100%;
+    }
+
+    h1 {
+      max-width: 100%;
     }
 
     &__visual-wrap {
@@ -270,7 +280,7 @@
     }
 
     h1 {
-      max-width: 11ch;
+      max-width: 100%;
       font-size: clamp(2.55rem, 11vw, 4.25rem);
     }
 
@@ -293,5 +303,45 @@
       margin-top: 26px;
       padding: 20px;
     }
+  }
+}
+
+@media (min-width: 1700px) and (max-width: 1920px) {
+  .softskills-sos-sg-hero__visual-wrap {
+    width: min(920px, 72vw);
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1699px) {
+  .softskills-sos-sg-hero__visual-wrap {
+    width: min(820px, 72vw);
+  }
+
+  .softskills-sos-sg-hero__content {
+    width: min(50%, 820px);
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .softskills-sos-sg-hero__visual-wrap {
+    width: min(720px, 72vw);
+  }
+
+  .softskills-sos-sg-hero__content {
+    width: min(50%, 820px);
+  }
+
+  .softskills-sos-sg-hero__inner {
+    min-height: 720px;
+  }
+}
+
+@media (min-width: 1040px) and (max-width: 1199px) {
+  .softskills-sos-sg-hero__content {
+    width: min(50%, 820px);
+  }
+
+  .softskills-sos-sg-hero__inner {
+    min-height: 690px;
   }
 }

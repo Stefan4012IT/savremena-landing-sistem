@@ -24,7 +24,7 @@ export function SkillsInPracticeSection() {
                 <p className="softskills-is-skills-practice__category">{item.category}</p>
                 <h3>{item.title}</h3>
                 <p className="softskills-is-skills-practice__text">{item.text}</p>
-                <a href={item.href}>{item.linkLabel}<span aria-hidden="true"> ↗</span></a>
+                <a href={item.href} target="_blank" rel="noopener noreferrer">{item.linkLabel}<span aria-hidden="true"> ↗</span></a>
               </div>
             </article>
           ))}

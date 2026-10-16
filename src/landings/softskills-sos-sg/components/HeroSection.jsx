@@ -3,8 +3,8 @@ import { useLandingData } from '../useLandingData'
 import cambridgeLogo from '../../novo-odeljenje/assets/logos/cambridge-logo-white.png'
 import savremenaGroupLogo from '../../malo-mesta/assets/Logo_sos_sg_001.svg'
 
-const heroImage = 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/08/malo_mesta_hero_new_001.png'
-const heroImageMobile = 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/08/malo_mesta_hero_new_001-mobile.png'
+const heroImage = 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/10/softskill_hero_img_1.1.png'
+const heroImageMobile = heroImage
 
 export function HeroSection() {
   const { hero } = useLandingData()
@@ -24,6 +24,14 @@ export function HeroSection() {
         <div className="softskills-sos-sg-hero__content">
           <h1>{hero.title}</h1>
           <p className="softskills-sos-sg-hero__subtitle">{hero.subtitle}</p>
+          <div className="softskills-sos-sg-hero__visual-wrap">
+            <img className="softskills-sos-sg-hero__visual softskills-sos-sg-hero__visual--desktop" src={heroImage} alt="Učenik i nastavnica Savremene" />
+            <img
+              className="softskills-sos-sg-hero__visual softskills-sos-sg-hero__visual--mobile"
+              src={heroImageMobile}
+              alt="Učenik i nastavnica Savremene"
+            />
+          </div>
           <div className="softskills-sos-sg-hero__copy">
             {hero.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           </div>
@@ -31,14 +39,6 @@ export function HeroSection() {
             {hero.skills.map((skill) => <span key={skill}>{skill}</span>)}
           </div>
           <p className="softskills-sos-sg-hero__conclusion">{hero.conclusion}</p>
-        </div>
-        <div className="softskills-sos-sg-hero__visual-wrap">
-          <img className="softskills-sos-sg-hero__visual softskills-sos-sg-hero__visual--desktop" src={heroImage} alt="Učenik i nastavnica Savremene" />
-          <img
-            className="softskills-sos-sg-hero__visual softskills-sos-sg-hero__visual--mobile"
-            src={heroImageMobile}
-            alt="Učenik i nastavnica Savremene"
-          />
         </div>
       </div>
       <div className="softskills-sos-sg-hero__form-panel" id="prijava">

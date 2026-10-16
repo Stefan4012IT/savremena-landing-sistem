@@ -153,6 +153,10 @@
 }
 
 @media (max-width: 640px) {
+  .softskills-sos-sg-enrollment-help__advisor {
+    order: -1;
+  }
+
   .softskills-sos-sg-waiting-list {
     .modern-education__content {
       order: 2;
@@ -167,7 +171,7 @@
     width: min(58vw, 220px);
     min-height: 0;
     aspect-ratio: 4 / 5;
-    justify-self: center;
+    justify-self: left;
     border-radius: 16px;
   }
 

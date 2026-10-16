@@ -906,6 +906,7 @@
   }
 
   .softskills-is-enrollment-help__advisor {
+    order: -1;
     justify-self: start;
   }
 
@@ -929,7 +930,7 @@
   }
 
   .softskills-is-partner-logos {
-    padding-block: 26px;
+    padding: 56px 0 0;
   }
 
   .softskills-is-partner-logos__row {
@@ -977,6 +978,11 @@
 }
 
 @media (max-width: 760px) {
+  .softskills-is-partner-logos {
+    padding-top: 56px;
+    padding-bottom: 0;
+  }
+
   .softskills-is-modern-education__image-placeholder img {
     object-position: left center;
   }

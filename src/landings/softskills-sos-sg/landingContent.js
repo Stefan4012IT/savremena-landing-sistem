@@ -55,7 +55,7 @@ export const landingData = {
     transition:
       'Zato pravo obrazovanje ne priprema dete samo za sledeći test, već za svet u kojem će morati neprestano da uči, razmišlja, prilagođava se i stvara nove mogućnosti.',
     aiEyebrow: 'Čovek + tehnologija',
-    aiTitle: 'U eri veštačke inteligencije, ljudsko razmišljanje dobija novu vrednost.',
+    aiTitle: 'U AI eri, ljudsko razmišljanje dobija novu vrednost.',
     aiText:
       'Veštačka inteligencija može da analizira podatke, generiše sadržaj i predlaže rešenja. Ali sposobnost da procenimo tačnost informacija, razumemo posledice odluka i odgovorno primenimo tehnologiju ostaje presudna.',
     aiStats: [
@@ -78,6 +78,7 @@ export const landingData = {
       {
         title: 'Ne učimo ih šta da misle. Učimo ih kako da razmišljaju.',
         category: 'Kritičko mišljenje i argumentacija',
+        imageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/10/softskill_1.1.jpg',
         text: 'Kroz Cambridge Global Perspectives učenici istražuju različite perspektive, razlikuju činjenice od mišljenja, učestvuju u debatama i uče da argumentovano zastupaju svoje stavove, uz poštovanje tuđih mišljenja.',
         linkLabel: 'Pogledajte primer iz nastave',
         href: 'https://www.savremena-osnovna.edu.rs/global-perspectives-razvijanje-kritickog-misljenja-kroz-projekat/',
@@ -85,6 +86,7 @@ export const landingData = {
       {
         title: 'Ne čekaju gotova rešenja. Uče da ih stvaraju.',
         category: 'Kreativnost, saradnja i rešavanje problema',
+        imageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/10/softskill_2.jpg',
         text: 'U LEGO STEAM laboratoriji, kroz robotiku i interdisciplinarne projekte, učenici eksperimentišu, razvijaju kreativna rešenja i uče da zajedničkim radom prevazilaze izazove.',
         linkLabel: 'Otkrijte projektnu nastavu',
         href: 'https://www.savremena-osnovna.edu.rs/projektna-nastava/',
@@ -92,6 +94,7 @@ export const landingData = {
       {
         title: 'Velike ideje počinju malim koracima.',
         category: 'Preduzetništvo i finansijska pismenost',
+        imageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/10/softskill_3.jpg',
         text: 'Od osmišljavanja proizvoda i biznis planova do organizacije školskih bazara, Savremenci uče kako se ideja pretvara u konkretan rezultat. Razvijaju inicijativu, odgovornost, organizacione sposobnosti i finansijsku pismenost.',
         linkLabel: 'Preduzetništvo u praksi',
         href: 'https://www.savremena-osnovna.edu.rs/preduzetnistvo-u-savremenoj-bazar-u-ucionici/',
@@ -99,6 +102,7 @@ export const landingData = {
       {
         title: 'Od velikih pitanja do sopstvenih rešenja.',
         category: 'Inovacije, digitalna pismenost i AI etika',
+        imageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/10/softskill_4.jpg',
         text: 'U okviru Cambridge projekata učenici su osmišljavali robota za otkrivanje i gašenje šumskih požara, istraživali digitalnu bezbednost i dezinformacije, dok kroz AI aktivnosti upoznaju mogućnosti i etičke izazove novih tehnologija.',
         linkLabel: 'Upoznajte Cambridge projekte',
         href: 'https://www.savremena-osnovna.edu.rs/global-perspectives-cambridge-projekti-ucenika-o-buducnosti-planete/',
@@ -106,6 +110,7 @@ export const landingData = {
       {
         title: 'Odgovornost za budućnost uči se danas.',
         category: 'Održivost i ekološka svest',
+        imageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/10/softskill_5.1.jpg',
         text: 'Kroz projekat „Drvo za budućnost”, ekološke akcije i istraživanje globalnih izazova, učenici razvijaju svest o zaštiti životne sredine i uče da svojim postupcima mogu da doprinesu pozitivnim promenama.',
         linkLabel: 'Pogledajte akciju Drvo za budućnost',
         href: 'https://www.savremena-osnovna.edu.rs/akcija-sadnje-drveca-projekat-drvo-za-buducnost/',
@@ -113,6 +118,7 @@ export const landingData = {
       {
         title: 'Znanje gradi sposobnosti. Vrednosti oblikuju čoveka.',
         category: 'Empatija, etika i društvena odgovornost',
+        imageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/10/softskill_6.jpg',
         text: 'Kroz projekte „Kindness”, „Nedelja solidarnosti i zajedništva” i humanitarne aktivnosti, učenici uče da razumeju druge, razvijaju empatiju, poštovanje, solidarnost i osećaj odgovornosti prema zajednici.',
         linkLabel: 'Upoznajte naše aktivnosti',
         href: 'https://www.savremena-osnovna.edu.rs/nedelja-solidarnosti-i-zajednistvu-u-savremenoj/',
@@ -204,7 +210,7 @@ export const landingData = {
   ],
   testimonials: {
     eyebrow: 'Iskustva učenika i roditelja',
-    title: '„Savremena gimnazija je drugačija od drugih”',
+    title: '„Savremena je stvarno drugačija od drugih škola“',
   },
   testimonialCards: novoOdeljenjeTestimonialCards,
   enrollmentHelp: {

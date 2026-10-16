@@ -21,7 +21,7 @@ export function SkillsInPracticeSection() {
           {skillsInPractice.items.map((item, index) => (
             <article className="softskills-sos-sg-skills-practice__card" key={item.category}>
               <div className="softskills-sos-sg-skills-practice__visual" aria-hidden="true">
-                <span>{String(index + 1).padStart(2, '0')}</span>
+                <img src={item.imageUrl} alt="" loading="lazy" />
               </div>
               <div className="softskills-sos-sg-skills-practice__copy">
                 <p>{item.category}</p>
