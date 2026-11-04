@@ -62,9 +62,6 @@ export function HeroSection() {
               <p key={paragraph}>{renderHighlightedText(paragraph, hero.paragraphHighlights?.[index])}</p>
             ))}
           </div>
-          <ul className="open-day-is-secondary-hero__skills">
-            {hero.skills.map((skill) => <li key={skill}>{skill}</li>)}
-          </ul>
           <p className="open-day-is-secondary-hero__closing">{hero.closing}</p>
         </div>
         <div className="open-day-is-secondary-hero__form-panel" id="prijava">

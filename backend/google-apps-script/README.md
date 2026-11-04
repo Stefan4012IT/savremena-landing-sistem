@@ -1,6 +1,8 @@
 # Google Sheets backup prijava
 
-Ovaj Apps Script je sekundarni backup. UIS ostaje primarni kanal: tek nakon uspešnog UIS upisa backend pokušava da doda red u Google Sheet. Ako Sheet ne uspe, prijava se i dalje smatra uspešno poslatom u UIS.
+Za većinu landing prijava, ovaj Apps Script je sekundarni backup: UIS ostaje primarni kanal, a backend nakon uspešnog UIS upisa pokušava da doda red u Google Sheet. Ako Sheet ne uspe, prijava se i dalje smatra uspešno poslatom u UIS.
+
+Za landing `open-day-secondary`, backend preskače UIS i prijavu šalje samo u Google Sheet. U tom slučaju prijava se smatra uspešnom isključivo ako upis u Sheet uspe.
 
 ## Railway varijable
 

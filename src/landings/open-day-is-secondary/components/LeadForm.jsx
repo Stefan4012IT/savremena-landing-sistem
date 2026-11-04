@@ -117,15 +117,23 @@ function validatePhoneFields(countryCode, areaCode, phoneNumber, isEnglish) {
   return ''
 }
 
-function validateFormData(formData, isEnglish) {
+function isOpenDaySecondaryLanding(landingSlug) {
+  return landingSlug === 'open-day-secondary' || landingSlug === 'en/open-day-secondary'
+}
+
+function validateFormData(formData, isEnglish, landingSlug) {
   const name = String(formData.get('name') || '').trim()
   const email = String(formData.get('email') || '').trim()
   const childAge = Number(formData.get('childAge'))
+  const minChildAge = isOpenDaySecondaryLanding(landingSlug) ? 5 : 4
+  const maxChildAge = isOpenDaySecondaryLanding(landingSlug) ? 19 : 20
 
   if (name.length < 2) return isEnglish ? 'Enter your full name.' : 'Unesite ime i prezime.'
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return isEnglish ? 'Enter a valid email address.' : 'Unesite ispravnu e-mail adresu.'
-  if (!Number.isInteger(childAge) || childAge < 4 || childAge > 20) {
-    return isEnglish ? 'Your child’s age must be between 4 and 20.' : 'Uzrast deteta mora biti između 4 i 20 godina.'
+  if (!Number.isInteger(childAge) || childAge < minChildAge || childAge > maxChildAge) {
+    return isEnglish
+      ? `Your child’s age must be between ${minChildAge} and ${maxChildAge}.`
+      : `Uzrast deteta mora biti između ${minChildAge} i ${maxChildAge} godina.`
   }
 
   return validatePhoneFields(
@@ -152,7 +160,7 @@ export function LeadForm({ className = '', headerTitle }) {
     const formData = new FormData(form)
     const submittedInstitution = formData.get('institution') || institution
     const leadEventId = formData.get('lead_event_id')
-    const validationMessage = validateFormData(formData, isEnglish)
+    const validationMessage = validateFormData(formData, isEnglish, landingSlug)
 
     if (validationMessage) {
       setStatus('error')
@@ -248,8 +256,8 @@ export function LeadForm({ className = '', headerTitle }) {
           <input
             type="number"
             name="childAge"
-            min="4"
-            max="20"
+            min={isOpenDaySecondaryLanding(landingSlug) ? '5' : '4'}
+            max={isOpenDaySecondaryLanding(landingSlug) ? '19' : '20'}
             placeholder={leadForm.childAgePlaceholder || (isEnglish ? 'Child’s age' : 'Uzrast deteta')}
             aria-label={leadForm.childAgeLabel || (isEnglish ? 'Child’s age' : 'Uzrast deteta')}
             required

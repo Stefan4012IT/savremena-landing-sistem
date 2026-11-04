@@ -60,6 +60,10 @@ function getClientIp(ctx) {
   return sanitizeText(ctx.request.ip || ctx.request.headers['x-forwarded-for'] || 'unknown', 120)
 }
 
+function isOpenDaySecondaryLanding(landingSlug: string) {
+  return landingSlug === 'open-day-secondary' || landingSlug === 'en/open-day-secondary'
+}
+
 function validateLeadPayload(body: Record<string, unknown>) {
   const errors: Record<string, string> = {}
   const name = sanitizeText(body.name, 60)
@@ -77,6 +81,8 @@ function validateLeadPayload(body: Record<string, unknown>) {
   const formName = sanitizeText(body.formName, 120) || `landing - ${landingSlug || institution}`
   const website = sanitizeText(body.website, 200)
   const validLeadEventId = /^ld_\d{10,13}_[a-z0-9]{4,16}$/.test(leadEventId) ? leadEventId : ''
+  const minChildAge = isOpenDaySecondaryLanding(landingSlug) ? 5 : 4
+  const maxChildAge = isOpenDaySecondaryLanding(landingSlug) ? 19 : 20
 
   if (website) {
     return {
@@ -96,8 +102,10 @@ function validateLeadPayload(body: Record<string, unknown>) {
   }
 
   const ageNum = Number(childsAge)
-  if (!Number.isInteger(ageNum) || ageNum < 4 || ageNum > 20) {
-    errors.childs_age = 'Uzrast mora biti izmedju 4 i 20.'
+  if (!Number.isInteger(ageNum) || ageNum < minChildAge || ageNum > maxChildAge) {
+    errors.childs_age = landingSlug === 'en/open-day-secondary'
+      ? `Your child's age must be between ${minChildAge} and ${maxChildAge}.`
+      : `Uzrast mora biti između ${minChildAge} i ${maxChildAge} godina.`
   }
 
   if (!/^\+\d{1,4}$/.test(countryCode)) {
@@ -231,12 +239,19 @@ export default {
     }
 
     try {
-      await sendLeadToUis(validation.sanitizedData)
+      if (isOpenDaySecondaryLanding(validation.sanitizedData.landing_slug)) {
+        const sheetsResult = await sendLeadToGoogleSheets(validation.sanitizedData)
+        if ('skipped' in sheetsResult && sheetsResult.skipped) {
+          throw new Error('Google Sheets nije konfigurisan za Open Day prijave.')
+        }
+      } else {
+        await sendLeadToUis(validation.sanitizedData)
 
-      try {
-        await sendLeadToGoogleSheets(validation.sanitizedData)
-      } catch (error) {
-        strapi.log.warn(`Google Sheets backup failed after UIS success: ${error}`)
+        try {
+          await sendLeadToGoogleSheets(validation.sanitizedData)
+        } catch (error) {
+          strapi.log.warn(`Google Sheets backup failed after UIS success: ${error}`)
+        }
       }
 
       ctx.body = {
@@ -244,6 +259,9 @@ export default {
         message: 'Podaci su uspjesno poslani.',
       }
     } catch (error) {
+      if (isOpenDaySecondaryLanding(validation.sanitizedData.landing_slug)) {
+        recentSubmissions.delete(dedupeKey)
+      }
       strapi.log.error(`Lead webhook error: ${error}`)
       ctx.status = 502
       ctx.body = {

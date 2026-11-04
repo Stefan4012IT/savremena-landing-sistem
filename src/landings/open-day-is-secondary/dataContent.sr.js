@@ -24,7 +24,6 @@ export const defaultDataContent = {
       ['isključivo na engleskom jeziku', 'Cambridge program', 'savremene metode rada', 'interaktivne časove', 'iskusni nastavnici mentori'],
       ['IS Open Day', 'subotu, 5. decembra, od 11 časova', '14 do 19 godina'],
     ],
-    skills: [],
     closing: '',
   },
   leadForm: {

@@ -160,6 +160,10 @@
     }
   }
 
+  @media (min-width: 992px) and (max-width: 1199px) {
+    padding-top: 260px;
+  }
+
   @media (max-width: 600px) {
     padding-top: 80px;
     padding-bottom: 56px;

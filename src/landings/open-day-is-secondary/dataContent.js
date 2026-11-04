@@ -182,7 +182,6 @@ export const defaultDataContent = {
       ['entirely in English', 'Cambridge programme', 'modern teaching methods', 'interactive lessons', 'experienced teacher-mentors'],
       ['IS Open Day', 'Saturday, 5 December at 11:00', '14 to 19'],
     ],
-    skills: [],
     closing: '',
   },
   emotionalTurn: {
