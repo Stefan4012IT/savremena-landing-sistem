@@ -1,0 +1,231 @@
+@use './layout';
+@use './hero';
+@use './sections';
+@use './cards';
+@use './form';
+
+.open-day-is-secondary-landing {
+  --sos-yellow: #282943;
+  --is-yellow: #e1a863;
+  --sos-red: #9d1516;
+  --sos-blue: #282943;
+  --sos-green: #427042;
+  --sos-ink: #07080c;
+  --is-font-heading: 'Khand', ui-sans-serif, system-ui, sans-serif;
+  --is-font-body: 'Saira', ui-sans-serif, system-ui, sans-serif;
+  --color-blue: var(--sos-blue);
+  --color-primary: #07080c;
+  --color-primary-dark: #07080c;
+  --color-red: var(--sos-red);
+  --color-yellow: var(--is-yellow);
+  --color-green: var(--sos-green);
+  --gradient-brand: var(--sos-yellow);
+  --open-day-is-secondary-landing-container-max: 1600px;
+  --open-day-is-secondary-landing-container-padding: clamp(20px, 4vw, 64px);
+  font-family: var(--is-font-body);
+}
+
+.open-day-is-secondary-landing {
+  p,
+  li,
+  a,
+  input,
+  select,
+  button {
+    font-family: var(--is-font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--is-font-heading);
+    font-weight: 700;
+  }
+
+  .open-day-is-secondary-section-header__eyebrow,
+  .open-day-is-secondary-special-offer__eyebrow {
+    font-family: var(--is-font-heading);
+    font-weight: 600;
+  }
+
+  .open-day-is-secondary-special-conditions,
+  .open-day-is-secondary-testimonial-card {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .open-day-is-secondary-info-card__profile,
+  .open-day-is-secondary-benefit-card__image,
+  .open-day-is-secondary-modern-education__image-placeholder,
+  .open-day-is-secondary-enrollment-help__advisor-photo {
+    background: var(--sos-yellow);
+    background-image: none;
+  }
+
+  .open-day-is-secondary-testimonial-card__video,
+  .open-day-is-secondary-testimonial-card__avatar {
+    background: var(--sos-yellow);
+  }
+
+  .open-day-is-secondary-special-conditions h2,
+  .open-day-is-secondary-special-conditions p,
+  .open-day-is-secondary-special-conditions li,
+  .open-day-is-secondary-special-conditions a,
+  .open-day-is-secondary-special-conditions__visual span,
+  .open-day-is-secondary-testimonial-card h3,
+  .open-day-is-secondary-testimonial-card p,
+  .open-day-is-secondary-testimonial-card__video-person,
+  .open-day-is-secondary-testimonial-card__avatar span {
+    color: #ffffff;
+  }
+
+  .open-day-is-secondary-testimonial-card__body {
+    background: var(--sos-yellow);
+    color: #ffffff;
+  }
+
+  .open-day-is-secondary-testimonial-card__body h3,
+  .open-day-is-secondary-testimonial-card__body p {
+    color: #ffffff;
+  }
+
+  .open-day-is-secondary-scholarship-offer__ribbon {
+    background: var(--sos-yellow);
+    color: #ffffff;
+  }
+
+  .open-day-is-secondary-special-offer {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .open-day-is-secondary-special-offer__eyebrow {
+    color: var(--is-yellow);
+  }
+
+  .open-day-is-secondary-special-offer h2 {
+    color: #ffffff;
+  }
+
+  .open-day-is-secondary-special-offer .open-day-is-secondary-landing-link--light {
+    border-color: var(--is-yellow);
+    background: var(--is-yellow);
+    color: #282943;
+  }
+
+  .open-day-is-secondary-info-card--direction {
+    background: var(--sos-yellow);
+    color: #ffffff;
+  }
+
+  .open-day-is-secondary-info-card--direction .open-day-is-secondary-info-card__title,
+  .open-day-is-secondary-info-card--direction .open-day-is-secondary-info-card__text {
+    color: #ffffff;
+  }
+
+  .open-day-is-secondary-info-card--direction .open-day-is-secondary-info-card__tag,
+  .open-day-is-secondary-info-card--direction .open-day-is-secondary-info-card__details {
+    color: var(--is-yellow);
+  }
+
+  .open-day-is-secondary-info-card--direction .open-day-is-secondary-info-card__profile span {
+    color: #ffffff;
+  }
+
+  .open-day-is-secondary-program-choice .open-day-is-secondary-landing-link {
+    border-color: var(--is-yellow);
+    background: var(--is-yellow);
+    color: #282943;
+  }
+
+  .open-day-is-secondary-testimonial-card,
+  .open-day-is-secondary-info-card--direction,
+  .open-day-is-secondary-program-choice__logo-card,
+  .open-day-is-secondary-benefit-card {
+    box-shadow: none;
+  }
+
+  .open-day-is-secondary-testimonial-card {
+    border: 1px solid var(--sos-yellow);
+  }
+
+  .open-day-is-secondary-stats-section {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .open-day-is-secondary-stats-section__value,
+  .open-day-is-secondary-stats-section__label {
+    color: #ffffff;
+  }
+
+  .open-day-is-secondary-landing-footer {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .open-day-is-secondary-landing-footer__contact,
+  .open-day-is-secondary-landing-footer__contact span,
+  .open-day-is-secondary-landing-footer__contact a {
+    color: #ffffff;
+  }
+
+  .open-day-is-secondary-special-conditions__visual {
+    border-color: rgba(7, 8, 12, 0.28);
+    background: rgba(7, 8, 12, 0.08);
+  }
+
+  .open-day-is-secondary-testimonial-card__play {
+    background: var(--sos-red);
+  }
+
+  .open-day-is-secondary-testimonial-card__play::after {
+    border-color: rgba(157, 21, 22, 0.34);
+  }
+
+  .open-day-is-secondary-testimonial-card__play svg {
+    fill: #ffffff;
+  }
+
+  .open-day-is-secondary-section-header__title,
+  .open-day-is-secondary-scholarship-offer__headline h2,
+  .open-day-is-secondary-program-choice__content h2,
+  .open-day-is-secondary-enrollment-help h2,
+  .open-day-is-secondary-benefit-card h3,
+  .open-day-is-secondary-scholarship-offer__process-title,
+  .open-day-is-secondary-testimonial-card__footer strong,
+  .open-day-is-secondary-testimonial-card__footer > div:last-child > span {
+    color: #282943;
+  }
+
+  .open-day-is-secondary-section-header__eyebrow,
+  .open-day-is-secondary-special-offer__eyebrow,
+  .open-day-is-secondary-college-promo__eyebrow,
+  .open-day-is-secondary-school-stage__eyebrow {
+    margin-bottom: 12px;
+    font-size: 22px;
+  }
+
+  .open-day-is-secondary-school-stage__content p.open-day-is-secondary-school-stage__eyebrow {
+    margin-bottom: 12px;
+    font-size: 22px;
+  }
+}
+
+.open-day-is-secondary-landing p[class*="__eyebrow"],
+.open-day-is-secondary-landing p[class*="__ribbon"] {
+  margin-bottom: 12px;
+  font-family: var(--is-font-heading);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.1;
+  text-transform: uppercase;
+}

@@ -20,6 +20,9 @@ import { defaultDataContent as upisJeOtvorenIsSerbianData } from './upis-je-otvo
 import { SoftskillsIsLanding } from './softskills-is/SoftskillsIsLanding'
 import { defaultDataContent as softskillsIsData } from './softskills-is/dataContent'
 import { defaultDataContent as softskillsIsSerbianData } from './softskills-is/dataContent.sr'
+import { OpenDayIsSecondaryLanding } from './open-day-is-secondary/OpenDayIsSecondaryLanding'
+import { defaultDataContent as openDayIsSecondaryData } from './open-day-is-secondary/dataContent'
+import { defaultDataContent as openDayIsSecondarySerbianData } from './open-day-is-secondary/dataContent.sr'
 import { NijeKasnoZaBoljuSkoluIsLanding } from './nije-kasno-za-bolju-skolu-is/NijeKasnoZaBoljuSkoluIsLanding'
 import { defaultLandingData as whyWaitLandingData } from './nije-kasno-za-bolju-skolu-is/landingContent'
 import { defaultLandingData as whyWaitEnglishLandingData } from './nije-kasno-za-bolju-skolu-is/landingContent.en'
@@ -82,6 +85,16 @@ export const landingRegistry = {
   [softskillsIsSerbianData.slug]: {
     component: SoftskillsIsLanding,
     fallbackData: softskillsIsSerbianData,
+    useStaticData: true,
+  },
+  [openDayIsSecondaryData.slug]: {
+    component: OpenDayIsSecondaryLanding,
+    fallbackData: openDayIsSecondaryData,
+    useStaticData: true,
+  },
+  [openDayIsSecondarySerbianData.slug]: {
+    component: OpenDayIsSecondaryLanding,
+    fallbackData: openDayIsSecondarySerbianData,
     useStaticData: true,
   },
   [whyWaitLandingData.slug]: {

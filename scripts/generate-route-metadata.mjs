@@ -12,6 +12,8 @@ import { defaultDataContent as upisJeOtvorenIs } from '../src/landings/upis-je-o
 import { defaultDataContent as upisJeOtvorenIsSerbian } from '../src/landings/upis-je-otvoren-is/dataContent.sr.js'
 import { defaultDataContent as softskillsIs } from '../src/landings/softskills-is/dataContent.js'
 import { defaultDataContent as softskillsIsSerbian } from '../src/landings/softskills-is/dataContent.sr.js'
+import { defaultDataContent as openDayIsSecondary } from '../src/landings/open-day-is-secondary/dataContent.js'
+import { defaultDataContent as openDayIsSecondarySerbian } from '../src/landings/open-day-is-secondary/dataContent.sr.js'
 import { defaultLandingData as whyWait } from '../src/landings/nije-kasno-za-bolju-skolu-is/landingContent.js'
 import { defaultLandingData as whyWaitEnglish } from '../src/landings/nije-kasno-za-bolju-skolu-is/landingContent.en.js'
 import { defaultLandingData as novoOdeljenje } from '../src/landings/novo-odeljenje/landingContent.js'
@@ -33,6 +35,8 @@ const landingData = [
   upisJeOtvorenIsSerbian,
   softskillsIs,
   softskillsIsSerbian,
+  openDayIsSecondary,
+  openDayIsSecondarySerbian,
   whyWait,
   whyWaitEnglish,
   novoOdeljenje,
