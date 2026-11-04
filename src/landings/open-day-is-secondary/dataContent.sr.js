@@ -4,12 +4,12 @@ export const defaultDataContent = {
   ...baseDataContent,
   slug: 'open-day-secondary',
   locale: 'sr',
-  name: 'Open Day – Secondary | International School',
+  name: 'International School Open Day',
   seo: {
-    title: 'Open Day – Secondary | International School',
+    title: 'International School Open Day | Cambridge škola u Beogradu',
     description:
-      'International School razvija kritičko mišljenje, kreativnost, samostalnost i druge veštine budućnosti kroz Cambridge obrazovanje na engleskom jeziku.',
-    ogImageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/10/soft-skills-1200x628-srb.jpg',
+      'Pridružite se događaju International School Open Day 5. decembra u 11 časova. Upoznajte Cambridge program, nastavnike i školu za učenike od 14 do 19 godina.',
+    ogImageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/IS_open_day_secondary_1200x628.jpg',
   },
   hero: {
     ...baseDataContent.hero,

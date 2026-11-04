@@ -101,7 +101,7 @@ export const defaultDataContent = {
   slug: 'en/open-day-secondary',
   apiSlug: 'open-day-secondary-en',
   locale: 'en',
-  name: 'Open Day – Secondary | International School',
+  name: 'International School Open Day',
   futureSkills: {
     ...serbianLandingData.futureSkills,
     eyebrow: 'The future of education',
@@ -165,9 +165,9 @@ export const defaultDataContent = {
     signature: 'International School. More than knowledge.',
   },
   seo: {
-    title: 'Open Day – Secondary | International School Belgrade',
-    description: 'International School develops critical thinking, creativity, independence and other future-ready skills through an English-language Cambridge education.',
-    ogImageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/10/soft-skill-1200x628-eng.jpg',
+    title: 'International School Open Day | Cambridge Education in Belgrade',
+    description: 'Join us for International School Open Day on 5 December at 11:00. Explore the Cambridge programme, meet our teachers and discover our school for students aged 14–19.',
+    ogImageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/IS_open_day_secondary_1200x628.jpg',
   },
   hero: {
     ...serbianLandingData.hero,
