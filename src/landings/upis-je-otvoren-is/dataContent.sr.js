@@ -20,7 +20,7 @@ export const defaultDataContent = {
     copyBefore: 'Iskoristite najbolji trenutak i obezbedite prestižno ',
     copyCambridge: 'Cambridge',
     copyBetween: ' obrazovanje po ',
-    copyLowest: 'najnižim',
+    copyLowest: 'povlašćenim',
     copyAfter: ' cenama.',
   },
   emotionalTurn: {

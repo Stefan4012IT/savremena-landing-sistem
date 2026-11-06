@@ -57,7 +57,7 @@ export const dataContent = {
     enrollmentYear: '2027/28',
     leadFirstLine: 'Obezbedite najsavremenije',
     leadSecondLine: 'Cambridge školovanje po',
-    leadHighlight: 'NAJNIŽIM',
+    leadHighlight: 'POVLAŠĆENIM',
     leadThirdLineAfter: 'cenama školarine.',
     messageBefore: '',
     messageHighlight: '',

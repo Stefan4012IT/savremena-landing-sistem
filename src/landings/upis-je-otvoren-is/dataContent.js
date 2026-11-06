@@ -114,9 +114,9 @@ export const defaultDataContent = {
     titleEmphasis: 'OPEN!',
     copyBefore: 'Make the most of this opportunity and secure prestigious ',
     copyCambridge: 'Cambridge',
-    copyBetween: ' education at the ',
-    copyLowest: 'lowest',
-    copyAfter: ' fees.',
+    copyBetween: ' education under the ',
+    copyLowest: 'favourable',
+    copyAfter: ' conditions.',
   },
   emotionalTurn: {
     ...serbianLandingData.emotionalTurn,
