@@ -46,7 +46,7 @@ export const dataContent = {
   hero: {
     homeUrl: '/poceo-je-upis',
     ministryLogoUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/07/ministarstvo_prosvete_logo_color_white.png',
-    imageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/upis-je-otvoren-sg_image.png',
+    imageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/poceo_je_upis_hero_001.png',
     shapeLeftUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/shape-left.svg',
     shapeRightUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/shape-right_002.svg',
     titlePrefix: 'Počeo je',
