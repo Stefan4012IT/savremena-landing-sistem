@@ -58,7 +58,7 @@ export function EmotionalTurnSection() {
           </div>
           <figure className="upis-je-otvoren-sg-scholarship-offer__image">
             <img
-              src="https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/08/10_slobodnih_mesta_img_1.1.jpg"
+              src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/poceo_je_upis_1.jpg"
               alt="Učenici Savremene gimnazije sa digitalnim uređajima"
             />
           </figure>
