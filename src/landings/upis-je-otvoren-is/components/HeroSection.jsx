@@ -2,9 +2,9 @@ import cambridgeLogo from '../assets/logos/cambridge-logo-white.png'
 import { LeadForm } from './LeadForm'
 import { useLandingData } from '../useLandingData'
 
-const heroImageLeftUrl = 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_enrollment_is_open_img_left_001.png'
-const heroImageRightUrl = 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_enrollment_is_open_img_right_001.png'
-const heroImageMobileUrl = 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_enrollment_is_open_img_mob.png'
+const heroImageLeftUrl = 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/enrollemnt_hero_left.png'
+const heroImageRightUrl = 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/enrollemnt_hero_right.png'
+const heroImageMobileUrl = 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/enrollemnt_hero_mob.png'
 
 export function HeroSection() {
   const { hero, locale = 'sr' } = useLandingData()
