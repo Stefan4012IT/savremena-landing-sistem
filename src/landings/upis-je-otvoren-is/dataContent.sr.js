@@ -15,8 +15,8 @@ export const defaultDataContent = {
   hero: {
     ...baseDataContent.hero,
     titleFirstLine: 'Upis za',
-    titleSecondLine: '2027/28. je',
-    titleEmphasis: 'OTVOREN!',
+    titleSecondLine: '2027/28. je u',
+    titleEmphasis: 'TOKU!',
     copyBefore: 'Iskoristite najbolji trenutak i obezbedite prestižno ',
     copyCambridge: 'Cambridge',
     copyBetween: ' obrazovanje po ',

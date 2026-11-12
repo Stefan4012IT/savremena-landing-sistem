@@ -109,9 +109,9 @@ export const defaultDataContent = {
   },
   hero: {
     ...serbianLandingData.hero,
-    titleFirstLine: 'Enrolment for',
-    titleSecondLine: '2027/28 is',
-    titleEmphasis: 'OPEN!',
+    titleFirstLine: '2027/28',
+    titleSecondLine: 'admissions',
+    titleEmphasis: 'NOW OPEN!',
     copyBefore: 'Make the most of this opportunity and secure prestigious ',
     copyCambridge: 'Cambridge',
     copyBetween: ' education under the ',

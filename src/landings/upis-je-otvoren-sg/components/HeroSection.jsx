@@ -28,8 +28,8 @@ export function HeroSection() {
         <div className="upis-je-otvoren-sg-hero__content" aria-label="Uvod u landing">
           <h1 className="upis-je-otvoren-sg-hero__title">
             <span className="upis-je-otvoren-sg-hero__title-line">
-              <span className="upis-je-otvoren-sg-hero__title-copy">{hero.titlePrefix}</span>
               <span className="upis-je-otvoren-sg-hero__title-emphasis">{hero.titleEmphasis}</span>
+              <span className="upis-je-otvoren-sg-hero__title-copy">{hero.titlePrefix}</span>
             </span>
             <span className="upis-je-otvoren-sg-hero__title-year">{hero.enrollmentYear}</span>
           </h1>

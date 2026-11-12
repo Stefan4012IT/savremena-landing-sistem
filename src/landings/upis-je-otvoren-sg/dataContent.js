@@ -49,7 +49,7 @@ export const dataContent = {
     imageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/poceo_je_upis_hero_001.png',
     shapeLeftUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/shape-left.svg',
     shapeRightUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/09/shape-right_002.svg',
-    titlePrefix: 'Počeo je',
+    titlePrefix: 'je u toku',
     titleEmphasis: 'UPIS',
     enrollmentYear: '2027/28',
     leadFirstLine: 'Obezbedite najsavremenije',
