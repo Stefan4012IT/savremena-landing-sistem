@@ -1021,3 +1021,80 @@
     }
   }
 }
+
+.pravi-trenutak-is-hero__background-image,
+.pravi-trenutak-is-event-strip--mobile {
+  display: none;
+}
+
+.pravi-trenutak-is-event-strip--desktop {
+  display: block;
+}
+
+@media (max-width: 991px) {
+  .pravi-trenutak-is-hero {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+    padding: 0;
+    background-color: #06234b;
+    background-image: none;
+
+    &__inner {
+      width: 100%;
+      min-height: 0;
+      margin: 0;
+      padding: 24px 20px 28px;
+    }
+
+    &__content {
+      position: static;
+      display: block;
+      width: 100%;
+      max-width: none;
+      text-align: left;
+      transform: none;
+    }
+
+    &__title {
+      max-width: 100%;
+      margin: 0;
+      font-size: clamp(2.35rem, 8.4vw, 5.6rem);
+      text-align: left;
+    }
+
+    &__title-line:first-child {
+      white-space: nowrap;
+    }
+
+    &__background-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0;
+      object-fit: contain;
+    }
+
+    &__form-panel {
+      position: relative;
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: auto;
+      width: min(100% - 40px, 640px);
+      margin: 0 auto 42px;
+      transform: none;
+    }
+  }
+
+  .pravi-trenutak-is-event-strip--desktop {
+    display: none;
+  }
+
+  .pravi-trenutak-is-event-strip--mobile {
+    display: block;
+    width: 100%;
+    padding-block: 32px;
+    background: #06234b;
+  }
+}

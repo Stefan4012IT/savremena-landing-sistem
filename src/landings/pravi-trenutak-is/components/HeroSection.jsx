@@ -2,6 +2,27 @@ import cambridgeLogo from '../assets/logos/cambridge-logo-white.png'
 import { LeadForm } from './LeadForm'
 import { useLandingData } from '../useLandingData'
 
+function EventStrip({ hero, isEnglish, className = '' }) {
+  return (
+    <div className={`pravi-trenutak-is-event-strip ${className}`} aria-label={isEnglish ? 'Enrolment dates and offer' : 'Datumi upisa i ponuda'}>
+      <div className="pravi-trenutak-is-event-strip__inner">
+        <div className="pravi-trenutak-is-event-strip__content">
+          <p className="pravi-trenutak-is-event-strip__date">
+            <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+              <rect x="3.5" y="6" width="25" height="22" rx="1.5" />
+              <path d="M9 3.5v5M23 3.5v5M4 12h24M9 17h2m4 0h2m4 0h2M9 22h2m4 0h2m4 0h2" />
+            </svg>
+            <span>{hero.eventDate}</span>
+          </p>
+          <p className="pravi-trenutak-is-event-strip__description">
+            {hero.eventDescriptionStart}<strong>{hero.eventDescriptionEmphasis}</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export function HeroSection() {
   const { hero, locale = 'sr' } = useLandingData()
   const isEnglish = locale === 'en'
@@ -40,31 +61,22 @@ export function HeroSection() {
             </span>
           </h1>
         </div>
-        <div className="pravi-trenutak-is-hero__form-panel" id="prijava">
-          <LeadForm
-            className="pravi-trenutak-is-lead-form--hero"
-            headerTitle={isEnglish ? 'APPLY NOW' : 'PRIJAVITE SE'}
-            headerText={isEnglish ? 'Give your child the most modern education in the region.' : 'Obezbedite svom detetu najsavremenije obrazovanje u regionu.'}
-          />
-        </div>
+      </div>
+      <img
+        className="pravi-trenutak-is-hero__background-image"
+        src="https://www.international-school.edu.rs/wp-content/uploads/2026/11/dobre-odluke-background-001.jpg"
+        alt=""
+      />
+      <EventStrip hero={hero} isEnglish={isEnglish} className="pravi-trenutak-is-event-strip--mobile" />
+      <div className="pravi-trenutak-is-hero__form-panel" id="prijava">
+        <LeadForm
+          className="pravi-trenutak-is-lead-form--hero"
+          headerTitle={isEnglish ? 'APPLY NOW' : 'PRIJAVITE SE'}
+          headerText={isEnglish ? 'Give your child the most modern education in the region.' : 'Obezbedite svom detetu najsavremenije obrazovanje u regionu.'}
+        />
       </div>
     </section>
-    <section className="pravi-trenutak-is-event-strip" aria-label={isEnglish ? 'Enrolment dates and offer' : 'Datumi upisa i ponuda'}>
-      <div className="pravi-trenutak-is-event-strip__inner">
-        <div className="pravi-trenutak-is-event-strip__content">
-          <p className="pravi-trenutak-is-event-strip__date">
-            <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-              <rect x="3.5" y="6" width="25" height="22" rx="1.5" />
-              <path d="M9 3.5v5M23 3.5v5M4 12h24M9 17h2m4 0h2m4 0h2M9 22h2m4 0h2m4 0h2" />
-            </svg>
-            <span>{hero.eventDate}</span>
-          </p>
-          <p className="pravi-trenutak-is-event-strip__description">
-            {hero.eventDescriptionStart}<strong>{hero.eventDescriptionEmphasis}</strong>
-          </p>
-        </div>
-      </div>
-    </section>
+    <EventStrip hero={hero} isEnglish={isEnglish} className="pravi-trenutak-is-event-strip--desktop" />
     </>
   )
 }
