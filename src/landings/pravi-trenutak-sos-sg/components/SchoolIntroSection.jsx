@@ -12,8 +12,11 @@ export function SchoolIntroSection() {
           <h2>{schoolIntro.title}</h2>
           {schoolIntro.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
         </div>
-        <div className="pravi-trenutak-sos-sg-school-intro__visual" role="img" aria-label="Prostor za sliku">
-          <span>Prostor za sliku</span>
+        <div className="pravi-trenutak-sos-sg-school-intro__visual">
+          <img
+            src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/pravi-trenutak_001.jpg"
+            alt=""
+          />
         </div>
       </div>
     </section>
