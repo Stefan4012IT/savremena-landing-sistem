@@ -383,6 +383,10 @@
     font-size: clamp(1.05rem, 1.4vw, 1.22rem);
   }
 
+  &__content strong {
+    color: #06234b;
+  }
+
   &__image-placeholder {
     display: grid;
     min-height: clamp(320px, 28vw, 430px);
@@ -591,7 +595,7 @@
   }
 
   &__content strong {
-    color: #f7b815;
+    color: #06234b;
     font-weight: 800;
   }
 
@@ -734,12 +738,17 @@
   }
 
   strong {
+    color: #06234b;
     font-weight: 900;
   }
 
   &__contacts a {
-    color: var(--color-muted);
+    color: #06234b;
     text-decoration: none;
+  }
+
+  &__contacts a[href^='tel:'] {
+    font-weight: 800;
   }
 
   &__messenger-link {
@@ -747,6 +756,7 @@
     align-items: center;
     gap: 8px;
     margin-inline: 2px;
+    color: #06234b;
     font-weight: 800;
     line-height: 1;
     vertical-align: middle;
