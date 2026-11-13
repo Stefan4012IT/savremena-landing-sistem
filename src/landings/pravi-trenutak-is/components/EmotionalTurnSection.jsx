@@ -76,7 +76,7 @@ export function EmotionalTurnSection() {
           </div>
           <figure className="pravi-trenutak-is-scholarship-offer__image">
             <img
-              src="https://www.international-school.edu.rs/wp-content/uploads/2026/09/why_wait_img_1.png"
+              src="https://www.international-school.edu.rs/wp-content/uploads/2026/11/dobre-odluke-002.jpg"
               alt={locale === 'en' ? 'International School students' : 'Učenici International Schoola'}
             />
           </figure>
