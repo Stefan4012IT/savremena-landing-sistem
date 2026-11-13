@@ -1,0 +1,68 @@
+.pravi-trenutak-sos-sg-school-intro {
+  padding: 200px 0 0;
+  background: #ffffff;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.85fr);
+    gap: clamp(36px, 6vw, 96px);
+    width: min(100% - (var(--landing-container-padding) * 2), var(--landing-container-max));
+    margin-inline: auto;
+    align-items: center;
+  }
+
+  &__copy {
+    display: grid;
+    gap: 20px;
+  }
+
+  h2 {
+    margin: 0;
+    color: #002965;
+    font-size: clamp(2rem, 4vw, 4rem);
+    line-height: 1.05;
+  }
+
+  p {
+    margin: 0;
+    color: #787878;
+    font-size: clamp(1.05rem, 1.4vw, 1.22rem);
+    line-height: 1.5;
+  }
+
+  &__visual {
+    display: grid;
+    min-height: 420px;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #eef1f5;
+    color: #787878;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 980px) {
+  .pravi-trenutak-sos-sg-school-intro {
+    padding: 200px 0 0;
+  }
+
+  .pravi-trenutak-sos-sg-school-intro__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .pravi-trenutak-sos-sg-school-intro__visual {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 640px) {
+  .pravi-trenutak-sos-sg-school-intro {
+    padding-top: 0;
+  }
+
+  .pravi-trenutak-sos-sg-school-intro__visual {
+    min-height: 240px;
+  }
+}

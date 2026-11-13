@@ -1,0 +1,322 @@
+.landing--pravi-trenutak-sos-sg {
+  min-height: 100vh;
+  overflow-x: clip;
+  --color-primary: #07080c;
+  --color-primary-dark: #07080c;
+  --color-red: #07080c;
+  --gradient-brand: #f7b815;
+}
+
+.pravi-trenutak-sos-sg-hero {
+  position: relative;
+  overflow: visible;
+  padding: clamp(32px, 5vw, 72px) 0 0;
+  background: #ffffff url('https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/pravi-trenutak-hero-background-001.jpg') center / cover no-repeat;
+  color: #002965;
+  --hero-content-left: max(var(--landing-container-padding), calc((100% - var(--landing-container-max)) / 2));
+
+  &__header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 22px var(--hero-content-left);
+  }
+
+  &__logo {
+    display: inline-flex;
+    width: clamp(260px, 22vw, 360px);
+    min-height: 56px;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  &__logo img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__institution-logos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(18px, 3vw, 38px);
+  }
+
+  &__institution-logos img {
+    display: block;
+    width: auto;
+    max-width: min(28vw, 220px);
+    max-height: clamp(38px, 5vw, 62px);
+    object-fit: contain;
+  }
+
+  &__inner {
+    position: static;
+    width: min(100% - (var(--landing-container-padding) * 2), var(--landing-container-max));
+    min-height: 790px;
+    margin: 0 auto;
+    padding-top: clamp(104px, 11vh, 144px);
+  }
+
+  &__content {
+    position: static;
+    width: max(50%, 820px);
+  }
+
+  &__content > :not(.pravi-trenutak-sos-sg-hero__visual-wrap) {
+    position: relative;
+    z-index: 1;
+  }
+
+  h1 {
+    max-width: 12ch;
+    margin: 0;
+    font-size: 135px;
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.045em;
+  }
+
+  &__title-strong {
+    font-weight: 950;
+  }
+
+  &__highlight {
+    color: #f7b815;
+    font-weight: 850;
+  }
+
+  &__bold {
+    color: inherit;
+    font-weight: 900;
+  }
+
+  &__subtitle {
+    margin: clamp(18px, 2.5vw, 30px) 0 0;
+    color: #002965;
+    font-size: clamp(1.35rem, 2vw, 1.8rem);
+    font-weight: 850;
+    line-height: 1.12;
+  }
+
+  &__copy {
+    width: 700px;
+    max-width: 100%;
+    margin-top: 24px;
+  }
+
+  &__conclusion,
+  &__copy p {
+    margin: 0;
+    color: #002965;
+    font-size: clamp(1rem, 1.18vw, 1.16rem);
+    font-weight: 550;
+    line-height: 1.5;
+  }
+
+  &__copy p {
+    font-size: 32px;
+  }
+
+  &__copy p + p {
+    margin-top: 14px;
+  }
+
+  &__skills {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 22px;
+  }
+
+  &__skills span {
+    border-radius: 999px;
+    padding: 7px 11px;
+    color: #981313;
+    background: #ffffff;
+    font-size: clamp(0.78rem, 0.88vw, 0.9rem);
+    font-weight: 800;
+    line-height: 1.15;
+    text-align: center;
+  }
+
+  &__conclusion {
+    margin-top: 20px;
+    border-left: 3px solid #f7b815;
+    padding-left: 15px;
+    color: #002965;
+    font-weight: 750;
+  }
+
+  &__form-panel {
+    position: absolute;
+    right: var(--hero-content-left);
+    top: 100%;
+    bottom: auto;
+    z-index: 3;
+    width: clamp(540px, 34vw, 660px);
+    border-radius: 20px;
+    padding: clamp(18px, 2vw, 26px);
+    background: #002965;
+    color: #ffffff;
+    transform: translateY(-50%);
+  }
+
+  &__form-panel .pravi-trenutak-sos-sg-form {
+    gap: 10px;
+  }
+
+  &__form-panel .pravi-trenutak-sos-sg-form__header {
+    gap: 4px;
+    margin-bottom: 0;
+  }
+
+  &__form-panel .pravi-trenutak-sos-sg-form__header h2 {
+    color: #ffffff;
+    font-size: clamp(1.45rem, 2vw, 2rem);
+  }
+
+  &__form-panel .pravi-trenutak-sos-sg-form input,
+  &__form-panel .pravi-trenutak-sos-sg-form select {
+    min-height: 42px;
+    padding: 8px 12px;
+  }
+
+  &__form-panel .pravi-trenutak-sos-sg-form button {
+    min-height: 44px;
+    margin-top: 0;
+    padding: 10px 18px;
+    background: #981313;
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 1040px) {
+  .pravi-trenutak-sos-sg-hero {
+    margin-bottom: 0;
+    padding-bottom: 56px;
+    &__inner {
+      min-height: auto;
+      padding-top: 112px;
+    }
+
+    &__content {
+      width: 100%;
+      max-width: 100%;
+      position: relative;
+    }
+
+    h1 {
+      max-width: 100%;
+    }
+
+    &__form-panel {
+      position: relative;
+      top: auto;
+      right: auto;
+      bottom: auto;
+      width: min(100% - (var(--landing-container-padding) * 2), 590px);
+      margin: 34px auto 0;
+      transform: none;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .pravi-trenutak-sos-sg-hero {
+    padding-bottom: 48px;
+    background-image: none;
+    background-color: #ffffff;
+
+    &__header {
+      gap: 14px;
+      padding: 16px var(--hero-content-left);
+    }
+
+    &__logo {
+      width: min(45vw, 190px);
+      min-height: 46px;
+    }
+
+    &__institution-logos {
+      gap: 10px;
+    }
+
+    &__institution-logos img {
+      max-width: 20vw;
+      max-height: 34px;
+    }
+
+    &__inner {
+      gap: 18px;
+      padding-top: 64px;
+    }
+
+    h1 {
+      max-width: 100%;
+      position: relative;
+      isolation: isolate;
+      font-size: clamp(2.8rem, 12vw, 4.8rem);
+      line-height: 0.88;
+      padding: clamp(28px, 8vw, 48px) 0;
+    }
+
+    h1::before {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: calc(var(--landing-container-padding) * -1);
+      width: calc(100% + (var(--landing-container-padding) * 2));
+      background: url('https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/pravi-trenutak-hero-background-001.jpg') center / cover no-repeat;
+      content: '';
+    }
+
+    &__copy p {
+      font-size: 22px;
+      line-height: 1.1;
+    }
+
+    &__skills {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    &__form-panel {
+      width: calc(100% - (var(--landing-container-padding) * 2));
+      margin-top: 26px;
+      padding: 20px;
+    }
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1699px) {
+  .pravi-trenutak-sos-sg-hero__content {
+    width: min(50%, 820px);
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .pravi-trenutak-sos-sg-hero__content {
+    width: min(50%, 820px);
+  }
+
+  .pravi-trenutak-sos-sg-hero__inner {
+    min-height: 720px;
+  }
+}
+
+@media (min-width: 1040px) and (max-width: 1199px) {
+  .pravi-trenutak-sos-sg-hero__content {
+    width: min(50%, 820px);
+  }
+
+  .pravi-trenutak-sos-sg-hero__inner {
+    min-height: 690px;
+  }
+}

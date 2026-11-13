@@ -30,8 +30,8 @@ import { MaloMestaLanding } from './malo-mesta/MaloMestaLanding'
 import { defaultLandingData as maloMestaLandingData } from './malo-mesta/landingContent'
 import { SoftskillsSosSgLanding } from './softskills-sos-sg/SoftskillsSosSgLanding'
 import { defaultLandingData as softskillsSosSgLandingData } from './softskills-sos-sg/landingContent'
-import { SvetskiDanDetetaSosSgLanding } from './svetski-dan-deteta-sos-sg/SvetskiDanDetetaSosSgLanding'
-import { defaultLandingData as svetskiDanDetetaSosSgLandingData } from './svetski-dan-deteta-sos-sg/landingContent'
+import { PraviTrenutakSosSgLanding } from './pravi-trenutak-sos-sg/PraviTrenutakSosSgLanding'
+import { defaultLandingData as praviTrenutakSosSgLandingData } from './pravi-trenutak-sos-sg/landingContent'
 
 export const landingRegistry = {
   [najboljaOdlukaLandingData.slug]: {
@@ -116,9 +116,9 @@ export const landingRegistry = {
     component: SoftskillsSosSgLanding,
     fallbackData: softskillsSosSgLandingData,
   },
-  [svetskiDanDetetaSosSgLandingData.slug]: {
-    component: SvetskiDanDetetaSosSgLanding,
-    fallbackData: svetskiDanDetetaSosSgLandingData,
+  [praviTrenutakSosSgLandingData.slug]: {
+    component: PraviTrenutakSosSgLanding,
+    fallbackData: praviTrenutakSosSgLandingData,
   },
 }
 
