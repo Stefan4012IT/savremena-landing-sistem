@@ -1,0 +1,217 @@
+@use './layout';
+@use './hero';
+@use './sections';
+@use './cards';
+@use './form';
+
+.pravi-trenutak-is-landing {
+  --sos-yellow: #354180;
+  --is-yellow: #f7b815;
+  --sos-red: #9d1516;
+  --sos-blue: #2b446b;
+  --sos-green: #427042;
+  --sos-ink: #07080c;
+  --is-font-heading: 'Khand', ui-sans-serif, system-ui, sans-serif;
+  --is-font-body: 'Saira', ui-sans-serif, system-ui, sans-serif;
+  --color-blue: var(--sos-blue);
+  --color-primary: #07080c;
+  --color-primary-dark: #07080c;
+  --color-red: var(--sos-red);
+  --color-yellow: var(--sos-yellow);
+  --color-green: var(--sos-green);
+  --gradient-brand: var(--sos-yellow);
+  --pravi-trenutak-is-landing-container-max: 1600px;
+  --pravi-trenutak-is-landing-container-padding: clamp(20px, 4vw, 64px);
+  font-family: var(--is-font-body);
+}
+
+.pravi-trenutak-is-landing {
+  p,
+  li,
+  a,
+  input,
+  select,
+  button {
+    font-family: var(--is-font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--is-font-heading);
+    font-weight: 700;
+  }
+
+  .pravi-trenutak-is-section-header__eyebrow,
+  .pravi-trenutak-is-special-offer__eyebrow {
+    font-family: var(--is-font-heading);
+    font-weight: 600;
+  }
+
+  .pravi-trenutak-is-special-conditions,
+  .pravi-trenutak-is-testimonial-card {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .pravi-trenutak-is-info-card__profile,
+  .pravi-trenutak-is-benefit-card__image,
+  .pravi-trenutak-is-modern-education__image-placeholder,
+  .pravi-trenutak-is-enrollment-help__advisor-photo {
+    background: var(--sos-yellow);
+    background-image: none;
+  }
+
+  .pravi-trenutak-is-testimonial-card__video,
+  .pravi-trenutak-is-testimonial-card__avatar {
+    background: var(--sos-yellow);
+  }
+
+  .pravi-trenutak-is-special-conditions h2,
+  .pravi-trenutak-is-special-conditions p,
+  .pravi-trenutak-is-special-conditions li,
+  .pravi-trenutak-is-special-conditions a,
+  .pravi-trenutak-is-special-conditions__visual span,
+  .pravi-trenutak-is-testimonial-card h3,
+  .pravi-trenutak-is-testimonial-card p,
+  .pravi-trenutak-is-testimonial-card__video-person,
+  .pravi-trenutak-is-testimonial-card__avatar span {
+    color: #ffffff;
+  }
+
+  .pravi-trenutak-is-testimonial-card__body {
+    background: var(--sos-yellow);
+    color: #ffffff;
+  }
+
+  .pravi-trenutak-is-testimonial-card__body h3,
+  .pravi-trenutak-is-testimonial-card__body p {
+    color: #ffffff;
+  }
+
+  .pravi-trenutak-is-scholarship-offer__ribbon {
+    background: var(--sos-yellow);
+    color: #ffffff;
+  }
+
+  .pravi-trenutak-is-special-offer {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .pravi-trenutak-is-special-offer__eyebrow,
+  .pravi-trenutak-is-special-offer h2 {
+    color: #ffffff;
+  }
+
+  .pravi-trenutak-is-special-offer .pravi-trenutak-is-landing-link--light {
+    border-color: var(--sos-red);
+    background: var(--sos-red);
+    color: #ffffff;
+  }
+
+  .pravi-trenutak-is-info-card--direction {
+    background: var(--sos-yellow);
+    color: #ffffff;
+  }
+
+  .pravi-trenutak-is-info-card--direction .pravi-trenutak-is-info-card__title,
+  .pravi-trenutak-is-info-card--direction .pravi-trenutak-is-info-card__text {
+    color: #ffffff;
+  }
+
+  .pravi-trenutak-is-info-card--direction .pravi-trenutak-is-info-card__tag,
+  .pravi-trenutak-is-info-card--direction .pravi-trenutak-is-info-card__details {
+    color: var(--is-yellow);
+  }
+
+  .pravi-trenutak-is-info-card--direction .pravi-trenutak-is-info-card__profile span {
+    color: #ffffff;
+  }
+
+  .pravi-trenutak-is-program-choice .pravi-trenutak-is-landing-link {
+    border-color: var(--sos-red);
+    background: var(--sos-red);
+    color: #ffffff;
+  }
+
+  .pravi-trenutak-is-testimonial-card,
+  .pravi-trenutak-is-info-card--direction,
+  .pravi-trenutak-is-program-choice__logo-card,
+  .pravi-trenutak-is-benefit-card {
+    box-shadow: none;
+  }
+
+  .pravi-trenutak-is-testimonial-card {
+    border: 1px solid var(--sos-yellow);
+  }
+
+  .pravi-trenutak-is-stats-section {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .pravi-trenutak-is-stats-section__value,
+  .pravi-trenutak-is-stats-section__label {
+    color: #ffffff;
+  }
+
+  .pravi-trenutak-is-landing-footer {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .pravi-trenutak-is-landing-footer__contact,
+  .pravi-trenutak-is-landing-footer__contact span,
+  .pravi-trenutak-is-landing-footer__contact a {
+    color: #ffffff;
+  }
+
+  .pravi-trenutak-is-special-conditions__visual {
+    border-color: rgba(7, 8, 12, 0.28);
+    background: rgba(7, 8, 12, 0.08);
+  }
+
+  .pravi-trenutak-is-testimonial-card__play {
+    background: var(--sos-red);
+  }
+
+  .pravi-trenutak-is-testimonial-card__play::after {
+    border-color: rgba(157, 21, 22, 0.34);
+  }
+
+  .pravi-trenutak-is-testimonial-card__play svg {
+    fill: #ffffff;
+  }
+
+  .pravi-trenutak-is-section-header__title,
+  .pravi-trenutak-is-scholarship-offer__headline h2,
+  .pravi-trenutak-is-program-choice__content h2,
+  .pravi-trenutak-is-enrollment-help h2,
+  .pravi-trenutak-is-benefit-card h3,
+  .pravi-trenutak-is-scholarship-offer__process-title,
+  .pravi-trenutak-is-testimonial-card__footer strong,
+  .pravi-trenutak-is-testimonial-card__footer > div:last-child > span {
+    color: #354180;
+  }
+
+  .pravi-trenutak-is-section-header__eyebrow,
+  .pravi-trenutak-is-special-offer__eyebrow,
+  .pravi-trenutak-is-college-promo__eyebrow,
+  .pravi-trenutak-is-school-stage__eyebrow {
+    margin-bottom: 12px;
+    font-size: 22px;
+  }
+
+  .pravi-trenutak-is-school-stage__content p.pravi-trenutak-is-school-stage__eyebrow {
+    margin-bottom: 12px;
+    font-size: 22px;
+  }
+}

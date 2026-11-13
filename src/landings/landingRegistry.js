@@ -17,6 +17,9 @@ import { defaultDataContent as upisJeOtvorenSgData } from './upis-je-otvoren-sg/
 import { UpisJeOtvorenIsLanding } from './upis-je-otvoren-is/UpisJeOtvorenIsLanding'
 import { defaultDataContent as upisJeOtvorenIsData } from './upis-je-otvoren-is/dataContent'
 import { defaultDataContent as upisJeOtvorenIsSerbianData } from './upis-je-otvoren-is/dataContent.sr'
+import { PraviTrenutakIsLanding } from './pravi-trenutak-is/PraviTrenutakIsLanding'
+import { defaultDataContent as praviTrenutakIsData } from './pravi-trenutak-is/dataContent'
+import { defaultDataContent as praviTrenutakIsSerbianData } from './pravi-trenutak-is/dataContent.sr'
 import { SoftskillsIsLanding } from './softskills-is/SoftskillsIsLanding'
 import { defaultDataContent as softskillsIsData } from './softskills-is/dataContent'
 import { defaultDataContent as softskillsIsSerbianData } from './softskills-is/dataContent.sr'
@@ -77,6 +80,16 @@ export const landingRegistry = {
   [upisJeOtvorenIsSerbianData.slug]: {
     component: UpisJeOtvorenIsLanding,
     fallbackData: upisJeOtvorenIsSerbianData,
+    useStaticData: true,
+  },
+  [praviTrenutakIsData.slug]: {
+    component: PraviTrenutakIsLanding,
+    fallbackData: praviTrenutakIsData,
+    useStaticData: true,
+  },
+  [praviTrenutakIsSerbianData.slug]: {
+    component: PraviTrenutakIsLanding,
+    fallbackData: praviTrenutakIsSerbianData,
     useStaticData: true,
   },
   [softskillsIsData.slug]: {
