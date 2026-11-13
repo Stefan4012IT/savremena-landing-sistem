@@ -1,12 +1,12 @@
 .pravi-trenutak-is-hero {
-  --is-hero-blue: #354180;
+  --is-hero-blue: #06234b;
   --is-hero-yellow: #f7b815;
   position: relative;
   min-height: 980px;
   isolation: isolate;
   overflow: visible;
   background-color: var(--is-hero-blue);
-  background-image: url('https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_enrollment_is_open_background_001.jpg');
+  background-image: url('https://www.international-school.edu.rs/wp-content/uploads/2026/11/dobre-odluke-background-001.jpg');
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -836,6 +836,188 @@
     &__form-panel {
       width: 100%;
       align-self: center;
+    }
+  }
+}
+
+// Right-moment campaign hero and date/offer strip.
+.pravi-trenutak-is-hero {
+  z-index: 2;
+  min-height: 900px;
+  background-position: center top;
+
+  &__inner {
+    min-height: 900px;
+  }
+
+  &__content {
+    top: auto;
+    bottom: 48px;
+    left: clamp(24px, 5vw, 84px);
+    width: min(58vw, 980px);
+    max-width: calc(100% - 700px);
+    justify-items: start;
+    text-align: left;
+    transform: none;
+  }
+
+  &__title {
+    display: block;
+    max-width: 100%;
+    color: #ffffff;
+    font-family: var(--is-font-heading, 'Khand', sans-serif);
+    font-size: clamp(3.5rem, 6.2vw, 7.8rem);
+    font-weight: 400;
+    letter-spacing: -0.035em;
+    line-height: 1;
+    text-align: left;
+    text-wrap: balance;
+  }
+
+  &__title strong {
+    font-weight: 800;
+  }
+
+  &__title-line {
+    display: block;
+  }
+
+  &__title-line:first-child {
+    white-space: nowrap;
+  }
+}
+
+.pravi-trenutak-is-landing h1 {
+  font-weight: 400 !important;
+}
+
+.pravi-trenutak-is-landing h1 strong {
+  font-weight: 800;
+}
+
+.pravi-trenutak-is-event-strip {
+  position: relative;
+  z-index: 1;
+  padding: 42px 0;
+  background: #06234b;
+  color: #ffffff;
+
+  &__inner {
+    width: auto;
+    margin-inline: clamp(24px, 5vw, 84px);
+  }
+
+  &__content {
+    max-width: 640px;
+    border-left: 2px solid #ffffff;
+    padding: 0 0 0 24px;
+  }
+
+  &__date {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0 0 30px;
+    color: #ffffff;
+    font-size: clamp(1.5rem, 2.8vw, 2.7rem);
+    font-weight: 400;
+    line-height: 1.1;
+  }
+
+  &__date svg {
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+  }
+
+  &__description {
+    max-width: 600px;
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(1.15rem, 2vw, 1.8rem);
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  &__description strong {
+    font-weight: 800;
+  }
+}
+
+@media (min-width: 992px) {
+  .pravi-trenutak-is-hero__form-panel {
+    bottom: 0;
+    transform: translateY(50%);
+  }
+}
+
+@media (max-width: 991px) {
+  .pravi-trenutak-is-hero {
+    min-height: auto;
+
+    &__inner {
+      min-height: auto;
+      padding-bottom: 24px;
+    }
+
+    &__content {
+      position: static;
+      display: contents;
+      width: auto;
+      max-width: none;
+      transform: none;
+    }
+
+    &__title {
+      order: 1;
+      align-self: flex-start;
+      max-width: min(100%, 720px);
+      margin: 0 0 24px;
+      font-size: clamp(3rem, 9vw, 5.8rem);
+      text-align: left;
+    }
+  }
+
+  .pravi-trenutak-is-event-strip {
+    padding-block: 42px;
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__inner {
+      margin-inline: 20px;
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .pravi-trenutak-is-event-strip {
+    padding-inline: 0;
+
+    &__content {
+      padding-left: 16px;
+    }
+
+    &__date {
+      gap: 12px;
+      margin-bottom: 20px;
+      font-size: 1.35rem;
+    }
+
+    &__date svg {
+      flex-basis: 30px;
+      width: 30px;
+      height: 30px;
+    }
+
+    &__description {
+      font-size: 1.2rem;
     }
   }
 }

@@ -2,10 +2,6 @@ import cambridgeLogo from '../assets/logos/cambridge-logo-white.png'
 import { LeadForm } from './LeadForm'
 import { useLandingData } from '../useLandingData'
 
-const heroImageLeftUrl = 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/enrollemnt_hero_left.png'
-const heroImageRightUrl = 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/enrollemnt_hero_right.png'
-const heroImageMobileUrl = 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/enrollemnt_hero_mob.png'
-
 export function HeroSection() {
   const { hero, locale = 'sr' } = useLandingData()
   const isEnglish = locale === 'en'
@@ -16,6 +12,7 @@ export function HeroSection() {
     : 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_eng_flag.png'
 
   return (
+    <>
     <section
       className="pravi-trenutak-is-hero"
       data-hero-version="jos-nije-kasno-za-bolju-skolu"
@@ -32,31 +29,16 @@ export function HeroSection() {
           </a>
         </div>
       </header>
-      <div className="pravi-trenutak-is-hero__visual pravi-trenutak-is-hero__visual--left" aria-hidden="true">
-        <img src={heroImageLeftUrl} alt="" />
-      </div>
-      <div className="pravi-trenutak-is-hero__visual pravi-trenutak-is-hero__visual--right" aria-hidden="true">
-        <img src={heroImageRightUrl} alt="" />
-      </div>
       <div className="pravi-trenutak-is-hero__inner">
-        <div className="pravi-trenutak-is-hero__content" aria-label="Uvod u landing">
+        <div className="pravi-trenutak-is-hero__content" aria-label={isEnglish ? 'The right moment for the right decision' : 'Pravi trenutak za pravu odluku'}>
           <h1 className="pravi-trenutak-is-hero__title">
-            <span className="pravi-trenutak-is-hero__title-line">{hero.titleFirstLine}</span>
-            <span className="pravi-trenutak-is-hero__title-line">{hero.titleSecondLine}</span>
-            <span className="pravi-trenutak-is-hero__title-emphasis">{hero.titleEmphasis}</span>
+            <span className="pravi-trenutak-is-hero__title-line">
+              {hero.promoTitleStart}<strong>{hero.promoTitleEmphasis}</strong>
+            </span>
+            <span className="pravi-trenutak-is-hero__title-line">
+              {hero.promoTitleMiddle}<strong>{hero.promoTitleFinal}</strong>
+            </span>
           </h1>
-          <div className="pravi-trenutak-is-hero__copy">
-            <p className="pravi-trenutak-is-hero__lead">
-              {hero.copyBefore}
-              <span className="pravi-trenutak-is-hero__lead-highlight">{hero.copyCambridge}</span>
-              {hero.copyBetween}
-              <span className="pravi-trenutak-is-hero__lead-highlight">{hero.copyLowest}</span>
-              {hero.copyAfter}
-            </p>
-          </div>
-        </div>
-        <div className="pravi-trenutak-is-hero__mobile-visual" aria-hidden="true">
-          <img src={heroImageMobileUrl} alt="" />
         </div>
         <div className="pravi-trenutak-is-hero__form-panel" id="prijava">
           <LeadForm
@@ -67,5 +49,22 @@ export function HeroSection() {
         </div>
       </div>
     </section>
+    <section className="pravi-trenutak-is-event-strip" aria-label={isEnglish ? 'Enrolment dates and offer' : 'Datumi upisa i ponuda'}>
+      <div className="pravi-trenutak-is-event-strip__inner">
+        <div className="pravi-trenutak-is-event-strip__content">
+          <p className="pravi-trenutak-is-event-strip__date">
+            <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+              <rect x="3.5" y="6" width="25" height="22" rx="1.5" />
+              <path d="M9 3.5v5M23 3.5v5M4 12h24M9 17h2m4 0h2m4 0h2M9 22h2m4 0h2m4 0h2" />
+            </svg>
+            <span>{hero.eventDate}</span>
+          </p>
+          <p className="pravi-trenutak-is-event-strip__description">
+            {hero.eventDescriptionStart}<strong>{hero.eventDescriptionEmphasis}</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+    </>
   )
 }
