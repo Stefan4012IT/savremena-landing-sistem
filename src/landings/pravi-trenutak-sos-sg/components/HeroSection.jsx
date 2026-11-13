@@ -1,7 +1,7 @@
 import { LeadForm } from './LeadForm'
 import { useLandingData } from '../useLandingData'
 import cambridgeLogo from '../../novo-odeljenje/assets/logos/cambridge-logo-white.png'
-import savremenaGroupLogo from '../../malo-mesta/assets/Logo_sos_sg_001.svg'
+const savremenaGroupLogo = 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/seg_2026_logo_horizontal.svg'
 
 const heroBackgroundImage = 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/pravi-trenutak-hero-background-001.jpg'
 
@@ -52,6 +52,10 @@ export function HeroSection() {
           ) : null}
           {hero.conclusion ? <p className="pravi-trenutak-sos-sg-hero__conclusion">{hero.conclusion}</p> : null}
         </div>
+      </div>
+      <div className="pravi-trenutak-sos-sg-hero__school-logos" aria-label="Savremena osnovna škola i Savremena gimnazija">
+        <img src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/sos_2026_logo.svg" alt="Savremena osnovna škola" />
+        <img src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/sg_2026_logo.svg" alt="Savremena gimnazija" />
       </div>
       <div className="pravi-trenutak-sos-sg-hero__form-panel" id="prijava">
         <LeadForm />

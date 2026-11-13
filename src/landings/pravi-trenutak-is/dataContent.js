@@ -32,14 +32,14 @@ const englishDirections = [
 ]
 
 const englishBenefitImageUrls = [
-  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_1.jpg',
-  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_2.jpg',
-  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_3.jpg',
-  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_4.jpg',
-  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_5.jpg',
-  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_6.jpg',
-  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_7.jpg',
-  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_8.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/11/benefit_0001.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/11/benefit_0002.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/11/benefit_0003.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/11/benefit_0004.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/11/benefit_0005.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/11/benefit_0006.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/11/benefit_0007.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/11/benefit_0008.jpg',
 ]
 
 const englishBenefits = [

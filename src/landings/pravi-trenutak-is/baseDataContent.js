@@ -247,42 +247,42 @@ export const benefits = [
   {
     title: 'Interdisciplinarna nastava na engleskom',
     text: 'Engleski je deo svakog školskog dana. Povezivanje različitih predmeta pomaže učenicima da sagledaju širu sliku, objasne svoje ideje i primene naučeno u novim situacijama.',
-    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_1.jpg',
+    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/benefit_0001.jpg',
   },
   {
     title: 'Priznate Cambridge diplome',
     text: 'Cambridge kvalifikacije podržavaju međunarodni obrazovni put. Priprema za njih podstiče temeljno razumevanje gradiva, radne navike i sigurnost pri izboru daljeg školovanja.',
-    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_2.jpg',
+    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/benefit_0002.jpg',
   },
   {
     title: 'Moderna tehnologija u nastavi',
     text: 'Digitalni alati čine apstraktne pojmove pristupačnijim. Učenici kroz istraživanje i praktične zadatke otkrivaju kako tehnologija može da pomogne u učenju i predstavljanju ideja.',
-    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_3.jpg',
+    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/benefit_0003.jpg',
   },
   {
     title: 'Nastavnici i mentori sa velikim iskustvom',
     text: 'Iskusni predavači usmeravaju učenike kroz izazove u učenju. Povratna informacija pomaže detetu da prepozna šta već razume i na čemu još treba da radi.',
-    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_4.jpg',
+    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/benefit_0004.jpg',
   },
   {
     title: 'Posvećenost svakom učeniku',
     text: 'Pažnja prema individualnim potrebama daje učeniku prostor za napredak. Razgovor o interesovanjima i ciljevima podstiče aktivno učešće i preuzimanje odgovornosti za sopstveno učenje.',
-    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_5.jpg',
+    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/benefit_0005.jpg',
   },
   {
     title: 'Podsticajno okruženje za učenje',
     text: 'Dostupna mentorska podrška olakšava prevazilaženje teškoća. Kada dete slobodno postavlja pitanja, lakše razvija istrajnost i spremnost da isproba drugačiji pristup zadatku.',
-    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_6.jpg',
+    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/benefit_0006.jpg',
   },
   {
     title: 'Bogate vannastavne aktivnosti',
     text: 'Sport i susreti sa kulturom proširuju školsko iskustvo. Zajedničke aktivnosti pružaju priliku za nova prijateljstva, saradnju i otkrivanje interesovanja van učionice.',
-    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_7.jpg',
+    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/benefit_0007.jpg',
   },
   {
     title: 'Sekcije za razvijanje talenata',
     text: 'Klubovi i radionice otvaraju prostor za lično izražavanje. Istražujući književnost, umetnost i jezike, učenici upoznaju svoje talente i pronalaze nove načine da ih razviju.',
-    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_8.jpg',
+    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/benefit_0008.jpg',
   },
 ]
 
