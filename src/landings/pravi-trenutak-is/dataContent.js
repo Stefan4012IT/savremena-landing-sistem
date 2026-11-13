@@ -31,6 +31,17 @@ const englishDirections = [
   },
 ]
 
+const englishBenefitImageUrls = [
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_1.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_2.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_3.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_4.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_5.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_6.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_7.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_8.jpg',
+]
+
 const englishBenefits = [
   ['Interdisciplinary learning in English', 'English is part of every school day. Connecting different subjects helps students see the bigger picture, explain their ideas and apply what they learn in new situations.'],
   ['Recognised Cambridge qualifications', 'Cambridge qualifications support an international education journey. Preparing for them encourages deep understanding, strong study habits and confidence when choosing the next step.'],
@@ -43,7 +54,7 @@ const englishBenefits = [
 ].map(([title, text], index) => ({
   title,
   text,
-  imageUrl: `https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_${index + 1}.jpg`,
+  imageUrl: englishBenefitImageUrls[index],
 }))
 
 const englishTestimonials = [
@@ -128,17 +139,16 @@ export const defaultDataContent = {
   emotionalTurn: {
     ...serbianLandingData.emotionalTurn,
     eyebrow: '',
-    title: 'Enrolment is open – secure your child’s place in time!',
+    title: 'Great opportunities start with a good choice',
     text: '',
     paragraphs: [
-      'Enrolment at International School is now open, and this is the right time to secure your child’s place for the next school year.',
-      'Now is the ideal time to explore the programme and all the benefits of International School, and secure a place for your child in the preferred year group.',
-      'Places are limited, so we recommend that you do not delay your application.',
+      'Choosing a school is one of the most important decisions you will make for your child. At International School, we combine knowledge with a Cambridge education and the development of skills that prepare students for the future.',
+      'Quality education is an investment whose value lasts for years, through the knowledge, experiences and skills your child gains throughout their education. Discover the opportunities International School offers and choose the educational path that best matches your child’s interests and potential.',
     ],
-    processTitle: 'What does the enrolment process look like?',
-    processText: 'Simply submit the form online or call us on 011/40-11-220. Our admissions consultants will present the programme, answer all your questions and support you throughout the process.',
-    processPhone: '011/40-11-220',
-    ctaText: 'Start the enrolment process today and secure your child’s place at International School.',
+    processTitle: '',
+    processText: '',
+    processPhone: '',
+    ctaText: '',
     worryLabel: 'Do you expect more from secondary education?',
     worries: [
       'Do you want a truly different education for your child?',
@@ -161,6 +171,7 @@ export const defaultDataContent = {
   },
   modernEducation: {
     ...serbianLandingData.modernEducation,
+    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/dobre-odluke-003.jpg',
     eyebrow: 'Where innovation meets inspiration — and students thrive.',
     title: 'A Cambridge Future-Ready school in the heart of Belgrade',
     text: 'Children absorb much more than knowledge: values, confidence, language, ambition and a way of seeing the world.',

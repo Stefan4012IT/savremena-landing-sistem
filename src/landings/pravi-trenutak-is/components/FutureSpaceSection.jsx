@@ -10,37 +10,24 @@ const existingSpaceImages = [
 ]
 
 const lowerGalleryImages = [
-  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_lower_gallery_1.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/11/primary_pr1.jpg',
   'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_lower_gallery_2.jpg',
-  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_lower_gallery_3.jpg',
-  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_lower_gallery_4.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/11/primary_pr3.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/11/primary_pr4.jpg',
   'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_lower_gallery_5.jpg',
-  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_lower_gallery_6.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/11/primary_pr6.jpg',
   'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_lower_gallery_7.jpg',
   'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_lower_gallery_8.jpg',
 ]
 
 const secondaryGalleryImages = [
-  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_secondary_gallery_1.jpg',
-  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_secondary_gallery_2.jpg',
-  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_secondary_gallery_3.jpg',
-  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_secondary_gallery_4.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/11/secondary_1.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/11/secondary_2.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/11/secondary_3.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/11/secondary_4.jpg',
 ]
 
-function shuffleImages(images) {
-  const shuffled = [...images]
-
-  for (let index = shuffled.length - 1; index > 0; index -= 1) {
-    const randomIndex = Math.floor(Math.random() * (index + 1))
-    const currentImage = shuffled[index]
-    shuffled[index] = shuffled[randomIndex]
-    shuffled[randomIndex] = currentImage
-  }
-
-  return shuffled
-}
-
-const mixedSecondaryImages = shuffleImages([...existingSpaceImages, ...secondaryGalleryImages])
+const mixedSecondaryImages = [...secondaryGalleryImages, ...existingSpaceImages]
 
 export function FutureSpaceCarousel({ stage = 'primary' }) {
   const images = stage === 'secondary' ? mixedSecondaryImages : lowerGalleryImages

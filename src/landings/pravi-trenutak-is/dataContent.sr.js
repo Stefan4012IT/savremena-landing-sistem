@@ -44,6 +44,10 @@ export const defaultDataContent = {
     processPhone: '',
     ctaText: '',
   },
+  modernEducation: {
+    ...baseDataContent.modernEducation,
+    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/dobre-odluke-003.jpg',
+  },
   leadForm: {
     ...baseDataContent.leadForm,
     formName: 'dobre-odluke - is - sr',
