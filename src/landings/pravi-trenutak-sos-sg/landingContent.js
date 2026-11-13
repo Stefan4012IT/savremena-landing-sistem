@@ -1,7 +1,7 @@
 import { testimonials as novoOdeljenjeTestimonialCards } from '../novo-odeljenje/landingContent.js'
 
 export const landingData = {
-  slug: 'parvi-trenutak',
+  slug: 'pravi-trenutak',
   name: 'Pravi trenutak — SOS + SG',
   brandScope: 'SOS+SG',
   gtmId: 'GTM-PDD7NJ3',
@@ -246,7 +246,7 @@ export const landingData = {
     phoneLabel: 'Telefon',
     childAgePlaceholder: 'Uzrast deteta',
     childAgeLabel: 'Uzrast deteta',
-    formName: 'parvi-trenutak',
+    formName: 'pravi-trenutak',
     submitLabel: 'Pošaljite prijavu',
     successTitle: 'Prijava je poslata',
     successMessage: 'Hvala vam. Naš tim za upis će vas uskoro kontaktirati.',

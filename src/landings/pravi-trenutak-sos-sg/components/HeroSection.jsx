@@ -25,7 +25,7 @@ export function HeroSection() {
   return (
     <section className="pravi-trenutak-sos-sg-hero">
       <header className="pravi-trenutak-sos-sg-hero__header" aria-label="Glavna navigacija">
-        <a className="pravi-trenutak-sos-sg-hero__logo" href="/parvi-trenutak" aria-label="Početna">
+        <a className="pravi-trenutak-sos-sg-hero__logo" href="/pravi-trenutak" aria-label="Početna">
           <img src={savremenaGroupLogo} alt="Savremena osnovna škola i Savremena gimnazija" />
         </a>
         <div className="pravi-trenutak-sos-sg-hero__institution-logos" aria-label="Institucionalni logotipi">
