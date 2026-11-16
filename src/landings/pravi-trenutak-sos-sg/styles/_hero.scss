@@ -1,5 +1,6 @@
 .landing--pravi-trenutak-sos-sg {
   min-height: 100vh;
+  overflow-x: hidden;
   overflow-x: clip;
   --color-primary: #07080c;
   --color-primary-dark: #07080c;
@@ -257,7 +258,7 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1040px) {
   .pravi-trenutak-sos-sg-hero {
     padding-bottom: 0;
     background-image: none;
@@ -292,17 +293,21 @@
     }
 
     &__inner {
+      box-sizing: border-box;
+      width: 100%;
       gap: 18px;
-      padding-top: 64px;
+      padding: 64px 0 0;
     }
 
     h1 {
+      box-sizing: border-box;
+      width: 100%;
       max-width: 100%;
       position: relative;
       isolation: isolate;
       font-size: clamp(2.8rem, 12vw, 4.8rem);
       line-height: 0.88;
-      padding: clamp(28px, 8vw, 48px) 0;
+      padding: clamp(28px, 8vw, 48px) var(--landing-container-padding);
     }
 
     h1::before {
@@ -310,10 +315,18 @@
       z-index: -1;
       top: 0;
       bottom: 0;
-      left: calc(var(--landing-container-padding) * -1);
-      width: calc(100% + (var(--landing-container-padding) * 2));
+      left: 0;
+      width: 100%;
       background: url('https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/pravi-trenutak-hero-background-001.jpg') center / cover no-repeat;
       content: '';
+    }
+
+    &__content > :not(h1) {
+      margin-inline: var(--landing-container-padding);
+    }
+
+    &__copy {
+      width: auto;
     }
 
     &__copy p {
@@ -333,6 +346,37 @@
   }
 }
 
+@media (max-width: 399px) {
+  .pravi-trenutak-sos-sg-hero__title-strong {
+    display: block;
+    width: min-content;
+    white-space: normal;
+  }
+
+  .pravi-trenutak-sos-sg-hero h1::before {
+    background-position: right top;
+  }
+}
+
+@media (min-width: 1041px) and (max-width: 1599px) {
+  .pravi-trenutak-sos-sg-hero {
+    background-position: 85% 50%;
+  }
+
+}
+
+@media (min-width: 701px) and (max-width: 1040px) {
+  .pravi-trenutak-sos-sg-hero {
+    background-position: right top;
+  }
+}
+
+@media (max-width: 1040px) {
+  .pravi-trenutak-sos-sg-hero h1::before {
+    background-position: right top;
+  }
+}
+
 @media (min-width: 1440px) and (max-width: 1699px) {
   .pravi-trenutak-sos-sg-hero__content {
     width: min(50%, 820px);
@@ -349,12 +393,20 @@
   }
 }
 
-@media (min-width: 1040px) and (max-width: 1199px) {
+@media (min-width: 1041px) and (max-width: 1199px) {
   .pravi-trenutak-sos-sg-hero__content {
     width: min(50%, 820px);
   }
+}
 
+@media (min-width: 1041px) and (max-width: 1599px) {
   .pravi-trenutak-sos-sg-hero__inner {
-    min-height: 690px;
+    min-height: auto;
+  }
+}
+
+@media (min-width: 1041px) and (max-width: 1699px) {
+  .pravi-trenutak-sos-sg-hero__content {
+    width: min(70%, 820px);
   }
 }

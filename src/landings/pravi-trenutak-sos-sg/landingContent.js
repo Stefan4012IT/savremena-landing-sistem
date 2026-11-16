@@ -227,10 +227,10 @@ export const landingData = {
     closing: 'Uspešna akademska budućnost vašeg deteta počinje jednim pozivom!',
   },
   enrollmentCta: {
-    eyebrow: 'Upis 2027/28. je počeo',
-    title: 'Uspešna budućnost vašeg deteta počinje pravim izborom danas.',
+    eyebrow: 'Upis je u toku',
+    title: 'Uspeh vašeg deteta počinje pravim izborom danas.',
     text: 'U Savremenoj osnovnoj školi i Savremenoj gimnaziji učenici razvijaju znanje, samostalnost, kreativnost, kritičko mišljenje i vrednosti koje im otvaraju vrata budućnosti. Stiču samopouzdanje da pokreću ideje, donose odluke i svoje znanje pretvaraju u konkretne rezultate.',
-    highlight: 'Upis naredne generacije 2027/28. je već počeo! Obezbedite mesto na vreme i iskoristite najniže cene školarina u upisnom ciklusu.',
+    highlight: 'Obezbedite mesto na vreme i iskoristite najniže cene školarina u upisnom ciklusu.',
     signature: 'Savremena. Više od znanja.',
   },
   leadForm: {

@@ -1033,7 +1033,7 @@
   .pravi-trenutak-is-event-strip__inner {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: clamp(20px, 3vw, 44px);
   }
 
