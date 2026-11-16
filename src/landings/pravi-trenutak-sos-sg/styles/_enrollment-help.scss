@@ -10,14 +10,16 @@
   }
 
   &__intro {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 350px);
-    gap: clamp(32px, 7vw, 110px);
-    align-items: start;
+    display: block;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: none;
   }
 
   h2 {
-    max-width: 980px;
+    max-width: none;
     margin: 0;
     color: #002965;
     font-size: clamp(2rem, 4vw, 4rem);
@@ -25,7 +27,7 @@
   }
 
   &__content > p {
-    max-width: 1080px;
+    max-width: none;
     margin: 24px 0 0;
     color: #787878;
     font-size: clamp(1.05rem, 1.4vw, 1.22rem);

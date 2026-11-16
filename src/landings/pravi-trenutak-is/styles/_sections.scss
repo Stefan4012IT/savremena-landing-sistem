@@ -711,18 +711,17 @@
   }
 
   &__intro {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 350px);
-    gap: clamp(32px, 7vw, 110px);
-    align-items: start;
+    display: block;
   }
 
   &__content {
+    width: 100%;
+    max-width: none;
     min-width: 0;
   }
 
   h2 {
-    max-width: 980px;
+    max-width: none;
     margin: 0;
     color: var(--color-primary-dark);
     font-size: clamp(2rem, 4vw, 4rem);
@@ -730,7 +729,7 @@
   }
 
   p {
-    max-width: 1080px;
+    max-width: none;
     margin: 24px 0 0;
     color: var(--color-muted);
     font-size: clamp(1.05rem, 1.4vw, 1.22rem);
@@ -854,7 +853,7 @@
   }
 
   &__logo {
-    width: min(100%, 230px);
+    width: min(100%, 340px);
     height: auto;
     margin-bottom: 22px;
   }

@@ -1029,6 +1029,21 @@
 
 .pravi-trenutak-is-event-strip--desktop {
   display: block;
+
+  .pravi-trenutak-is-event-strip__inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: clamp(20px, 3vw, 44px);
+  }
+
+  .pravi-trenutak-is-event-strip__logo {
+    display: block;
+    flex: 0 0 auto;
+    width: clamp(140px, 17vw, 260px);
+    max-height: 240px;
+    object-fit: contain;
+  }
 }
 
 @media (max-width: 991px) {
@@ -1096,5 +1111,25 @@
     width: 100%;
     padding-block: 32px;
     background: #06234b;
+
+    .pravi-trenutak-is-event-strip__inner {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .pravi-trenutak-is-event-strip__content {
+      flex: 1 1 auto;
+      min-width: 0;
+      max-width: none;
+    }
+
+    .pravi-trenutak-is-event-strip__logo {
+      display: block;
+      flex: 0 0 auto;
+      width: clamp(68px, 20vw, 110px);
+      max-height: 150px;
+      object-fit: contain;
+    }
   }
 }

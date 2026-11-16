@@ -25,13 +25,13 @@ export function EnrollmentHelpSection() {
   const isEnglish = locale === 'en'
 
   return (
-    <section className="pravi-trenutak-is-landing-section pravi-trenutak-is-enrollment-help">
+    <section id="prijava" className="pravi-trenutak-is-landing-section pravi-trenutak-is-enrollment-help">
       <div className="pravi-trenutak-is-landing-container pravi-trenutak-is-enrollment-help__inner">
         <div className="pravi-trenutak-is-enrollment-help__intro">
           <div className="pravi-trenutak-is-enrollment-help__content">
             <h2>{enrollmentHelp.title}</h2>
             <p>
-              {enrollmentHelp.introBeforeName} <strong>{enrollmentHelp.advisorName}</strong>,{' '}
+              {enrollmentHelp.introBeforeName}{enrollmentHelp.advisorName ? <> <strong>{enrollmentHelp.advisorName}</strong>,</> : null}{' '}
               {enrollmentHelp.introAfterName}
             </p>
             <p>
@@ -54,17 +54,12 @@ export function EnrollmentHelpSection() {
             </p>
             <p>{enrollmentHelp.closing}</p>
           </div>
-          <div className="pravi-trenutak-is-enrollment-help__advisor" aria-label={isEnglish ? 'Admissions adviser Katarina Petrovic' : 'Savetnica za upis Katarina Petrovic'}>
-            <div className="pravi-trenutak-is-enrollment-help__advisor-photo">
-              {enrollmentHelp.advisorImageUrl ? (
-                <img src={enrollmentHelp.advisorImageUrl} alt="" />
-              ) : (
-                <span>{enrollmentHelp.advisorInitials}</span>
-              )}
-            </div>
-          </div>
         </div>
-        <LeadForm className="pravi-trenutak-is-lead-form--enrollment" />
+        <LeadForm
+          className="pravi-trenutak-is-lead-form--enrollment"
+          headerTitle={isEnglish ? 'APPLY NOW' : 'PRIJAVITE SE'}
+          headerText={isEnglish ? 'Give your child the most modern education in the region.' : 'Obezbedite svom detetu najsavremenije obrazovanje u regionu.'}
+        />
       </div>
     </section>
   )

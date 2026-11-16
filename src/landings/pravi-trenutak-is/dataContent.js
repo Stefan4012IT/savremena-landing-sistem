@@ -114,9 +114,9 @@ export const defaultDataContent = {
   locale: 'en',
   name: 'The right moment | International School',
   seo: {
-    title: 'Enrolment for 2027/28 is open | International School',
-    description: 'Enrolment for the 2027/28 school year at International School is open. Secure your child’s place and a prestigious Cambridge education in English.',
-    ogImageUrl: 'https://sr.international-school.edu.rs/wp-content/uploads/2026/10/IS-enrollmtnt-1200x628-1.jpg',
+    title: 'The Right Moment for the Right Decision | International School',
+    description: 'From 23 to 30 November, enrol your child at International School under special tuition conditions. Choose an international Cambridge education in English and prepare your child for the future.',
+    ogImageUrl: 'https://sr.international-school.edu.rs/wp-content/uploads/2026/11/pravi_trenutak_og_1200x628.jpg',
   },
   hero: {
     ...serbianLandingData.hero,
@@ -213,8 +213,9 @@ export const defaultDataContent = {
   enrollmentHelp: {
     ...serbianLandingData.enrollmentHelp,
     title: 'Do you have questions or need help with enrolment?',
-    introBeforeName: 'Our friendly and experienced admissions adviser,',
-    introAfterName: 'is here to provide all the information you need, answer your questions and help you make the best decision for your child’s future.',
+    introBeforeName: 'Our friendly and experienced admissions advisers',
+    advisorName: '',
+    introAfterName: 'are here to provide all the information you need, answer your questions and help you make the best decision for your child’s future.',
     emphasis: 'Do not wait – give your child an education that truly makes a difference.',
     prompt: 'Call us today and start your International School journey:',
     viberLabel: 'Viber',

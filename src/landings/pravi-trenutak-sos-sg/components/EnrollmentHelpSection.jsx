@@ -33,7 +33,8 @@ export function EnrollmentHelpSection() {
           <div className="pravi-trenutak-sos-sg-enrollment-help__content">
             <h2>{enrollmentHelp.title}</h2>
             <p>
-              {enrollmentHelp.introBeforeName} <strong>{enrollmentHelp.advisorName}</strong>, {enrollmentHelp.introAfterName}
+              {enrollmentHelp.introBeforeName}{enrollmentHelp.advisorName ? <> <strong>{enrollmentHelp.advisorName}</strong>,</> : null}{' '}
+              {enrollmentHelp.introAfterName}
             </p>
             <p><strong>{enrollmentHelp.emphasis}</strong></p>
             <p>{enrollmentHelp.prompt}</p>
@@ -54,13 +55,6 @@ export function EnrollmentHelpSection() {
               {enrollmentHelp.contactSuffix.split('popunite prijavu')[1]}
             </p>
             <p>{enrollmentHelp.closing}</p>
-          </div>
-          <div className="pravi-trenutak-sos-sg-enrollment-help__advisor" aria-label="Savetnica za upis">
-            {enrollmentHelp.advisorImageUrl ? (
-              <img src={enrollmentHelp.advisorImageUrl} alt="" />
-            ) : (
-              <span>KP</span>
-            )}
           </div>
         </div>
       </div>

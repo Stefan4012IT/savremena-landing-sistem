@@ -7,10 +7,10 @@ export const defaultDataContent = {
   locale: 'sr',
   name: 'Pravi trenutak | International School',
   seo: {
-    title: 'Upis za 2027/28. je otvoren | International School',
+    title: 'Dobre odluke imaju svoj trenutak | International School',
     description:
-      'Upis za školsku 2027/28. godinu u International School je otvoren. Obezbedite detetu mesto na vreme i prestižno Cambridge obrazovanje na engleskom jeziku.',
-    ogImageUrl: 'https://sr.international-school.edu.rs/wp-content/uploads/2026/10/IS-enrollmtnt-1200x628-1.jpg',
+      'Od 23. do 30. novembra upišite dete u International School po posebnim uslovima. Izaberite međunarodno Cambridge obrazovanje na engleskom jeziku i put ka budućnosti.',
+    ogImageUrl: 'https://sr.international-school.edu.rs/wp-content/uploads/2026/11/pravi_trenutak_og_1200x628.jpg',
   },
   hero: {
     ...baseDataContent.hero,

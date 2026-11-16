@@ -7,7 +7,7 @@ export function FinalCTASection() {
   return (
     <footer className="pravi-trenutak-is-landing-footer">
       <div className="pravi-trenutak-is-landing-container pravi-trenutak-is-landing-footer__inner">
-        <img className="pravi-trenutak-is-landing-footer__logo" src="https://www.international-school.edu.rs/wp-content/uploads/2020/03/IS_logo_white.svg" alt="International School" />
+        <img className="pravi-trenutak-is-landing-footer__logo" src="https://sr.international-school.edu.rs/wp-content/uploads/2026/11/is_logo_2027_white-horisontal.svg" alt="International School" />
         <address className="pravi-trenutak-is-landing-footer__contact">
           <span>{footer.addressLine1}</span>
           <span>{footer.addressLine2}</span>

@@ -1,10 +1,7 @@
-import sosLogo from '../../malo-mesta/assets/sos_logo_1.svg'
-import sgLogo from '../../malo-mesta/assets/sg_beli.svg'
-
 const schools = [
   {
     name: 'Savremena osnovna škola',
-    logo: sosLogo,
+    logo: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/sos_logo_2027_white-horizontal.svg',
     website: 'www.savremena-osnovna.edu.rs',
     websiteUrl: 'https://www.savremena-osnovna.edu.rs',
     address: 'Bulevar heroja sa Košara 17, Novi Beograd',
@@ -13,7 +10,7 @@ const schools = [
   },
   {
     name: 'Savremena gimnazija',
-    logo: sgLogo,
+    logo: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/sg_logo_2027_white-horizontal.svg',
     website: 'www.savremena-gimnazija.edu.rs',
     websiteUrl: 'https://www.savremena-gimnazija.edu.rs',
     address: 'Masarikova 5, Palata Beograd',

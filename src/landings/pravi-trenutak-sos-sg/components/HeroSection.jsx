@@ -1,6 +1,4 @@
-import { LeadForm } from './LeadForm'
 import { useLandingData } from '../useLandingData'
-import cambridgeLogo from '../../novo-odeljenje/assets/logos/cambridge-logo-white.png'
 const savremenaGroupLogo = 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/seg_2026_logo_horizontal.svg'
 
 const heroBackgroundImage = 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/pravi-trenutak-hero-background-001.jpg'
@@ -29,8 +27,8 @@ export function HeroSection() {
           <img src={savremenaGroupLogo} alt="Savremena osnovna škola i Savremena gimnazija" />
         </a>
         <div className="pravi-trenutak-sos-sg-hero__institution-logos" aria-label="Institucionalni logotipi">
-          <img src={cambridgeLogo} alt="Cambridge International Education" />
-          <img src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/07/ministarstvo_prosvete_logo_color_white.png" alt="Ministarstvo prosvete" />
+          <img src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2024/08/camb-1.png" alt="Cambridge International Education" />
+          <img src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2021/06/ministarstvo_prosvete.svg" alt="Ministarstvo prosvete" />
         </div>
       </header>
       <div className="pravi-trenutak-sos-sg-hero__inner">
@@ -56,9 +54,6 @@ export function HeroSection() {
       <div className="pravi-trenutak-sos-sg-hero__school-logos" aria-label="Savremena osnovna škola i Savremena gimnazija">
         <img src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/sos_2026_logo.svg" alt="Savremena osnovna škola" />
         <img src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/sg_2026_logo.svg" alt="Savremena gimnazija" />
-      </div>
-      <div className="pravi-trenutak-sos-sg-hero__form-panel" id="prijava">
-        <LeadForm />
       </div>
     </section>
   )

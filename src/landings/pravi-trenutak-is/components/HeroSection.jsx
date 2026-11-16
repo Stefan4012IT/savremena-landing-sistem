@@ -1,5 +1,4 @@
 import cambridgeLogo from '../assets/logos/cambridge-logo-white.png'
-import { LeadForm } from './LeadForm'
 import { useLandingData } from '../useLandingData'
 
 function EventStrip({ hero, isEnglish, className = '' }) {
@@ -18,6 +17,11 @@ function EventStrip({ hero, isEnglish, className = '' }) {
             {hero.eventDescriptionStart}<strong>{hero.eventDescriptionEmphasis}</strong>
           </p>
         </div>
+        <img
+          className="pravi-trenutak-is-event-strip__logo"
+          src="https://sr.international-school.edu.rs/wp-content/uploads/2026/11/seg_logo_2027_color-white-vertical.svg"
+          alt="Savremena obrazovna grupa"
+        />
       </div>
     </div>
   )
@@ -40,7 +44,7 @@ export function HeroSection() {
     >
       <header className="pravi-trenutak-is-hero__header" aria-label={isEnglish ? 'Main navigation' : 'Glavna navigacija'}>
         <a className="pravi-trenutak-is-hero__logo" href={homeHref} aria-label={isEnglish ? 'Home' : 'Početna'}>
-          <img src="https://sr.international-school.edu.rs/wp-content/uploads/2026/09/is_logo_27-28.svg" alt="International School" />
+          <img src="https://sr.international-school.edu.rs/wp-content/uploads/2026/11/is_logo_2027_color-white.svg" alt="International School" />
         </a>
         <div className="pravi-trenutak-is-hero__institution-logos" aria-label={isEnglish ? 'Institutional logos and language switcher' : 'Institucionalni logotipi i izbor jezika'}>
           <img src={cambridgeLogo} alt="Cambridge International Education" />
@@ -68,13 +72,6 @@ export function HeroSection() {
         alt=""
       />
       <EventStrip hero={hero} isEnglish={isEnglish} className="pravi-trenutak-is-event-strip--mobile" />
-      <div className="pravi-trenutak-is-hero__form-panel" id="prijava">
-        <LeadForm
-          className="pravi-trenutak-is-lead-form--hero"
-          headerTitle={isEnglish ? 'APPLY NOW' : 'PRIJAVITE SE'}
-          headerText={isEnglish ? 'Give your child the most modern education in the region.' : 'Obezbedite svom detetu najsavremenije obrazovanje u regionu.'}
-        />
-      </div>
     </section>
     <EventStrip hero={hero} isEnglish={isEnglish} className="pravi-trenutak-is-event-strip--desktop" />
     </>

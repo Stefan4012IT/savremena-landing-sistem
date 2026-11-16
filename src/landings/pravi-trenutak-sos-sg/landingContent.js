@@ -6,10 +6,10 @@ export const landingData = {
   brandScope: 'SOS+SG',
   gtmId: 'GTM-PDD7NJ3',
   seo: {
-    title: 'Soft skills za budućnost | Savremena osnovna škola i gimnazija',
+    title: 'Dobre odluke imaju svoj trenutak | Savremena',
     description:
-      'Savremena osnovna škola i gimnazija razvijaju kritičko mišljenje, kreativnost, emocionalnu inteligenciju i druge veštine važne za budućnost.',
-    ogImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/10/sos-sg-og-1200x628.jpg',
+      'Od 23. do 30. novembra ostvarite posebne uslove upisa u Savremenu osnovnu školu i gimnaziju. Upoznajte obrazovanje koje povezuje Cambridge program, znanje i veštine za budućnost.',
+    ogImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/dobre-odluke-sos-sg-1200x628.jpg',
   },
   hero: {
     titleStrong: 'Dobre odluke',
@@ -215,17 +215,16 @@ export const landingData = {
   testimonialCards: novoOdeljenjeTestimonialCards,
   enrollmentHelp: {
     title: 'Imate pitanja ili vam je potrebna pomoć oko upisa?',
-    introBeforeName: 'Naša ljubazna i stručna savetnica za upis,',
-    advisorName: 'Katarina Petrović',
+    introBeforeName: 'Naši ljubazni i stručni savetnici za upis',
+    advisorName: '',
     introAfterName:
-      'tu je da vam pruži sve potrebne informacije, razjasni nedoumice i pomogne da donesete najbolju odluku za budućnost vašeg deteta.',
+      'tu su da vam pruže sve potrebne informacije, razjasne nedoumice i pomognu da donesete najbolju odluku za budućnost vašeg deteta.',
     emphasis: 'Ne čekajte - obezbedite svom detetu školovanje koje zaista pravi razliku.',
     prompt: 'Pozovite nas još danas i započnite svoje Savremeno iskustvo:',
     phonePrimary: '011/40-11-223',
     phoneSecondary: '062/191-80-56',
     contactSuffix: 'ili popunite prijavu, a mi ćemo vas pozvati.',
     closing: 'Uspešna akademska budućnost vašeg deteta počinje jednim pozivom!',
-    advisorImageUrl: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/sg-katarina-petrovic.jpg',
   },
   enrollmentCta: {
     eyebrow: 'Upis 2027/28. je počeo',
