@@ -34,8 +34,10 @@ export function HeroSection() {
       <div className="pravi-trenutak-sos-sg-hero__inner">
         <div className="pravi-trenutak-sos-sg-hero__content">
           <h1>
-            {hero.titleStrong ? <strong className="pravi-trenutak-sos-sg-hero__title-strong">{hero.titleStrong} </strong> : null}
-            {hero.title}{hero.titleHighlight ? <span className="pravi-trenutak-sos-sg-hero__highlight">{hero.titleHighlight}</span> : null}
+            <span className="pravi-trenutak-sos-sg-hero__title-copy">
+              {hero.titleStrong ? <strong className="pravi-trenutak-sos-sg-hero__title-strong">{hero.titleStrong} </strong> : null}
+              {hero.title}{hero.titleHighlight ? <span className="pravi-trenutak-sos-sg-hero__highlight">{hero.titleHighlight}</span> : null}
+            </span>
           </h1>
           {hero.subtitle ? <p className="pravi-trenutak-sos-sg-hero__subtitle">{hero.subtitle}</p> : null}
           <div className="pravi-trenutak-sos-sg-hero__copy">
