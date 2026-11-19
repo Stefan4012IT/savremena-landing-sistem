@@ -399,21 +399,12 @@
   .pravi-trenutak-sos-sg-hero__content {
     width: min(50%, 820px);
   }
-
-  .pravi-trenutak-sos-sg-hero__inner {
-    min-height: 720px;
-  }
 }
 
 @media (min-width: 1041px) and (max-width: 1199px) {
   .pravi-trenutak-sos-sg-hero__content {
     width: min(50%, 820px);
-  }
-}
-
-@media (min-width: 1041px) and (max-width: 1599px) {
-  .pravi-trenutak-sos-sg-hero__inner {
-    min-height: auto;
+    height: 900px;
   }
 }
 
