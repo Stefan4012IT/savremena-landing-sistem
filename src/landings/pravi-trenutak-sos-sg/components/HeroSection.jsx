@@ -51,6 +51,7 @@ export function HeroSection() {
             </div>
           ) : null}
           {hero.conclusion ? <p className="pravi-trenutak-sos-sg-hero__conclusion">{hero.conclusion}</p> : null}
+          <a className="pravi-trenutak-sos-sg-hero__school-cta" href="#prijava">Prijava</a>
         </div>
       </div>
       <div className="pravi-trenutak-sos-sg-hero__school-logos" aria-label="Savremena osnovna škola i Savremena gimnazija">
