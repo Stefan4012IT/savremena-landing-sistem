@@ -1,0 +1,93 @@
+.black-friday-sos-sg-school-intro {
+  padding: 160px 0 96px;
+  background: #ffffff;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.85fr);
+    gap: clamp(36px, 6vw, 96px);
+    width: min(100% - (var(--landing-container-padding) * 2), var(--landing-container-max));
+    margin-inline: auto;
+    align-items: center;
+  }
+
+  &__copy {
+    display: grid;
+    gap: 20px;
+  }
+
+  &__paragraph-group {
+    display: grid;
+    gap: 20px;
+  }
+
+  h2 {
+    margin: 0;
+    color: #002965;
+    font-size: clamp(2rem, 4vw, 4rem);
+    line-height: 1.05;
+  }
+
+  p {
+    margin: 0;
+    color: #787878;
+    font-size: clamp(1.05rem, 1.4vw, 1.22rem);
+    line-height: 1.5;
+  }
+
+  &__highlight-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0;
+    color: #f7b815;
+    font-size: clamp(1.8rem, 3vw, 2.75rem);
+    font-weight: 800;
+    line-height: 1.1;
+
+    &::before {
+      flex: 0 0 48px;
+      height: 3px;
+      background: #f7b815;
+      content: '';
+    }
+  }
+
+  &__visual {
+    display: grid;
+    min-height: 420px;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #eef1f5;
+    color: #787878;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  &__visual img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 980px) {
+  .black-friday-sos-sg-school-intro__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .black-friday-sos-sg-school-intro__visual {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 640px) {
+  .black-friday-sos-sg-school-intro__visual {
+    min-height: 240px;
+  }
+}

@@ -1,0 +1,217 @@
+@use './layout';
+@use './hero';
+@use './sections';
+@use './cards';
+@use './form';
+
+.black-friday-is-landing {
+  --sos-yellow: #06234b;
+  --is-yellow: #f7b815;
+  --sos-red: #9d1516;
+  --sos-blue: #06234b;
+  --sos-green: #427042;
+  --sos-ink: #07080c;
+  --is-font-heading: 'Khand', ui-sans-serif, system-ui, sans-serif;
+  --is-font-body: 'Saira', ui-sans-serif, system-ui, sans-serif;
+  --color-blue: var(--sos-blue);
+  --color-primary: #07080c;
+  --color-primary-dark: #07080c;
+  --color-red: var(--sos-red);
+  --color-yellow: var(--sos-yellow);
+  --color-green: var(--sos-green);
+  --gradient-brand: var(--sos-yellow);
+  --black-friday-is-landing-container-max: 1600px;
+  --black-friday-is-landing-container-padding: clamp(20px, 4vw, 64px);
+  font-family: var(--is-font-body);
+}
+
+.black-friday-is-landing {
+  p,
+  li,
+  a,
+  input,
+  select,
+  button {
+    font-family: var(--is-font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--is-font-heading);
+    font-weight: 700;
+  }
+
+  .black-friday-is-section-header__eyebrow,
+  .black-friday-is-special-offer__eyebrow {
+    font-family: var(--is-font-heading);
+    font-weight: 600;
+  }
+
+  .black-friday-is-special-conditions,
+  .black-friday-is-testimonial-card {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .black-friday-is-info-card__profile,
+  .black-friday-is-benefit-card__image,
+  .black-friday-is-modern-education__image-placeholder,
+  .black-friday-is-enrollment-help__advisor-photo {
+    background: var(--sos-yellow);
+    background-image: none;
+  }
+
+  .black-friday-is-testimonial-card__video,
+  .black-friday-is-testimonial-card__avatar {
+    background: var(--sos-yellow);
+  }
+
+  .black-friday-is-special-conditions h2,
+  .black-friday-is-special-conditions p,
+  .black-friday-is-special-conditions li,
+  .black-friday-is-special-conditions a,
+  .black-friday-is-special-conditions__visual span,
+  .black-friday-is-testimonial-card h3,
+  .black-friday-is-testimonial-card p,
+  .black-friday-is-testimonial-card__video-person,
+  .black-friday-is-testimonial-card__avatar span {
+    color: #ffffff;
+  }
+
+  .black-friday-is-testimonial-card__body {
+    background: var(--sos-yellow);
+    color: #ffffff;
+  }
+
+  .black-friday-is-testimonial-card__body h3,
+  .black-friday-is-testimonial-card__body p {
+    color: #ffffff;
+  }
+
+  .black-friday-is-scholarship-offer__ribbon {
+    background: var(--sos-yellow);
+    color: #ffffff;
+  }
+
+  .black-friday-is-special-offer {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .black-friday-is-special-offer__eyebrow,
+  .black-friday-is-special-offer h2 {
+    color: #ffffff;
+  }
+
+  .black-friday-is-special-offer .black-friday-is-landing-link--light {
+    border-color: var(--sos-red);
+    background: var(--sos-red);
+    color: #ffffff;
+  }
+
+  .black-friday-is-info-card--direction {
+    background: var(--sos-yellow);
+    color: #ffffff;
+  }
+
+  .black-friday-is-info-card--direction .black-friday-is-info-card__title,
+  .black-friday-is-info-card--direction .black-friday-is-info-card__text {
+    color: #ffffff;
+  }
+
+  .black-friday-is-info-card--direction .black-friday-is-info-card__tag,
+  .black-friday-is-info-card--direction .black-friday-is-info-card__details {
+    color: var(--is-yellow);
+  }
+
+  .black-friday-is-info-card--direction .black-friday-is-info-card__profile span {
+    color: #ffffff;
+  }
+
+  .black-friday-is-program-choice .black-friday-is-landing-link {
+    border-color: var(--sos-red);
+    background: var(--sos-red);
+    color: #ffffff;
+  }
+
+  .black-friday-is-testimonial-card,
+  .black-friday-is-info-card--direction,
+  .black-friday-is-program-choice__logo-card,
+  .black-friday-is-benefit-card {
+    box-shadow: none;
+  }
+
+  .black-friday-is-testimonial-card {
+    border: 1px solid var(--sos-yellow);
+  }
+
+  .black-friday-is-stats-section {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .black-friday-is-stats-section__value,
+  .black-friday-is-stats-section__label {
+    color: #ffffff;
+  }
+
+  .black-friday-is-landing-footer {
+    background: var(--sos-yellow);
+    background-image: none;
+    color: #ffffff;
+  }
+
+  .black-friday-is-landing-footer__contact,
+  .black-friday-is-landing-footer__contact span,
+  .black-friday-is-landing-footer__contact a {
+    color: #ffffff;
+  }
+
+  .black-friday-is-special-conditions__visual {
+    border-color: rgba(7, 8, 12, 0.28);
+    background: rgba(7, 8, 12, 0.08);
+  }
+
+  .black-friday-is-testimonial-card__play {
+    background: var(--sos-red);
+  }
+
+  .black-friday-is-testimonial-card__play::after {
+    border-color: rgba(157, 21, 22, 0.34);
+  }
+
+  .black-friday-is-testimonial-card__play svg {
+    fill: #ffffff;
+  }
+
+  .black-friday-is-section-header__title,
+  .black-friday-is-scholarship-offer__headline h2,
+  .black-friday-is-program-choice__content h2,
+  .black-friday-is-enrollment-help h2,
+  .black-friday-is-benefit-card h3,
+  .black-friday-is-scholarship-offer__process-title,
+  .black-friday-is-testimonial-card__footer strong,
+  .black-friday-is-testimonial-card__footer > div:last-child > span {
+    color: #06234b;
+  }
+
+  .black-friday-is-section-header__eyebrow,
+  .black-friday-is-special-offer__eyebrow,
+  .black-friday-is-college-promo__eyebrow,
+  .black-friday-is-school-stage__eyebrow {
+    margin-bottom: 12px;
+    font-size: 22px;
+  }
+
+  .black-friday-is-school-stage__content p.black-friday-is-school-stage__eyebrow {
+    margin-bottom: 12px;
+    font-size: 22px;
+  }
+}

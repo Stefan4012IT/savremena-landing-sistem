@@ -1,0 +1,31 @@
+import { useLandingData } from '../useLandingData'
+
+export function SchoolIntroSection() {
+  const { schoolIntro } = useLandingData()
+
+  if (!schoolIntro) return null
+
+  return (
+    <section className="black-friday-sos-sg-school-intro">
+      <div className="black-friday-sos-sg-school-intro__inner">
+        <div className="black-friday-sos-sg-school-intro__copy">
+          <h2>{schoolIntro.title}</h2>
+          {schoolIntro.paragraphs.map((paragraph, index) => (
+            <div className="black-friday-sos-sg-school-intro__paragraph-group" key={paragraph}>
+              <p>{paragraph}</p>
+              {index === 1 && schoolIntro.highlightTitle ? (
+                <h3 className="black-friday-sos-sg-school-intro__highlight-title">{schoolIntro.highlightTitle}</h3>
+              ) : null}
+            </div>
+          ))}
+        </div>
+        <div className="black-friday-sos-sg-school-intro__visual">
+          <img
+            src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/pravi-trenutak_001.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+  )
+}

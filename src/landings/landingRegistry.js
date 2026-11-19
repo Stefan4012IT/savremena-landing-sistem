@@ -1,5 +1,7 @@
 import { NajboljaOdlukaLanding } from './najbolja-odluka/NajboljaOdlukaLanding'
 import { defaultLandingData as najboljaOdlukaLandingData } from './najbolja-odluka/landingContent'
+import { BlackFridaySosSgLanding } from './black-friday-sos-sg/BlackFridaySosSgLanding'
+import { defaultLandingData as blackFridaySosSgLandingData } from './black-friday-sos-sg/landingContent'
 import { NovoOdeljenjeLanding } from './novo-odeljenje/NovoOdeljenjeLanding'
 import { defaultLandingData as novoOdeljenjeLandingData } from './novo-odeljenje/landingContent'
 import { DesetSlobodnihMestaLanding } from './10-slobodnih-mesta/DesetSlobodnihMestaLanding'
@@ -20,6 +22,9 @@ import { defaultDataContent as upisJeOtvorenIsSerbianData } from './upis-je-otvo
 import { PraviTrenutakIsLanding } from './pravi-trenutak-is/PraviTrenutakIsLanding'
 import { defaultDataContent as praviTrenutakIsData } from './pravi-trenutak-is/dataContent'
 import { defaultDataContent as praviTrenutakIsSerbianData } from './pravi-trenutak-is/dataContent.sr'
+import { BlackFridayIsLanding } from './black-friday-is/BlackFridayIsLanding'
+import { defaultDataContent as blackFridayIsData } from './black-friday-is/dataContent'
+import { defaultDataContent as blackFridayIsSerbianData } from './black-friday-is/dataContent.sr'
 import { SoftskillsIsLanding } from './softskills-is/SoftskillsIsLanding'
 import { defaultDataContent as softskillsIsData } from './softskills-is/dataContent'
 import { defaultDataContent as softskillsIsSerbianData } from './softskills-is/dataContent.sr'
@@ -40,6 +45,10 @@ export const landingRegistry = {
   [najboljaOdlukaLandingData.slug]: {
     component: NajboljaOdlukaLanding,
     fallbackData: najboljaOdlukaLandingData,
+  },
+  [blackFridaySosSgLandingData.slug]: {
+    component: BlackFridaySosSgLanding,
+    fallbackData: blackFridaySosSgLandingData,
   },
   [novoOdeljenjeLandingData.slug]: {
     component: NovoOdeljenjeLanding,
@@ -90,6 +99,16 @@ export const landingRegistry = {
   [praviTrenutakIsSerbianData.slug]: {
     component: PraviTrenutakIsLanding,
     fallbackData: praviTrenutakIsSerbianData,
+    useStaticData: true,
+  },
+  [blackFridayIsData.slug]: {
+    component: BlackFridayIsLanding,
+    fallbackData: blackFridayIsData,
+    useStaticData: true,
+  },
+  [blackFridayIsSerbianData.slug]: {
+    component: BlackFridayIsLanding,
+    fallbackData: blackFridayIsSerbianData,
     useStaticData: true,
   },
   [softskillsIsData.slug]: {
