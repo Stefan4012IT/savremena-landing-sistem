@@ -12,8 +12,9 @@ export const landingData = {
     ogImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/dobre-odluke-sos-sg-1200x628.jpg',
   },
   hero: {
-    titleStrong: 'Osigurajte obrazovanje',
-    title: 'koje otvara vrata perspektivne budućnosti',
+    titlePrefix: 'Ovo je',
+    titleEmphasis: 'INVESTICIJA',
+    titleContinuation: 'u uspešnu budućnost vašeg deteta.',
     subtitle: '',
     paragraphs: [
       'Dok se mnogi ove nedelje fokusiraju na sniženja i popuste na proizvode, obrazovni sistem Savremene vam poklanja nešto mnogo vrednije – priliku da investirate u budućnost svog deteta. Kroz ekskluzivni popust do 42%, do 30.11, dobijate mogućnost da osigurate obrazovanje koje otvara vrata internacionalne budućnosti.',

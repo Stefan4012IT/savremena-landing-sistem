@@ -5,10 +5,11 @@ const PIXEL_SIZE = 32
 function drawPixelatedMessage(canvas, textureImage = null) {
   const viewportWidth = window.innerWidth
   const viewportHeight = window.innerHeight
+  const isMobile = viewportWidth < 776
   const pixelRatio = Math.max(1, window.devicePixelRatio || 1)
   const width = Math.max(1, Math.ceil(viewportWidth * pixelRatio))
   const height = Math.max(1, Math.ceil(viewportHeight * pixelRatio))
-  const messageBoxWidth = Math.min(viewportWidth * 0.94, 1440) * 0.7
+  const messageBoxWidth = Math.min(viewportWidth * 0.94, 1440) * (isMobile ? 0.76 : 0.7)
   const messageBoxLeft = (viewportWidth - messageBoxWidth) / 2
   const messageBoxRight = messageBoxLeft + messageBoxWidth
   const context = canvas.getContext('2d')
@@ -52,20 +53,36 @@ function drawPixelatedMessage(canvas, textureImage = null) {
     }
   }
 
-  const sideLineSize = Math.min(viewportWidth * 0.19, viewportHeight * 0.14) * 0.7
-  const blackFridaySize = Math.min(viewportWidth * 0.27, viewportHeight * 0.25) * 0.9
+  const sideLineSize = isMobile
+    ? Math.min(viewportWidth * 0.15, viewportHeight * 0.075) * 0.9
+    : Math.min(viewportWidth * 0.19, viewportHeight * 0.14) * 0.7
+  const blackFridaySize = isMobile
+    ? Math.min(viewportWidth * 0.22, viewportHeight * 0.14) * 0.92
+    : Math.min(viewportWidth * 0.27, viewportHeight * 0.25) * 0.9
+  const topLineY = viewportHeight * (isMobile ? 0.24 : 0.2)
+  const blackLineY = viewportHeight * (isMobile ? 0.37 : 0.39)
+  const fridayLineY = isMobile
+    ? blackLineY + Math.max(viewportHeight * 0.09, blackFridaySize * 1.04)
+    : viewportHeight * 0.58
+  const actionLineY = isMobile
+    ? fridayLineY + (blackLineY - topLineY)
+    : viewportHeight * 0.78
+  const rightLineOffset = isMobile ? 0 : -76
+  const verticalOffset = isMobile ? viewportHeight / 2 - (topLineY + actionLineY) / 2 : 0
 
-  drawLine('OVO NIJE', sideLineSize, 'left', viewportHeight * 0.2)
-  const blackMetrics = drawLine('BLACK', blackFridaySize, 'left', viewportHeight * 0.39)
+  drawLine('OVO NIJE', sideLineSize, 'left', topLineY + verticalOffset)
+  const blackMetrics = drawLine('BLACK', blackFridaySize, 'left', blackLineY + verticalOffset)
   drawLine(
     'FRIDAY',
     blackFridaySize,
-    'right',
-    viewportHeight * 0.58,
-    messageBoxWidth - blackMetrics.firstGlyphWidth + messageBoxWidth * 0.06,
-    -76,
+    isMobile ? 'left' : 'right',
+    fridayLineY + verticalOffset,
+    isMobile
+      ? messageBoxWidth - blackMetrics.firstGlyphWidth
+      : messageBoxWidth - blackMetrics.firstGlyphWidth + messageBoxWidth * 0.06,
+    isMobile ? blackMetrics.firstGlyphWidth : rightLineOffset,
   )
-  drawLine('AKCIJA', sideLineSize, 'right', viewportHeight * 0.78, messageBoxWidth, -76)
+  drawLine('AKCIJA', sideLineSize, 'right', actionLineY + verticalOffset, messageBoxWidth, rightLineOffset)
 
   if (textureImage?.complete && textureImage.naturalWidth > 0) {
     const textureCanvas = document.createElement('canvas')
@@ -183,6 +200,40 @@ export function BlackFridayIntroOverlay() {
   const [phase, setPhase] = useState('still')
   const layerRef = useRef(null)
   const particlesRef = useRef(null)
+  const isDone = phase === 'done'
+
+  useEffect(() => {
+    if (isDone) return undefined
+
+    const body = document.body
+    const root = document.documentElement
+    const scrollY = window.scrollY
+    const previousBodyStyles = {
+      position: body.style.position,
+      top: body.style.top,
+      left: body.style.left,
+      right: body.style.right,
+      width: body.style.width,
+      overflow: body.style.overflow,
+      overscrollBehavior: body.style.overscrollBehavior,
+    }
+    const previousRootOverflow = root.style.overflow
+
+    body.style.position = 'fixed'
+    body.style.top = `-${scrollY}px`
+    body.style.left = '0'
+    body.style.right = '0'
+    body.style.width = '100%'
+    body.style.overflow = 'hidden'
+    body.style.overscrollBehavior = 'none'
+    root.style.overflow = 'hidden'
+
+    return () => {
+      Object.assign(body.style, previousBodyStyles)
+      root.style.overflow = previousRootOverflow
+      window.scrollTo(0, scrollY)
+    }
+  }, [isDone])
 
   useEffect(() => {
     const layer = layerRef.current

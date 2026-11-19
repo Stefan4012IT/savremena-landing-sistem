@@ -12,7 +12,7 @@
   position: relative;
   overflow: visible;
   padding: clamp(32px, 5vw, 72px) 0 0;
-  background: #ffffff url('https://www.international-school.edu.rs/wp-content/uploads/2026/11/black_friday_sos_sg_hero_background.png') center / cover no-repeat;
+  background: #ffffff url('https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/black_friday_sos_sg_hero_background_001.png') center / cover no-repeat;
   color: #002965;
   --hero-content-left: max(var(--landing-container-padding), calc((100% - var(--landing-container-max)) / 2));
 
@@ -80,12 +80,16 @@
     width: min(100% - (var(--landing-container-padding) * 2), var(--landing-container-max));
     min-height: 790px;
     margin: 0 auto;
-    padding-top: 160px;
+    padding-top: 120px;
   }
 
   &__content {
     position: static;
     width: min(100%, 1280px);
+  }
+
+  &__mobile-image-wrap {
+    display: none;
   }
 
   &__content > :not(.black-friday-sos-sg-hero__visual-wrap) {
@@ -94,12 +98,32 @@
   }
 
   h1 {
-    max-width: 100%;
+    display: grid;
+    justify-items: start;
+    max-width: 73%;
     margin: 0;
-    font-size: 4.75rem;
+    color: #ffffff;
+    font-size: 3.5rem;
     font-weight: 700;
     line-height: 1;
     letter-spacing: -0.045em;
+  }
+
+  &__title-prefix,
+  &__title-emphasis,
+  &__title-continuation {
+    display: block;
+  }
+
+  &__title-emphasis {
+    color: #f7b815;
+    font-size: 1.5em;
+    font-weight: 900;
+    line-height: 0.9;
+  }
+
+  &__title-continuation {
+    max-width: 600px;
   }
 
   &__highlight {
@@ -108,7 +132,7 @@
   }
 
   &__bold {
-    color: inherit;
+    color: #f7b815;
     font-weight: 900;
   }
 
@@ -121,7 +145,7 @@
   }
 
   &__copy {
-    width: 900px;
+    width: 700px;
     max-width: 100%;
     margin-top: 24px;
   }
@@ -129,14 +153,14 @@
   &__conclusion,
   &__copy p {
     margin: 0;
-    color: #002965;
+    color: #ffffff;
     font-size: clamp(1rem, 1.18vw, 1.16rem);
     font-weight: 550;
     line-height: 1.5;
   }
 
   &__copy p {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   &__copy p + p {
@@ -215,7 +239,7 @@
     min-height: 44px;
     margin-top: 0;
     padding: 10px 18px;
-    background: #002965;
+    background: #000000;
     color: #ffffff;
   }
 }
@@ -322,7 +346,7 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      background: url('https://www.international-school.edu.rs/wp-content/uploads/2026/11/black_friday_sos_sg_hero_background.png') center / cover no-repeat;
+      background: url('https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/black_friday_sos_sg_hero_background_001.png') center / cover no-repeat;
       content: '';
     }
 
@@ -382,14 +406,115 @@
   }
 }
 
-@media (min-width: 1041px) and (max-width: 1599px) {
-  .black-friday-sos-sg-hero__inner {
-    min-height: auto;
+@media (min-width: 1400px) and (max-width: 1600px) {
+  .black-friday-sos-sg-hero {
+    &__copy {
+      width: 35%;
+    }
+
+    &__form-panel {
+      right: var(--hero-content-left);
+      left: auto;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@media (min-width: 1041px) and (max-width: 1399px) {
+  .black-friday-sos-sg-hero {
+    background-position: 47% 50%;
+
+    &__copy {
+      width: 45%;
+    }
+
+    &__form-panel {
+      right: var(--hero-content-left);
+      left: auto;
+      transform: translateY(-30%);
+    }
+  }
+
+  .black-friday-sos-sg-school-intro {
+    padding-top: 240px;
   }
 }
 
 @media (min-width: 1041px) and (max-width: 1699px) {
   .black-friday-sos-sg-hero__content {
     width: min(100%, 1280px);
+  }
+}
+
+@media (min-width: 776px) and (max-width: 1040px) {
+  .black-friday-sos-sg-school-intro {
+    padding-top: 96px;
+  }
+
+  .black-friday-sos-sg-hero {
+    background-image: url('https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/black_friday_sos_sg_hero_background_001.png');
+    background-position: right top;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+
+    h1 {
+      width: 50%;
+      padding-top: 0;
+      font-size: clamp(2.8rem, 12vw, 2.8rem);
+    }
+
+    &__title-emphasis {
+      padding-top: 8px;
+      font-size: 1em;
+    }
+
+    h1::before {
+      background: none;
+    }
+
+    &__copy p {
+      color: #787878;
+    }
+  }
+}
+
+@media (max-width: 775px) {
+  .black-friday-sos-sg-school-intro {
+    padding-top: 56px !important;
+  }
+
+  .black-friday-sos-sg-hero {
+    padding: 0 0 24px;
+    background-color: #ffffff;
+    background-image: url('https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/black_friday_hero_mob_background.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    h1::before {
+      content: none;
+    }
+
+    .black-friday-sos-sg-hero__content > .black-friday-sos-sg-hero__mobile-image-wrap {
+      display: block;
+      width: 100vw;
+      margin-inline: calc(50% - 50vw);
+      border-bottom: 3px solid #f7b815;
+    }
+
+    &__mobile-image {
+      display: block;
+      width: calc(100% - (var(--landing-container-padding) * 2));
+      height: auto;
+      margin: 0 auto;
+    }
+
+    &__copy p {
+      color: #ffffff;
+    }
+
+    &__title-emphasis {
+      padding-top: 8px;
+      font-size: 1.15em;
+    }
   }
 }

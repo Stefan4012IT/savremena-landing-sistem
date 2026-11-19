@@ -1,6 +1,8 @@
 import { useLandingData } from '../useLandingData'
 import { LeadForm } from './LeadForm'
-const savremenaGroupLogo = 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/seg_2026_logo_horizontal.svg'
+import cambridgeLogo from '../../novo-odeljenje/assets/logos/cambridge-logo-white.png'
+import ministryLogo from '../../najbolja-odluka/assets/logos/ministarstvo-prosvete-logo-white.png'
+const savremenaGroupLogo = 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/sos-sg-logo-2027.svg'
 
 const heroBackgroundImage = 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/black_friday_sos_sg_hero_background.png'
 
@@ -28,15 +30,24 @@ export function HeroSection() {
           <img src={savremenaGroupLogo} alt="Savremena osnovna škola i Savremena gimnazija" />
         </a>
         <div className="black-friday-sos-sg-hero__institution-logos" aria-label="Institucionalni logotipi">
-          <img src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2024/08/camb-1.png" alt="Cambridge International Education" />
-          <img src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2021/06/ministarstvo_prosvete.svg" alt="Ministarstvo prosvete" />
+          <img src={cambridgeLogo} alt="Cambridge International Education" />
+          <img src={ministryLogo} alt="Ministarstvo prosvete" />
         </div>
       </header>
       <div className="black-friday-sos-sg-hero__inner">
         <div className="black-friday-sos-sg-hero__content">
           <h1>
-            {hero.titleStrong ? `${hero.titleStrong} ` : ''}{hero.title}
+            <span className="black-friday-sos-sg-hero__title-prefix">{hero.titlePrefix}</span>
+            <span className="black-friday-sos-sg-hero__title-emphasis">{hero.titleEmphasis}</span>
+            <span className="black-friday-sos-sg-hero__title-continuation">{hero.titleContinuation}</span>
           </h1>
+          <div className="black-friday-sos-sg-hero__mobile-image-wrap">
+            <img
+              className="black-friday-sos-sg-hero__mobile-image"
+              src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/black_friday_hero_mob_img.png"
+              alt=""
+            />
+          </div>
           {hero.subtitle ? <p className="black-friday-sos-sg-hero__subtitle">{hero.subtitle}</p> : null}
           <div className="black-friday-sos-sg-hero__copy">
             {hero.paragraphs.map((paragraph, index) => (

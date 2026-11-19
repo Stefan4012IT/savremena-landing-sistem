@@ -11,12 +11,14 @@ import { EnrollmentHelpSection } from './components/EnrollmentHelpSection'
 import { FooterSection } from './components/FooterSection'
 import { LandingDataProvider } from './LandingDataProvider'
 import { BlackFridayIntroOverlay } from './components/BlackFridayIntroOverlay'
+import { ContactWidget } from './components/ContactWidget'
 
 export function BlackFridaySosSgLanding({ data }) {
   return (
     <LandingDataProvider value={data}>
       <main className="landing landing--black-friday-sos-sg">
         <BlackFridayIntroOverlay />
+        <ContactWidget />
         <HeroSection />
         <SchoolIntroSection />
         <BlackFridayOfferSection />
