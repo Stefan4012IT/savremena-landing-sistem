@@ -9,7 +9,7 @@ function drawPixelatedMessage(canvas, textureImage = null) {
   const pixelRatio = Math.max(1, window.devicePixelRatio || 1)
   const width = Math.max(1, Math.ceil(viewportWidth * pixelRatio))
   const height = Math.max(1, Math.ceil(viewportHeight * pixelRatio))
-  const messageBoxWidth = Math.min(viewportWidth * 0.94, 1440) * (isMobile ? 0.76 : 0.7)
+  const messageBoxWidth = Math.min(viewportWidth * 0.94, 1440) * (isMobile ? 0.9 : 0.7)
   const messageBoxLeft = (viewportWidth - messageBoxWidth) / 2
   const messageBoxRight = messageBoxLeft + messageBoxWidth
   const context = canvas.getContext('2d')
@@ -54,10 +54,10 @@ function drawPixelatedMessage(canvas, textureImage = null) {
   }
 
   const sideLineSize = isMobile
-    ? Math.min(viewportWidth * 0.15, viewportHeight * 0.075) * 0.9
+    ? Math.min(viewportWidth * 0.15, viewportHeight * 0.075) * 0.9 * 0.92
     : Math.min(viewportWidth * 0.19, viewportHeight * 0.14) * 0.7
   const blackFridaySize = isMobile
-    ? Math.min(viewportWidth * 0.22, viewportHeight * 0.14) * 0.92
+    ? Math.min(viewportWidth * 0.22, viewportHeight * 0.14) * 0.92 * 0.92
     : Math.min(viewportWidth * 0.27, viewportHeight * 0.25) * 0.9
   const topLineY = viewportHeight * (isMobile ? 0.24 : 0.2)
   const blackLineY = viewportHeight * (isMobile ? 0.37 : 0.39)
@@ -78,7 +78,7 @@ function drawPixelatedMessage(canvas, textureImage = null) {
     isMobile ? 'left' : 'right',
     fridayLineY + verticalOffset,
     isMobile
-      ? messageBoxWidth - blackMetrics.firstGlyphWidth
+      ? messageBoxWidth
       : messageBoxWidth - blackMetrics.firstGlyphWidth + messageBoxWidth * 0.06,
     isMobile ? blackMetrics.firstGlyphWidth : rightLineOffset,
   )
@@ -260,7 +260,7 @@ export function BlackFridayIntroOverlay() {
       textureImage = image
       redraw()
     }
-    image.src = 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/black_friday_sos_sg_hero_background.png'
+    image.src = 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/black_friday_sos_sg_hero_background_002.webp'
 
     let stopBurst = () => {}
     const focusTimer = window.setTimeout(() => setPhase('focused'), 1200)

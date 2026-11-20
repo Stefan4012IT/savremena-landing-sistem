@@ -21,7 +21,7 @@ export function SchoolIntroSection() {
         </div>
         <div className="black-friday-sos-sg-school-intro__visual">
           <img
-            src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/pravi-trenutak_001.jpg"
+            src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/black_friday_landing_img_002.jpg"
             alt=""
           />
         </div>

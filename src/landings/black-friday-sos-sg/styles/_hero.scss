@@ -12,7 +12,7 @@
   position: relative;
   overflow: visible;
   padding: clamp(32px, 5vw, 72px) 0 0;
-  background: #ffffff url('https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/black_friday_sos_sg_hero_background_001.png') center / cover no-repeat;
+  background: #ffffff url('https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/black_friday_sos_sg_hero_background_002.webp') center / cover no-repeat;
   color: #002965;
   --hero-content-left: max(var(--landing-container-padding), calc((100% - var(--landing-container-max)) / 2));
 
@@ -239,7 +239,7 @@
     min-height: 44px;
     margin-top: 0;
     padding: 10px 18px;
-    background: #000000;
+    background: #f7b815;
     color: #ffffff;
   }
 }
@@ -346,7 +346,7 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      background: url('https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/black_friday_sos_sg_hero_background_001.png') center / cover no-repeat;
+      background: url('https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/black_friday_sos_sg_hero_background_002.webp') center / cover no-repeat;
       content: '';
     }
 
@@ -452,7 +452,7 @@
   }
 
   .black-friday-sos-sg-hero {
-    background-image: url('https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/black_friday_sos_sg_hero_background_001.png');
+    background-image: url('https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/black_friday_sos_sg_hero_background_002.webp');
     background-position: right top;
     background-size: 100% auto;
     background-repeat: no-repeat;

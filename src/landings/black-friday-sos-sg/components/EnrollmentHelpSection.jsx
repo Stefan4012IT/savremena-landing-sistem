@@ -56,6 +56,9 @@ export function EnrollmentHelpSection() {
             </p>
             <p>{enrollmentHelp.closing}</p>
           </div>
+          <div className="black-friday-sos-sg-enrollment-help__advisor" aria-label="Savetnica za upis Katarina Petrović">
+            <img src={enrollmentHelp.advisorImageUrl} alt="Katarina Petrović, savetnica za upis" />
+          </div>
         </div>
       </div>
     </section>

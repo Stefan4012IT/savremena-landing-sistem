@@ -3,7 +3,8 @@
   z-index: 10000;
   inset: 0;
   overflow: hidden;
-  background: transparent;
+  background: #000000;
+  transition: background-color 1200ms ease;
 
   &__pixels,
   &__particles {
@@ -30,6 +31,10 @@
 
   &--dispersing &__pixels {
     opacity: 0;
+  }
+
+  &--dispersing {
+    background-color: transparent;
   }
 
   &--dispersing &__particles {

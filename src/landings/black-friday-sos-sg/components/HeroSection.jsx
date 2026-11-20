@@ -1,8 +1,8 @@
 import { useLandingData } from '../useLandingData'
 import { LeadForm } from './LeadForm'
 import cambridgeLogo from '../../novo-odeljenje/assets/logos/cambridge-logo-white.png'
-import ministryLogo from '../../najbolja-odluka/assets/logos/ministarstvo-prosvete-logo-white.png'
 const savremenaGroupLogo = 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/sos-sg-logo-2027.svg'
+const ministryLogo = 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/07/ministarstvo_prosvete_logo_color_white.png'
 
 const heroBackgroundImage = 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/black_friday_sos_sg_hero_background.png'
 
@@ -44,7 +44,7 @@ export function HeroSection() {
           <div className="black-friday-sos-sg-hero__mobile-image-wrap">
             <img
               className="black-friday-sos-sg-hero__mobile-image"
-              src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/black_friday_hero_mob_img.png"
+              src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/black_friday_1080x1920.png"
               alt=""
             />
           </div>

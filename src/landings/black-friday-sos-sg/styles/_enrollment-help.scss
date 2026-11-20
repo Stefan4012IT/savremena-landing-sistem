@@ -10,7 +10,10 @@
   }
 
   &__intro {
-    display: block;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 350px);
+    gap: clamp(32px, 7vw, 110px);
+    align-items: start;
   }
 
   &__content {
