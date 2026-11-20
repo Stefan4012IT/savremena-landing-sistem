@@ -6,7 +6,7 @@
   isolation: isolate;
   overflow: visible;
   background-color: var(--is-hero-blue);
-  background-image: url('https://www.international-school.edu.rs/wp-content/uploads/2026/11/dobre-odluke-background-001.jpg');
+  background-image: url('https://www.international-school.edu.rs/wp-content/uploads/2026/11/IS_landing_bf_hero.webp');
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -866,8 +866,8 @@
     max-width: 100%;
     color: #ffffff;
     font-family: var(--is-font-heading, 'Khand', sans-serif);
-    font-size: clamp(3.5rem, 6.2vw, 7.8rem);
-    font-weight: 400;
+    font-size: 70px;
+    font-weight: 600;
     letter-spacing: -0.035em;
     line-height: 1;
     text-align: left;
@@ -875,24 +875,23 @@
   }
 
   &__title strong {
-    font-weight: 800;
+    font-weight: 900;
+    font-size: 1.17em;
   }
 
   &__title-line {
     display: block;
-  }
-
-  &__title-line:first-child {
     white-space: nowrap;
   }
 }
 
 .black-friday-is-landing h1 {
-  font-weight: 400 !important;
+  font-size: 70px;
+  font-weight: 600 !important;
 }
 
 .black-friday-is-landing h1 strong {
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .black-friday-is-event-strip {
@@ -1100,6 +1099,10 @@
       margin: 0 auto 42px;
       transform: none;
     }
+  }
+
+  .black-friday-is-landing h1 {
+    font-size: clamp(2.35rem, 8.4vw, 70px);
   }
 
   .black-friday-is-event-strip--desktop {

@@ -55,20 +55,19 @@ export function HeroSection() {
         </div>
       </header>
       <div className="black-friday-is-hero__inner">
-        <div className="black-friday-is-hero__content" aria-label={isEnglish ? 'The right moment for the right decision' : 'Pravi trenutak za pravu odluku'}>
+        <div className="black-friday-is-hero__content" aria-label={isEnglish ? 'This is an investment in your child’s international future' : 'Ovo je investicija u internacionalnu budućnost vašeg deteta'}>
           <h1 className="black-friday-is-hero__title">
-            <span className="black-friday-is-hero__title-line">
-              {hero.promoTitleStart}<strong>{hero.promoTitleEmphasis}</strong>
-            </span>
-            <span className="black-friday-is-hero__title-line">
-              {hero.promoTitleMiddle}<strong>{hero.promoTitleFinal}</strong>
-            </span>
+            {hero.titleLines.map(({ text, emphasis }, index) => (
+              <span className="black-friday-is-hero__title-line" key={`${text}-${index}`}>
+                {emphasis ? <strong className="black-friday-is-hero__title-emphasis">{text}</strong> : text}
+              </span>
+            ))}
           </h1>
         </div>
       </div>
       <img
         className="black-friday-is-hero__background-image"
-        src="https://www.international-school.edu.rs/wp-content/uploads/2026/11/dobre-odluke-background-001.jpg"
+        src="https://www.international-school.edu.rs/wp-content/uploads/2026/11/IS_landing_bf_hero.webp"
         alt=""
       />
       <EventStrip hero={hero} isEnglish={isEnglish} className="black-friday-is-event-strip--mobile" />

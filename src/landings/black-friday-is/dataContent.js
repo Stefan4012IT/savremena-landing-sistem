@@ -120,10 +120,13 @@ export const defaultDataContent = {
   },
   hero: {
     ...serbianLandingData.hero,
-    promoTitleStart: 'The right ',
-    promoTitleEmphasis: 'moment',
-    promoTitleMiddle: ' for the right ',
-    promoTitleFinal: 'decision.',
+    titleLines: [
+      { text: 'This is' },
+      { text: 'INVESTMENT', emphasis: true },
+      { text: 'in your child’s' },
+      { text: 'international' },
+      { text: 'future' },
+    ],
     eventDate: '23–30 NOVEMBER',
     eventDescriptionStart: 'Enrol at International School and benefit from ',
     eventDescriptionEmphasis: 'our most favourable tuition fees of the year.',

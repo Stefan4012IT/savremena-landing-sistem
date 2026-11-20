@@ -14,10 +14,13 @@ export const defaultDataContent = {
   },
   hero: {
     ...baseDataContent.hero,
-    promoTitleStart: 'Pravi ',
-    promoTitleEmphasis: 'trenutak',
-    promoTitleMiddle: ' za pravu ',
-    promoTitleFinal: 'odluku.',
+    titleLines: [
+      { text: 'Ovo je' },
+      { text: 'INVESTICIJA', emphasis: true },
+      { text: 'u internacionalnu' },
+      { text: 'budućnost vašeg' },
+      { text: 'deteta' },
+    ],
     eventDate: '23–30. NOVEMBAR',
     eventDescriptionStart: 'Upišite se u International School i ostvarite ',
     eventDescriptionEmphasis: 'najpovoljnije školarine u godini.',
