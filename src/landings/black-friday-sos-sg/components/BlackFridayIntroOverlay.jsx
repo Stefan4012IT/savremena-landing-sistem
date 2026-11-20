@@ -54,10 +54,10 @@ function drawPixelatedMessage(canvas, textureImage = null) {
   }
 
   const sideLineSize = isMobile
-    ? Math.min(viewportWidth * 0.15, viewportHeight * 0.075) * 0.9 * 0.92
+    ? Math.min(viewportWidth * 0.15, viewportHeight * 0.075) * 0.9 * 0.92 * 0.9
     : Math.min(viewportWidth * 0.19, viewportHeight * 0.14) * 0.7
   const blackFridaySize = isMobile
-    ? Math.min(viewportWidth * 0.22, viewportHeight * 0.14) * 0.92 * 0.92
+    ? Math.min(viewportWidth * 0.22, viewportHeight * 0.14) * 0.92 * 0.92 * 0.9
     : Math.min(viewportWidth * 0.27, viewportHeight * 0.25) * 0.9
   const topLineY = viewportHeight * (isMobile ? 0.24 : 0.2)
   const blackLineY = viewportHeight * (isMobile ? 0.37 : 0.39)
@@ -98,12 +98,22 @@ function drawPixelatedMessage(canvas, textureImage = null) {
 
     if (textureContext && lowResolutionContext) {
       const coverScale = Math.max(lowWidth / textureImage.naturalWidth, lowHeight / textureImage.naturalHeight)
+        * (isMobile ? 1.6 : 1.5)
       const drawnWidth = textureImage.naturalWidth * coverScale
       const drawnHeight = textureImage.naturalHeight * coverScale
+      const horizontalShift = Math.min(
+        lowWidth * (isMobile ? 0.12 : 0.2),
+        Math.max(0, (drawnWidth - lowWidth) / 2),
+      )
+      const verticalShift = isMobile
+        ? Math.min(lowHeight * 0.10, Math.max(0, (drawnHeight - lowHeight) / 2))
+        : 0
+      const textureLeft = (lowWidth - drawnWidth) / 2 - horizontalShift
+      const textureTop = (lowHeight - drawnHeight) / 2 - verticalShift
       lowResolutionContext.drawImage(
         textureImage,
-        (lowWidth - drawnWidth) / 2,
-        (lowHeight - drawnHeight) / 2,
+        textureLeft,
+        textureTop,
         drawnWidth,
         drawnHeight,
       )

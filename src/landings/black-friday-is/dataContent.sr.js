@@ -46,7 +46,7 @@ export const defaultDataContent = {
   },
   modernEducation: {
     ...baseDataContent.modernEducation,
-    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/dobre-odluke-003.jpg',
+    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/nije_kasno_za_bolju_skolu_cabridge.jpg',
   },
   leadForm: {
     ...baseDataContent.leadForm,

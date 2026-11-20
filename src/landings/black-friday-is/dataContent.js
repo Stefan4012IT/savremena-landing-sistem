@@ -32,14 +32,14 @@ const englishDirections = [
 ]
 
 const englishBenefitImageUrls = [
-  'https://www.international-school.edu.rs/wp-content/uploads/2026/11/benefit_0001.jpg',
-  'https://www.international-school.edu.rs/wp-content/uploads/2026/11/benefit_0002.jpg',
-  'https://www.international-school.edu.rs/wp-content/uploads/2026/11/benefit_0003.jpg',
-  'https://www.international-school.edu.rs/wp-content/uploads/2026/11/benefit_0004.jpg',
-  'https://www.international-school.edu.rs/wp-content/uploads/2026/11/benefit_0005.jpg',
-  'https://www.international-school.edu.rs/wp-content/uploads/2026/11/benefit_0006.jpg',
-  'https://www.international-school.edu.rs/wp-content/uploads/2026/11/benefit_0007.jpg',
-  'https://www.international-school.edu.rs/wp-content/uploads/2026/11/benefit_0008.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_1.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_2.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_3.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_4.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_5.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_6.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_7.jpg',
+  'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is_benefits_8.jpg',
 ]
 
 const englishBenefits = [
@@ -171,7 +171,7 @@ export const defaultDataContent = {
   },
   modernEducation: {
     ...serbianLandingData.modernEducation,
-    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/dobre-odluke-003.jpg',
+    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/nije_kasno_za_bolju_skolu_cabridge.jpg',
     eyebrow: 'Where innovation meets inspiration — and students thrive.',
     title: 'A Cambridge Future-Ready school in the heart of Belgrade',
     text: 'Children absorb much more than knowledge: values, confidence, language, ambition and a way of seeing the world.',
@@ -213,9 +213,9 @@ export const defaultDataContent = {
   enrollmentHelp: {
     ...serbianLandingData.enrollmentHelp,
     title: 'Do you have questions or need help with enrolment?',
-    introBeforeName: 'Our friendly and experienced admissions advisers',
-    advisorName: '',
-    introAfterName: 'are here to provide all the information you need, answer your questions and help you make the best decision for your child’s future.',
+    introBeforeName: 'Our friendly and experienced admissions adviser,',
+    advisorName: 'Katarina Petrović',
+    introAfterName: 'is here to provide all the information you need, answer your questions and help you make the best decision for your child’s future.',
     emphasis: 'Do not wait – give your child an education that truly makes a difference.',
     prompt: 'Call us today and start your International School journey:',
     viberLabel: 'Viber',

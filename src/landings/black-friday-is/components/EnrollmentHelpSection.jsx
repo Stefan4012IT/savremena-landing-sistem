@@ -54,6 +54,15 @@ export function EnrollmentHelpSection() {
             </p>
             <p>{enrollmentHelp.closing}</p>
           </div>
+          <div className="black-friday-is-enrollment-help__advisor" aria-label={isEnglish ? 'Admissions adviser Katarina Petrovic' : 'Savetnica za upis Katarina Petrović'}>
+            <div className="black-friday-is-enrollment-help__advisor-photo">
+              {enrollmentHelp.advisorImageUrl ? (
+                <img src={enrollmentHelp.advisorImageUrl} alt="" />
+              ) : (
+                <span>{enrollmentHelp.advisorInitials}</span>
+              )}
+            </div>
+          </div>
         </div>
         <LeadForm
           className="black-friday-is-lead-form--enrollment"
