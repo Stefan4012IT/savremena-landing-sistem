@@ -1,0 +1,168 @@
+.black-friday-is-contact-widget {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  z-index: 80;
+  display: grid;
+  width: 160px;
+  justify-items: end;
+  transform: translateY(-50%);
+
+  &__anchor {
+    position: relative;
+    width: fit-content;
+  }
+
+  &__promo-box {
+    display: grid;
+    width: 140px;
+    justify-items: center;
+    gap: 8px;
+    border-radius: 16px 0 0 16px;
+    padding: 10px;
+    background: rgba(6, 35, 75, 0.90);
+    backdrop-filter: blur(8px);
+  }
+
+  &__trigger {
+    display: block;
+    width: 100%;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  &__visual {
+    display: flex;
+    width: 100%;
+    min-height: 78px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 8px 2px;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  &__visual > strong {
+    color: #f7b815;
+    font-size: 2.15rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  &__visual > span {
+    color: #ffffff;
+    font-size: 0.88rem;
+    line-height: 1.2;
+  }
+
+  &__visual b {
+    font-weight: 900;
+  }
+
+  &__label-trigger {
+    border: 0;
+    border-radius: 999px;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  &__label {
+    position: relative;
+    top: -2px;
+    border-radius: 999px;
+    padding: 4px 14px;
+    background: #f7b815;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+    color: #06234b;
+    font-size: 0.95rem;
+    font-weight: 800;
+    line-height: 1.1;
+  }
+
+  &__menu {
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 10px);
+    display: grid;
+    width: 236px;
+    gap: 4px;
+    border-radius: 14px;
+    padding: 8px;
+    background: rgba(6, 35, 75, 0.90);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    transform: translateY(-50%);
+  }
+
+  &__option {
+    display: flex;
+    min-height: 44px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 9px;
+    padding: 8px 10px;
+    color: #ffffff;
+    font-size: 0.84rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      background: rgba(255, 255, 255, 0.14);
+      outline: none;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      flex: 0 0 20px;
+      fill: none;
+      stroke: #ffffff;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.8;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .black-friday-is-contact-widget {
+    top: auto;
+    bottom: 18px;
+    width: 118px;
+    transform: none;
+
+    &__promo-box {
+      width: 104px;
+      gap: 6px;
+      padding: 8px 6px;
+    }
+
+    &__visual {
+      min-height: 72px;
+    }
+
+    &__visual > strong {
+      font-size: 1.7rem;
+    }
+
+    &__visual > span {
+      font-size: 0.78rem;
+    }
+
+    &__label {
+      padding: 4px 10px;
+      font-size: 0.84rem;
+    }
+
+    &__menu {
+      right: calc(100% + 8px);
+      width: min(220px, calc(100vw - 140px));
+    }
+  }
+}

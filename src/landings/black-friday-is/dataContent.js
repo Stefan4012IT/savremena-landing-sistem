@@ -115,7 +115,7 @@ export const defaultDataContent = {
   name: 'The right moment | International School',
   seo: {
     title: 'The Right Moment for the Right Decision | International School',
-    description: 'From 23 to 30 November, enrol your child at International School under special tuition conditions. Choose an international Cambridge education in English and prepare your child for the future.',
+    description: 'Enrol your child at International School by 30 November and receive up to 38% off tuition. Choose an international Cambridge education that opens the door to an international future.',
     ogImageUrl: 'https://sr.international-school.edu.rs/wp-content/uploads/2026/11/pravi_trenutak_og_1200x628.jpg',
   },
   hero: {
@@ -127,9 +127,14 @@ export const defaultDataContent = {
       { text: 'international' },
       { text: 'future' },
     ],
-    eventDate: '23–30 NOVEMBER',
-    eventDescriptionStart: 'Enrol at International School and benefit from ',
-    eventDescriptionEmphasis: 'our most favourable tuition fees of the year.',
+    eventDate: 'UNTIL 30 NOVEMBER',
+    eventDescriptionStart: 'Enrol at International School and receive up to ',
+    eventDescriptionEmphasis: '38% off tuition.',
+    copyParagraphs: [
+      'While many people this week are focusing on discounts and deals on products, International School is offering you something far more valuable – the opportunity to invest in your child’s future.',
+      'With an exclusive discount of up to 38%, available until 30 November only, you can give your child an education that prepares them for the best universities and opens the door to an international future.',
+      'Do not miss the opportunity to secure a world-class education for your child’s happy and successful future!',
+    ],
     titleFirstLine: '2027/28',
     titleSecondLine: 'admissions',
     titleEmphasis: 'NOW OPEN!',
@@ -142,11 +147,13 @@ export const defaultDataContent = {
   emotionalTurn: {
     ...serbianLandingData.emotionalTurn,
     eyebrow: '',
-    title: 'Great opportunities start with a good choice',
+    title: 'Invest in a future that pays off',
     text: '',
     paragraphs: [
-      'Choosing a school is one of the most important decisions you will make for your child. At International School, we combine knowledge with a Cambridge education and the development of skills that prepare students for the future.',
-      'Quality education is an investment whose value lasts for years, through the knowledge, experiences and skills your child gains throughout their education. Discover the opportunities International School offers and choose the educational path that best matches your child’s interests and potential.',
+      'Think about where your child will be in five years. Can you see them at one of the world’s most prestigious universities? Using their knowledge to shape the world and fulfil their ambitions? These visions begin with the right decisions—today.',
+      'While Black Friday offers discounts on material things, take a moment to pause. Those things will wear out, be forgotten or become outdated. But investing in your child’s education—in their happiness, security and successful future—is a value that lasts forever.',
+      'Choose a school that does not simply teach children facts, but empowers them to think critically, explore the world and develop their talents. International School is where your children learn how to achieve everything they imagine. Today is the right moment to give them the best start!',
+      'Choose International School and give them more than an education.',
     ],
     processTitle: '',
     processText: '',

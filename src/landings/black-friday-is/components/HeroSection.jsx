@@ -1,4 +1,5 @@
 import cambridgeLogo from '../assets/logos/cambridge-logo-white.png'
+import { LeadForm } from './LeadForm'
 import { useLandingData } from '../useLandingData'
 
 function EventStrip({ hero, isEnglish, className = '' }) {
@@ -25,6 +26,17 @@ function EventStrip({ hero, isEnglish, className = '' }) {
       </div>
     </div>
   )
+}
+
+function renderCampaignParagraph(paragraph, isEnglish) {
+  const emphasisPattern = isEnglish ? /(38%|30 November)/g : /(38%|30\.11\.)/g
+  const emphasizedParts = new Set(isEnglish ? ['38%', '30 November'] : ['38%', '30.11.'])
+
+  return paragraph.split(emphasisPattern).map((part, index) => (
+    emphasizedParts.has(part)
+      ? <strong key={`${part}-${index}`}>{part}</strong>
+      : part
+  ))
 }
 
 export function HeroSection() {
@@ -63,6 +75,18 @@ export function HeroSection() {
               </span>
             ))}
           </h1>
+          <div className="black-friday-is-hero__campaign-copy">
+            {hero.copyParagraphs?.map((paragraph) => (
+              <p key={paragraph}>{renderCampaignParagraph(paragraph, isEnglish)}</p>
+            ))}
+          </div>
+        </div>
+        <div className="black-friday-is-hero__form-panel" id="prijava">
+          <LeadForm
+            className="black-friday-is-lead-form--hero"
+            headerTitle={isEnglish ? 'APPLY NOW' : 'PRIJAVITE SE'}
+            headerText={isEnglish ? 'Give your child the most modern education in the region.' : 'Obezbedite svom detetu najsavremenije obrazovanje u regionu.'}
+          />
         </div>
       </div>
       <img

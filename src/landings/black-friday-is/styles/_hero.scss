@@ -145,8 +145,8 @@
     margin-inline: 0.08em;
     border-radius: 0.12em;
     padding: 0.06em 0.16em 0.1em;
-    background: var(--is-hero-yellow);
-    color: var(--is-hero-blue);
+    background: var(--is-hero-blue);
+    color: #ffffff;
     font-weight: 900;
     text-transform: uppercase;
     white-space: nowrap;
@@ -267,20 +267,20 @@
     width: min(640px, calc(100vw - 48px));
     border-radius: 28px;
     padding: clamp(20px, 2.2vw, 28px);
-    background: var(--is-hero-yellow);
-    color: var(--is-hero-blue);
+    background: var(--is-hero-blue);
+    color: #ffffff;
     box-shadow: 0 28px 86px rgba(18, 24, 32, 0.28);
   }
 
   &__form-panel .black-friday-is-lead-form--hero .black-friday-is-lead-form__header h2,
   &__form-panel .black-friday-is-lead-form--hero .black-friday-is-lead-form__header p,
   &__form-panel .black-friday-is-lead-form--hero .black-friday-is-lead-form__message {
-    color: var(--is-hero-blue);
+    color: #ffffff;
   }
 
   &__form-panel .black-friday-is-lead-form--hero button {
-    background: var(--is-hero-blue);
-    color: #ffffff;
+    background: var(--is-hero-yellow);
+    color: var(--is-hero-blue);
   }
 }
 
@@ -851,11 +851,13 @@
   }
 
   &__content {
+    position: relative;
     top: auto;
-    bottom: 48px;
-    left: clamp(24px, 5vw, 84px);
-    width: min(58vw, 980px);
-    max-width: calc(100% - 700px);
+    bottom: auto;
+    left: auto;
+    width: auto;
+    max-width: none;
+    padding-top: 60px;
     justify-items: start;
     text-align: left;
     transform: none;
@@ -883,6 +885,38 @@
     display: block;
     white-space: nowrap;
   }
+
+  &__campaign-copy {
+    width: 35%;
+    max-width: none;
+    margin-top: clamp(12px, 1.3vw, 20px);
+    color: #ffffff;
+    font-size: clamp(1rem, 1.2vw, 1.25rem);
+    font-weight: 500;
+    line-height: 1.35;
+  }
+
+  &__campaign-copy p {
+    margin: 0 0 10px;
+  }
+
+  &__campaign-copy p:last-child {
+    margin-bottom: 0;
+  }
+
+  &__campaign-copy strong {
+    font-weight: 900;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .black-friday-is-hero h1.black-friday-is-hero__title {
+    font-size: 60px;
+  }
+
+  .black-friday-is-hero__campaign-copy {
+    font-size: 16px;
+  }
 }
 
 .black-friday-is-landing h1 {
@@ -895,6 +929,7 @@
 }
 
 .black-friday-is-event-strip {
+  display: none !important;
   position: relative;
   z-index: 1;
   padding: 42px 0;
@@ -969,6 +1004,7 @@
       display: contents;
       width: auto;
       max-width: none;
+      padding-top: 0;
       transform: none;
     }
 
@@ -979,6 +1015,14 @@
       margin: 0 0 24px;
       font-size: clamp(3rem, 9vw, 5.8rem);
       text-align: left;
+    }
+
+    &__campaign-copy {
+      width: 100%;
+      max-width: 760px;
+      margin-top: 16px;
+      font-size: clamp(1rem, 2.2vw, 1.15rem);
+      line-height: 1.4;
     }
   }
 

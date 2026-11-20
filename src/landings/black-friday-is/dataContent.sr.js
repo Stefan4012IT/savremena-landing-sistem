@@ -9,7 +9,7 @@ export const defaultDataContent = {
   seo: {
     title: 'Dobre odluke imaju svoj trenutak | International School',
     description:
-      'Od 23. do 30. novembra upišite dete u International School po posebnim uslovima. Izaberite međunarodno Cambridge obrazovanje na engleskom jeziku i put ka budućnosti.',
+      'Upišite dete u International School uz popust do 38% do 30. novembra. Izaberite međunarodno Cambridge obrazovanje koje otvara vrata internacionalne budućnosti.',
     ogImageUrl: 'https://sr.international-school.edu.rs/wp-content/uploads/2026/11/pravi_trenutak_og_1200x628.jpg',
   },
   hero: {
@@ -21,9 +21,14 @@ export const defaultDataContent = {
       { text: 'budućnost vašeg' },
       { text: 'deteta' },
     ],
-    eventDate: '23–30. NOVEMBAR',
-    eventDescriptionStart: 'Upišite se u International School i ostvarite ',
-    eventDescriptionEmphasis: 'najpovoljnije školarine u godini.',
+    eventDate: 'DO 30. NOVEMBRA',
+    eventDescriptionStart: 'Upišite dete u International School i ostvarite popust do ',
+    eventDescriptionEmphasis: '38% na školarinu.',
+    copyParagraphs: [
+      'Dok se mnogi ove nedelje fokusiraju na sniženja i popuste na proizvode, International School vam nudi nešto mnogo vrednije – priliku da investirate u budućnost svog deteta.',
+      'Kroz ekskluzivni popust do 38%, koji traje samo do 30.11., pružate svom detetu mogućnost da stekne obrazovanje koje ga priprema za najbolje univerzitete i otvara vrata internacionalne budućnosti.',
+      'Ne propustite priliku da obezbedite vrhunsko obrazovanje za srećnu i uspešnu budućnost svog deteta!',
+    ],
     titleFirstLine: 'Upis za',
     titleSecondLine: '2027/28. je u',
     titleEmphasis: 'TOKU!',
@@ -36,11 +41,13 @@ export const defaultDataContent = {
   emotionalTurn: {
     ...baseDataContent.emotionalTurn,
     eyebrow: '',
-    title: 'Velike mogućnosti počinju dobrim izborom',
+    title: 'Investirajte u budućnost koja se isplati',
     text: '',
     paragraphs: [
-      'Izbor škole jedna je od najvažnijih odluka koje donosite za svoje dete. U International Schoolu povezujemo znanje sa Cambridge obrazovanjem i razvojem veština koje pripremaju učenike za budućnost.',
-      'Kvalitetno obrazovanje je ulaganje čija vrednost traje godinama, kroz znanja, iskustva i veštine koje dete stiče tokom školovanja. Upoznajte mogućnosti koje International School pruža i odaberite obrazovni put koji najbolje odgovara interesovanjima i potencijalima vašeg deteta.',
+      'Razmislite o tome gde će vaše dete biti za pet godina. Da li ga vidite na jednom od najprestižnijih svetskih univerziteta? Kako koristi svoja znanja da oblikuje svet i ostvaruje svoje ambicije? Ovakve slike počinju pravim odlukama – danas.',
+      'Dok vam Black Friday nudi sniženja na materijalne stvari, zastanite na trenutak. Te stvari će se istrošiti, zaboraviti ili zastareti. Ali ulaganje u obrazovanje vaše dece – u njihovu sreću, sigurnost i uspešnu budućnost – to je vrednost koja traje zauvek.',
+      'Izaberite školu koja decu ne uči samo činjenicama, već ih osnažuje da razmišljaju kritički, istražuju svet i razvijaju talente. International School je mesto gde vaša deca uče kako da ostvare sve što zamisle. Danas je pravi trenutak da im obezbedite najbolji početak!',
+      'Izaberite International School i obezbedite im više od obrazovanja.',
     ],
     processTitle: '',
     processText: '',

@@ -1,0 +1,94 @@
+.black-friday-is-intro-overlay {
+  position: fixed;
+  z-index: 10000;
+  inset: 0;
+  overflow: hidden;
+  isolation: isolate;
+  background: transparent;
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: #000000;
+    content: '';
+    transform-origin: center;
+    transition: opacity 900ms ease;
+  }
+
+  &__pixels,
+  &__particles {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    transform-origin: center;
+    transition: opacity 1200ms ease;
+  }
+
+  &__particles {
+    pointer-events: none;
+  }
+
+  &--focused &__pixels,
+  &--focused &__particles,
+  &--dispersing &__pixels,
+  &--dispersing &__particles {
+    animation: black-friday-is-intro-zoom 2200ms linear forwards;
+  }
+
+  &--focused::before,
+  &--dispersing::before {
+    animation: black-friday-is-intro-zoom 2200ms linear forwards;
+  }
+
+  &--dispersing &__pixels {
+    opacity: 0;
+  }
+
+  &--dispersing {
+    background-color: transparent;
+  }
+
+  &--dispersing::before {
+    opacity: 0;
+  }
+
+  &--dispersing &__particles {
+    opacity: 1;
+  }
+}
+
+@keyframes black-friday-is-intro-zoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(2.5);
+  }
+}
+
+.black-friday-is-canvas-preview {
+  width: min(100% - 40px, 1280px);
+  margin: 48px auto;
+  color: #07080c;
+
+  h2 {
+    margin: 0 0 8px;
+  }
+
+  p {
+    margin: 0 0 16px;
+  }
+
+  canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #000000;
+  }
+}
