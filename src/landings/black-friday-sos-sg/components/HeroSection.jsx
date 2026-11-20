@@ -44,7 +44,7 @@ export function HeroSection() {
           <div className="black-friday-sos-sg-hero__mobile-image-wrap">
             <img
               className="black-friday-sos-sg-hero__mobile-image"
-              src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/black_friday_1080x1920.png"
+              src="https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/black_friday_hero_mob_img.png"
               alt=""
             />
           </div>
