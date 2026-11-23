@@ -448,7 +448,7 @@
 
 @media (min-width: 776px) and (max-width: 1040px) {
   .black-friday-sos-sg-school-intro {
-    padding-top: 96px;
+    padding-top: 0;
   }
 
   .black-friday-sos-sg-hero {
@@ -472,6 +472,12 @@
       background: none;
     }
 
+    &__copy {
+      margin-top: 164px;
+      padding: 24px;
+      background: #ffffff;
+    }
+
     &__copy p {
       color: #787878;
     }
@@ -480,7 +486,7 @@
 
 @media (max-width: 775px) {
   .black-friday-sos-sg-school-intro {
-    padding-top: 56px !important;
+    padding-top: 0 !important;
   }
 
   .black-friday-sos-sg-hero {

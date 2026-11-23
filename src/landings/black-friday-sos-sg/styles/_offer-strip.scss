@@ -11,10 +11,9 @@
   }
 
   &__header {
-    display: grid;
-    grid-template-columns: minmax(0, 900px) minmax(0, 1fr);
-    column-gap: clamp(32px, 6vw, 96px);
-    row-gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px clamp(32px, 6vw, 96px);
     max-width: none;
     align-items: end;
   }
@@ -24,7 +23,7 @@
   }
 
   &__eyebrow {
-    grid-column: 1 / -1;
+    flex: 0 0 100%;
     margin: 0 0 12px;
     color: #981313;
     font-size: clamp(1.05rem, 1.4vw, 1.22rem);
@@ -33,6 +32,7 @@
   }
 
   &__title {
+    flex: 0 1 900px;
     max-width: none;
     margin: 0;
     color: #07080c;
@@ -41,6 +41,7 @@
   }
 
   &__intro {
+    flex: 1 1 320px;
     max-width: none;
     margin: 0;
     color: #4e5969;
@@ -49,15 +50,16 @@
   }
 
   &__visual {
+    display: flex;
+    align-items: center;
     min-height: 100%;
     overflow: hidden;
-    border-bottom: 2px solid #981313;
   }
 
   &__visual img {
     display: block;
     width: 100%;
-    height: 100%;
+    border-bottom: 2px solid #981313;
     object-fit: contain;
   }
 
@@ -103,16 +105,23 @@
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1919px) {
   .black-friday-sos-sg-offer-strip {
     &__header {
-      grid-template-columns: 1fr;
+      flex-direction: column;
+      align-items: stretch;
+      max-width: 900px;
     }
 
-    &__eyebrow {
-      grid-column: auto;
+    &__title,
+    &__intro {
+      flex-basis: auto;
     }
+  }
+}
 
+@media (max-width: 760px) {
+  .black-friday-sos-sg-offer-strip {
     &__top,
     &__schools {
       grid-template-columns: 1fr;

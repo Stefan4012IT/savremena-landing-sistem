@@ -91,3 +91,19 @@
     min-height: 240px;
   }
 }
+
+@media (max-width: 775px) {
+  .black-friday-sos-sg-school-intro {
+    padding-bottom: 0;
+  }
+
+  .black-friday-sos-sg-school-intro__inner {
+    padding-block: 56px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .black-friday-sos-sg-school-intro {
+    padding-top: 96px;
+  }
+}
