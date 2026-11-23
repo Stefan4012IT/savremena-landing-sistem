@@ -75,6 +75,13 @@ export function HeroSection() {
               </span>
             ))}
           </h1>
+          <div className="black-friday-is-hero__mobile-layer-wrap">
+            <img
+              className="black-friday-is-hero__mobile-layer-image"
+              src="https://www.international-school.edu.rs/wp-content/uploads/2026/11/is-black-friday-layer-hero-mob.png"
+              alt=""
+            />
+          </div>
           <div className="black-friday-is-hero__campaign-copy">
             {hero.copyParagraphs?.map((paragraph) => (
               <p key={paragraph}>{renderCampaignParagraph(paragraph, isEnglish)}</p>

@@ -453,7 +453,7 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1040px) {
   .black-friday-is-hero {
     min-height: auto;
     overflow: hidden;
@@ -641,6 +641,19 @@
   }
 }
 
+@media (min-width: 992px) and (max-width: 1040px) {
+  .black-friday-is-hero__title {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 1920px) {
+  .black-friday-is-hero .black-friday-is-hero__campaign-copy {
+    width: 30%;
+  }
+}
+
 // Enrollment artwork: each figure is independently anchored to the bottom edge
 // of the hero background so it can be adjusted without affecting the copy/form.
 .black-friday-is-hero {
@@ -705,7 +718,7 @@
     width: clamp(320px, 27vw, 520px);
   }
 
-  @media (max-width: 991px) {
+  @media (max-width: 1040px) {
     &__content {
       width: 100%;
       max-width: none;
@@ -742,6 +755,7 @@
 @media (min-width: 1200px) and (max-width: 1640px) {
   .black-friday-is-hero {
     min-height: 880px;
+    background-position: left top;
 
     &__inner {
       min-height: 880px;
@@ -763,6 +777,12 @@
     &__visual--right {
       width: clamp(320px, 40vw, 460px);
     }
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .black-friday-is-hero .black-friday-is-hero__campaign-copy {
+    width: 25%;
   }
 }
 
@@ -983,14 +1003,14 @@
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1041px) {
   .black-friday-is-hero__form-panel {
     bottom: 0;
     transform: translateY(50%);
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1040px) {
   .black-friday-is-hero {
     min-height: auto;
 
@@ -1066,6 +1086,8 @@
 }
 
 .black-friday-is-hero__background-image,
+.black-friday-is-hero__mobile-layer-wrap,
+.black-friday-is-hero__mobile-layer-image,
 .black-friday-is-event-strip--mobile {
   display: none;
 }
@@ -1089,14 +1111,17 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1040px) {
   .black-friday-is-hero {
     display: flex;
     min-height: 0;
     flex-direction: column;
     padding: 0;
     background-color: #06234b;
-    background-image: none;
+    background-image: url('https://www.international-school.edu.rs/wp-content/uploads/2026/11/is-black-friday-background-hero-mob.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     &__inner {
       width: 100%;
@@ -1126,11 +1151,26 @@
     }
 
     &__background-image {
-      display: block;
+      display: none;
       width: 100%;
       height: auto;
       margin: 0;
       object-fit: contain;
+    }
+
+    &__mobile-layer-wrap {
+      display: block;
+      width: 100vw;
+      margin: 20px 0 0;
+      border-bottom: 3px solid var(--is-hero-yellow);
+      margin-left: calc(50% - 50vw);
+    }
+
+    &__mobile-layer-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0;
     }
 
     &__form-panel {
@@ -1139,8 +1179,8 @@
       right: auto;
       bottom: auto;
       left: auto;
-      width: min(100% - 40px, 640px);
-      margin: 0 auto 42px;
+      width: min(100%, 640px);
+      margin: 32px auto 42px;
       transform: none;
     }
   }

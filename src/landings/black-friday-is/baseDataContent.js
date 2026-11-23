@@ -147,7 +147,7 @@ export const landingData = {
     contactSuffix: 'ili popunite prijavu, a mi ćemo vas pozvati.',
     closing: 'Uspešna akademska budućnost vašeg deteta počinje jednim pozivom!',
     advisorInitials: 'KP',
-    advisorImageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/is-katarina-petrovic.jpg',
+    advisorImageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/is-katarina-petrovic.jpg',
   },
   leadForm: {
     namePlaceholder: 'Ime i prezime',
