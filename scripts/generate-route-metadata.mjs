@@ -19,6 +19,9 @@ import { defaultLandingData as whyWaitEnglish } from '../src/landings/nije-kasno
 import { defaultLandingData as novoOdeljenje } from '../src/landings/novo-odeljenje/landingContent.js'
 import { defaultLandingData as maloMesta } from '../src/landings/malo-mesta/landingContent.js'
 import { defaultLandingData as softskillsSosSg } from '../src/landings/softskills-sos-sg/landingContent.js'
+import { defaultLandingData as blackFridaySosSg } from '../src/landings/black-friday-sos-sg/landingContent.js'
+import { defaultDataContent as blackFridayIs } from '../src/landings/black-friday-is/dataContent.js'
+import { defaultDataContent as blackFridayIsSerbian } from '../src/landings/black-friday-is/dataContent.sr.js'
 
 const distDirectory = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', 'dist')
 const templatePath = path.join(distDirectory, 'index.html')
@@ -42,6 +45,9 @@ const landingData = [
   novoOdeljenje,
   maloMesta,
   softskillsSosSg,
+  blackFridaySosSg,
+  blackFridayIs,
+  blackFridayIsSerbian,
 ]
 
 const institutionNames = {

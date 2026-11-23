@@ -7,10 +7,10 @@ export const defaultDataContent = {
   locale: 'sr',
   name: 'Pravi trenutak | International School',
   seo: {
-    title: 'Dobre odluke imaju svoj trenutak | International School',
+    title: 'Black Friday popust do 38% na školarinu | International School',
     description:
-      'Upišite dete u International School uz popust do 38% do 30. novembra. Izaberite međunarodno Cambridge obrazovanje koje otvara vrata internacionalne budućnosti.',
-    ogImageUrl: 'https://sr.international-school.edu.rs/wp-content/uploads/2026/11/pravi_trenutak_og_1200x628.jpg',
+      'Do 30. novembra ostvarite popust do 38% na školarinu u International Schoolu. Izaberite međunarodno Cambridge obrazovanje za budućnost vašeg deteta.',
+    ogImageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/bf-is-og-1200x628-srb.jpg',
   },
   hero: {
     ...baseDataContent.hero,

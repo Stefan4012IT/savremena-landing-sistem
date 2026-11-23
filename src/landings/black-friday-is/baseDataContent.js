@@ -33,7 +33,7 @@ const placeholderImages = {
 }
 
 export const landingData = {
-  slug: 'why-wait',
+  slug: 'black-friday-is',
   name: 'Još nije kasno za bolju školu',
   brandScope: 'IS',
   gtmId: 'GTM-P36T5K6',
@@ -160,7 +160,7 @@ export const landingData = {
     childAgePlaceholder: 'Uzrast deteta',
     childAgeLabel: 'Uzrast deteta',
     institution: 'is',
-    formName: 'why-wait - is',
+    formName: 'black-friday-is - is',
     submitLabel: 'Prijavite se',
     successTitle: 'Prijava je poslata',
     successMessage: 'Hvala vam. Naš tim će vas uskoro kontaktirati sa informacijama o upisu.',

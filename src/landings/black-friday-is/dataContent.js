@@ -114,9 +114,9 @@ export const defaultDataContent = {
   locale: 'en',
   name: 'The right moment | International School',
   seo: {
-    title: 'The Right Moment for the Right Decision | International School',
-    description: 'Enrol your child at International School by 30 November and receive up to 38% off tuition. Choose an international Cambridge education that opens the door to an international future.',
-    ogImageUrl: 'https://sr.international-school.edu.rs/wp-content/uploads/2026/11/pravi_trenutak_og_1200x628.jpg',
+    title: 'Black Friday: Up to 38% Off Tuition | International School',
+    description: 'Enrol your child at International School by 30 November and receive up to 38% off tuition. Choose a Cambridge international education for their future.',
+    ogImageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/bf-is-1200x628-og-eng.jpg',
   },
   hero: {
     ...serbianLandingData.hero,

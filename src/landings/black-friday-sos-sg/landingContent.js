@@ -6,10 +6,10 @@ export const landingData = {
   brandScope: 'SOS+SG',
   gtmId: 'GTM-PDD7NJ3',
   seo: {
-    title: 'Dobre odluke imaju svoj trenutak | Savremena',
+    title: 'Black Friday popust do 42% na školarinu | Savremena',
     description:
-      'Od 23. do 30. novembra ostvarite posebne uslove upisa u Savremenu osnovnu školu i gimnaziju. Upoznajte obrazovanje koje povezuje Cambridge program, znanje i veštine za budućnost.',
-    ogImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/dobre-odluke-sos-sg-1200x628.jpg',
+      'Do 30. novembra ostvarite ekskluzivni popust do 42% na školarinu u Savremenoj osnovnoj školi i Savremenoj gimnaziji.',
+    ogImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/sos-sg-bf-og1200x628-3.jpg',
   },
   hero: {
     titlePrefix: 'Ovo je',
