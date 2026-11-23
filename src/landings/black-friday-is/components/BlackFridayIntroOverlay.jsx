@@ -101,7 +101,7 @@ function drawPixelatedMessage(canvas, textureImage = null, isEnglish = false) {
       const drawnWidth = textureImage.naturalWidth * coverScale
       const drawnHeight = textureImage.naturalHeight * coverScale
       const horizontalShift = Math.min(
-        lowWidth * 0.15,
+        lowWidth * 0.50,
         Math.max(0, (drawnWidth - lowWidth) / 2),
       )
       const verticalShift = Math.min(
@@ -132,9 +132,11 @@ function drawPixelatedMessage(canvas, textureImage = null, isEnglish = false) {
   }
 
   const pixels = []
+  const particleGridSize = isMobile ? 26 : PIXEL_SIZE
+  const rightParticleGridSize = isMobile ? 18 : PIXEL_SIZE
   const maskData = maskContext.getImageData(0, 0, width, height).data
-  for (let y = PIXEL_SIZE / 2; y < viewportHeight; y += PIXEL_SIZE) {
-    for (let x = PIXEL_SIZE / 2; x < viewportWidth; x += PIXEL_SIZE) {
+  for (let y = particleGridSize / 2; y < viewportHeight; y += particleGridSize) {
+    for (let x = particleGridSize / 2; x < viewportWidth; x += x >= viewportWidth / 2 ? rightParticleGridSize : particleGridSize) {
       const sampleX = Math.min(width - 1, Math.round(x * pixelRatio))
       const sampleY = Math.min(height - 1, Math.round(y * pixelRatio))
       const alpha = maskData[(sampleY * width + sampleX) * 4 + 3]
