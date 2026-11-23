@@ -65,7 +65,8 @@ export function HeroSection() {
           <LeadForm
             variant="dark"
             headerTitle="PRIJAVITE SE"
-            headerText="Još uvek imate priliku da svom detetu obezbedite najsavremenije obrazovanje u regionu."
+            headerText="Prijavom rezervišete mesto po povlašćenim uslovima koji važe samo do 30.11., bez obaveze da izvršite upis."
+            headerTextHighlight="povlašćenim uslovima koji važe samo do 30.11."
           />
         </div>
       </div>

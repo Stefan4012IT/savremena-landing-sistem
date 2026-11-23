@@ -64,6 +64,9 @@
   }
 
   &__label {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
     position: relative;
     top: -3px;
     border-radius: 999px;
@@ -71,12 +74,27 @@
     background: #f7b815;
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
     color: #ffffff;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 800;
     line-height: 1.1;
   }
 
+  &__label svg {
+    width: 14px;
+    height: 14px;
+    fill: none;
+    stroke: currentcolor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2.2;
+    transform: translateY(0.5px);
+  }
+
   &__label-trigger {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
     border: 0;
     border-radius: 999px;
     padding: 0;
@@ -153,7 +171,7 @@
 
     &__label {
       padding: 4px 10px;
-      font-size: 0.84rem;
+      font-size: 0.78rem;
       color: #ffffff;
     }
 

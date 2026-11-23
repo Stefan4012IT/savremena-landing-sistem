@@ -17,7 +17,7 @@ export const landingData = {
     titleContinuation: 'u uspešnu budućnost vašeg deteta.',
     subtitle: '',
     paragraphs: [
-      'Dok se mnogi ove nedelje fokusiraju na sniženja i popuste na proizvode, obrazovni sistem Savremene vam poklanja nešto mnogo vrednije – priliku da investirate u budućnost svog deteta. Kroz ekskluzivni popust do 42%, do 30.11, dobijate mogućnost da osigurate obrazovanje koje otvara vrata internacionalne budućnosti.',
+      'Dok se mnogi ove nedelje fokusiraju na sniženja i popuste na proizvode, obrazovni sistem Savremene vam poklanja nešto mnogo vrednije – priliku da investirate u budućnost svog deteta. Kroz ekskluzivni popust do 42% koji važi samo do 30.11, dobijate mogućnost da osigurate obrazovanje koje otvara vrata internacionalne budućnosti.',
     ],
     paragraphBold: [['obrazovni sistem Savremene', 'ekskluzivni popust do 42%', 'do 30.11']],
     skills: [],
@@ -268,7 +268,7 @@ export const landingData = {
       'Zato ovo nije običan popust već prilika da svom detetu obezbedite obrazovanje za srećnu i uspešnu budućnost.',
     ],
     highlight: 'Donosite odluke koje prave razliku. Izaberite ono što je zaista važno.',
-    closing: 'Prijavite se do nedelje i obezbedite upis po ceni od 388 evra mesečno. Ne čekajte sutra za odluku. Odluka o njihovoj budućnosti se donosi danas.',
+    closing: 'Prijavite se do nedelje i obezbedite upis po ceni od 395 evra mesečno. Ne čekajte sutra za odluku. Odluka o njihovoj budućnosti se donosi danas.',
     stepsTitle: 'Prijavite svoje dete već sada:',
     steps: [
       'Popunite onlajn-prijavu ili pozovite na 011/40-11-223 i rezervišite mesto po sniženoj ceni.',

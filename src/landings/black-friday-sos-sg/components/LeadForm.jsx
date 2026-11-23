@@ -66,7 +66,15 @@ function validateFormData(formData, ageRange) {
   return validatePhoneFields(formData.get('countryCode'), formData.get('areaCode'), formData.get('phone'))
 }
 
-export function LeadForm({ variant = 'dark', showHeader = true, headerTitle = 'Prijavite se', headerText = '' }) {
+function renderHeaderText(text, highlight) {
+  if (!highlight || !text.includes(highlight)) return text
+
+  const [before, after] = text.split(highlight)
+
+  return <>{before}<strong>{highlight}</strong>{after}</>
+}
+
+export function LeadForm({ variant = 'dark', showHeader = true, headerTitle = 'Prijavite se', headerText = '', headerTextHighlight = '' }) {
   const { leadForm, slug, institutionOptions = [] } = useLandingData()
   const defaultInstitution = ''
   const [institutionSelection, setInstitutionSelection] = useState(defaultInstitution)
@@ -132,7 +140,7 @@ export function LeadForm({ variant = 'dark', showHeader = true, headerTitle = 'P
         {showHeader ? (
           <div className="black-friday-sos-sg-form__header">
             <h2>{headerTitle}</h2>
-            {headerText ? <p>{headerText}</p> : null}
+            {headerText ? <p>{renderHeaderText(headerText, headerTextHighlight)}</p> : null}
           </div>
         ) : null}
         <LeadEventIdField institution={institution} formName={formName} landingSlug={slug} />

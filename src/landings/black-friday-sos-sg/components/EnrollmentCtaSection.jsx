@@ -3,7 +3,7 @@ import { useLandingData } from '../useLandingData'
 
 const phoneNumber = '011/40-11-223'
 const phoneHref = 'tel:+381114011223'
-const price = '388 evra'
+const price = '395 evra'
 
 function renderPhoneLink(text) {
   const [before, after] = text.split(phoneNumber)
@@ -38,7 +38,10 @@ export function EnrollmentCtaSection() {
         </div>
         <div className="black-friday-sos-sg-enrollment-cta__side">
           <div className="black-friday-sos-sg-enrollment-cta__form-panel" id="prijava">
-            <LeadForm />
+            <LeadForm
+              headerText="Prijavom rezervišete mesto po povlašćenim uslovima koji važe samo do 30.11., bez obaveze da izvršite upis."
+              headerTextHighlight="povlašćenim uslovima koji važe samo do 30.11."
+            />
           </div>
           <div className="black-friday-sos-sg-enrollment-cta__steps-wrap">
             <p className="black-friday-sos-sg-enrollment-cta__steps-title">{enrollmentCta.stepsTitle}</p>

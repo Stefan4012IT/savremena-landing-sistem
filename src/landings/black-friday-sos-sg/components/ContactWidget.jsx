@@ -67,7 +67,12 @@ export function ContactWidget() {
             aria-controls="black-friday-sos-sg-contact-options"
             onClick={() => setIsOpen((open) => !open)}
           >
-            <span className="black-friday-sos-sg-contact-widget__label">Pozovite</span>
+            <span className="black-friday-sos-sg-contact-widget__label">
+              <span>Pozovite</span>
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path d="m5 4 6 6-6 6M10 4l6 6-6 6" />
+              </svg>
+            </span>
           </button>
         </div>
       </div>
