@@ -1,6 +1,7 @@
 import { HeroSection } from './components/HeroSection'
 import { SchoolIntroSection } from './components/SchoolIntroSection'
 import { BlackFridayOfferSection } from './components/BlackFridayOfferSection'
+import { QuoteMarqueeSection } from './components/QuoteMarqueeSection'
 import { ProgramChoiceSection } from './components/ProgramChoiceSection'
 import { PartnerLogosSection } from './components/PartnerLogosSection'
 import { StatsSection } from './components/StatsSection'
@@ -22,6 +23,7 @@ export function BlackFridaySosSgLanding({ data }) {
         <HeroSection />
         <SchoolIntroSection />
         <BlackFridayOfferSection />
+        <QuoteMarqueeSection />
         <ProgramChoiceSection />
         <PartnerLogosSection />
         <StatsSection />

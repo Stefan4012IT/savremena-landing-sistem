@@ -26,18 +26,43 @@ export const landingData = {
   schoolIntro: {
     title: 'Zašto je ovo pametna odluka?',
     paragraphs: [
-      'Kada bi vas neko pitao koliko vam je važno da svom detetu obezbedite detinjstvo bez stresa, da zavoli učenje, da razvije svoj puni potencijal i otvori vrata internacionalnih mogućnosti, sigurni smo da biste odgovorili rečju neprocenjivo.',
-      'Dok su sniženja svuda oko vas i dok i vi upadate u Black Friday groznicu, razmišljajući da li da izaberete nove cipele, frižider ili gejmersku konzolu, zastanite i svoj novac uložite u JEDINU stvar koja će vam se sigurno isplatiti.',
+      'Kada bi vas neko pitao koliko vam je važno da svom detetu obezbedite detinjstvo bez stresa, da zavoli učenje, da razvije svoj puni potencijal i otvori vrata internacionalnih mogućnosti, sigurni smo da biste odgovorili rečju:',
+      'Dok su sniženja svuda oko vas i dok i vi upadate u Black Friday groznicu, razmišljajući da li da izaberete nove cipele, frižider ili gejmersku konzolu, zastanite i svoj novac uložite u JEDINU stvar koja će vam se sigurno isplatiti. U svoju decu.',
       'Uložite u njihovo obrazovanje, odrastanje sa osmehom i u uspešnu budućnost. Prebacite fokus sa materijalnih i prolaznih stvari i birajte pametno. Uložite u njihovu srećnu i uspešnu budućnost.',
       'Izaberite Savremenu osnovnu školu i gimnaziju i obezbedite im više od obrazovanja.',
     ],
-    highlightTitle: 'U svoju decu.',
+    highlightTitles: {
+      0: 'Neprocenjivo.',
+    },
   },
-  blackFridayOffer: {
-    title: 'Iskoristite priliku: 42% popusta na školarinu',
-    intro: 'Savremena osnovna škola i gimnazija pružaju vam priliku da po izuzetno sniženoj ceni obezbedite svom detetu najbolje obrazovanje.',
-    detail: 'Produžen popust do 30.11. — prijavite se i ostvarite 42% popusta na školarinu i osigurajte im školovanje u okruženju koje neguje njihov talenat, kreativnost i ljubav prema učenju.',
+  schoolOverview: {
+    eyebrow: 'Savremena Education Group',
+    title: 'Najsavremeniji obrazovni sistem za uspešnu budućnost',
+    intro: 'Savremena osnovna škola i gimnazija predstavljaju najmoderniji obrazovni sistem u ovom delu Evrope, akreditovan od Ministarstvo prosvete i Cambridge univerziteta po finskom modelu za srećno odrastanje, za uzrast od 5 do 19 godina.',
+    imageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/bf_middle_001.png',
+    schools: [
+      {
+        name: 'Savremena osnovna škola',
+        title: 'Podsticajno okruženje za savremene osnovce',
+        logo: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/sos_logo_2027_white-horizontal.svg',
+        text: 'Savremena osnovna škola predstavlja oazu učenja i druženja na Novom Beogradu. Posvećeni učitelji i nastavnici, primena najsavremenije edukativne tehnologije, Nacionalni i Kombinovani program, multidisciplinarni časovi i personalizovan pristup kreiraju zdravo i podsticajno okruženje za razvoj višestruke inteligencije učenika i njihove ličnosti i talenata.',
+      },
+      {
+        name: 'Savremena gimnazija',
+        title: 'Prestižna Cambridge gimnazija za buduće lidere',
+        logo: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/sg_logo_2027_white-horizontal.svg',
+        text: 'Savremena gimnazija nalazi se u srcu prestonice, u Palati Beograd, i sa pravom nosi epitet Future Ready School. Karakterišu je napredna tehnologija, Google okruženje, interaktivna nastava i diplome koje otvaraju sva vrata za nastavak školovanja. Učenicima su na raspolaganju Nacionalni i Kombinovani – Cambridge program, na kojima stiču obrazovanje, vaspitanje i veštine lidera budućnosti.',
+      },
+    ],
   },
+  educationQuotes: [
+    '„Investicija u znanje plaća najbolje kamate.” — Benjamin Franklin',
+    '„Prava sloboda dolazi iz znanja.”',
+    '„Ulaganje u obrazovanje donosi najvišu kamatu.”',
+    '„Znanje je ključ koji otvara vrata svih mogućnosti.”',
+    '„Znanje je koren svih dobrih dela.”',
+    '„Investicija u znanje je investicija u budućnost.” — Benjamin Franklin',
+  ],
   specialOffer: {
     eyebrow: 'Slobodna mesta',
     title: 'Izbegnite stres i neizvesnost liste čekanja: rezervišite mesto odmah!',
@@ -233,14 +258,23 @@ export const landingData = {
     phoneSecondary: '062/191-80-56',
     contactSuffix: 'ili popunite prijavu, a mi ćemo vas pozvati.',
     closing: 'Uspešna akademska budućnost vašeg deteta počinje jednim pozivom!',
-    advisorImageUrl: 'https://www.savremena-gimnazija.edu.rs/wp-content/uploads/2026/06/sg-katarina-petrovic.jpg',
+    advisorImageUrl: 'https://www.savremena-osnovna.edu.rs/wp-content/uploads/2026/11/seg-katarina-petrovic.jpg',
   },
   enrollmentCta: {
     eyebrow: 'Upis je u toku',
     title: 'Uspeh vašeg deteta počinje pravim izborom danas.',
-    text: 'U Savremenoj osnovnoj školi i Savremenoj gimnaziji učenici razvijaju znanje, samostalnost, kreativnost, kritičko mišljenje i vrednosti koje im otvaraju vrata budućnosti. Stiču samopouzdanje da pokreću ideje, donose odluke i svoje znanje pretvaraju u konkretne rezultate.',
-    highlight: 'Obezbedite mesto na vreme i iskoristite najniže cene školarina u upisnom ciklusu.',
-    signature: 'Savremena. Više od znanja.',
+    paragraphs: [
+      'Dok gejmerske konzole zastarevaju, frižideri se kvare, a cipele izlaze iz mode, znanje i veštine koje vaše dete stekne u Savremenoj traju zauvek.',
+      'Zato ovo nije običan popust već prilika da svom detetu obezbedite obrazovanje za srećnu i uspešnu budućnost.',
+    ],
+    highlight: 'Donosite odluke koje prave razliku. Izaberite ono što je zaista važno.',
+    closing: 'Prijavite se do nedelje i obezbedite upis po ceni od 388 evra mesečno. Ne čekajte sutra za odluku. Odluka o njihovoj budućnosti se donosi danas.',
+    stepsTitle: 'Prijavite svoje dete već sada:',
+    steps: [
+      'Popunite onlajn-prijavu ili pozovite na 011/40-11-223 i rezervišite mesto po sniženoj ceni.',
+      'Naš tim će kontaktirati s vama i saznaćete sve dodatne informacije.',
+      'Obezbedite svom detetu mesto u školi koja menja živote.',
+    ],
   },
   leadForm: {
     institution: 'sos',

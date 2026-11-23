@@ -135,9 +135,11 @@ function drawPixelatedMessage(canvas, textureImage = null) {
   }
 
   const pixels = []
+  const particleGridSize = isMobile ? 26 : PIXEL_SIZE
+  const rightParticleGridSize = isMobile ? 18 : PIXEL_SIZE
   const maskData = maskContext.getImageData(0, 0, width, height).data
-  for (let y = PIXEL_SIZE / 2; y < viewportHeight; y += PIXEL_SIZE) {
-    for (let x = PIXEL_SIZE / 2; x < viewportWidth; x += PIXEL_SIZE) {
+  for (let y = particleGridSize / 2; y < viewportHeight; y += particleGridSize) {
+    for (let x = particleGridSize / 2; x < viewportWidth; x += x >= viewportWidth / 2 ? rightParticleGridSize : particleGridSize) {
       const sampleX = Math.min(width - 1, Math.round(x * pixelRatio))
       const sampleY = Math.min(height - 1, Math.round(y * pixelRatio))
       const alpha = maskData[(sampleY * width + sampleX) * 4 + 3]
@@ -154,6 +156,7 @@ function animatePixelBurst(canvas, points) {
 
   const viewportWidth = window.innerWidth
   const viewportHeight = window.innerHeight
+  const isMobile = viewportWidth < 776
   const pixelRatio = Math.max(1, window.devicePixelRatio || 1)
   canvas.width = Math.ceil(viewportWidth * pixelRatio)
   canvas.height = Math.ceil(viewportHeight * pixelRatio)
@@ -177,7 +180,7 @@ function animatePixelBurst(canvas, points) {
       y: startY,
       vx: (directionX / length) * speed + (Math.random() - 0.5) * 130,
       vy: (directionY / length) * speed + (Math.random() - 0.5) * 130,
-      size: 28 + Math.random() * 28,
+      size: isMobile ? 18 + Math.random() * 18 : 28 + Math.random() * 28,
       color: colors[Math.floor(Math.random() * colors.length)],
     }
   })

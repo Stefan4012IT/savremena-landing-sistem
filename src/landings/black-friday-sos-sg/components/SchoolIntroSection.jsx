@@ -13,8 +13,10 @@ export function SchoolIntroSection() {
           {schoolIntro.paragraphs.map((paragraph, index) => (
             <div className="black-friday-sos-sg-school-intro__paragraph-group" key={paragraph}>
               <p>{paragraph}</p>
-              {index === 1 && schoolIntro.highlightTitle ? (
-                <h3 className="black-friday-sos-sg-school-intro__highlight-title">{schoolIntro.highlightTitle}</h3>
+              {schoolIntro.highlightTitles?.[index] ? (
+                <h3 className="black-friday-sos-sg-school-intro__highlight-title">
+                  {schoolIntro.highlightTitles[index]}
+                </h3>
               ) : null}
             </div>
           ))}

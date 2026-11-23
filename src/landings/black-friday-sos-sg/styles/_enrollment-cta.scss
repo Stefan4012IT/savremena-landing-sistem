@@ -15,6 +15,11 @@
     max-width: 760px;
   }
 
+  &__side {
+    display: grid;
+    gap: 28px;
+  }
+
   &__eyebrow {
     margin: 0 0 16px;
     color: #981313;
@@ -44,11 +49,33 @@
     font-weight: 850;
   }
 
-  &__content > p.black-friday-sos-sg-enrollment-cta__signature {
+  &__price {
+    color: #f7b815;
+    font-weight: 850;
+  }
+
+  &__steps-title {
+    margin: 0;
+    color: #07080c;
+    font-size: clamp(1.05rem, 1.4vw, 1.22rem);
+    font-weight: 800;
+  }
+
+  &__steps {
+    display: grid;
+    gap: 10px;
+    margin: 12px 0 0;
+    padding-left: 1.4em;
+    color: var(--color-text);
+    font-size: clamp(1.05rem, 1.4vw, 1.22rem);
+    line-height: 1.45;
+  }
+
+  &__steps a {
     color: #981313;
     font-weight: 800;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
   }
 
   &__form-panel {
@@ -104,11 +131,29 @@
   .black-friday-sos-sg-enrollment-cta__form-panel {
     width: 100%;
   }
+
+  .black-friday-sos-sg-enrollment-cta__side {
+    width: 100%;
+  }
 }
 
 @media (min-width: 981px) and (max-width: 1439px) {
-  .black-friday-sos-sg-enrollment-cta__form-panel {
+  .black-friday-sos-sg-enrollment-cta__side {
     width: 75%;
     margin-inline: auto;
+  }
+}
+
+@media (max-width: 980px) {
+  .black-friday-sos-sg-enrollment-cta__side {
+    grid-template-columns: 1fr;
+  }
+
+  .black-friday-sos-sg-enrollment-cta__steps-wrap {
+    order: 1;
+  }
+
+  .black-friday-sos-sg-enrollment-cta__form-panel {
+    order: 2;
   }
 }
