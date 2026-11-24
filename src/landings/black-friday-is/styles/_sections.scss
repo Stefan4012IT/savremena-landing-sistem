@@ -113,6 +113,12 @@
   background: #ffffff;
 }
 
+@media (max-width: 1040px) {
+  .black-friday-is-landing .black-friday-is-scholarship-offer {
+    padding-top: clamp(56px, 6vw, 96px);
+  }
+}
+
 .black-friday-is-special-conditions {
   background: var(--gradient-brand);
   color: #ffffff;

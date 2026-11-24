@@ -782,7 +782,7 @@
 
 @media (min-width: 1200px) and (max-width: 1600px) {
   .black-friday-is-hero .black-friday-is-hero__campaign-copy {
-    width: 25%;
+    width: 30%;
   }
 }
 
@@ -929,12 +929,13 @@
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 1040px) and (max-width: 1199px) {
   .black-friday-is-hero h1.black-friday-is-hero__title {
-    font-size: 60px;
+    font-size: 40px;
   }
 
   .black-friday-is-hero__campaign-copy {
+    width: 30%;
     font-size: 16px;
   }
 }
@@ -946,6 +947,16 @@
 
 .black-friday-is-landing h1 strong {
   font-weight: 900;
+}
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .black-friday-is-landing h1 {
+    font-size: 50px;
+  }
+
+  .black-friday-is-hero__content {
+    padding-top: 0;
+  }
 }
 
 .black-friday-is-event-strip {

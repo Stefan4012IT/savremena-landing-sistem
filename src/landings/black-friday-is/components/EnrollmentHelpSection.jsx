@@ -25,7 +25,7 @@ export function EnrollmentHelpSection() {
   const isEnglish = locale === 'en'
 
   return (
-    <section id="prijava" className="black-friday-is-landing-section black-friday-is-enrollment-help">
+    <section id="prijava-dole" className="black-friday-is-landing-section black-friday-is-enrollment-help">
       <div className="black-friday-is-landing-container black-friday-is-enrollment-help__inner">
         <div className="black-friday-is-enrollment-help__intro">
           <div className="black-friday-is-enrollment-help__content">

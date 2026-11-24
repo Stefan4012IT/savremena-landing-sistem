@@ -37,7 +37,7 @@ export function EnrollmentCtaSection() {
           <p>{renderPrice(enrollmentCta.closing)}</p>
         </div>
         <div className="black-friday-sos-sg-enrollment-cta__side">
-          <div className="black-friday-sos-sg-enrollment-cta__form-panel" id="prijava">
+          <div className="black-friday-sos-sg-enrollment-cta__form-panel" id="prijava-dole">
             <LeadForm
               headerText="Prijavom rezervišete mesto po povlašćenim uslovima koji važe samo do 30.11., bez obaveze da izvršite upis."
               headerTextHighlight="povlašćenim uslovima koji važe samo do 30.11."
