@@ -152,10 +152,10 @@
 
 @media (max-width: 680px) {
   .black-friday-sos-sg-contact-widget {
-    top: auto;
-    bottom: 18px;
+    top: 50%;
+    bottom: auto;
     width: 108px;
-    transform: none;
+    transform: translateY(-50%);
 
     &__trigger {
       padding: 0;
