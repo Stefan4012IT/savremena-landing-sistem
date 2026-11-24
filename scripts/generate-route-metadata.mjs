@@ -7,6 +7,7 @@ import { defaultLandingData as desetSlobodnihMesta } from '../src/landings/10-sl
 import { defaultLandingData as nijeKasnoZaBoljuSkolu } from '../src/landings/nije-kasno-za-bolju-skolu-sg/landingContent.js'
 import { defaultLandingData as josNijeKasnoZaBoljuSkolu } from '../src/landings/nije-kasno-za-bolju-skolu-sos/landingContent.js'
 import { defaultDataContent as upisJeOtvorenSos } from '../src/landings/upis-je-otvoren-sos/dataContent.js'
+import { defaultDataContent as upisJeOtvorenSosAbTest } from '../src/landings/upis-je-otvoren-sos-ab-test/dataContent.js'
 import { defaultDataContent as upisJeOtvorenSg } from '../src/landings/upis-je-otvoren-sg/dataContent.js'
 import { defaultDataContent as upisJeOtvorenIs } from '../src/landings/upis-je-otvoren-is/dataContent.js'
 import { defaultDataContent as upisJeOtvorenIsSerbian } from '../src/landings/upis-je-otvoren-is/dataContent.sr.js'
@@ -22,6 +23,9 @@ import { defaultLandingData as softskillsSosSg } from '../src/landings/softskill
 import { defaultLandingData as blackFridaySosSg } from '../src/landings/black-friday-sos-sg/landingContent.js'
 import { defaultDataContent as blackFridayIs } from '../src/landings/black-friday-is/dataContent.js'
 import { defaultDataContent as blackFridayIsSerbian } from '../src/landings/black-friday-is/dataContent.sr.js'
+import { defaultLandingData as praviTrenutakSosSg } from '../src/landings/pravi-trenutak-sos-sg/landingContent.js'
+import { defaultDataContent as praviTrenutakIs } from '../src/landings/pravi-trenutak-is/dataContent.js'
+import { defaultDataContent as praviTrenutakIsSerbian } from '../src/landings/pravi-trenutak-is/dataContent.sr.js'
 
 const distDirectory = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', 'dist')
 const templatePath = path.join(distDirectory, 'index.html')
@@ -33,6 +37,7 @@ const landingData = [
   nijeKasnoZaBoljuSkolu,
   josNijeKasnoZaBoljuSkolu,
   upisJeOtvorenSos,
+  upisJeOtvorenSosAbTest,
   upisJeOtvorenSg,
   upisJeOtvorenIs,
   upisJeOtvorenIsSerbian,
@@ -48,7 +53,13 @@ const landingData = [
   blackFridaySosSg,
   blackFridayIs,
   blackFridayIsSerbian,
+  praviTrenutakSosSg,
+  praviTrenutakIs,
+  praviTrenutakIsSerbian,
 ]
+
+const defaultTitle = 'Savremena obrazovna grupa'
+const defaultDescription = 'Savremeno obrazovanje za sigurnu budućnost učenika.'
 
 const institutionNames = {
   SOS: 'Savremena osnovna škola',
@@ -66,8 +77,8 @@ function escapeHtml(value) {
 }
 
 function metadataTags(data) {
-  const title = data.seo?.title || data.name || 'Savremena obrazovna grupa'
-  const description = data.seo?.description || ''
+  const title = data.seo?.title || defaultTitle
+  const description = data.seo?.description || defaultDescription
   const canonicalUrl = `${siteUrl}/${data.slug}`
   const imageUrl = data.seo?.ogImageUrl || ''
   const siteName = institutionNames[String(data.brandScope).trim().toUpperCase()] || 'Savremena obrazovna grupa'
@@ -101,7 +112,7 @@ const template = fs.readFileSync(templatePath, 'utf8')
 
 for (const data of landingData) {
   const routeDirectory = path.join(distDirectory, data.slug)
-  let html = template.replace(/<title>[\s\S]*?<\/title>/i, `<title>${escapeHtml(data.seo?.title || data.name)}</title>`)
+  let html = template.replace(/<title>[\s\S]*?<\/title>/i, `<title>${escapeHtml(data.seo?.title || defaultTitle)}</title>`)
 
   if (data.locale === 'en') {
     html = html.replace(/<html\s+lang=["']sr["']/i, '<html lang="en"')
@@ -116,5 +127,15 @@ for (const data of landingData) {
   fs.mkdirSync(routeDirectory, { recursive: true })
   fs.writeFileSync(path.join(routeDirectory, 'index.html'), html)
 }
+
+fs.writeFileSync(
+  path.join(distDirectory, 'serve.json'),
+  JSON.stringify({
+    rewrites: landingData.flatMap(({ slug }) => [
+      { source: `/${slug}`, destination: `/${slug}/index.html` },
+      { source: `/${slug}/`, destination: `/${slug}/index.html` },
+    ]),
+  }, null, 2),
+)
 
 console.log(`Generated static metadata pages for ${landingData.length} landing routes.`)

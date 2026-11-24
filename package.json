@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && node scripts/generate-route-metadata.mjs && cp dist/index.html dist/404.html",
-    "start": "serve -s dist -l tcp://0.0.0.0:${PORT:-4173}",
+    "start": "serve dist -l tcp://0.0.0.0:${PORT:-4173}",
     "lint": "eslint .",
     "preview": "vite preview",
     "backend:dev": "npm run develop --prefix backend",

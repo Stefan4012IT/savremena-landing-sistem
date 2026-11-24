@@ -3,6 +3,9 @@ import { useGtm } from './hooks/useGtm'
 import { landingRegistry } from './landings/landingRegistry'
 import { fetchLandingBySlug } from './services/landingApi'
 
+const defaultSeoTitle = 'Savremena obrazovna grupa'
+const defaultSeoDescription = 'Savremeno obrazovanje za sigurnu budućnost učenika.'
+
 const faviconPackages = {
   IS: 'favicon_io_IS',
   default: 'favicon_io_SOS-SG',
@@ -238,12 +241,12 @@ function App() {
 
   useEffect(() => {
     if (!landingData) {
-      document.title = 'Savremena'
+      document.title = defaultSeoTitle
       return
     }
 
-    const title = landingData.seo?.title ?? landingData.name ?? 'Savremena'
-    const description = landingData.seo?.description ?? ''
+    const title = landingData.seo?.title || defaultSeoTitle
+    const description = landingData.seo?.description || defaultSeoDescription
     const imageUrl = landingData.seo?.ogImageUrl ?? ''
     const pageUrl = `${window.location.origin}${window.location.pathname}`
 
