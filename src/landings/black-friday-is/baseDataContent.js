@@ -127,10 +127,10 @@ export const landingData = {
     text: 'Od prvih školskih koraka do pripreme za studije, International School povezuje Cambridge obrazovanje na engleskom jeziku sa razvojem samostalnosti, talenata i veština za život. U međunarodnom okruženju učenici istražuju svoja interesovanja i grade sigurnost za nove izazove.',
   },
   specialOffer: {
-    eyebrow: 'Važan korak ka budućnosti',
-    title: 'Iskoristite priliku da obezbedite mesto u International Schoolu',
+    eyebrow: '',
+    title: 'Do 38% popusta na školarinu – prilika koju ne želite da propustite!',
     text:
-      'Ako vaše dete nije upisalo školu koju je želelo, još uvek imate mogućnost da izaberete obrazovanje koje mu pruža sigurnost, podršku i bolju pripremu za budućnost.',
+      'Obezbedite svom detetu vrhunsko obrazovanje uz 38% popusta na školarinu do 30.11! International School pruža inspirativno okruženje koje razvija talente, podstiče kreativnost i priprema za akademski i profesionalni uspeh širom sveta.',
   },
   enrollmentHelp: {
     title: 'Imate pitanja ili vam je potrebna pomoć oko upisa?',
@@ -148,6 +148,24 @@ export const landingData = {
     closing: 'Uspešna akademska budućnost vašeg deteta počinje jednim pozivom!',
     advisorInitials: 'KP',
     advisorImageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/is-katarina-petrovic.jpg',
+  },
+  enrollmentCta: {
+    eyebrow: 'Upis je u toku',
+    title: 'Uspeh vašeg deteta počinje pravim izborom danas.',
+    paragraphs: [
+      'Dok gejmerske konzole zastarevaju, frižideri se kvare, a cipele izlaze iz mode, znanje i veštine koje vaše dete stekne u International Schoolu traju zauvek.',
+      'Zato ovo nije običan popust već prilika da svom detetu obezbedite obrazovanje za srećnu i uspešnu budućnost.',
+    ],
+    highlight: 'Donosite odluke koje prave razliku. Izaberite ono što je zaista važno.',
+    closing: 'Prijavite se do nedelje i obezbedite upis po ceni od 596 evra mesečno. Ne čekajte sutra za odluku. Odluka o njihovoj budućnosti se donosi danas.',
+    stepsTitle: 'Prijavite svoje dete već sada:',
+    phone: '011/40-11-220',
+    phoneHref: 'tel:+381114011220',
+    steps: [
+      'Popunite onlajn-prijavu ili pozovite na 011/40-11-220 i rezervišite mesto po povlašćenim uslovima.',
+      'Naš tim će kontaktirati s vama i saznaćete sve dodatne informacije.',
+      'Obezbedite svom detetu mesto u školi koja menja živote.',
+    ],
   },
   leadForm: {
     namePlaceholder: 'Ime i prezime',

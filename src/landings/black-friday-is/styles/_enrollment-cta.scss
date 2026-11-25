@@ -1,0 +1,149 @@
+.black-friday-is-enrollment-cta {
+  padding-block: 0;
+  background: #ffffff;
+  color: #06234b;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.72fr);
+    gap: clamp(40px, 6vw, 96px);
+    align-items: center;
+  }
+
+  &__content {
+    max-width: 760px;
+  }
+
+  &__side {
+    display: grid;
+    gap: 28px;
+  }
+
+  &__eyebrow {
+    margin: 0 0 16px;
+    color: #f7b815;
+    font-size: clamp(1.05rem, 1.4vw, 1.22rem);
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin: 0;
+    color: #06234b;
+    font-size: clamp(2rem, 4vw, 4rem);
+    line-height: 1.05;
+  }
+
+  &__content > p:not(.black-friday-is-enrollment-cta__eyebrow) {
+    margin: 22px 0 0;
+    color: var(--color-muted);
+    font-size: clamp(1.05rem, 1.4vw, 1.22rem);
+    line-height: 1.45;
+  }
+
+  &__content > p.black-friday-is-enrollment-cta__highlight {
+    border-left: 4px solid #f7b815;
+    padding-left: 16px;
+    color: #06234b;
+    font-weight: 850;
+  }
+
+  &__price {
+    color: #f7b815;
+    font-weight: 850;
+  }
+
+  &__steps-title {
+    margin: 0;
+    color: #06234b;
+    font-size: clamp(1.05rem, 1.4vw, 1.22rem);
+    font-weight: 800;
+  }
+
+  &__steps {
+    display: grid;
+    gap: 10px;
+    margin: 12px 0 0;
+    padding-left: 1.4em;
+    color: var(--color-muted);
+    font-size: clamp(1.05rem, 1.4vw, 1.22rem);
+    line-height: 1.45;
+  }
+
+  &__steps a {
+    color: #06234b;
+    font-weight: 800;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+  }
+
+  &__form-panel {
+    border-radius: 24px;
+    padding: clamp(20px, 2.2vw, 28px);
+    background: #06234b;
+  }
+
+  &__form-panel .black-friday-is-lead-form {
+    gap: 8px;
+  }
+
+  // The panel provides the visual frame and spacing, so the form itself
+  // should not add a second inset background/padding inside it.
+  &__form-panel .black-friday-is-lead-form--enrollment {
+    width: 100%;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  &__form-panel .black-friday-is-lead-form__header {
+    gap: 4px;
+    margin-bottom: 0;
+  }
+
+  &__form-panel .black-friday-is-lead-form__header h2,
+  &__form-panel .black-friday-is-lead-form__header p {
+    color: #ffffff;
+  }
+
+  &__form-panel .black-friday-is-lead-form__header h2 {
+    font-size: clamp(1.35rem, 1.7vw, 1.75rem);
+    line-height: 1.08;
+  }
+
+  &__form-panel .black-friday-is-lead-form button {
+    background: #f7b815;
+    color: #06234b;
+  }
+}
+
+@media (max-width: 1439px) {
+  .black-friday-is-enrollment-cta__inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .black-friday-is-enrollment-cta__content,
+  .black-friday-is-enrollment-cta__form-panel,
+  .black-friday-is-enrollment-cta__side {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (min-width: 981px) and (max-width: 1439px) {
+  .black-friday-is-enrollment-cta__side {
+    width: 75%;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 980px) {
+  .black-friday-is-enrollment-cta__steps-wrap {
+    order: 1;
+  }
+
+  .black-friday-is-enrollment-cta__form-panel {
+    order: 2;
+  }
+}

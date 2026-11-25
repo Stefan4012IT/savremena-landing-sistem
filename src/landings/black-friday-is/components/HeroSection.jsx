@@ -51,7 +51,7 @@ export function HeroSection() {
   return (
     <>
     <section
-      className="black-friday-is-hero"
+      className={`black-friday-is-hero${isEnglish ? ' black-friday-is-hero--en' : ''}`}
       data-hero-version="jos-nije-kasno-za-bolju-skolu"
     >
       <header className="black-friday-is-hero__header" aria-label={isEnglish ? 'Main navigation' : 'Glavna navigacija'}>
@@ -78,7 +78,9 @@ export function HeroSection() {
           <div className="black-friday-is-hero__mobile-layer-wrap">
             <img
               className="black-friday-is-hero__mobile-layer-image"
-              src="https://www.international-school.edu.rs/wp-content/uploads/2026/11/is-black-friday-layer-hero-mob.png"
+              src={isEnglish
+                ? 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/is-black-friday-mob-eng.png'
+                : 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/is-black-friday-layer-hero-mob.png'}
               alt=""
             />
           </div>

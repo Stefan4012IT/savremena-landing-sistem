@@ -118,6 +118,8 @@ export const defaultDataContent = {
     description: 'Enrol your child at International School by 30 November and receive up to 38% off tuition. Choose a Cambridge international education for their future.',
     ogImageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/bf-is-1200x628-og-eng.jpg',
   },
+  blackFridayOverview: null,
+  blackFridayQuotes: null,
   hero: {
     ...serbianLandingData.hero,
     titleLines: [
@@ -216,9 +218,8 @@ export const defaultDataContent = {
   },
   specialOffer: {
     ...serbianLandingData.specialOffer,
-    eyebrow: 'An important step towards the future',
-    title: 'Secure your place at International School',
-    text: 'If your child has not enrolled at the school they hoped for, there is still an opportunity to choose an education that provides security, support and better preparation for the future.',
+    title: 'Up to 38% off tuition – an opportunity you do not want to miss!',
+    text: 'Give your child an outstanding education with up to 38% off tuition until 30 November. International School provides an inspiring environment that develops talent, encourages creativity and prepares students for academic and professional success around the world.',
   },
   enrollmentHelp: {
     ...serbianLandingData.enrollmentHelp,
@@ -232,6 +233,23 @@ export const defaultDataContent = {
     whatsappLabel: 'WhatsApp',
     contactSuffix: 'or complete the form and we will call you back.',
     closing: 'Your child’s successful academic future starts with one call.',
+  },
+  enrollmentCta: {
+    ...serbianLandingData.enrollmentCta,
+    eyebrow: 'Enrolment is open',
+    title: 'Your child’s success starts with the right choice today.',
+    paragraphs: [
+      'While gaming consoles become outdated, refrigerators break down and shoes go out of fashion, the knowledge and skills your child gains at International School last forever.',
+      'This is not an ordinary discount, but an opportunity to give your child an education for a happy and successful future.',
+    ],
+    highlight: 'Make decisions that make a difference. Choose what truly matters.',
+    closing: 'Apply by Sunday and secure enrolment at a price of 596 euros per month. Do not wait until tomorrow to make a decision. Their future is decided today.',
+    stepsTitle: 'Apply for your child now:',
+    steps: [
+      'Complete the online application or call 011/40-11-220 to reserve a place on preferential terms.',
+      'Our team will contact you with all the additional information.',
+      'Secure your child a place at a school that changes lives.',
+    ],
   },
   leadForm: {
     ...serbianLandingData.leadForm,

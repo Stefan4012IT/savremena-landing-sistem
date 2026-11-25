@@ -1,5 +1,7 @@
 import { HeroSection } from './components/HeroSection'
 import { EmotionalTurnSection } from './components/EmotionalTurnSection'
+import { BlackFridayOverviewSection } from './components/BlackFridayOverviewSection'
+import { QuoteMarqueeSection } from './components/QuoteMarqueeSection'
 import { ModernEducationSection } from './components/ModernEducationSection'
 import { PartnerLogosSection } from './components/PartnerLogosSection'
 import { SchoolStageSection } from './components/SchoolStageSection'
@@ -8,6 +10,7 @@ import { StatsSection } from './components/StatsSection'
 import { BenefitsSection } from './components/BenefitsSection'
 import { SpecialOfferSection } from './components/SpecialOfferSection'
 import { EnrollmentHelpSection } from './components/EnrollmentHelpSection'
+import { EnrollmentCtaSection } from './components/EnrollmentCtaSection'
 import { TestimonialsSection } from './components/TestimonialsSection'
 import { FinalCTASection } from './components/FinalCTASection'
 import { ContactWidget } from './components/ContactWidget'
@@ -26,16 +29,19 @@ export function BlackFridayIsLanding({ data }) {
         <HeroSection />
         {showCanvasPreview ? <CanvasBackgroundPreview /> : null}
         <EmotionalTurnSection />
-        <StatsSection />
+        <BlackFridayOverviewSection />
+        <QuoteMarqueeSection />
         <ModernEducationSection />
+        <StatsSection />
         <PartnerLogosSection />
         <SchoolStageSection stage="primary" />
         <SchoolStageSection stage="secondary" />
         <CollegePromoSection />
         <SpecialOfferSection />
         <BenefitsSection />
-        <EnrollmentHelpSection />
+        <EnrollmentCtaSection />
         <TestimonialsSection />
+        <EnrollmentHelpSection />
         <FinalCTASection />
         <ContactWidget />
       </main>

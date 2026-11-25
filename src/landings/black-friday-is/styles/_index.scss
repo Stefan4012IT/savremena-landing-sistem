@@ -2,6 +2,9 @@
 @use './hero';
 @use './intro-overlay';
 @use './sections';
+@use './black-friday-overview';
+@use './quote-marquee';
+@use './enrollment-cta';
 @use './cards';
 @use './form';
 @use './contact-widget';
@@ -112,9 +115,9 @@
   }
 
   .black-friday-is-special-offer .black-friday-is-landing-link--light {
-    border-color: var(--sos-red);
-    background: var(--sos-red);
-    color: #ffffff;
+    border-color: #f7b815;
+    background: #f7b815;
+    color: #06234b;
   }
 
   .black-friday-is-info-card--direction {

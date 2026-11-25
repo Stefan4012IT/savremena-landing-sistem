@@ -54,6 +54,29 @@ export const defaultDataContent = {
     processPhone: '',
     ctaText: '',
   },
+  blackFridayOverview: {
+    title: 'Najmoderniji obrazovni sistem za globalne lidere',
+    intro: 'International School je Future Ready School, koji spaja najbolje svetske obrazovne prakse i tehnologiju kako bi učenicima pružio vrhunsko obrazovanje i pripremio ih za uspeh u globalnom svetu. Sa akreditacijom Cambridge univerziteta i prestižnim Global Perspectives programom, International School se izdvaja kao idealan izbor za roditelje koji žele najbolje za svoju decu.',
+    imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/11/is_image_002.png',
+    features: [
+      {
+        title: 'Inspirativno okruženje za razvoj talenata',
+        text: 'International School se nalazi u modernoj zgradi u srcu Beograda opremljenoj najsavremenijom tehnologijom i prostorom koji podstiče kreativnost, istraživanje i timski rad. Učenici imaju priliku da prate nastavu isključivo na engleskom jeziku, koristeći interaktivne table, digitalne platforme i personalizovane edukativne alate, koji im omogućavaju da uče kroz primenu znanja u realnim situacijama.',
+      },
+      {
+        title: 'Cambridge škola koja otvara vrata budućnosti',
+        text: 'Kao jedna od retkih Cambridge Global Perspectives škola u regionu, International School pruža učenicima priliku da razviju kritičko mišljenje, interdisciplinarna znanja i veštine koje ih pripremaju za nastavak školovanja na najboljim univerzitetima širom sveta. Programi su osmišljeni tako da prepoznaju i razvijaju individualne talente učenika, dok ih pripremaju za izazove modernog društva.',
+      },
+    ],
+  },
+  blackFridayQuotes: [
+    '„Investicija u znanje plaća najbolje kamate.” — Benjamin Franklin',
+    '„Prava sloboda dolazi iz znanja.”',
+    '„Ulaganje u obrazovanje donosi najvišu kamatu.”',
+    '„Znanje je ključ koji otvara vrata svih mogućnosti.”',
+    '„Znanje je koren svih dobrih dela.”',
+    '„Investicija u znanje je investicija u budućnost.” — Benjamin Franklin',
+  ],
   modernEducation: {
     ...baseDataContent.modernEducation,
     imageUrl: 'https://www.international-school.edu.rs/wp-content/uploads/2026/09/nije_kasno_za_bolju_skolu_cabridge.jpg',

@@ -1,4 +1,3 @@
-import { LeadForm } from './LeadForm'
 import { useLandingData } from '../useLandingData'
 
 function ViberIcon() {
@@ -25,8 +24,8 @@ export function EnrollmentHelpSection() {
   const isEnglish = locale === 'en'
 
   return (
-    <section id="prijava-dole" className="black-friday-is-landing-section black-friday-is-enrollment-help">
-      <div className="black-friday-is-landing-container black-friday-is-enrollment-help__inner">
+    <section className="black-friday-is-landing-section black-friday-is-enrollment-help">
+      <div className="black-friday-is-landing-container">
         <div className="black-friday-is-enrollment-help__intro">
           <div className="black-friday-is-enrollment-help__content">
             <h2>{enrollmentHelp.title}</h2>
@@ -64,11 +63,6 @@ export function EnrollmentHelpSection() {
             </div>
           </div>
         </div>
-        <LeadForm
-          className="black-friday-is-lead-form--enrollment"
-          headerTitle={isEnglish ? 'APPLY NOW' : 'PRIJAVITE SE'}
-          headerText={isEnglish ? 'Give your child the most modern education in the region.' : 'Obezbedite svom detetu najsavremenije obrazovanje u regionu.'}
-        />
       </div>
     </section>
   )

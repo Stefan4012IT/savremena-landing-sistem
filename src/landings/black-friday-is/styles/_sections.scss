@@ -233,7 +233,7 @@
 }
 
 .black-friday-is-partner-logos {
-  padding: clamp(34px, 4vw, 58px) 0;
+  padding: 96px 0 0;
   background: #ffffff;
 
   &__grid {
@@ -686,6 +686,7 @@
     grid-template-columns: 1fr;
     gap: 16px;
     justify-items: start;
+    text-align: left;
   }
 
   &__eyebrow {
@@ -703,13 +704,39 @@
   }
 
   h2 {
+    margin-bottom: 24px;
     font-size: clamp(1.75rem, 3.2vw, 3rem);
     line-height: 1.08;
+    text-align: left;
+  }
+
+  &__text {
+    width: min(100%, 1160px);
+    max-width: 1160px;
+    margin: 14px 0 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: clamp(1rem, 1.4vw, 1.2rem);
+    line-height: 1.45;
+    text-align: left;
+  }
+
+  &__text strong {
+    color: #ffffff;
+    font-weight: 900;
+  }
+
+  .black-friday-is-landing-link--light {
+    min-height: 44px;
+    border-color: #f7b815;
+    background: #f7b815;
+    color: #06234b;
+    padding: 10px 24px;
   }
 }
 
 .black-friday-is-enrollment-help {
   background: #ffffff;
+  padding-top: 0;
 
   &__inner {
     display: grid;
@@ -930,7 +957,7 @@
   }
 
   .black-friday-is-partner-logos {
-    padding-block: 26px;
+    padding: 48px 0 0;
   }
 
   .black-friday-is-partner-logos__row {
@@ -992,6 +1019,22 @@
   .black-friday-is-enrollment-help__advisor-photo,
   .black-friday-is-enrollment-help__advisor-photo img {
     min-height: 280px;
+  }
+
+  .black-friday-is-enrollment-help__advisor {
+    order: -1;
+    width: min(58vw, 220px);
+    justify-self: start;
+  }
+
+  .black-friday-is-enrollment-help__advisor-photo {
+    min-height: 0;
+    aspect-ratio: 4 / 5;
+    border-radius: 16px;
+  }
+
+  .black-friday-is-enrollment-help__advisor-photo img {
+    min-height: 0;
   }
 
 }

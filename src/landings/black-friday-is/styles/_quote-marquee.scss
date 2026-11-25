@@ -1,0 +1,50 @@
+.black-friday-is-quote-marquee {
+  overflow: hidden;
+  padding-block: clamp(22px, 2.8vw, 38px);
+  background: #06234b;
+  color: #ffffff;
+
+  &__track {
+    display: flex;
+    width: max-content;
+    animation: black-friday-is-quotes 62s linear infinite;
+    will-change: transform;
+  }
+
+  &__quote {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: clamp(24px, 3vw, 48px);
+    margin-right: clamp(24px, 3vw, 48px);
+    color: #ffffff;
+    font-size: clamp(1.45rem, 2.2vw, 2rem);
+    font-weight: 700;
+    line-height: 1.1;
+    white-space: nowrap;
+
+    &::after {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ffffff;
+      content: '';
+    }
+  }
+}
+
+@keyframes black-friday-is-quotes {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .black-friday-is-quote-marquee__track {
+    animation: none;
+  }
+}

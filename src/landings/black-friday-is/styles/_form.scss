@@ -151,9 +151,11 @@
   }
 
   button {
+    min-height: 44px;
     justify-self: start;
     width: auto;
-    border-radius: 20px;
+    border-radius: 50px;
+    padding: 10px 24px;
     background: var(--sos-red, #9d1516);
     color: #ffffff;
   }
