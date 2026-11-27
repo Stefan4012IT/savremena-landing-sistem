@@ -26,6 +26,7 @@ import { defaultDataContent as blackFridayIsSerbian } from '../src/landings/blac
 import { defaultLandingData as praviTrenutakSosSg } from '../src/landings/pravi-trenutak-sos-sg/landingContent.js'
 import { defaultDataContent as praviTrenutakIs } from '../src/landings/pravi-trenutak-is/dataContent.js'
 import { defaultDataContent as praviTrenutakIsSerbian } from '../src/landings/pravi-trenutak-is/dataContent.sr.js'
+import { defaultLandingData as parentEducation } from '../src/landings/besplatna-edukacija-za-roditelje/landingContent.js'
 
 const distDirectory = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', 'dist')
 const templatePath = path.join(distDirectory, 'index.html')
@@ -56,6 +57,7 @@ const landingData = [
   praviTrenutakSosSg,
   praviTrenutakIs,
   praviTrenutakIsSerbian,
+  parentEducation,
 ]
 
 const defaultTitle = 'Savremena obrazovna grupa'
