@@ -1,5 +1,6 @@
 import { sendLeadToUis } from '../services/uis'
 import { sendLeadToGoogleSheets } from '../services/googleSheets'
+import { sendParentEducationLeadToGoogleSheets } from '../services/parentEducationSheets'
 
 const recentSubmissions = new Map<string, number>()
 const allowedInstitutions = new Set(['sos', 'sg', 'is'])
@@ -64,6 +65,10 @@ function isOpenDaySecondaryLanding(landingSlug: string) {
   return landingSlug === 'open-day-secondary' || landingSlug === 'en/open-day-secondary'
 }
 
+function isParentEducationLanding(landingSlug: string) {
+  return landingSlug === 'besplatna-edukacija-za-roditelje'
+}
+
 function validateLeadPayload(body: Record<string, unknown>) {
   const errors: Record<string, string> = {}
   const name = sanitizeText(body.name, 60)
@@ -80,6 +85,9 @@ function validateLeadPayload(body: Record<string, unknown>) {
   const pageUrl = sanitizeText(body.pageUrl, 500)
   const formName = sanitizeText(body.formName, 120) || `landing - ${landingSlug || institution}`
   const website = sanitizeText(body.website, 200)
+  const parentEducationLanding = isParentEducationLanding(landingSlug)
+  const eventName = sanitizeText(body.event, 240)
+  const consent = body.consent === true || body.consent === 'true' || body.consent === 'on'
   const validLeadEventId = /^ld_\d{10,13}_[a-z0-9]{4,16}$/.test(leadEventId) ? leadEventId : ''
   const minChildAge = isOpenDaySecondaryLanding(landingSlug) ? 5 : 4
   const maxChildAge = isOpenDaySecondaryLanding(landingSlug) ? 19 : 20
@@ -102,29 +110,35 @@ function validateLeadPayload(body: Record<string, unknown>) {
   }
 
   const ageNum = Number(childsAge)
-  if (!Number.isInteger(ageNum) || ageNum < minChildAge || ageNum > maxChildAge) {
+  if (!parentEducationLanding && (!Number.isInteger(ageNum) || ageNum < minChildAge || ageNum > maxChildAge)) {
     errors.childs_age = landingSlug === 'en/open-day-secondary'
       ? `Your child's age must be between ${minChildAge} and ${maxChildAge}.`
       : `Uzrast mora biti između ${minChildAge} i ${maxChildAge} godina.`
   }
 
-  if (!/^\+\d{1,4}$/.test(countryCode)) {
+  if (!parentEducationLanding && !/^\+\d{1,4}$/.test(countryCode)) {
     errors['country-code'] = 'Pozivni broj drzave nije ispravan.'
   }
 
-  if (!/^\d+$/.test(rawAreaCode)) {
-    errors['area-code'] = 'Pozivni broj mora sadržati samo cifre.'
-  } else if (countryCode === '+381' && rawAreaCode.startsWith('0')) {
-    errors['area-code'] = 'Pozivni broj unesite bez početne nule, na primer 64 ili 11.'
-  } else if (countryCode === '+381' && !/^\d{2,3}$/.test(rawAreaCode)) {
-    errors['area-code'] = 'Pozivni broj za Srbiju mora imati 2 ili 3 cifre.'
-  } else if (countryCode !== '+381' && !/^\d{1,5}$/.test(rawAreaCode)) {
-    errors['area-code'] = 'Pozivni broj mora imati od 1 do 5 cifara.'
+  if (!parentEducationLanding) {
+    if (!/^\d+$/.test(rawAreaCode)) {
+      errors['area-code'] = 'Pozivni broj mora sadržati samo cifre.'
+    } else if (countryCode === '+381' && rawAreaCode.startsWith('0')) {
+      errors['area-code'] = 'Pozivni broj unesite bez početne nule, na primer 64 ili 11.'
+    } else if (countryCode === '+381' && !/^\d{2,3}$/.test(rawAreaCode)) {
+      errors['area-code'] = 'Pozivni broj za Srbiju mora imati 2 ili 3 cifre.'
+    } else if (countryCode !== '+381' && !/^\d{1,5}$/.test(rawAreaCode)) {
+      errors['area-code'] = 'Pozivni broj mora imati od 1 do 5 cifara.'
+    }
   }
 
   const serbianPhoneRule = countryCode === '+381' ? getSerbianPhoneRule(areaCode) : null
 
-  if (!/^\d+$/.test(rawPhoneNumber)) {
+  if (parentEducationLanding) {
+    if (rawPhoneNumber && !/^\+?[\d\s-]{5,20}$/.test(rawPhoneNumber)) {
+      errors['phone-number'] = 'Telefon nije u ispravnom formatu.'
+    }
+  } else if (!/^\d+$/.test(rawPhoneNumber)) {
     errors['phone-number'] = 'Telefon mora sadržati samo cifre.'
   } else if (countryCode === '+381' && !serbianPhoneRule && !errors['area-code']) {
     errors['area-code'] = 'Pozivni broj nije u važećem opsegu za Srbiju.'
@@ -142,13 +156,16 @@ function validateLeadPayload(body: Record<string, unknown>) {
   }
 
   const internationalNumberLength = countryCode.replace(/\D/g, '').length + areaCode.length + phoneNumber.length
-  if (!errors['country-code'] && !errors['area-code'] && !errors['phone-number'] && internationalNumberLength > 15) {
+  if (!parentEducationLanding && !errors['country-code'] && !errors['area-code'] && !errors['phone-number'] && internationalNumberLength > 15) {
     errors['phone-number'] = 'Kompletan međunarodni broj ne sme imati više od 15 cifara.'
   }
 
   if (!allowedInstitutions.has(institution)) {
     errors.institution = 'Institution nije ispravan.'
   }
+
+  if (parentEducationLanding && !eventName) errors.event = 'Izaberite predavanje.'
+  if (parentEducationLanding && !consent) errors.consent = 'Potrebna je saglasnost za prijavu.'
 
   return {
     isSpam: false,
@@ -166,6 +183,8 @@ function validateLeadPayload(body: Record<string, unknown>) {
       form_name: formName,
       landing_slug: landingSlug,
       page_url: pageUrl,
+      event: eventName,
+      consent,
     },
   }
 }
@@ -239,7 +258,9 @@ export default {
     }
 
     try {
-      if (isOpenDaySecondaryLanding(validation.sanitizedData.landing_slug)) {
+      if (isParentEducationLanding(validation.sanitizedData.landing_slug)) {
+        await sendParentEducationLeadToGoogleSheets(validation.sanitizedData)
+      } else if (isOpenDaySecondaryLanding(validation.sanitizedData.landing_slug)) {
         const sheetsResult = await sendLeadToGoogleSheets(validation.sanitizedData)
         if ('skipped' in sheetsResult && sheetsResult.skipped) {
           throw new Error('Google Sheets nije konfigurisan za Open Day prijave.')
@@ -259,7 +280,7 @@ export default {
         message: 'Podaci su uspjesno poslani.',
       }
     } catch (error) {
-      if (isOpenDaySecondaryLanding(validation.sanitizedData.landing_slug)) {
+      if (isOpenDaySecondaryLanding(validation.sanitizedData.landing_slug) || isParentEducationLanding(validation.sanitizedData.landing_slug)) {
         recentSubmissions.delete(dedupeKey)
       }
       strapi.log.error(`Lead webhook error: ${error}`)

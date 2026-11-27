@@ -40,6 +40,8 @@ import { SoftskillsSosSgLanding } from './softskills-sos-sg/SoftskillsSosSgLandi
 import { defaultLandingData as softskillsSosSgLandingData } from './softskills-sos-sg/landingContent'
 import { PraviTrenutakSosSgLanding } from './pravi-trenutak-sos-sg/PraviTrenutakSosSgLanding'
 import { defaultLandingData as praviTrenutakSosSgLandingData } from './pravi-trenutak-sos-sg/landingContent'
+import { ParentEducationLanding } from './besplatna-edukacija-za-roditelje/ParentEducationLanding'
+import { defaultLandingData as parentEducationLandingData } from './besplatna-edukacija-za-roditelje/landingContent'
 
 export const landingRegistry = {
   [najboljaOdlukaLandingData.slug]: {
@@ -151,6 +153,11 @@ export const landingRegistry = {
   [praviTrenutakSosSgLandingData.slug]: {
     component: PraviTrenutakSosSgLanding,
     fallbackData: praviTrenutakSosSgLandingData,
+  },
+  [parentEducationLandingData.slug]: {
+    component: ParentEducationLanding,
+    fallbackData: parentEducationLandingData,
+    useStaticData: true,
   },
 }
 
